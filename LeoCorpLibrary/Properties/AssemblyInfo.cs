@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("LeoCorpLibrary")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Léo Corporation")]
 [assembly: AssemblyProduct("LeoCorpLibrary")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("Léo Corporation")]
 [assembly: AssemblyCulture("")]
 
 // L'affectation de la valeur false à ComVisible rend les types invisibles dans cet assembly
