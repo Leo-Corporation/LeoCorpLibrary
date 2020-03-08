@@ -1,0 +1,5 @@
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\bin\Release\LeoCorpLibrary.dll
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\bin\Release\LeoCorpLibrary.pdb
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Release\LeoCorpLibrary.csprojAssemblyReference.cache
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Release\LeoCorpLibrary.dll
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Release\LeoCorpLibrary.pdb
