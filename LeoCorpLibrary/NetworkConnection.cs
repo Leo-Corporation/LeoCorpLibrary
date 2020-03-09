@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LeoCorpLibrary
 {
-    class NetworkConnection
+    public class NetworkConnection
     {
         public bool IsAvailable() // Fonction pour tester la connexion Internet
         {
