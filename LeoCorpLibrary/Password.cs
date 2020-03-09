@@ -17,7 +17,7 @@ namespace LeoCorpLibrary
             }
             else
             {
-                throw new Exception("The parameter 'chars' does not contain a seperator.");
+                throw new Exception("The parameter 'chars' (string) does not contain the specified seperator.");
             }
             string finalPassword = ""; // Mot de passe final
             Random random = new Random(); // Nombre aléatoire
@@ -32,7 +32,7 @@ namespace LeoCorpLibrary
             }
             else
             {
-                throw new Exception("The parameter 'lenght' must be higher than 0.");
+                throw new Exception("The parameter 'lenght' (int) must be higher than 0.");
             }
             return finalPassword; // Retourne le mot de passe final
         }
