@@ -13,6 +13,9 @@ Le projet est toujours en cours de développement, et à l'heure actuelle, la bi
 ## Télécharger la bibliothèque
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoCorpLibrary/bin/Release/LeoCorpLibrary.dll), puis cliquez sur le bouton "Télécharger".
 
+## Documentation
+Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
+
 ## Comment ajouter la bibliothèque dans un projet ?
 Si vous souhaiter ajouter la bibliothèque dans un projet, suivez ces étapes :
 
