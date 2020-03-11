@@ -17,16 +17,4 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoC
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
 
 ## Comment ajouter la bibliothèque dans un projet ?
-Si vous souhaiter ajouter la bibliothèque dans un projet, suivez ces étapes :
-
-**1. Dans l'explorateur de solutions, faites un clic droit sur le projet auquel ous voulez ajouter la bibliothèque.**
-
-**2. Cliquez dans le menu sur "Ajouter"**
-
-**3. Dans la fenêtre qui vient de s'ouvrir, sur la gauche, cliquez sur "Parcourir", puis cliquez sur le bouton en bas à droite "Parcourir..."**
-
-**4. Naviguez jusqu'à l'emplacement où se situe le fichier `LeoCorpLibrary.dll` et sélectionnez-le (double clic)**
-
-**5. Assurez-vous que `LeoCorpLibrary.dll` soit bien sélectionné (case cochée), puis cliquez sur "OK".**
-
-La référence `LeoCorpLibrary` a été ajoutée au projet. Pour vérifier si c'est bien le cas, allez dans l"explorateur de solutions, "déroulez" votre projet. Déroulez "Références", normalement, en dessous de "Références", se situe un élément nommé `LeoCorpLibrary`.
+Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary#1-ajouter-la-bibliothèque-dans-un-projet) pour consulter la documentation à ce sujet.
