@@ -10,6 +10,9 @@ Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework/Wind
 ## En cours de développement
 Le projet est toujours en cours de développement, et à l'heure actuelle, la bibliothèque reste très limitée.
 
+Voici ce qui est en cours d'implémentation :
+- Système de mise à jour pour votre logiciel
+
 ## Télécharger la bibliothèque
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoCorpLibrary/bin/Release/LeoCorpLibrary.dll), puis cliquez sur le bouton "Télécharger".
 
