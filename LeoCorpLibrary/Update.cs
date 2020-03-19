@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LeoCorpLibrary
 {
@@ -42,6 +43,17 @@ namespace LeoCorpLibrary
                 throw new Exception("The parameter 'lastVersionFileLink' (string) is empty or contain only white spaces.");
             }
             return lastVersion;
+        }
+        public void Check(string version, string lastVersion, Form availableUpdateForm, Form noUpdateForm)
+        {
+            if (version == lastVersion)
+            {
+                noUpdateForm.Show();
+            }
+            else
+            {
+                availableUpdateForm.Show();
+            }
         }
     }
 }
