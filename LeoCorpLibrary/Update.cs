@@ -12,7 +12,7 @@ namespace LeoCorpLibrary
         public bool IsAvailable(string version, string lastVersion)
         {
             bool res;
-            if (version == lastVersion) // Sila version du logiciel = a la dernière version, alors le logiciel est à jour
+            if (version == lastVersion) // Si la version du logiciel = a la dernière version, alors le logiciel est à jour
             {
                 res = false; // False : Aucune MAJs Disonibles
             }
