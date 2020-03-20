@@ -16,6 +16,12 @@ Voici ce qui est en cours d'implémentation :
 ## Télécharger la bibliothèque
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoCorpLibrary/bin/Release/LeoCorpLibrary.dll), puis cliquez sur le bouton "Télécharger".
 
+## Nouveautés de la version 1.1
+### Ajout(s)
+- Ajout de fonctions pour vous aider à mettre à jour votre application
+### Correction(s)
+- Correction d'une erreur de typo dans le fichier "Update.cs" (#2)
+
 ## Documentation
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
