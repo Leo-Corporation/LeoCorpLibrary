@@ -16,6 +16,12 @@ Voici ce qui est en cours d'implémentation :
 ## Télécharger la bibliothèque
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoCorpLibrary/bin/Release/LeoCorpLibrary.dll), puis cliquez sur le bouton "Télécharger".
 
+## Nouveautés de la version 1.1
+### Ajout(s)
+- Ajout de fonctions pour vous aider à mettre à jour votre application
+### Correction(s)
+- Correction d'une erreur de typo dans le fichier "Update.cs" (#2)
+
 ## Documentation
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
@@ -23,6 +29,7 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obte
 - [Installer la bibliothèque](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary)
 - [Générer un mot de passe](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/G%C3%A9n%C3%A9rer-un-mot-de-passe)
 - [Tester/vérifier une connexion Internet](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/V%C3%A9rifier-une-connexion-internet)
+- [Rechercher des mises à jour](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Rechercher-des-mises-%C3%A0-jour)
 
 ## Comment ajouter la bibliothèque dans un projet ?
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary#1-ajouter-la-bibliothèque-dans-un-projet) pour consulter la documentation à ce sujet.
