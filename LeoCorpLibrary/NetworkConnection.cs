@@ -45,7 +45,7 @@ namespace LeoCorpLibrary
             }
             else
             {
-                throw new Exception("The content of the parameter 'site' (string) is empty/or is not a valid URL (http://example.com)."); // Erreur
+                throw new ArgumentNullException("The content of the parameter 'site' (string) is empty/or is not a valid URL (http://example.com)."); // Erreur
             }
             return result;
         }

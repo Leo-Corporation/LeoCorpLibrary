@@ -40,19 +40,26 @@ namespace LeoCorpLibrary
             }
             else
             {
-                throw new Exception("The parameter 'lastVersionFileLink' (string) is empty or contain only white spaces.");
+                throw new ArgumentNullException("The parameter 'lastVersionFileLink' (string) is empty or contain only white spaces.");
             }
             return lastVersion;
         }
         public void Check(string version, string lastVersion, Form availableUpdateForm, Form noUpdateForm)
         {
-            if (version == lastVersion)
+            if (availableUpdateForm != null || noUpdateForm != null)
             {
-                noUpdateForm.Show();
+                if (version == lastVersion)
+                {
+                    noUpdateForm.Show();
+                }
+                else
+                {
+                    availableUpdateForm.Show();
+                }
             }
-            else
+            else // Dans le cas où l'utilisateur ne spécifie pas de valeur pour les forms
             {
-                availableUpdateForm.Show();
+                throw new ArgumentNullException("The argument 'availableUpdateForm' and/or 'noUpdateForm' cannot be 'null'");
             }
         }
     }
