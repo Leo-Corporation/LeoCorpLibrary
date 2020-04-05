@@ -33,3 +33,7 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obte
 
 ## Comment ajouter la bibliothèque dans un projet ?
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary#1-ajouter-la-bibliothèque-dans-un-projet) pour consulter la documentation à ce sujet.
+
+## Projets qui utilisent cette bibliothèque
+- [Leo-Corporation / Générateur de mots de passe](https://github.com/Leo-Corporation/Generateur-de-mots-de-passe)
+- [Leo-Corporation / InternetTest](https://github.com/Leo-Corporation/InternetTest)
