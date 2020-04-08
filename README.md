@@ -16,11 +16,9 @@ Voici ce qui est en cours d'implémentation :
 ## Télécharger la bibliothèque
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoCorpLibrary/bin/Release/LeoCorpLibrary.dll), puis cliquez sur le bouton "Télécharger".
 
-## Nouveautés de la version 1.1
+## Nouveautés de la version 1.1.1.2003
 ### Ajout(s)
-- Ajout de fonctions pour vous aider à mettre à jour votre application
-### Correction(s)
-- Correction d'une erreur de typo dans le fichier "Update.cs" (#2)
+- Certaines exceptions sont désormais des "ArgumentNullException"
 
 ## Documentation
 ### Consulter la documentation
@@ -34,6 +32,14 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obte
 ## Comment ajouter la bibliothèque dans un projet ?
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary#1-ajouter-la-bibliothèque-dans-un-projet) pour consulter la documentation à ce sujet.
 
+## Contribuer
+Si vous souhaitez contribuer à LeoCorpLibrary, voici les prérequis que vous devez avoir :
+- Visual Studio 2019 (toutes éditions) avec :
+   - Développement en .NET Desktop
+   - Git
+- .NET Framework
+
+Pour ajouter ce répertoire dans Visual Studio, vous pouver faire un fork et cloner ce fork depuis la page de démarrage de VS2019.
 ## Projets qui utilisent cette bibliothèque
 ### GitHub
 - [Leo-Corporation / Générateur de mots de passe](https://github.com/Leo-Corporation/Generateur-de-mots-de-passe)
