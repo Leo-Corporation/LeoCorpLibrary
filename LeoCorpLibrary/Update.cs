@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -60,6 +61,29 @@ namespace LeoCorpLibrary
             else // Dans le cas où l'utilisateur ne spécifie pas de valeur pour les forms
             {
                 throw new ArgumentNullException("The argument 'availableUpdateForm' and/or 'noUpdateForm' cannot be 'null'");
+            }
+        }
+        public void InstallUpdate(string filePath, string newVersionLink)
+        {
+            if (File.Exists(filePath))
+            {
+                try
+                {
+                    WebClient webClient = new WebClient();
+                    File.Delete(filePath); // Supprime l'ancienne version
+                    Console.WriteLine(filePath + " deleted!");
+                    webClient.DownloadFile(newVersionLink, filePath); // Télécharge la nouvelle version
+                    Console.WriteLine("Done!");
+                    System.Diagnostics.Process.Start(filePath); // Démarre la nouvelle version
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+            else
+            {
+                throw new FileNotFoundException("The parameter 'filePath' does not lead to a specific file."); // Erreur
             }
         }
     }
