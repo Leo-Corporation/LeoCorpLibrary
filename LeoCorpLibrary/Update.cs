@@ -63,10 +63,18 @@ namespace LeoCorpLibrary
                 throw new ArgumentNullException("The argument 'availableUpdateForm' and/or 'noUpdateForm' cannot be 'null'");
             }
         }
-        public void InstallUpdate(string filePath, string newVersionLink)
+        public void Install(string filePath, string newVersionLink, bool fromAppStartupPath = false)
         {
-            if (File.Exists(filePath))
+            if (File.Exists(filePath)) // Si fichier existe
             {
+                if (fromAppStartupPath) // Depuis chemin de démarrage
+                {
+                    filePath = Application.StartupPath + filePath;
+                }
+                if (string.IsNullOrEmpty(newVersionLink) || string.IsNullOrWhiteSpace(newVersionLink)) // Si vide
+                {
+                    throw new ArgumentNullException("The parameter 'newVersionLink' cannot be null.");
+                }
                 try
                 {
                     WebClient webClient = new WebClient();
@@ -84,6 +92,17 @@ namespace LeoCorpLibrary
             else
             {
                 throw new FileNotFoundException("The parameter 'filePath' does not lead to a specific file."); // Erreur
+            }
+        }
+        public void InstallAsync(string filePath, string newVersionLink)
+        {
+            if (File.Exists(filePath))
+            {
+                //TODO
+            }
+            else
+            {
+                throw new FileNotFoundException("The parameter 'filePath' does not lead to a specific file.");
             }
         }
     }
