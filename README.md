@@ -45,3 +45,4 @@ Pour ajouter ce répertoire dans Visual Studio, vous pouver faire un fork et clo
 - [Leo-Corporation / Générateur de mots de passe](https://github.com/Leo-Corporation/Generateur-de-mots-de-passe)
 - [Leo-Corporation / InternetTest](https://github.com/Leo-Corporation/InternetTest)
 ### Autres
+- ColorPicker 2 par [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
