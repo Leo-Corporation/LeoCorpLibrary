@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -10,6 +13,9 @@ namespace LeoCorpLibrary
 {
     public class Update
     {
+        Label label;
+        ProgressBar ProgressBar;
+        string fileName;
         public bool IsAvailable(string version, string lastVersion)
         {
             bool res;
@@ -60,6 +66,37 @@ namespace LeoCorpLibrary
             else // Dans le cas où l'utilisateur ne spécifie pas de valeur pour les forms
             {
                 throw new ArgumentNullException("The argument 'availableUpdateForm' and/or 'noUpdateForm' cannot be 'null'");
+            }
+        }
+        public void Install(string filePath, string newVersionLink, bool fromAppStartupPath = false)
+        {
+            if (File.Exists(filePath)) // Si fichier existe
+            {
+                if (fromAppStartupPath) // Depuis chemin de démarrage
+                {
+                    filePath = Application.StartupPath + filePath;
+                }
+                if (string.IsNullOrEmpty(newVersionLink) || string.IsNullOrWhiteSpace(newVersionLink)) // Si vide
+                {
+                    throw new ArgumentNullException("The parameter 'newVersionLink' cannot be null.");
+                }
+                try
+                {
+                    WebClient webClient = new WebClient();
+                    File.Delete(filePath); // Supprime l'ancienne version
+                    Console.WriteLine(filePath + " deleted!");
+                    webClient.DownloadFile(newVersionLink, filePath); // Télécharge la nouvelle version
+                    Console.WriteLine("Done!");
+                    Process.Start(filePath); // Démarre la nouvelle version
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+            else
+            {
+                throw new FileNotFoundException("The parameter 'filePath' does not lead to a specific file."); // Erreur
             }
         }
     }
