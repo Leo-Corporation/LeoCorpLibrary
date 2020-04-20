@@ -7,18 +7,12 @@ Allez consultez le wiki pour découvrir la documentation et l'emploi de cette fo
 Cette bibliothèque est écrite en .NET Framework 4.7.2 en utilisant le C#.
 Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework/Windows Form.
 
-## En cours de développement
-Le projet est toujours en cours de développement, et à l'heure actuelle, la bibliothèque reste très limitée.
-
-Voici ce qui est en cours d'implémentation :
-- Système de mise à jour pour votre logiciel
-
 ## Télécharger la bibliothèque
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoCorpLibrary/bin/Release/LeoCorpLibrary.dll), puis cliquez sur le bouton "Télécharger".
 
-## Nouveautés de la version 1.1.1.2003
+## Nouveautés de la version 1.2.0.2004
 ### Ajout(s)
-- Certaines exceptions sont désormais des "ArgumentNullException"
+- Ajout du système de mise à jour complet. (Vérification, Installation)
 
 ## Documentation
 ### Consulter la documentation
