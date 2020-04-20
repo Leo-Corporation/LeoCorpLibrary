@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,6 +13,9 @@ namespace LeoCorpLibrary
 {
     public class Update
     {
+        Label label;
+        ProgressBar ProgressBar;
+        string fileName;
         public bool IsAvailable(string version, string lastVersion)
         {
             bool res;
@@ -82,7 +87,7 @@ namespace LeoCorpLibrary
                     Console.WriteLine(filePath + " deleted!");
                     webClient.DownloadFile(newVersionLink, filePath); // Télécharge la nouvelle version
                     Console.WriteLine("Done!");
-                    System.Diagnostics.Process.Start(filePath); // Démarre la nouvelle version
+                    Process.Start(filePath); // Démarre la nouvelle version
                 }
                 catch (Exception ex)
                 {
@@ -92,17 +97,6 @@ namespace LeoCorpLibrary
             else
             {
                 throw new FileNotFoundException("The parameter 'filePath' does not lead to a specific file."); // Erreur
-            }
-        }
-        public void InstallAsync(string filePath, string newVersionLink)
-        {
-            if (File.Exists(filePath))
-            {
-                //TODO
-            }
-            else
-            {
-                throw new FileNotFoundException("The parameter 'filePath' does not lead to a specific file.");
             }
         }
     }
