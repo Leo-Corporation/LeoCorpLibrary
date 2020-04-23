@@ -8,7 +8,13 @@ Cette bibliothèque est écrite en .NET Framework 4.7.2 en utilisant le C#.
 Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework/Windows Form.
 
 ## Télécharger la bibliothèque
+**Depuis GitHub**
+
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoCorpLibrary/bin/Release/LeoCorpLibrary.dll), puis cliquez sur le bouton "Télécharger".
+
+**Package NuGet**
+
+Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary/#) pour télécharger le package NuGet.
 
 ## Nouveautés de la version 1.2.0.2004
 ### Ajout(s)
