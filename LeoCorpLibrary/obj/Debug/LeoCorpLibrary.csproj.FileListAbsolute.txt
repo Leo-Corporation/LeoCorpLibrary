@@ -1,0 +1,6 @@
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\bin\Debug\LeoCorpLibrary.dll
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\bin\Debug\LeoCorpLibrary.pdb
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Debug\LeoCorpLibrary.csprojAssemblyReference.cache
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Debug\LeoCorpLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Debug\LeoCorpLibrary.dll
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Debug\LeoCorpLibrary.pdb
