@@ -46,3 +46,4 @@ Pour ajouter ce répertoire dans Visual Studio, vous pouver faire un fork et clo
 - [Leo-Corporation / InternetTest](https://github.com/Leo-Corporation/InternetTest)
 ### Autres
 - ColorPicker 2 par [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
+- GestionBiblio X, édition Ultra par [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
