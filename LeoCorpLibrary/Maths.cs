@@ -35,12 +35,12 @@ namespace LeoCorpLibrary
 
         public class Circle
         {
-            public double GetCircleArea(double radius) // Obtenir l'aire d'un cercle
+            public double GetArea(double radius) // Obtenir l'aire d'un cercle
             {
                 return Math.PI * Math.Sqrt(radius); // Formule
             }
 
-            public double GetCirclePerimeter(double radius) // Obtenir le périmètre d'un cercle
+            public double GetPerimeter(double radius) // Obtenir le périmètre d'un cercle
             {
                 return 2 * Math.PI * radius; // Formule
             }
@@ -48,17 +48,17 @@ namespace LeoCorpLibrary
 
         public class Triangle
         {
-            public double GetTriangleArea(double height, double weight) // Obtenir l'aire d'un triangle
+            public double GetArea(double height, double weight) // Obtenir l'aire d'un triangle
             {
                 return height * weight / 2; // Formule
             }
 
-            public double GetTrianglePerimeter(double a, double b, double c) // Obtenir le périmètre d'un triangle
+            public double GetPerimeter(double a, double b, double c) // Obtenir le périmètre d'un triangle
             {
                 return new Maths().Sum(a, b, c); // Formule
             }
 
-            public bool IsTriangleBuildable(double side1, double side2, double side3) // Triangle construisable ?
+            public bool IsBuildable(double side1, double side2, double side3) // Triangle construisable ?
             {
                 bool result = false; // Résultat final
                 double biggestSide = new Maths().GetBiggestNumber(side1, side2, side3); // Obtient le grand côté
