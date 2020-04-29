@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>LeoCorpLibrary</id>
-    <version>1.3.0.2005-pre1</version>
+    <version>1.3.0.2005-pre2</version>
     <title>LeoCorpLibrary</title>
     <authors>Leo Corporation + Contributeurs</authors>
     <owners>LeoCorporation</owners>
@@ -11,7 +11,14 @@
     <projectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</projectUrl>
     <icon>images\icon.png</icon>
     <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
-    <releaseNotes>Ajout de fonctions mathématiques.</releaseNotes>
+    <releaseNotes>Ajout de fonctions mathématiques et réorganisation du code : 
+    - Maths.Triangle.GetArea() 
+    - Maths.Triangle.GetPerimeter() 
+    - Maths.Triangle.IsBuildable() 
+    - Maths.Circle.GetArea() 
+    - Maths.Circle.GetPerimeter() 
+    - Maths.GetBiggestNumber() 
+    </releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>LeoCorporation Library Lib</tags>
   </metadata>
