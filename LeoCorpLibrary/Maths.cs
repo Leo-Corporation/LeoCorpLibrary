@@ -53,9 +53,9 @@ namespace LeoCorpLibrary
                 return height * weight / 2; // Formule
             }
 
-            public double GetPerimeter(double a, double b, double c) // Obtenir le périmètre d'un triangle
+            public double GetPerimeter(double side1, double side2, double side3) // Obtenir le périmètre d'un triangle
             {
-                return new Maths().Sum(a, b, c); // Formule
+                return new Maths().Sum(side1, side2, side3); // Formule
             }
 
             public bool IsBuildable(double side1, double side2, double side3) // Triangle construisable ?
