@@ -18,7 +18,7 @@ Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary/#) pour télécharge
 
 ## Nouveautés de la version 1.3.0.2005
 ### Ajout(s)
-- Nouvelles fonctions mathématiques et réorganisation du code : 
+- Nouvelles fonctions mathématiques : 
   - `Maths.Triangle.GetArea()`
   - `Maths.Triangle.GetPerimeter()`
   - `Maths.Triangle.IsBuildable()`
