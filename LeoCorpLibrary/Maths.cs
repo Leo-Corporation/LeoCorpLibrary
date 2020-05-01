@@ -22,7 +22,7 @@ namespace LeoCorpLibrary
 
         public double GetBiggestNumber(params double[] numbers) // Obtient le nombre le plus grand
         {
-            double biggestNumber = 0;
+            double biggestNumber = numbers[0]; // Fonction compatible avec des nombres négatifs
             foreach (double number in numbers) // Pour chaque nombre
             {
                 if (number > biggestNumber) // Si le nombre est plus grand le plus grand nombre, alors il devient le plus grand nombre
