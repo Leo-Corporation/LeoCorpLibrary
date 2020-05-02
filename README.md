@@ -30,6 +30,7 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obte
 - [Générer un mot de passe](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/G%C3%A9n%C3%A9rer-un-mot-de-passe)
 - [Tester/vérifier une connexion Internet](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/V%C3%A9rifier-une-connexion-internet)
 - [Rechercher des mises à jour](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Rechercher-des-mises-%C3%A0-jour)
+- [Fonctions mathématiques](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Fonctions-math%C3%A9matiques)
 
 ## Comment ajouter la bibliothèque dans un projet ?
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary#1-ajouter-la-bibliothèque-dans-un-projet) pour consulter la documentation à ce sujet.
