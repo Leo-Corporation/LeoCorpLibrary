@@ -20,6 +20,19 @@ namespace LeoCorpLibrary
             return finalResult;
         }
 
+        public double GetLowestNumber(params double[] numbers)
+        {
+            double lowestNumber = numbers[0];
+            foreach (double number in numbers)
+            {
+                if (number < lowestNumber)
+                {
+                    lowestNumber = number;
+                }
+            }
+            return lowestNumber;
+        }
+
         public double GetBiggestNumber(params double[] numbers) // Obtient le nombre le plus grand
         {
             double biggestNumber = numbers[0]; // Fonction compatible avec des nombres négatifs
