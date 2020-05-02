@@ -16,18 +16,12 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoC
 
 Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary/#) pour télécharger le package NuGet.
 
-## Nouveautés de la version 1.3.0.2005
+## Nouveautés de la version 1.3.1.2005
 ### Ajout(s)
-- Nouvelles fonctions mathématiques : 
-  - `Maths.Triangle.GetArea()`
-  - `Maths.Triangle.GetPerimeter()`
-  - `Maths.Triangle.IsBuildable()`
-  - `Maths.Circle.GetArea()`
-  - `Maths.Circle.GetPerimeter()`
-  - `Maths.GetBiggestNumber()`
-  - `Maths.Sum()`
+- Nouvelles fonction mathématiques : 
+  - `Maths.GetLowestNumber()`
 ### Correction(s)
-- La fonction "GetBiggestNumber" ne fonctionne pas avec des nombres négatifs (#15)
+- Le package NuGet n'est pas à jour (#19)
 ## Documentation
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
