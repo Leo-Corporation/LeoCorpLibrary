@@ -1,4 +1,4 @@
-# LeoCorpLibrary
+# LeoCorpLibrary ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) ![GitHub issues](https://img.shields.io/github/issues-raw/Leo-CorpORATION/LeoCorpLibrary?label=issues)
 ## Qu'est-ce que c'est ?
 "LeoCorpLibrary" ou "LeoCorpLib" est une bibliothèque contenant des fonctions qui sont utilisées dans nos logiciels et qui peuvent vous être utiles. Pour le moment, la bilbiothèque ne contient qu'une seule fonction qui permet de générer un mot de passe.
 
@@ -12,7 +12,10 @@ Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework/Wind
 
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoCorpLibrary/bin/Release/LeoCorpLibrary.dll), puis cliquez sur le bouton "Télécharger".
 
-**Package NuGet**
+**Package NuGet** 
+
+![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary)
+![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 
 Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary/#) pour télécharger le package NuGet.
 
