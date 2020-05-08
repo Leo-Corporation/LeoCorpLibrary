@@ -54,3 +54,5 @@ Pour ajouter ce répertoire dans Visual Studio, vous pouver faire un fork et clo
 - ColorPicker 2 par [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 - GestionBiblio X, édition Ultra par [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 - Générateur de codes barre 2 par [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
+
+[Ajoutez votre logiciel à cette liste en proposant votre projet](https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=ajout+cr%C3%A9dit&template=credit_projet.md&title=%5BCr%C3%A9dit-Projet%5D+)
