@@ -5,7 +5,7 @@
 Allez consultez le wiki pour découvrir la documentation et l'emploi de cette fonction.
 
 Cette bibliothèque est écrite en .NET Framework 4.7.2 en utilisant le C#.
-Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework/Windows Form.
+Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework/Windows Forms.
 
 ## Télécharger la bibliothèque
 **Depuis GitHub**
@@ -37,6 +37,11 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obte
 
 ## Comment ajouter la bibliothèque dans un projet ?
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary#1-ajouter-la-bibliothèque-dans-un-projet) pour consulter la documentation à ce sujet.
+
+## Roadmap été 2020
+Voici la "Roadmap" de cet été 2020 concernant LeoCorpLibrary :
+
+![Roadmap](https://raw.githubusercontent.com/Leo-Corporation/LeoCorp-Docs/master/Roadmaps/LeoCorpLibrary/Roadmap%20%C3%A9t%C3%A9%202020.png)
 
 ## Contribuer
 Si vous souhaitez contribuer à LeoCorpLibrary, voici les prérequis que vous devez avoir :
