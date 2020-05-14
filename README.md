@@ -19,12 +19,10 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoC
 
 Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary/#) pour télécharger le package NuGet.
 
-## Nouveautés de la version 1.3.1.2005
+## Nouveautés de la version 1.4.0.2005
 ### Ajout(s)
-- Nouvelles fonction mathématiques : 
-  - `Maths.GetLowestNumber()`
-### Correction(s)
-- Le package NuGet n'est pas à jour (#19)
+- **[Réorganisation du code](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Changements-li%C3%A9s-%C3%A0-la-version-1.4)**
+- Ajout de descriptions aux méthodes
 ## Documentation
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.

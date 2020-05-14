@@ -11,12 +11,15 @@ using System.Windows.Forms;
 
 namespace LeoCorpLibrary
 {
-    public class Update
+    public static class Update
     {
-        Label label;
-        ProgressBar ProgressBar;
-        string fileName;
-        public bool IsAvailable(string version, string lastVersion)
+        /// <summary>
+        /// Permet de vérifier si des mises à jour sont disponibles.
+        /// </summary>
+        /// <param name="version">Version actuelle du logiciel.</param>
+        /// <param name="lastVersion">Dernière version du logiciel.</param>
+        /// <returns>Retourne une valeur bool.</returns>
+        public static bool IsAvailable(string version, string lastVersion)
         {
             bool res;
             if (version == lastVersion) // Si la version du logiciel = a la dernière version, alors le logiciel est à jour
@@ -29,7 +32,15 @@ namespace LeoCorpLibrary
             }
             return res; // Retourne la valeur finale
         }
-        public string GetLastVersion(string lastVersionFileLink)
+
+        /// <summary>
+        /// Permet d'obtenir la dernière version d'un logiciel, à partir d'un fichier texte (*.txt).
+        /// </summary>
+        /// <param name="lastVersionFileLink">Lien du fichier où se situe le numéro de la dernière version.</param>
+        /// <exception cref="System.ArgumentNullException"></exception>
+        /// <exception cref="System.Exception"></exception>
+        /// <returns>Retorune une valeur de type string.</returns>
+        public static string GetLastVersion(string lastVersionFileLink)
         {
             string lastVersion = "";
             if (!string.IsNullOrWhiteSpace(lastVersionFileLink)) // Vérification que la valeur n'est pas 'null' ou remplie d'espaces blancs.
@@ -50,7 +61,16 @@ namespace LeoCorpLibrary
             }
             return lastVersion;
         }
-        public void Check(string version, string lastVersion, Form availableUpdateForm, Form noUpdateForm)
+
+        /// <summary>
+        /// Permet de vérifier si des mises à jour sont disponibles pour votre logiciel.
+        /// </summary>
+        /// <param name="version">Version actuelle du logiciel.</param>
+        /// <param name="lastVersion">Dernière version du logiciel.</param>
+        /// <param name="availableUpdateForm">Fenêtre qui s'affiche si des mises à jour sont disponibles.</param>
+        /// <param name="noUpdateForm">Fenêtre qui s'affiche lorsqu'aucune mises à jour n'est disponibles.</param>
+        /// <exception cref="System.ArgumentNullException"></exception>
+        public static void Check(string version, string lastVersion, Form availableUpdateForm, Form noUpdateForm)
         {
             if (availableUpdateForm != null || noUpdateForm != null)
             {
@@ -68,7 +88,17 @@ namespace LeoCorpLibrary
                 throw new ArgumentNullException("The argument 'availableUpdateForm' and/or 'noUpdateForm' cannot be 'null'");
             }
         }
-        public void Install(string filePath, string newVersionLink, bool fromAppStartupPath = false)
+
+        /// <summary>
+        /// Permet d'installer une mise à jour.
+        /// </summary>
+        /// <param name="filePath">Emplacement du fichier.</param>
+        /// <param name="newVersionLink">Lien du nouveau fichier.</param>
+        /// <param name="fromAppStartupPath">(facultatif) Ouvrir le fichier depuis l'emplacement du programme.</param>
+        /// <exception cref="System.ArgumentNullException"></exception>
+        /// <exception cref="System.Exception"></exception>
+        /// <exception cref="System.IO.FileNotFoundException"></exception>
+        public static void Install(string filePath, string newVersionLink, bool fromAppStartupPath = false)
         {
             if (File.Exists(filePath)) // Si fichier existe
             {
