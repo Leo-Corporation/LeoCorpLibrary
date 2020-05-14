@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace LeoCorpLibrary
 {
-    public class NetworkConnection
+    public static class NetworkConnection
     {
-        public bool IsAvailable() // Fonction pour tester la connexion Internet
+        /// <summary>
+        /// <para>Cette fonction permet de savoir si l'utilisateur a une connexion à Internet.</para>
+        /// <para>La connexion est testée sur le site https://bing.com.</para>
+        /// </summary>
+        /// <returns>Retourne une valeur bool.</returns>
+        public static bool IsAvailable() // Fonction pour tester la connexion Internet
         {
             try
             {
@@ -25,7 +30,14 @@ namespace LeoCorpLibrary
             }
         }
 
-        public bool IsAvailableTestSite(string site)
+        /// <summary>
+        /// <para>Permet de savoir si l'utilisateur a une connexion à Internet.</para>
+        /// <para>La connexion est testée sur le site spécifié.</para>
+        /// </summary>
+        /// <param name="site">Site sur lequel al connexion est testée.</param>
+        /// <exception cref="System.ArgumentNullException"></exception>
+        /// <returns>Retourne une valeur bool.</returns>
+        public static bool IsAvailableTestSite(string site)
         {
             bool result = true;
             if (!string.IsNullOrEmpty(site)) // Vérification de la validité de l'URL

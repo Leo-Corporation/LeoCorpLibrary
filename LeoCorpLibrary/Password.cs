@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace LeoCorpLibrary
 {
-    public class Password
+    public static class Password
     {
-        public string Generate(int lenght, string chars, string separator)
+        /// <summary>
+        /// Permet générer un mot de passe.
+        /// </summary>
+        /// <param name="lenght">Longueur du mot de passe.</param>
+        /// <param name="chars">Caractères utilisés pour générer un mot de passe.</param>
+        /// <param name="separator">Séparateur.</param>
+        /// <exception cref="System.Exception"></exception>
+        /// <returns>Retorune une valeur string.</returns>
+        public static string Generate(int lenght, string chars, string separator)
         {
             string[] usableChars = { };
             if (chars.Contains(separator)) // Si les caractères contiennent le séparateur
