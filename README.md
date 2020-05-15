@@ -23,6 +23,10 @@ Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary/#) pour télécharge
 ### Ajout(s)
 - **[Réorganisation du code](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Changements-li%C3%A9s-%C3%A0-la-version-1.4)**
 - Ajout de descriptions aux méthodes
+## Nouveautés de la version 1.4.1.2005
+### Ajout(s)
+- La documentation XML a été améliorée
+- La documentation XML est intégrée dans le package NuGet
 ## Documentation
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
