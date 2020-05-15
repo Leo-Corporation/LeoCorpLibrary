@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace LeoCorpLibrary
 {
+    /// <summary>
+    /// Classe regroupant des méthodes liées aux mathématiques.
+    /// </summary>
     public static class Maths
     {
         /// <summary>
@@ -61,13 +64,16 @@ namespace LeoCorpLibrary
             return biggestNumber;
         }
 
+        /// <summary>
+        /// Classe regroupant des méthodes liées aux cercles.
+        /// </summary>
         public static class Circle
         {
             /// <summary>
             /// Permet d'obtenir l'aire d'un cercle à partir d'un rayon donné.
             /// </summary>
             /// <param name="radius">Rayon du cercle.</param>
-            /// <returns>Retourne une valeur de type double.</returns>
+            /// <returns>Retourne une valeur de type <c>double</c>.</returns>
             public static double GetArea(double radius) // Obtenir l'aire d'un cercle
             {
                 return Math.PI * Math.Sqrt(radius); // Formule
@@ -77,13 +83,16 @@ namespace LeoCorpLibrary
             /// Permet d'obtenir le périmètre d'un cercle à partir d'un rayon donné.
             /// </summary>
             /// <param name="radius">Rayon du cercle.</param>
-            /// <returns>Retourne une valeur de type double.</returns>
+            /// <returns>Retourne une valeur de type <c>double</c>.</returns>
             public static double GetPerimeter(double radius) // Obtenir le périmètre d'un cercle
             {
                 return 2 * Math.PI * radius; // Formule
             }
         }
 
+        /// <summary>
+        /// Classe regroupant des méthodes liées aux triangles.
+        /// </summary>
         public static class Triangle
         {
             /// <summary>
@@ -91,7 +100,7 @@ namespace LeoCorpLibrary
             /// </summary>
             /// <param name="height">Hauteur du triangle.</param>
             /// <param name="weight">Largeur/base du triangle.</param>
-            /// <returns>Retourne une valeur de type double.</returns>
+            /// <returns>Retourne une valeur de type <c>double</c>.</returns>
             public static double GetArea(double height, double weight) // Obtenir l'aire d'un triangle
             {
                 return height * weight / 2; // Formule
@@ -103,7 +112,7 @@ namespace LeoCorpLibrary
             /// <param name="side1">Côté du triangle.</param>
             /// <param name="side2">Côté du triangle.</param>
             /// <param name="side3">Côté du triangle.</param>
-            /// <returns>Retourne une valeur de type double.</returns>
+            /// <returns>Retourne une valeur de type <c>double</c>.</returns>
             public static double GetPerimeter(double side1, double side2, double side3) // Obtenir le périmètre d'un triangle
             {
                 return Sum(side1, side2, side3); // Formule
@@ -115,7 +124,7 @@ namespace LeoCorpLibrary
             /// <param name="side1">Côté du triangle.</param>
             /// <param name="side2">Côté du triangle.</param>
             /// <param name="side3">Côté du triangle.</param>
-            /// <returns>Retourne une valeur de type bool.</returns>
+            /// <returns>Retourne une valeur de type <c>bool</c>.</returns>
             public static bool IsBuildable(double side1, double side2, double side3) // Triangle construisable ?
             {
                 bool result = false; // Résultat final
