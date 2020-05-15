@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace LeoCorpLibrary
 {
+    /// <summary>
+    /// Classe regroupant des méthodes pour générer un mot de passe.
+    /// </summary>
     public static class Password
     {
         /// <summary>
@@ -15,7 +18,7 @@ namespace LeoCorpLibrary
         /// <param name="chars">Caractères utilisés pour générer un mot de passe.</param>
         /// <param name="separator">Séparateur.</param>
         /// <exception cref="System.Exception"></exception>
-        /// <returns>Retorune une valeur string.</returns>
+        /// <returns>Retorune une valeur <c>string</c>.</returns>
         public static string Generate(int lenght, string chars, string separator)
         {
             string[] usableChars = { };

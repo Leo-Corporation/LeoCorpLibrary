@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace LeoCorpLibrary
 {
+    /// <summary>
+    /// Classe regroupant des méthodes pour metttre à jour votre logiciel.
+    /// </summary>
     public static class Update
     {
         /// <summary>
@@ -18,7 +21,7 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <param name="version">Version actuelle du logiciel.</param>
         /// <param name="lastVersion">Dernière version du logiciel.</param>
-        /// <returns>Retourne une valeur bool.</returns>
+        /// <returns>Retourne une valeur <c>bool</c>.</returns>
         public static bool IsAvailable(string version, string lastVersion)
         {
             bool res;
@@ -39,7 +42,7 @@ namespace LeoCorpLibrary
         /// <param name="lastVersionFileLink">Lien du fichier où se situe le numéro de la dernière version.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
         /// <exception cref="System.Exception"></exception>
-        /// <returns>Retorune une valeur de type string.</returns>
+        /// <returns>Retorune une valeur de type <c>string</c>.</returns>
         public static string GetLastVersion(string lastVersionFileLink)
         {
             string lastVersion = "";

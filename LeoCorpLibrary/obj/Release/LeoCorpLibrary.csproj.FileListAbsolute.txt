@@ -4,3 +4,4 @@ C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Release\L
 C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Release\LeoCorpLibrary.dll
 C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Release\LeoCorpLibrary.pdb
 C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\obj\Release\LeoCorpLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary\bin\Release\LeoCorpLibrary.xml
