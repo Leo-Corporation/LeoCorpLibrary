@@ -1,8 +1,8 @@
 # LeoCorpLibrary ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) ![GitHub issues](https://img.shields.io/github/issues-raw/Leo-CorpORATION/LeoCorpLibrary?label=issues)
 ## Qu'est-ce que c'est ?
-"LeoCorpLibrary" ou "LeoCorpLib" est une bibliothèque contenant des fonctions qui sont utilisées dans nos logiciels et qui peuvent vous être utiles. Pour le moment, la bilbiothèque ne contient qu'une seule fonction qui permet de générer un mot de passe.
+"LeoCorpLibrary" ou "LeoCorpLib" est une bibliothèque contenant des fonctions qui sont utilisées dans nos logiciels et qui peuvent vous être utiles. La bibliothèque comprend de nombreuses méthodes qui peuvent vous être utiles (Génération de mots de passe, fonctions mathématiques, système de mise à jour...).
 
-Allez consultez le wiki pour découvrir la documentation et l'emploi de cette fonction.
+Allez consultez le [wiki](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki) pour découvrir la documentation et l'emploi de ces méthodes.
 
 Cette bibliothèque est écrite en .NET Framework 4.7.2 en utilisant le C#.
 Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework/Windows Forms.
@@ -44,6 +44,8 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-L
 Voici la "Roadmap" de cet été 2020 concernant LeoCorpLibrary :
 
 ![Roadmap](https://raw.githubusercontent.com/Leo-Corporation/LeoCorp-Docs/master/Roadmaps/LeoCorpLibrary/Roadmap%20%C3%A9t%C3%A9%202020.png)
+
+**Attention, d'autres ajouts peuvent être effectués sans qu'ils figurent sur la roadmap**
 
 ## Contribuer
 Si vous souhaitez contribuer à LeoCorpLibrary, voici les prérequis que vous devez avoir :
