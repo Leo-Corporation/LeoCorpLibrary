@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>LeoCorpLibrary</id>
+    <version>1.4.1.2005</version>
+    <title>LeoCorpLibrary</title>
+    <authors>Leo Corporation + Contributeurs</authors>
+    <owners>LeoCorporation</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</projectUrl>
+    <icon>images\icon.png</icon>
+    <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
+    <releaseNotes>
+      Version 1.4.0.2005
+    - Réorganisation du code
+    - Ajout de descriptions aux méthodes
+      Version 1.4.1.2005
+    - La documentation XML a été améliorée
+    - La documentation XML est désormais intégrée dans le package NuGet
+    </releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>LeoCorporation Library Lib</tags>
+  </metadata>
+  <files>
+    <file src="..\bin\Release\LeoCorpLibrary.dll" target="lib\net472"></file>
+    <file src="..\bin\Release\LeoCorpLibrary.xml" target="lib\net472"></file>
+    <file src="..\images\icon.png" target="\images"></file>
+  </files>
+</package>
