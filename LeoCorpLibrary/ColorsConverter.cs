@@ -63,7 +63,7 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <param name="hexColor">Couleur HEX.</param>
         /// <exception cref="Exceptions.HEXInvalidValueException"/>
-        /// <returns>Valuer <see cref="HEXColor"/></returns>
+        /// <returns>Valeur <see cref="HEXColor"/></returns>
         public static Color HEXtoRGB(HEXColor hexColor)
         {
             try
@@ -111,7 +111,7 @@ namespace LeoCorpLibrary
         /// Permet de créer une couleur HSV à partir d'une couleur (<see cref="Color"/>).
         /// </summary>
         /// <param name="color">Couleur (<see cref="Color"/>)</param>
-        /// <returns></returns>
+        /// <returns>Valeur <see cref="HSVColor"/></returns>
         public static HSVColor FromRGB(Color color)
         {
             HSVColor toReturn = new HSVColor();
