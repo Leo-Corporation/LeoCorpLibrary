@@ -183,6 +183,7 @@ namespace LeoCorpLibrary
         /// <param name="red">Rouge.</param>
         /// <param name="blue">Bleu.</param>
         /// <param name="green">Vert</param>
+        /// <exception cref="Exceptions.RGBInvalidValueException"/>
         /// <returns>Valeur <see cref="HEXColor"/></returns>
         public static HEXColor FromRGB(int red, int green, int blue)
         {
