@@ -11,7 +11,6 @@ namespace LeoCorpLibrary.Exceptions
     /// </summary>
     public class RGBInvalidValueException : Exception
     {
-
         /// <summary>
         /// Initialise une nouvelle instance de la classe <see cref="RGBInvalidValueException"/>.
         /// </summary>

@@ -11,9 +11,8 @@ namespace LeoCorpLibrary
     /// <summary>
     /// Classe permettant de convertir des types de couleur.
     /// </summary>
-    public static class ColorConverter
+    public static class ColorsConverter
     {
-
 		/// <summary>
 		/// Permet de convertir une couleur RGB en couleur HSV (<see cref="HSVColor"/>).
 		/// </summary>
