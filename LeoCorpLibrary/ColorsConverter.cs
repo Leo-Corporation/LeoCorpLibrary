@@ -62,17 +62,25 @@ namespace LeoCorpLibrary
         /// Permet de convertir une couleur HEX (<see cref="HEXColor"/>) en couleur RGB (<see cref="Color"/>).
         /// </summary>
         /// <param name="hexColor">Couleur HEX.</param>
+        /// <exception cref="Exceptions.HEXInvalidValueException"/>
         /// <returns>Valuer <see cref="HEXColor"/></returns>
         public static Color HEXtoRGB(HEXColor hexColor)
         {
-            // Enleves les #
-            if (hexColor.Value.IndexOf('#') != -1)
-                hexColor.Value = hexColor.Value.Replace("#", "");
-            int r, g, b = 0;
-            r = int.Parse(hexColor.Value.Substring(0, 2), NumberStyles.AllowHexSpecifier);
-            g = int.Parse(hexColor.Value.Substring(2, 2), NumberStyles.AllowHexSpecifier);
-            b = int.Parse(hexColor.Value.Substring(4, 2), NumberStyles.AllowHexSpecifier);
-            return Color.FromArgb(r, g, b);
+            try
+            {
+                // Enleves les #
+                if (hexColor.Value.IndexOf('#') != -1)
+                    hexColor.Value = hexColor.Value.Replace("#", "");
+                int r, g, b = 0;
+                r = int.Parse(hexColor.Value.Substring(0, 2), NumberStyles.AllowHexSpecifier);
+                g = int.Parse(hexColor.Value.Substring(2, 2), NumberStyles.AllowHexSpecifier);
+                b = int.Parse(hexColor.Value.Substring(4, 2), NumberStyles.AllowHexSpecifier);
+                return Color.FromArgb(r, g, b);
+            }
+            catch
+            {
+                throw new HEXInvalidValueException("The specified HEX value is invalid.");
+            }
         }
     }
 
