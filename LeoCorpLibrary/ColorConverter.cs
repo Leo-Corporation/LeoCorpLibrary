@@ -8,26 +8,36 @@ using System.Threading.Tasks;
 namespace LeoCorpLibrary
 {
     /// <summary>
-    /// Classe permettant de convertir des types de couleur
+    /// Classe permettant de convertir des types de couleur.
     /// </summary>
     public static class ColorConverter
     {
 
 		/// <summary>
-		/// Permet de convertir une couleur RGB (<see cref="Color"/>) en couleur HSV (<see cref="HSVColor"/>)
+		/// Permet de convertir une couleur RGB en couleur HSV (<see cref="HSVColor"/>).
 		/// </summary>
-		/// <param name="red">Rouge</param>
-		/// <param name="green">Vert</param>
-		/// <param name="blue">Bleu</param>
+		/// <param name="red">Rouge.</param>
+		/// <param name="green">Vert.</param>
+		/// <param name="blue">Bleu.</param>
 		/// <returns>Couleur <see cref="HSVColor"/></returns>
 		public static HSVColor RGBtoHSV(int red, int green, int blue)
         {
 			return HSVColor.FromRGB(red, green, blue);
         }
+
+		/// <summary>
+		/// Permet de convertir une couleur RGB (<see cref="Color"/>) en couleur HSV (<see cref="HSVColor"/>).
+		/// </summary>
+		/// <param name="color">Couleur (<see cref="Color"/>).</param>
+		/// <returns></returns>
+		public static HSVColor RGBtoHSV(Color color)
+        {
+			return HSVColor.FromRGB(color);
+        }
     }
 
 	/// <summary>
-	/// Structure d'une couleur HSV
+	/// Structure d'une couleur HSV.
 	/// </summary>
     public struct HSVColor
     {
@@ -35,22 +45,22 @@ namespace LeoCorpLibrary
 		// Il a été ici amélioré
 
 		/// <summary>
-		/// Luminosié
+		/// Luminosié.
 		/// </summary>
 		public float Hue;
 
 		/// <summary>
-		/// Saturation
+		/// Saturation.
 		/// </summary>
 		public float Saturation;
 
 		/// <summary>
-		/// Valeur
+		/// Valeur.
 		/// </summary>
 		public float Value;
 
 		/// <summary>
-		/// Permet de créer une couleur HSV à partir d'une couleur (<see cref="Color"/>)
+		/// Permet de créer une couleur HSV à partir d'une couleur (<see cref="Color"/>).
 		/// </summary>
 		/// <param name="color">Couleur (<see cref="Color"/>)</param>
 		/// <returns></returns>
@@ -70,11 +80,11 @@ namespace LeoCorpLibrary
 		}
 
 		/// <summary>
-		/// Permet de créer une couleur HSV à partir d'une couleur (<see cref="Color"/>)
+		/// Permet de créer une couleur HSV à partir d'une couleur (<see cref="Color"/>).
 		/// </summary>
-		/// <param name="red">Rouge</param>
-		/// <param name="green">Vert</param>
-		/// <param name="blue">Bleu</param>
+		/// <param name="red">Rouge.</param>
+		/// <param name="green">Vert.</param>
+		/// <param name="blue">Bleu<./param>
 		/// <returns></returns>
 		public static HSVColor FromRGB(int red, int green, int blue)
         {
@@ -93,7 +103,7 @@ namespace LeoCorpLibrary
 	}
 
 	/// <summary>
-	/// Structure d'une couleur HEX
+	/// Structure d'une couleur HEX.
 	/// </summary>
     public struct HEXColor
     {
