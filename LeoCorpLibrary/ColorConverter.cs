@@ -84,7 +84,7 @@ namespace LeoCorpLibrary
 		/// </summary>
 		/// <param name="red">Rouge.</param>
 		/// <param name="green">Vert.</param>
-		/// <param name="blue">Bleu<./param>
+		/// <param name="blue">Bleu.</param>
 		/// <returns></returns>
 		public static HSVColor FromRGB(int red, int green, int blue)
         {
