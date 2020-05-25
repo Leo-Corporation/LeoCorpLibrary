@@ -82,6 +82,19 @@ namespace LeoCorpLibrary
                 throw new HEXInvalidValueException("The specified HEX value is invalid.");
             }
         }
+
+        /// <summary>
+        /// Permet de convertir une couleur HEX (<see cref="HEXColor"/>) en couleur HSV (<see cref="HSVColor"/>).
+        /// </summary>
+        /// <param name="hexColor"></param>
+        /// <exception cref="Exceptions.HEXInvalidValueException"/>
+        /// <returns>Valeur <see cref="HSVColor"/></returns>
+        public static HSVColor HEXtoHSV(HEXColor hexColor)
+        {
+            HSVColor hSVColor = new HSVColor();
+            hSVColor = RGBtoHSV(HEXtoRGB(hexColor));
+            return hSVColor;
+        }
     }
 
     /// <summary>
