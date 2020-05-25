@@ -68,7 +68,7 @@ namespace LeoCorpLibrary
 		// Il a été ici amélioré
 
 		/// <summary>
-		/// Luminosié.
+		/// Teinte.
 		/// </summary>
 		public float Hue;
 
