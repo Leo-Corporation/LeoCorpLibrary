@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LeoCorpLibrary.Exceptions
 {
     /// <summary>
-    /// Se produit lorsqu'unen valeur RGB n'est valide.
+    /// Se produit lorsqu'une valeur RGB n'est pas valide.
     /// </summary>
     public class RGBInvalidValueException : Exception
     {
