@@ -13,6 +13,17 @@ namespace LeoCorpLibrary
     public static class ColorConverter
     {
 
+		/// <summary>
+		/// Permet de convertir une couleur RGB (<see cref="Color"/>) en couleur HSV (<see cref="HSVColor"/>)
+		/// </summary>
+		/// <param name="red">Rouge</param>
+		/// <param name="green">Vert</param>
+		/// <param name="blue">Bleu</param>
+		/// <returns>Couleur <see cref="HSVColor"/></returns>
+		public static HSVColor RGBtoHSV(int red, int green, int blue)
+        {
+			return HSVColor.FromRGB(red, green, blue);
+        }
     }
 
 	/// <summary>
