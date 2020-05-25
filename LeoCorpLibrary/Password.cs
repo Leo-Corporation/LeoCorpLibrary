@@ -18,7 +18,7 @@ namespace LeoCorpLibrary
         /// <param name="chars">Caractères utilisés pour générer un mot de passe.</param>
         /// <param name="separator">Séparateur.</param>
         /// <exception cref="System.Exception"></exception>
-        /// <returns>Retorune une valeur <c>string</c>.</returns>
+        /// <returns>Valeur de type <see cref="string"/>.</returns>
         public static string Generate(int lenght, string chars, string separator)
         {
             string[] usableChars = { };

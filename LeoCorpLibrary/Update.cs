@@ -21,7 +21,7 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <param name="version">Version actuelle du logiciel.</param>
         /// <param name="lastVersion">Dernière version du logiciel.</param>
-        /// <returns>Retourne une valeur <c>bool</c>.</returns>
+        /// <returns>Valeur de type <see cref="bool"/>.</returns>
         public static bool IsAvailable(string version, string lastVersion)
         {
             bool res;
@@ -42,7 +42,7 @@ namespace LeoCorpLibrary
         /// <param name="lastVersionFileLink">Lien du fichier où se situe le numéro de la dernière version.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
         /// <exception cref="System.Exception"></exception>
-        /// <returns>Retorune une valeur de type <c>string</c>.</returns>
+        /// <returns>Valeur de type <see cref="string"/>.</returns>
         public static string GetLastVersion(string lastVersionFileLink)
         {
             string lastVersion = "";

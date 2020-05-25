@@ -16,7 +16,7 @@ namespace LeoCorpLibrary
         /// <para>Cette fonction permet de savoir si l'utilisateur a une connexion à Internet.</para>
         /// <para>La connexion est testée sur le site https://bing.com.</para>
         /// </summary>
-        /// <returns>Retourne une valeur <c>bool</c>.</returns>
+        /// <returns>Valeur de type <see cref="bool"/>.</returns>
         public static bool IsAvailable() // Fonction pour tester la connexion Internet
         {
             try
@@ -39,7 +39,7 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <param name="site">Site sur lequel al connexion est testée.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
-        /// <returns>Retourne une valeur <c>bool</c>.</returns>
+        /// <returns>Valeur de type <see cref="bool"/>.</returns>
         public static bool IsAvailableTestSite(string site)
         {
             bool result = true;
