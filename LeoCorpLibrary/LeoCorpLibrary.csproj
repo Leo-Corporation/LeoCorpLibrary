@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorsConverter.cs" />
+    <Compile Include="Exceptions\HEXInvalidValueException.cs" />
     <Compile Include="Exceptions\RGBInvalidValueException.cs" />
     <Compile Include="Maths.cs" />
     <Compile Include="NetworkConnection.cs" />
