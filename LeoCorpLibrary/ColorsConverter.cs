@@ -133,7 +133,8 @@ namespace LeoCorpLibrary
         /// <param name="red">Rouge.</param>
         /// <param name="green">Vert.</param>
         /// <param name="blue">Bleu.</param>
-        /// <returns></returns>
+        /// <exception cref="Exceptions.RGBInvalidValueException"/>
+        /// <returns>Valeur <see cref="HSVColor"/></returns>
         public static HSVColor FromRGB(int red, int green, int blue)
         {
             if (!(red >= 0 && red <= 255 && green >= 0 && green <= 255 && blue >= 0 && blue <= 255)) // Si pas valide
