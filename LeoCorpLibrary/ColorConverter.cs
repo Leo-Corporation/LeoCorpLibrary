@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeoCorpLibrary.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -112,7 +113,7 @@ namespace LeoCorpLibrary
         {
 			if (!(red >= 0 && red <= 255 && green >= 0 && green <= 255 && blue >= 0 && blue <= 255)) // Si pas valide
 			{
-				throw new Exception("The specified argmuents aren't RGB valid."); // Erreur
+				throw new RGBInvalidValueException("The specified argmuents aren't RGB valid."); // Erreur
 			}
 			HSVColor toReturn = new HSVColor();
 			Color color = Color.FromArgb(red, green, blue);
@@ -162,7 +163,7 @@ namespace LeoCorpLibrary
 		{
 			if (!(red >= 0 && red <= 255 && green >= 0 && green <= 255 && blue >= 0 && blue <= 255)) // Si pas valide
             {
-				throw new Exception("The specified argmuents aren't RGB valid."); // Erreur
+				throw new RGBInvalidValueException("The specified argmuents aren't RGB valid."); // Erreur
             }
 			HEXColor toReturn = new HEXColor(); // Couleur HEX
 			toReturn.Value = ColorTranslator.FromHtml(String.Format("#{0:X2}{1:X2}{2:X2}", red, green, blue)).Name.Remove(0, 2); // Conversion en HEX

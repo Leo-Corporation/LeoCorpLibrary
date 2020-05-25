@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorConverter.cs" />
+    <Compile Include="Exceptions\RGBInvalidValueException.cs" />
     <Compile Include="Maths.cs" />
     <Compile Include="NetworkConnection.cs" />
     <Compile Include="Password.cs" />
