@@ -75,7 +75,7 @@ namespace LeoCorpLibrary
         /// <exception cref="System.ArgumentNullException"></exception>
         public static void Check(string version, string lastVersion, Form availableUpdateForm, Form noUpdateForm)
         {
-            if (availableUpdateForm != null || noUpdateForm != null)
+            if (availableUpdateForm != null && noUpdateForm != null)
             {
                 if (version == lastVersion)
                 {
