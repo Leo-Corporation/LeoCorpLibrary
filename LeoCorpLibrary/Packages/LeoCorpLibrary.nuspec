@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>LeoCorpLibrary</id>
-    <version>1.4.1.2005</version>
+    <version>1.5.0.2006-pre1</version>
     <title>LeoCorpLibrary</title>
     <authors>Leo Corporation + Contributeurs</authors>
     <owners>LeoCorporation</owners>
@@ -12,12 +12,10 @@
     <icon>images\icon.png</icon>
     <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
     <releaseNotes>
-      Version 1.4.0.2005
-    - Réorganisation du code
-    - Ajout de descriptions aux méthodes
-      Version 1.4.1.2005
-    - La documentation XML a été améliorée
-    - La documentation XML est désormais intégrée dans le package NuGet
+      Version 1.5.0.2006-pre1
+    - Ajout de la possibilité de convertir une couleur RGB en couleur HEX
+    - Ajout de la possibilité de convertir une couleur RGB en couleur HSV
+    - Ajout d'exceptions personnalisées
     </releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>LeoCorporation Library Lib</tags>
