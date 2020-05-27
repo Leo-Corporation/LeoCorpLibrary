@@ -51,7 +51,7 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Permet de convertir une couleur RGB (<see cref="Color"/>) en couleur HEX (<see cref="HEXColor"/>).
         /// </summary>
-        /// <param name="color"></param>
+        /// <param name="color">Couleur.</param>
         /// <returns>Valeur <see cref="HEXColor"/>.</returns>
         public static HEXColor RGBtoHEX(Color color)
         {
@@ -86,7 +86,7 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Permet de convertir une couleur HEX (<see cref="HEXColor"/>) en couleur HSV (<see cref="HSVColor"/>).
         /// </summary>
-        /// <param name="hexColor"></param>
+        /// <param name="hexColor">Couleur HEX.</param>
         /// <exception cref="Exceptions.HEXInvalidValueException"/>
         /// <returns>Valeur <see cref="HSVColor"/></returns>
         public static HSVColor HEXtoHSV(HEXColor hexColor)
@@ -196,7 +196,7 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <param name="red">Rouge.</param>
         /// <param name="blue">Bleu.</param>
-        /// <param name="green">Vert</param>
+        /// <param name="green">Vert.</param>
         /// <exception cref="Exceptions.RGBInvalidValueException"/>
         /// <returns>Valeur <see cref="HEXColor"/></returns>
         public static HEXColor FromRGB(int red, int green, int blue)
