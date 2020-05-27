@@ -12,21 +12,18 @@ Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework/Wind
 
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoCorpLibrary/bin/Release/LeoCorpLibrary.dll), puis cliquez sur le bouton "Télécharger".
 
-**Package NuGet** 
+**Package NuGet** ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 
-![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary)
-![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
+Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary) pour télécharger le package NuGet.
 
-Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary/#) pour télécharger le package NuGet.
-
-## Nouveautés de la version 1.4.0.2005
+## Nouveautés de la version 1.5.0.2006
 ### Ajout(s)
-- **[Réorganisation du code](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Changements-li%C3%A9s-%C3%A0-la-version-1.4)**
-- Ajout de descriptions aux méthodes
-## Nouveautés de la version 1.4.1.2005
-### Ajout(s)
-- La documentation XML a été améliorée
-- La documentation XML est intégrée dans le package NuGet
+- Ajout de la possibilité de convertir une couleur RGB en couleur HEX
+- Ajout de la possibilité de convertir une couleur RGB en couleur HSV
+- Ajout de la possibilité de convertir une couleur HEX en couleur RGB
+- Ajout de la possibilité de convertir une couleur HEX en couleur HSV
+- Amélioration de la documentation XML
+- Ajout d'exceptions personnalisées
 ## Documentation
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
@@ -36,6 +33,7 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obte
 - [Tester/vérifier une connexion Internet](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/V%C3%A9rifier-une-connexion-internet)
 - [Rechercher des mises à jour](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Rechercher-des-mises-%C3%A0-jour)
 - [Fonctions mathématiques](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Fonctions-math%C3%A9matiques)
+- [Convertisseur de couleurs](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Convertisseur-de-couleurs)
 
 ## Comment ajouter la bibliothèque dans un projet ?
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary#1-ajouter-la-bibliothèque-dans-un-projet) pour consulter la documentation à ce sujet.
