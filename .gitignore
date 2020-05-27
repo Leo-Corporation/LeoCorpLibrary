@@ -344,3 +344,5 @@ MigrationBackup/
 # End of https://www.gitignore.io/api/visualstudio
 .vs/LeoCorpLibrary/v16/.suo
 LeoCorpLibrary/Packages/nuget.exe
+eOnExit  true,
+*.exe,
