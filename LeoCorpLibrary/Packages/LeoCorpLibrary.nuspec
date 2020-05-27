@@ -12,9 +12,12 @@
     <icon>images\icon.png</icon>
     <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
     <releaseNotes>
-      Version 1.5.0.2006-pre1
+      Version 1.5.0.2006
     - Ajout de la possibilité de convertir une couleur RGB en couleur HEX
     - Ajout de la possibilité de convertir une couleur RGB en couleur HSV
+    - Ajout de la possibilité de convertir une couleur HEX en couleur RGB
+    - Ajout de la possibilité de convertir une couleur HEX en couleur HSV
+    - Amélioration de la documentation XML
     - Ajout d'exceptions personnalisées
     </releaseNotes>
     <copyright>Copyright 2020</copyright>
