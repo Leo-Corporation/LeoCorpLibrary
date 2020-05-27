@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorsConverter.cs" />
+    <Compile Include="Exceptions\HEXInvalidValueException.cs" />
+    <Compile Include="Exceptions\RGBInvalidValueException.cs" />
     <Compile Include="Maths.cs" />
     <Compile Include="NetworkConnection.cs" />
     <Compile Include="Password.cs" />

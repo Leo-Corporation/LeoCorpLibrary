@@ -17,7 +17,7 @@ namespace LeoCorpLibrary
         /// Permet de faire une somme de nombres de type double.
         /// </summary>
         /// <param name="args">Nombres.</param>
-        /// <returns>Retourne une valeur de type double.</returns>
+        /// <returns>Valeur de type <see cref="double"/>.</returns>
         public static double Sum(params double[] args) // Somme
         {
             double finalResult = 0;
@@ -32,7 +32,7 @@ namespace LeoCorpLibrary
         /// Permet d'obtneir à partir d'une liste de nombre de type double, le plus petit d'entre eux.
         /// </summary>
         /// <param name="numbers">Nombres.</param>
-        /// <returns>Retourne une valeur de type double.</returns>
+        /// <returns>Valeur de type <see cref="double"/>.</returns>
         public static double GetLowestNumber(params double[] numbers)
         {
             double lowestNumber = numbers[0];
@@ -50,7 +50,7 @@ namespace LeoCorpLibrary
         /// Permet d'obtenir à partir d'une liste de nombre de type double, le plus grand d'entre eux.
         /// </summary>
         /// <param name="numbers">Nombres.</param>
-        /// <returns>Retourne une valeur de type double.</returns>
+        /// <returns>Valeur de type <see cref="double"/>.</returns>
         public static double GetBiggestNumber(params double[] numbers) // Obtient le nombre le plus grand
         {
             double biggestNumber = numbers[0]; // Fonction compatible avec des nombres négatifs
@@ -73,7 +73,7 @@ namespace LeoCorpLibrary
             /// Permet d'obtenir l'aire d'un cercle à partir d'un rayon donné.
             /// </summary>
             /// <param name="radius">Rayon du cercle.</param>
-            /// <returns>Retourne une valeur de type <c>double</c>.</returns>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetArea(double radius) // Obtenir l'aire d'un cercle
             {
                 return Math.PI * Math.Sqrt(radius); // Formule
@@ -83,7 +83,7 @@ namespace LeoCorpLibrary
             /// Permet d'obtenir le périmètre d'un cercle à partir d'un rayon donné.
             /// </summary>
             /// <param name="radius">Rayon du cercle.</param>
-            /// <returns>Retourne une valeur de type <c>double</c>.</returns>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetPerimeter(double radius) // Obtenir le périmètre d'un cercle
             {
                 return 2 * Math.PI * radius; // Formule
@@ -100,7 +100,7 @@ namespace LeoCorpLibrary
             /// </summary>
             /// <param name="height">Hauteur du triangle.</param>
             /// <param name="weight">Largeur/base du triangle.</param>
-            /// <returns>Retourne une valeur de type <c>double</c>.</returns>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetArea(double height, double weight) // Obtenir l'aire d'un triangle
             {
                 return height * weight / 2; // Formule
@@ -112,7 +112,7 @@ namespace LeoCorpLibrary
             /// <param name="side1">Côté du triangle.</param>
             /// <param name="side2">Côté du triangle.</param>
             /// <param name="side3">Côté du triangle.</param>
-            /// <returns>Retourne une valeur de type <c>double</c>.</returns>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetPerimeter(double side1, double side2, double side3) // Obtenir le périmètre d'un triangle
             {
                 return Sum(side1, side2, side3); // Formule
@@ -124,7 +124,7 @@ namespace LeoCorpLibrary
             /// <param name="side1">Côté du triangle.</param>
             /// <param name="side2">Côté du triangle.</param>
             /// <param name="side3">Côté du triangle.</param>
-            /// <returns>Retourne une valeur de type <c>bool</c>.</returns>
+            /// <returns>Valeur de type <see cref="bool"/>.</returns>
             public static bool IsBuildable(double side1, double side2, double side3) // Triangle construisable ?
             {
                 bool result = false; // Résultat final
