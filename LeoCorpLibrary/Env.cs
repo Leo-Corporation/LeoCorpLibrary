@@ -16,5 +16,10 @@ namespace LeoCorpLibrary
         {
             return Directory.GetFiles(directory, "*", SearchOption.TopDirectoryOnly).Length;
         }
+
+        public static int GetDirectoryCount(string directory)
+        {
+            return Directory.GetDirectories(directory, "*", SearchOption.TopDirectoryOnly).Length;
+        }
     }
 }
