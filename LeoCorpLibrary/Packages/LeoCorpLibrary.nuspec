@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>LeoCorpLibrary</id>
-    <version>1.5.0.2006</version>
+    <version>1.6.0.2006-pre1</version>
     <title>LeoCorpLibrary</title>
     <authors>Leo Corporation + Contributeurs</authors>
     <owners>LeoCorporation</owners>
@@ -12,13 +12,11 @@
     <icon>images\icon.png</icon>
     <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
     <releaseNotes>
-      Version 1.5.0.2006
-    - Ajout de la possibilité de convertir une couleur RGB en couleur HEX
-    - Ajout de la possibilité de convertir une couleur RGB en couleur HSV
-    - Ajout de la possibilité de convertir une couleur HEX en couleur RGB
-    - Ajout de la possibilité de convertir une couleur HEX en couleur HSV
-    - Amélioration de la documentation XML
-    - Ajout d'exceptions personnalisées
+      Version 1.6.0.2006-pre1
+    - Ajout d'une fonction pour connaître le nombre de fichiers présent dans un répertoire
+    - Ajout d'une fonction pour connaître le nombre de dossiers présent dans un répertoire
+    - Ajout d'une fonction pour connaître le nombre de fichiers présent dans un répertoire (et sous-répertoires)
+    - Ajout d'une fonction pour connaître le nombre de dossiers présent dans un répertoire (et sous-répertoires)
     </releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>LeoCorporation Library Lib</tags>
