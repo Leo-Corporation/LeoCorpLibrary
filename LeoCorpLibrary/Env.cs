@@ -32,6 +32,13 @@ namespace LeoCorpLibrary
             return result;
         }
 
+        /// <summary>
+        /// Obtient le nombre de fichiers dans un répertoire en offrant la possibilité d'inclure les sous-répertoires.
+        /// </summary>
+        /// <param name="directory">Chemin du répertoire.</param>
+        /// <param name="includeSubDirectories">Inclure ou non les sous-répertoires.</param>
+        /// <exception cref="FileNotFoundException"></exception>
+        /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetFilesCount(string directory, bool includeSubDirectories)
         {
             int result;
@@ -73,6 +80,13 @@ namespace LeoCorpLibrary
             return result;
         }
 
+        /// <summary>
+        /// Obtient le nombre de répertoires dans un répertoire en offrant la possibilité d'inclure les sous-répertoires.
+        /// </summary>
+        /// <param name="directory">Chemin du répertoire.</param>
+        /// <param name="includeSubDirectories">Inclure ou non les sous-répertoires.</param>
+        /// <exception cref="DirectoryNotFoundException"></exception>
+        /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetDirectoryCount(string directory, bool includeSubDirectories)
         {
             int result;
