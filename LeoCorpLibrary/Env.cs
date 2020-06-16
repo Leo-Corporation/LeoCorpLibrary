@@ -32,6 +32,27 @@ namespace LeoCorpLibrary
             return result;
         }
 
+        public static int GetFilesCount(string directory, bool includeSubDirectories)
+        {
+            int result;
+            if (Directory.Exists(directory))
+            {
+                if (includeSubDirectories)
+                {
+                    result = Directory.GetFiles(directory, "*", SearchOption.AllDirectories).Length;
+                }
+                else
+                {
+                    result = Directory.GetFiles(directory, "*", SearchOption.TopDirectoryOnly).Length;
+                }
+            }
+            else
+            {
+                throw new DirectoryNotFoundException("The specified directory does not exist.");
+            }
+            return result;
+        }
+
         /// <summary>
         /// Obtient le nombre de répertoires dans un répertoire sans inclure les sous-répertoires.
         /// </summary>
