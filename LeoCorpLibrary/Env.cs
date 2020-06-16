@@ -19,7 +19,16 @@ namespace LeoCorpLibrary
         /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetFilesCount(string directory)
         {
-            return Directory.GetFiles(directory, "*", SearchOption.TopDirectoryOnly).Length;
+            int result;
+            if (Directory.Exists(directory))
+            {
+                result = Directory.GetFiles(directory, "*", SearchOption.TopDirectoryOnly).Length;
+            }
+            else
+            {
+                throw new DirectoryNotFoundException("The specified directory does not exist.");
+            }
+            return result;
         }
 
         /// <summary>
@@ -29,7 +38,16 @@ namespace LeoCorpLibrary
         /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetDirectoryCount(string directory)
         {
-            return Directory.GetDirectories(directory, "*", SearchOption.TopDirectoryOnly).Length;
+            int result;
+            if (Directory.Exists(directory))
+            {
+                result = Directory.GetDirectories(directory, "*", SearchOption.TopDirectoryOnly).Length;
+            }
+            else
+            {
+                throw new DirectoryNotFoundException("The specified directory does not exist.");
+            }
+            return result;
         }
     }
 }
