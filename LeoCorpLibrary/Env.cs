@@ -36,7 +36,7 @@ namespace LeoCorpLibrary
         /// Obtient le nombre de répertoires dans un répertoire sans inclure les sous-répertoires.
         /// </summary>
         /// <param name="directory">Chemin du répertoire.</param>
-        /// /// <exception cref="DirectoryNotFoundException"></exception>
+        /// <exception cref="DirectoryNotFoundException"></exception>
         /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetDirectoryCount(string directory)
         {
