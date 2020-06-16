@@ -72,5 +72,26 @@ namespace LeoCorpLibrary
             }
             return result;
         }
+
+        public static int GetDirectoryCount(string directory, bool includeSubDirectories)
+        {
+            int result;
+            if (Directory.Exists(directory))
+            {
+                if (includeSubDirectories)
+                {
+                    result = Directory.GetDirectories(directory, "*", SearchOption.AllDirectories).Length;
+                }
+                else
+                {
+                    result = Directory.GetDirectories(directory, "*", SearchOption.TopDirectoryOnly).Length;
+                }
+            }
+            else
+            {
+                throw new DirectoryNotFoundException("The specified directory does not exist.");
+            }
+            return result;
+        }
     }
 }
