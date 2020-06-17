@@ -66,7 +66,7 @@ namespace LeoCorpLibrary
         /// <param name="directory">Chemin du répertoire.</param>
         /// <exception cref="DirectoryNotFoundException"></exception>
         /// <returns>Valeur de type <see cref="int"/>.</returns>
-        public static int GetDirectoryCount(string directory)
+        public static int GetDirectoriesCount(string directory)
         {
             int result;
             if (Directory.Exists(directory))
