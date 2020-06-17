@@ -108,4 +108,35 @@ namespace LeoCorpLibrary
             return result;
         }
     }
+
+    /// <summary>
+    /// Type de taille de fichiers/répertoires.
+    /// </summary>
+    public enum SizeType
+    {
+        /// <summary>
+        /// Unité Byte.
+        /// </summary>
+        Byte,
+        /// <summary>
+        /// Unité Kilobyte.
+        /// </summary>
+        Kilobyte,
+        /// <summary>
+        /// Unité Megabyte.
+        /// </summary>
+        Megabyte,
+        /// <summary>
+        /// Unité Gigabyte.
+        /// </summary>
+        Gigabyte,
+        /// <summary>
+        /// Unité Terabyte.
+        /// </summary>
+        Terabyte,
+        /// <summary>
+        /// Unité Petabyte.
+        /// </summary>
+        Petabyte
+    }
 }
