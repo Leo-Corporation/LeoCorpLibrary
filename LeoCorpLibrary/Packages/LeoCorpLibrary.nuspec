@@ -15,7 +15,8 @@
       Version 1.6.0.2006-pre2
     - Ajout d'une fonction pour connaître l'espace libre sur le lecteur sélectionné
     - Ajout d'une fonction pour connaître l'espace total sur le lecteur sélectionné
-    - Ajout d'une enumération qui permet de chosir quel type de taille va être retournée sur ces fonctions (MB, GB...)
+    - Ajout d'une énumération qui permet de choisir quel type de taille va être retournée sur ces fonctions (MB, GB...)
+    - La fonction "GetDirectoryCount" a été renommée en "GetDiretoiresCount"
 
       Version 1.6.0.2006-pre1
     - Ajout d'une fonction pour connaître le nombre de fichiers présent dans un répertoire
