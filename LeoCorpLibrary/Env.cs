@@ -110,9 +110,9 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtenir l'espace disque disponible.
+        /// Permet d'obtenir l'espace du lecteur disponible.
         /// </summary>
-        /// <param name="drive">Disque.</param>
+        /// <param name="drive">Lecteur.</param>
         /// <param name="sizeType">Type de valeur retournée (MB, GB...)</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="DriveNotFoundException"></exception>
@@ -157,6 +157,14 @@ namespace LeoCorpLibrary
             return res;
         }
 
+        /// <summary>
+        /// Permet d'obtenir l'espace libre du lecteur.
+        /// </summary>
+        /// <param name="drive">Lecteur.</param>
+        /// <param name="sizeType">Type de valeur retournée (MB, GB...)</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="DriveNotFoundException"></exception>
+        /// <returns>Retourne une valeur de type <see cref="double"/>.</returns>
         public static double GetTotalDriveSpace(string drive, SizeType sizeType)
         {
             double res = 0; // Résulat final
