@@ -107,6 +107,45 @@ namespace LeoCorpLibrary
             }
             return result;
         }
+
+        public static double GetDiskAvailableFreeSpace(string drive, SizeType sizeType)
+        {
+            double res = 0; // Résulat final
+
+            if (string.IsNullOrEmpty(drive))
+            {
+                throw new ArgumentNullException("The parameter 'disk' is empty."); // Retourner une erreur
+            }
+            
+            if (!Directory.Exists(drive))
+            {
+                throw new DriveNotFoundException("The specified drive does not exist."); // Retourner une erreur
+            }
+
+            double size = new DriveInfo(drive).AvailableFreeSpace;
+            switch (sizeType)
+            {
+                case SizeType.Byte: // Si l'unité sélectionnée est le Byte
+                    res = size;
+                    break;
+                case SizeType.Kilobyte: // Si l'unité sélectionnée est le Kilobyte
+                    res = size / 1000;
+                    break;
+                case SizeType.Megabyte: // Si l'unité sélectionnée est le Megabyte
+                    res = size / 1000000;
+                    break;
+                case SizeType.Gigabyte: // Si l'unité sélectionnée est le Gigabyte
+                    res = size / 1000000000;
+                    break;
+                case SizeType.Terabyte: // Si l'unité sélectionnée est le Terabyte
+                    res = size / 1000000000000;
+                    break;
+                case SizeType.Petabyte: // Si l'unité sélectionnée est le Petabyte
+                    res = size / 1000000000000000;
+                    break;
+            }
+            return res;
+        }
     }
 
     /// <summary>
