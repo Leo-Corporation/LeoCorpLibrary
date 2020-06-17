@@ -87,7 +87,7 @@ namespace LeoCorpLibrary
         /// <param name="includeSubDirectories">Inclure ou non les sous-répertoires.</param>
         /// <exception cref="DirectoryNotFoundException"></exception>
         /// <returns>Valeur de type <see cref="int"/>.</returns>
-        public static int GetDirectoryCount(string directory, bool includeSubDirectories)
+        public static int GetDirectoriesCount(string directory, bool includeSubDirectories)
         {
             int result;
             if (Directory.Exists(directory))
