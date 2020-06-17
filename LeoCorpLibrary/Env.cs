@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -108,7 +109,15 @@ namespace LeoCorpLibrary
             return result;
         }
 
-        public static double GetDiskAvailableFreeSpace(string drive, SizeType sizeType)
+        /// <summary>
+        /// Permet d'obtenir l'espace disque disponible.
+        /// </summary>
+        /// <param name="drive">Disque.</param>
+        /// <param name="sizeType">Type de valeur retournée (MB, GB...)</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="DriveNotFoundException"></exception>
+        /// <returns>Valeur de type <see cref="double"/>.</returns>
+        public static double GetDriveAvailableFreeSpace(string drive, SizeType sizeType)
         {
             double res = 0; // Résulat final
 
@@ -123,27 +132,69 @@ namespace LeoCorpLibrary
             }
 
             double size = new DriveInfo(drive).AvailableFreeSpace;
+
             switch (sizeType)
             {
                 case SizeType.Byte: // Si l'unité sélectionnée est le Byte
                     res = size; // Retourner la conversion de Byte en Byte
                     break;
                 case SizeType.Kilobyte: // Si l'unité sélectionnée est le Kilobyte
-                    res = size / 1000; // Retourner la conversion de kilibyte en kilobyte
+                    res = size / 1000; // Retourner la conversion de Byte en kilobyte
                     break;
                 case SizeType.Megabyte: // Si l'unité sélectionnée est le Megabyte
-                    res = size / 1000000; // Retourner la conversion de Megabyte en Megabyte
+                    res = size / 1000000; // Retourner la conversion de Byte en Megabyte
                     break;
                 case SizeType.Gigabyte: // Si l'unité sélectionnée est le Gigabyte
-                    res = size / 1000000000; // Retourner la conversion de Gigabyte en Gigabyte
+                    res = size / 1000000000; // Retourner la conversion de Byte en Gigabyte
                     break;
                 case SizeType.Terabyte: // Si l'unité sélectionnée est le Terabyte
-                    res = size / 1000000000000; // Retourner la conversion de Terabyte en Terabyte
+                    res = size / 1000000000000; // Retourner la conversion de Byte en Terabyte
                     break;
                 case SizeType.Petabyte: // Si l'unité sélectionnée est le Petabyte
-                    res = size / 1000000000000000; // Retourner la conversion de Petabyte en Petabyte
+                    res = size / 1000000000000000; // Retourner la conversion de Byte en Petabyte
                     break;
             }
+            return res;
+        }
+
+        public static double GetTotalDriveSpace(string drive, SizeType sizeType)
+        {
+            double res = 0; // Résulat final
+
+            if (string.IsNullOrEmpty(drive))
+            {
+                throw new ArgumentNullException("The parameter 'disk' is empty."); // Retourner une erreur
+            }
+
+            if (!Directory.Exists(drive))
+            {
+                throw new DriveNotFoundException("The specified drive does not exist."); // Retourner une erreur
+            }
+
+            double size = new DriveInfo(drive).TotalSize; // Espace total du lecteur
+
+            switch (sizeType)
+            {
+                case SizeType.Byte: // Si l'unité sélectionnée est le Byte
+                    res = size;// Retourner la conversion de Byte en Byte
+                    break;
+                case SizeType.Kilobyte: // Si l'unité sélectionnée est le Kilobyte
+                    res = size / 1000; // Retourner la conversion de Byte en Kilobyte
+                    break;
+                case SizeType.Megabyte: // Si l'unité sélectionnée est le Megabyte
+                    res = size / 1000000; // Retourner la conversion de Byte en Megabyte
+                    break;
+                case SizeType.Gigabyte: // Si l'unité sélectionnée est le Gigabyte
+                    res = size / 1000000000; // Retourner la conversion de Byte en Gigabyte
+                    break;
+                case SizeType.Terabyte: // Si l'unité sélectionnée est le Terabyte
+                    res = size / 1000000000000; // Retourner la conversion de Byte en Terabyte
+                    break;
+                case SizeType.Petabyte: // Si l'unité sélectionnée est le Petabyte
+                    res = size / 1000000000000000; // Retourner la conversion de Byte en Petabyte
+                    break;
+            }
+
             return res;
         }
     }
