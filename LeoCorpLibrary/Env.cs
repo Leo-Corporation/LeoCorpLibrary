@@ -20,14 +20,14 @@ namespace LeoCorpLibrary
         /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetFilesCount(string directory)
         {
-            int result;
-            if (Directory.Exists(directory))
+            int result; // Résulat final
+            if (Directory.Exists(directory)) // Si le répertoire existe
             {
-                result = Directory.GetFiles(directory, "*", SearchOption.TopDirectoryOnly).Length;
+                result = Directory.GetFiles(directory, "*", SearchOption.TopDirectoryOnly).Length; // Obtenir le nombre de fichiers
             }
             else
             {
-                throw new DirectoryNotFoundException("The specified directory does not exist.");
+                throw new DirectoryNotFoundException("The specified directory does not exist."); // Retourner une erreur
             }
             return result;
         }
@@ -41,21 +41,21 @@ namespace LeoCorpLibrary
         /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetFilesCount(string directory, bool includeSubDirectories)
         {
-            int result;
-            if (Directory.Exists(directory))
+            int result; // Résulat final
+            if (Directory.Exists(directory)) // Si le répertoire existe
             {
-                if (includeSubDirectories)
+                if (includeSubDirectories) // Si les sous répertoires sont inclus
                 {
-                    result = Directory.GetFiles(directory, "*", SearchOption.AllDirectories).Length;
+                    result = Directory.GetFiles(directory, "*", SearchOption.AllDirectories).Length; // Obtenir le nombre de fichiers
                 }
                 else
                 {
-                    result = Directory.GetFiles(directory, "*", SearchOption.TopDirectoryOnly).Length;
+                    result = Directory.GetFiles(directory, "*", SearchOption.TopDirectoryOnly).Length; // Obtenir le nombre de fichiers
                 }
             }
             else
             {
-                throw new DirectoryNotFoundException("The specified directory does not exist.");
+                throw new DirectoryNotFoundException("The specified directory does not exist."); // Retourner une erreur
             }
             return result;
         }
@@ -68,14 +68,14 @@ namespace LeoCorpLibrary
         /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetDirectoriesCount(string directory)
         {
-            int result;
-            if (Directory.Exists(directory))
+            int result; // Résulat final
+            if (Directory.Exists(directory)) // Si le répertoire existe
             {
-                result = Directory.GetDirectories(directory, "*", SearchOption.TopDirectoryOnly).Length;
+                result = Directory.GetDirectories(directory, "*", SearchOption.TopDirectoryOnly).Length; // Obtenir le nombre de répertoires
             }
             else
             {
-                throw new DirectoryNotFoundException("The specified directory does not exist.");
+                throw new DirectoryNotFoundException("The specified directory does not exist."); // Retourner une erreur
             }
             return result;
         }
@@ -89,21 +89,21 @@ namespace LeoCorpLibrary
         /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetDirectoriesCount(string directory, bool includeSubDirectories)
         {
-            int result;
-            if (Directory.Exists(directory))
+            int result; // Résulat final
+            if (Directory.Exists(directory)) // Si le répertoire existe
             {
-                if (includeSubDirectories)
+                if (includeSubDirectories) // Si les sous répertoires sont inclus
                 {
-                    result = Directory.GetDirectories(directory, "*", SearchOption.AllDirectories).Length;
+                    result = Directory.GetDirectories(directory, "*", SearchOption.AllDirectories).Length; // Obtenir le nombre de répertoires
                 }
                 else
                 {
-                    result = Directory.GetDirectories(directory, "*", SearchOption.TopDirectoryOnly).Length;
+                    result = Directory.GetDirectories(directory, "*", SearchOption.TopDirectoryOnly).Length; // Obtenir le nombre de répertoires
                 }
             }
             else
             {
-                throw new DirectoryNotFoundException("The specified directory does not exist.");
+                throw new DirectoryNotFoundException("The specified directory does not exist."); // Retourner une erreur
             }
             return result;
         }
@@ -126,22 +126,22 @@ namespace LeoCorpLibrary
             switch (sizeType)
             {
                 case SizeType.Byte: // Si l'unité sélectionnée est le Byte
-                    res = size;
+                    res = size; // Retourner la conversion de Byte en Byte
                     break;
                 case SizeType.Kilobyte: // Si l'unité sélectionnée est le Kilobyte
-                    res = size / 1000;
+                    res = size / 1000; // Retourner la conversion de kilibyte en kilobyte
                     break;
                 case SizeType.Megabyte: // Si l'unité sélectionnée est le Megabyte
-                    res = size / 1000000;
+                    res = size / 1000000; // Retourner la conversion de Megabyte en Megabyte
                     break;
                 case SizeType.Gigabyte: // Si l'unité sélectionnée est le Gigabyte
-                    res = size / 1000000000;
+                    res = size / 1000000000; // Retourner la conversion de Gigabyte en Gigabyte
                     break;
                 case SizeType.Terabyte: // Si l'unité sélectionnée est le Terabyte
-                    res = size / 1000000000000;
+                    res = size / 1000000000000; // Retourner la conversion de Terabyte en Terabyte
                     break;
                 case SizeType.Petabyte: // Si l'unité sélectionnée est le Petabyte
-                    res = size / 1000000000000000;
+                    res = size / 1000000000000000; // Retourner la conversion de Petabyte en Petabyte
                     break;
             }
             return res;
