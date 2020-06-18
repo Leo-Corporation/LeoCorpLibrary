@@ -113,11 +113,11 @@ namespace LeoCorpLibrary
         /// Permet d'obtenir l'espace du lecteur disponible.
         /// </summary>
         /// <param name="drive">Lecteur.</param>
-        /// <param name="sizeType">Type de valeur retournée (MB, GB...)</param>
+        /// <param name="unitType">Type de valeur retournée (MB, GB...)</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="DriveNotFoundException"></exception>
         /// <returns>Valeur de type <see cref="double"/>.</returns>
-        public static double GetDriveAvailableFreeSpace(string drive, SizeType sizeType)
+        public static double GetDriveAvailableFreeSpace(string drive, UnitType unitType)
         {
             double res = 0; // Résulat final
 
@@ -133,24 +133,24 @@ namespace LeoCorpLibrary
 
             double size = new DriveInfo(drive).AvailableFreeSpace;
 
-            switch (sizeType)
+            switch (unitType)
             {
-                case SizeType.Byte: // Si l'unité sélectionnée est le Byte
+                case UnitType.Byte: // Si l'unité sélectionnée est le Byte
                     res = size; // Retourner la conversion de Byte en Byte
                     break;
-                case SizeType.Kilobyte: // Si l'unité sélectionnée est le Kilobyte
+                case UnitType.Kilobyte: // Si l'unité sélectionnée est le Kilobyte
                     res = size / 1000; // Retourner la conversion de Byte en kilobyte
                     break;
-                case SizeType.Megabyte: // Si l'unité sélectionnée est le Megabyte
+                case UnitType.Megabyte: // Si l'unité sélectionnée est le Megabyte
                     res = size / 1000000; // Retourner la conversion de Byte en Megabyte
                     break;
-                case SizeType.Gigabyte: // Si l'unité sélectionnée est le Gigabyte
+                case UnitType.Gigabyte: // Si l'unité sélectionnée est le Gigabyte
                     res = size / 1000000000; // Retourner la conversion de Byte en Gigabyte
                     break;
-                case SizeType.Terabyte: // Si l'unité sélectionnée est le Terabyte
+                case UnitType.Terabyte: // Si l'unité sélectionnée est le Terabyte
                     res = size / 1000000000000; // Retourner la conversion de Byte en Terabyte
                     break;
-                case SizeType.Petabyte: // Si l'unité sélectionnée est le Petabyte
+                case UnitType.Petabyte: // Si l'unité sélectionnée est le Petabyte
                     res = size / 1000000000000000; // Retourner la conversion de Byte en Petabyte
                     break;
             }
@@ -161,11 +161,11 @@ namespace LeoCorpLibrary
         /// Permet d'obtenir l'espace libre du lecteur.
         /// </summary>
         /// <param name="drive">Lecteur.</param>
-        /// <param name="sizeType">Type de valeur retournée (MB, GB...)</param>
+        /// <param name="unitType">Type de valeur retournée (MB, GB...)</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="DriveNotFoundException"></exception>
         /// <returns>Retourne une valeur de type <see cref="double"/>.</returns>
-        public static double GetTotalDriveSpace(string drive, SizeType sizeType)
+        public static double GetTotalDriveSpace(string drive, UnitType unitType)
         {
             double res = 0; // Résulat final
 
@@ -181,24 +181,24 @@ namespace LeoCorpLibrary
 
             double size = new DriveInfo(drive).TotalSize; // Espace total du lecteur
 
-            switch (sizeType)
+            switch (unitType)
             {
-                case SizeType.Byte: // Si l'unité sélectionnée est le Byte
+                case UnitType.Byte: // Si l'unité sélectionnée est le Byte
                     res = size;// Retourner la conversion de Byte en Byte
                     break;
-                case SizeType.Kilobyte: // Si l'unité sélectionnée est le Kilobyte
+                case UnitType.Kilobyte: // Si l'unité sélectionnée est le Kilobyte
                     res = size / 1000; // Retourner la conversion de Byte en Kilobyte
                     break;
-                case SizeType.Megabyte: // Si l'unité sélectionnée est le Megabyte
+                case UnitType.Megabyte: // Si l'unité sélectionnée est le Megabyte
                     res = size / 1000000; // Retourner la conversion de Byte en Megabyte
                     break;
-                case SizeType.Gigabyte: // Si l'unité sélectionnée est le Gigabyte
+                case UnitType.Gigabyte: // Si l'unité sélectionnée est le Gigabyte
                     res = size / 1000000000; // Retourner la conversion de Byte en Gigabyte
                     break;
-                case SizeType.Terabyte: // Si l'unité sélectionnée est le Terabyte
+                case UnitType.Terabyte: // Si l'unité sélectionnée est le Terabyte
                     res = size / 1000000000000; // Retourner la conversion de Byte en Terabyte
                     break;
-                case SizeType.Petabyte: // Si l'unité sélectionnée est le Petabyte
+                case UnitType.Petabyte: // Si l'unité sélectionnée est le Petabyte
                     res = size / 1000000000000000; // Retourner la conversion de Byte en Petabyte
                     break;
             }
@@ -210,7 +210,7 @@ namespace LeoCorpLibrary
     /// <summary>
     /// Type de taille de fichiers/répertoires.
     /// </summary>
-    public enum SizeType
+    public enum UnitType
     {
         /// <summary>
         /// Unité Byte.
