@@ -205,6 +205,24 @@ namespace LeoCorpLibrary
 
             return res;
         }
+
+        
+        public static double GetOccupiedDriveSpace(string drive, UnitType unitType)
+        {
+            double res;
+            if (string.IsNullOrEmpty(drive)) // Si le paramètre est vide
+            {
+                throw new ArgumentNullException("The parameter 'drive' is empty."); // Retourner une erreur
+            }
+
+            if (!Directory.Exists(drive)) // Si le lecteur n'existe pas
+            {
+                throw new DriveNotFoundException("The specified drive does not exist."); // Retourner une erreur
+            }
+
+            res = GetTotalDriveSpace(drive, unitType) - GetDriveAvailableFreeSpace(drive, unitType); // Obtenir l'espace occupé
+            return res;
+        }
     }
 
     /// <summary>
