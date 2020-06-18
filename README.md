@@ -16,24 +16,27 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoC
 
 Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary) pour télécharger le package NuGet.
 
-## Nouveautés de la version 1.5.0.2006
+## Nouveautés de la version 1.6.0.2006
 ### Ajout(s)
-- Ajout de la possibilité de convertir une couleur RGB en couleur HEX
-- Ajout de la possibilité de convertir une couleur RGB en couleur HSV
-- Ajout de la possibilité de convertir une couleur HEX en couleur RGB
-- Ajout de la possibilité de convertir une couleur HEX en couleur HSV
-- Amélioration de la documentation XML
-- Ajout d'exceptions personnalisées
+- Ajout d'une fonction pour connaître l'espace libre sur le lecteur sélectionné
+- Ajout d'une fonction pour connaître l'espace total sur le lecteur sélectionné
+- Ajout d'une fonction pour connaître l'espace occupé sur le lecteur sélectionné
+- Ajout d'une énumération qui permet de choisir quel type de taille va être retournée sur ces fonctions (MB, GB...)
+- Ajout d'une fonction pour connaître le nombre de fichiers présent dans un répertoire
+- Ajout d'une fonction pour connaître le nombre de dossiers présent dans un répertoire
+- Ajout d'une fonction pour connaître le nombre de fichiers présent dans un répertoire (et sous-répertoires)
+- Ajout d'une fonction pour connaître le nombre de dossiers présent dans un répertoire (et sous-répertoires)
 ## Documentation
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
 ### Liens utiles :
 - [Installer la bibliothèque](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary)
-- [Générer un mot de passe](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/G%C3%A9n%C3%A9rer-un-mot-de-passe)
-- [Tester/vérifier une connexion Internet](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/V%C3%A9rifier-une-connexion-internet)
-- [Rechercher des mises à jour](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Rechercher-des-mises-%C3%A0-jour)
-- [Fonctions mathématiques](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Fonctions-math%C3%A9matiques)
 - [Convertisseur de couleurs](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Convertisseur-de-couleurs)
+- [Environnement](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Environnement)
+- [Fonctions mathématiques](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Fonctions-math%C3%A9matiques)
+- [Générer un mot de passe](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/G%C3%A9n%C3%A9rer-un-mot-de-passe)
+- [Rechercher des mises à jour](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Rechercher-des-mises-%C3%A0-jour)
+- [Vérifier une connexion Internet](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/V%C3%A9rifier-une-connexion-internet)
 
 ## Comment ajouter la bibliothèque dans un projet ?
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary#1-ajouter-la-bibliothèque-dans-un-projet) pour consulter la documentation à ce sujet.
