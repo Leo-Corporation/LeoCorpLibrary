@@ -123,7 +123,7 @@ namespace LeoCorpLibrary
 
             if (string.IsNullOrEmpty(drive))
             {
-                throw new ArgumentNullException("The parameter 'disk' is empty."); // Retourner une erreur
+                throw new ArgumentNullException("The parameter 'drive' is empty."); // Retourner une erreur
             }
             
             if (!Directory.Exists(drive))
@@ -171,7 +171,7 @@ namespace LeoCorpLibrary
 
             if (string.IsNullOrEmpty(drive))
             {
-                throw new ArgumentNullException("The parameter 'disk' is empty."); // Retourner une erreur
+                throw new ArgumentNullException("The parameter 'drive' is empty."); // Retourner une erreur
             }
 
             if (!Directory.Exists(drive))
