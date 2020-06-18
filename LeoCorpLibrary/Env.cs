@@ -206,7 +206,14 @@ namespace LeoCorpLibrary
             return res;
         }
 
-        
+        /// <summary>
+        /// Permet d'obtenir l'espace occupé du lecteur.
+        /// </summary>
+        /// <param name="drive">Lecteur.</param>
+        /// <param name="unitType">Type de valeur retournée (MB, GB...)</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="DriveNotFoundException"></exception>
+        /// <returns>Retourne une valeur de type <see cref="double"/>.</returns>
         public static double GetOccupiedDriveSpace(string drive, UnitType unitType)
         {
             double res;
