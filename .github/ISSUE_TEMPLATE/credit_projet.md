@@ -6,27 +6,24 @@ labels: ajout crédit
 assignees: ''
 
 ---
+<!---Vous pouvez supprimer les sections non-nécessaires--->
 
 ## Projet
+<!---Indiquez le nom  du projet.--->
 **Nom**
 
-Indiquez le nom  du projet.
-
+<!---Indiquez le nom de la société et/ou du créateur--->
 **Société/Créateur**
 
-Indiquez le nom de la société et/ou du créateur
-
+<!---Lien vers le site Internet de l'entreprise/créateur.--->
 **Lien du site web**
 
-Lien vers le site Internet de l'entreprise/créateur.
-
+<!---Une description de votre projet--->
 **Description**
 
-Une description de votre projet
 ## LeoCorpLibrary
+<!---Insérez une preuve qui montre que vous utilisez LeoCorpLibrary, comme une image/capture d'écran.--->
 **Preuve que vous utilisez LeoCorpLibrary**
-
-Insérez une preuve qui montre que vous utilisez LeoCorpLibrary, comme une image/capture d'écran.
 
 ![Capture d'écran]()
 
