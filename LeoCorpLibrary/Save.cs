@@ -8,8 +8,18 @@ using System.Windows.Forms;
 
 namespace LeoCorpLibrary
 {
+    /// <summary>
+    /// Classe regroupant des méthodes sur la sauvegarde de contrôles dans des fichiers.
+    /// </summary>
     public static class Save
     {
+        /// <summary>
+        /// Permet de sauvegarder le contenu d'une <see cref="ListView"/>.
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="Exception"></exception>
+        /// <param name="listView"><see cref="ListView"/></param>
+        /// <param name="filePath">Emplacement où enregistrer le contenu d'une <see cref="ListView"/>.</param>
         public static void ListViewContent(ListView listView, string filePath)
         {
             if (string.IsNullOrEmpty(filePath)) // Si l'argument 'filePath' est vide ou null
@@ -19,7 +29,6 @@ namespace LeoCorpLibrary
             string itemSplit = "(*E*)"; // Séparer entre les éléments => item1(*E*)item2
             string columnSplit = "(*C*)"; // Séparer entre les valeurs => item1(*E*)item2(*C*)item1(*E*)item2
             StringBuilder stringBuilder = new StringBuilder(); // Outil pour construire du string
-            int elementNumber = listView.Items.Count; // Nombre d'élément dans la listview
 
             foreach (ListViewItem listViewItem in listView.Items) // Pour chaque élément dans la listview
             {
