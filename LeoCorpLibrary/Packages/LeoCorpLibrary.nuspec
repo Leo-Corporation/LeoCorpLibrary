@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>LeoCorpLibrary</id>
-    <version>1.6.0.2006</version>
+    <version>1.7.0.2007-pre1</version>
     <title>LeoCorpLibrary</title>
     <authors>Leo Corporation + Contributeurs</authors>
     <owners>LeoCorporation</owners>
@@ -12,15 +12,8 @@
     <icon>images\icon.png</icon>
     <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
     <releaseNotes>
-      Version 1.6.0.2006
-    - Ajout d'une fonction pour connaître l'espace libre sur le lecteur sélectionné
-    - Ajout d'une fonction pour connaître l'espace total sur le lecteur sélectionné
-    - Ajout d'une fonction pour connaître l'espace occupé sur le lecteur sélectionné
-    - Ajout d'une énumération qui permet de choisir quel type de taille va être retournée sur ces fonctions (MB, GB...)
-    - Ajout d'une fonction pour connaître le nombre de fichiers présent dans un répertoire
-    - Ajout d'une fonction pour connaître le nombre de dossiers présent dans un répertoire
-    - Ajout d'une fonction pour connaître le nombre de fichiers présent dans un répertoire (et sous-répertoires)
-    - Ajout d'une fonction pour connaître le nombre de dossiers présent dans un répertoire (et sous-répertoires)
+      Version 1.7.0.2007-pre1
+    - Ajout d'une fonction pour sauvegarder le contenu d'une ListView
     </releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>LeoCorporation Library Lib</tags>
