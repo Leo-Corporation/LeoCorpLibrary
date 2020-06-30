@@ -50,5 +50,35 @@ namespace LeoCorpLibrary
                 throw new Exception("An error occured: " + ex.Message); // Afficher un message d'erreur
             }
         }
+
+        public static void ListViewContent(ListView listView, string filePath, string itemSplit, string columnSplit)
+        {
+            if (string.IsNullOrEmpty(filePath) || string.IsNullOrEmpty(itemSplit) || string.IsNullOrEmpty(columnSplit)) // Vérifier les paramètres
+            {
+                throw new ArgumentNullException("One of the specified parameters is null or empty."); // Afficher message d'erreur
+            }
+
+            StringBuilder stringBuilder = new StringBuilder(); // Outil pour construire du string
+
+            foreach (ListViewItem listViewItem in listView.Items) // Pour chaque élément dans la listview
+            {
+                for (int i = 0; i <= listView.Columns.Count - 1; i++) // Pour chaque colone dans un élément
+                {
+                    stringBuilder.Append(listViewItem.SubItems[i].Text); // Ajouter la valeur de la colonne
+                    if (i < listView.Columns.Count - 1)
+                        stringBuilder.Append(columnSplit); // Ajouter le séparateur
+                }
+                stringBuilder.Append(itemSplit); // Ajouter le séparateur
+            }
+
+            try
+            {
+                File.WriteAllText(filePath, stringBuilder.ToString()); // Ecrire les données dans un fichier
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occured: " + ex.Message); // Afficher un message d'erreur
+            }
+        }
     }
 }
