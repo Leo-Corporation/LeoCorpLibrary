@@ -7,8 +7,19 @@ using System.Windows.Forms;
 
 namespace LeoCorpLibrary
 {
+    /// <summary>
+    /// Classe regroupant des méthodes sur le chargement de fichiers dans des contrôles.
+    /// </summary>
     public static class Load
     {
+        /// <summary>
+        /// Permet de charger un fichier de sauvegarde dans une <see cref="ListView"/>.
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="Exception"></exception>
+        /// <exception cref="System.IO.FileNotFoundException"></exception>
+        /// <param name="listView"><see cref="ListView"/>.</param>
+        /// <param name="filePath">Emplacement du fichier à charger dans la <see cref="ListView"/>.</param>
         public static void ListViewContent(ListView listView, string filePath)
         {
             if (string.IsNullOrEmpty(filePath)) // Si l'argument 'filePath' est vide ou null
