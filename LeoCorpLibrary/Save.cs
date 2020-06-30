@@ -18,7 +18,7 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="Exception"></exception>
-        /// <param name="listView"><see cref="ListView"/></param>
+        /// <param name="listView"><see cref="ListView"/>.</param>
         /// <param name="filePath">Emplacement où enregistrer le contenu d'une <see cref="ListView"/>.</param>
         public static void ListViewContent(ListView listView, string filePath)
         {
@@ -51,6 +51,15 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Permet de sauvegarder le contenu d'une <see cref="ListView"/>.
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="Exception"></exception>
+        /// <param name="listView"><see cref="ListView"/>.</param>
+        /// <param name="filePath">Emplacement où enregistrer le contenu d'une <see cref="ListView"/>.</param>
+        /// <param name="itemSplit">Séprateur d'éléments (ex: /*E*/).</param>
+        /// <param name="columnSplit">Séparateur de colonnes (ex: /*C*/)</param>
         public static void ListViewContent(ListView listView, string filePath, string itemSplit, string columnSplit)
         {
             if (string.IsNullOrEmpty(filePath) || string.IsNullOrEmpty(itemSplit) || string.IsNullOrEmpty(columnSplit)) // Vérifier les paramètres
