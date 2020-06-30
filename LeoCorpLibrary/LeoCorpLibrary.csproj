@@ -48,6 +48,7 @@
     <Compile Include="Env.cs" />
     <Compile Include="Exceptions\HEXInvalidValueException.cs" />
     <Compile Include="Exceptions\RGBInvalidValueException.cs" />
+    <Compile Include="Load.cs" />
     <Compile Include="Maths.cs" />
     <Compile Include="NetworkConnection.cs" />
     <Compile Include="Password.cs" />
