@@ -62,6 +62,16 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Permet de charger un fichier de sauvegarde dans une <see cref="ListView"/>.
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="Exception"></exception>
+        /// <exception cref="FileNotFoundException"></exception>
+        /// <param name="listView"><see cref="ListView"/>.</param>
+        /// <param name="filePath">Emplacement du fichier à charger dans la <see cref="ListView"/>.</param>
+        /// <param name="itemSplit">Séparateur d'éléments utilisé lors de la sauvegarde.</param>
+        /// <param name="columnSplit">Séparateur de colonnes utilisé lors de la sauvegarde.</param>
         public static void ListViewContent(ListView listView, string filePath, string itemSplit, string columnSplit)
         {
             if (string.IsNullOrEmpty(filePath) || string.IsNullOrEmpty(itemSplit) || string.IsNullOrEmpty(columnSplit)) // Si les paramètres sont vides ou null
