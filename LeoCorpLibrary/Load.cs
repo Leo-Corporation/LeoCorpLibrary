@@ -38,7 +38,7 @@ namespace LeoCorpLibrary
             try
             {
                 string data = File.ReadAllText(filePath); // Données
-                string[] elements = data.Split(new string[] { itemSplit }, StringSplitOptions.None); // Séparer avec itemSplit
+                string[] elements = data.Split(new string[] { itemSplit }, StringSplitOptions.RemoveEmptyEntries); // Séparer avec itemSplit
                 
                 foreach (string element in elements) // Pour chaque élément dans 'elements'
                 {
