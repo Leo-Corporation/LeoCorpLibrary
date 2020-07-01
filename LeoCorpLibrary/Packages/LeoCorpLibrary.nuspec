@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>LeoCorpLibrary</id>
-    <version>1.7.0.2007-rc2</version>
+    <version>1.7.0.2007</version>
     <title>LeoCorpLibrary</title>
     <authors>Leo Corporation + Contributeurs</authors>
     <owners>LeoCorporation</owners>
@@ -12,17 +12,15 @@
     <icon>images\icon.png</icon>
     <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
     <releaseNotes>
-      Version 1.7.0.2007-rc2
+      Version 1.7.0.2007
     - Problème de chargement de la ListView (#65)
     - Erreur dans la documentation XML (#66)
     - Mise à jour de la documentation
-      Version 1.7.0.2007-rc1
+    - Ajout d'une fonction pour sauvegarder le contenu d'une ListView
     - Ajout d'une variante de la fonction pour sauvegarder le contenu d'une ListView
     - Ajout d'une fonction pour charger un fichier de sauvegarde dans une ListView
     - Ajout d'une variante de la fonction pour charger un fichier de sauvegarde dans une ListView
     - Mise à jour de la documentation XML
-      Version 1.7.0.2007-pre1
-    - Ajout d'une fonction pour sauvegarder le contenu d'une ListView
     </releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>LeoCorporation Library Lib</tags>
