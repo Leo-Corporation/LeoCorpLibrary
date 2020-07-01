@@ -1,4 +1,4 @@
-# LeoCorpLibrary ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) ![GitHub issues](https://img.shields.io/github/issues/Leo-Corporation/LeoCorpLibrary)
+# LeoCorpLibrary ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) ![GitHub issues](https://img.shields.io/github/issues/Leo-Corporation/LeoCorpLibrary) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LeoCorpLibrary/.NET%20Framework)
 ## Qu'est-ce que c'est ?
 "LeoCorpLibrary" ou "LeoCorpLib" est une bibliothèque contenant des fonctions qui sont utilisées dans nos logiciels et qui peuvent vous être utiles. La bibliothèque comprend de nombreuses méthodes qui peuvent vous être utiles (Génération de mots de passe, fonctions mathématiques, système de mise à jour...).
 
