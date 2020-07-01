@@ -58,7 +58,7 @@ namespace LeoCorpLibrary
         /// <exception cref="Exception"></exception>
         /// <param name="listView"><see cref="ListView"/>.</param>
         /// <param name="filePath">Emplacement où enregistrer le contenu d'une <see cref="ListView"/>.</param>
-        /// <param name="itemSplit">Séprateur d'éléments (ex: /*E*/).</param>
+        /// <param name="itemSplit">Séparateur d'éléments (ex: /*E*/).</param>
         /// <param name="columnSplit">Séparateur de colonnes (ex: /*C*/)</param>
         public static void ListViewContent(ListView listView, string filePath, string itemSplit, string columnSplit)
         {
