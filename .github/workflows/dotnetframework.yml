@@ -1,5 +1,12 @@
 name: .NET Framework
-on: [push, pull_request]
+on: 
+    push:
+      branches:
+        - master
+        - vNext
+    pull_request:
+      branches:
+        - master
 
 jobs:
   build:

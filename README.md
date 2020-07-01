@@ -1,4 +1,4 @@
-# LeoCorpLibrary ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) ![GitHub issues](https://img.shields.io/github/issues/Leo-Corporation/LeoCorpLibrary)
+# LeoCorpLibrary ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) ![GitHub issues](https://img.shields.io/github/issues/Leo-Corporation/LeoCorpLibrary) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LeoCorpLibrary/.NET%20Framework)
 ## Qu'est-ce que c'est ?
 "LeoCorpLibrary" ou "LeoCorpLib" est une bibliothèque contenant des fonctions qui sont utilisées dans nos logiciels et qui peuvent vous être utiles. La bibliothèque comprend de nombreuses méthodes qui peuvent vous être utiles (Génération de mots de passe, fonctions mathématiques, système de mise à jour...).
 
@@ -16,26 +16,28 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoC
 
 Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary) pour télécharger le package NuGet.
 
-## Nouveautés de la version 1.6.0.2006
+## Nouveautés de la version 1.7.0.2007
 ### Ajout(s)
-- Ajout d'une fonction pour connaître l'espace libre sur le lecteur sélectionné
-- Ajout d'une fonction pour connaître l'espace total sur le lecteur sélectionné
-- Ajout d'une fonction pour connaître l'espace occupé sur le lecteur sélectionné
-- Ajout d'une énumération qui permet de choisir quel type de taille va être retournée sur ces fonctions (MB, GB...)
-- Ajout d'une fonction pour connaître le nombre de fichiers présent dans un répertoire
-- Ajout d'une fonction pour connaître le nombre de dossiers présent dans un répertoire
-- Ajout d'une fonction pour connaître le nombre de fichiers présent dans un répertoire (et sous-répertoires)
-- Ajout d'une fonction pour connaître le nombre de dossiers présent dans un répertoire (et sous-répertoires)
+- Ajout d'une fonction pour sauvegarder le contenu d'une ListView
+- Ajout d'une variante de la fonction pour sauvegarder le contenu d'une ListView
+- Ajout d'une fonction pour charger un fichier de sauvegarde dans une ListView
+- Ajout d'une variante de la fonction pour charger un fichier de sauvegarde dans une ListView
+### Corrections(s)
+- Mise à jour de la documentation XML
+- Problème de chargement de la ListView (#65)
+- Erreur dans la documentation XML (#66)
 ## Documentation
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
 ### Liens utiles :
 - [Installer la bibliothèque](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary)
+- [Charger un fichier](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Charger-un-fichier)
 - [Convertisseur de couleurs](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Convertisseur-de-couleurs)
 - [Environnement](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Environnement)
 - [Fonctions mathématiques](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Fonctions-math%C3%A9matiques)
 - [Générer un mot de passe](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/G%C3%A9n%C3%A9rer-un-mot-de-passe)
 - [Rechercher des mises à jour](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Rechercher-des-mises-%C3%A0-jour)
+- [Sauvegarder dans un fichier](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Sauvegarder-dans-un-fichier)
 - [Vérifier une connexion Internet](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/V%C3%A9rifier-une-connexion-internet)
 
 ## Comment ajouter la bibliothèque dans un projet ?
