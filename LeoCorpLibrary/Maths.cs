@@ -166,6 +166,9 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Classe regroupant des méthodes liées au cube.
+        /// </summary>
         public static class Cube
         {
             public static double GetVolume(double side, double height)
@@ -174,6 +177,9 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Classe regroupant des méthodes liées au cylindre
+        /// </summary>
         public static class Cylinder
         {
             public static double GetVolume(double radius, double height)
