@@ -173,5 +173,13 @@ namespace LeoCorpLibrary
                 return Math.Sqrt(side) * height; // Retourne le résultat
             }
         }
+
+        public static class Cylinder
+        {
+            public static double GetVolume(double radius, double height)
+            {
+                return Math.PI * Math.Sqrt(radius) * height; // Retourner le résultat
+            }
+        }
     }
 }
