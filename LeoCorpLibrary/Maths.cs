@@ -165,5 +165,13 @@ namespace LeoCorpLibrary
                 return result;
             }
         }
+
+        public static class Cube
+        {
+            public static double GetVolume(double side, double height)
+            {
+                return Math.Sqrt(side) * height; // Retourne le résultat
+            }
+        }
     }
 }
