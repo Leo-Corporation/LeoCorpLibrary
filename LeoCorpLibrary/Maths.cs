@@ -171,6 +171,12 @@ namespace LeoCorpLibrary
         /// </summary>
         public static class Cube
         {
+            /// <summary>
+            /// Permet d'obtenir le volume d'un cube.
+            /// </summary>
+            /// <param name="side">Longueur du côté.</param>
+            /// <param name="height">Hauteur.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetVolume(double side, double height)
             {
                 return Math.Sqrt(side) * height; // Retourne le résultat
@@ -182,6 +188,12 @@ namespace LeoCorpLibrary
         /// </summary>
         public static class Cylinder
         {
+            /// <summary>
+            /// Permet d'obtenir le volume d'un cylindre.
+            /// </summary>
+            /// <param name="radius">Rayon.</param>
+            /// <param name="height">Hauteur.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetVolume(double radius, double height)
             {
                 return Math.PI * Math.Sqrt(radius) * height; // Retourner le résultat
