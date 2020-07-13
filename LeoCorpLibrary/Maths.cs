@@ -165,5 +165,67 @@ namespace LeoCorpLibrary
                 return result;
             }
         }
+
+        /// <summary>
+        /// Classe regroupant des méthodes liées au cube.
+        /// </summary>
+        public static class Cube
+        {
+            /// <summary>
+            /// Permet d'obtenir le volume d'un cube.
+            /// </summary>
+            /// <param name="side">Longueur du côté.</param>
+            /// <param name="height">Hauteur.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetVolume(double side, double height)
+            {
+                return side * side * height; // Retourne le résultat
+            }
+
+            /// <summary>
+            /// Permet d'obtenir le volume d'un cube.
+            /// </summary>
+            /// <param name="side">Longeur du côté.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetVolume(double side)
+            {
+                return side * side * side; // Retourner le résultat
+            }
+        }
+
+        /// <summary>
+        /// Classe regroupant des méthodes liées au cylindre
+        /// </summary>
+        public static class Cylinder
+        {
+            /// <summary>
+            /// Permet d'obtenir le volume d'un cylindre.
+            /// </summary>
+            /// <param name="radius">Rayon.</param>
+            /// <param name="height">Hauteur.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetVolume(double radius, double height)
+            {
+                return Math.PI * radius * radius * height; // Retourner le résultat
+            }
+        }
+
+        /// <summary>
+        /// Classe regroupant des méthodes liées à la pyramide.
+        /// </summary>
+        public static class Pyramid
+        {
+            /// <summary>
+            /// Permet d'obtenir le volume d'une pyramide.
+            /// </summary>
+            /// <param name="lenght">Longeur.</param>
+            /// <param name="width">Largeur.</param>
+            /// <param name="height">Hauteur.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetVolume(double lenght, double width, double height)
+            {
+                return lenght * width * (height / 3); // Retourner le résultat
+            }
+        }
     }
 }
