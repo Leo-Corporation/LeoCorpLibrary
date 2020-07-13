@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>LeoCorpLibrary</id>
-    <version>1.7.0.2007</version>
+    <version>1.8.0.2007-rc1</version>
     <title>LeoCorpLibrary</title>
     <authors>Leo Corporation + Contributeurs</authors>
     <owners>LeoCorporation</owners>
@@ -12,14 +12,13 @@
     <icon>images\icon.png</icon>
     <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
     <releaseNotes>
-      Version 1.7.0.2007
-    - Problème de chargement de la ListView (#65)
-    - Erreur dans la documentation XML (#66)
-    - Mise à jour de la documentation
-    - Ajout d'une fonction pour sauvegarder le contenu d'une ListView
-    - Ajout d'une variante de la fonction pour sauvegarder le contenu d'une ListView
-    - Ajout d'une fonction pour charger un fichier de sauvegarde dans une ListView
-    - Ajout d'une variante de la fonction pour charger un fichier de sauvegarde dans une ListView
+      Version 1.8.0.2007-rc1
+    - Aucune fonction ne retourne le résultat attendu (Corrigé)
+    - Ajout d'une autre variante de la fonction Cube.GetVolume()
+    - Ajout de la possibilité de calculer le volume d'une pyramide
+      Version 1.8.0.2007-pre1
+    - Ajout de la possibiliter d'obtenir le volume d'un cube
+    _ Ajout de la possibiliter d'obtenir le volume d'un cylindre
     - Mise à jour de la documentation XML
     </releaseNotes>
     <copyright>Copyright 2020</copyright>
