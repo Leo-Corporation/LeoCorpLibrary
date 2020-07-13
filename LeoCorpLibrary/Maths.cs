@@ -209,5 +209,13 @@ namespace LeoCorpLibrary
                 return Math.PI * radius * radius * height; // Retourner le résultat
             }
         }
+
+        public static class Pyramid
+        {
+            public static double GetVolume(double lenght, double width, double height)
+            {
+                return lenght * width * (height / 3); // Retourner le résultat
+            }
+        }
     }
 }
