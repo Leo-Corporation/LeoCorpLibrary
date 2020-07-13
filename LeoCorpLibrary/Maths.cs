@@ -210,8 +210,18 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Classe regroupant des méthodes liées à la pyramide.
+        /// </summary>
         public static class Pyramid
         {
+            /// <summary>
+            /// Permet d'obtenir le volume d'une pyramide.
+            /// </summary>
+            /// <param name="lenght">Longeur.</param>
+            /// <param name="width">Largeur.</param>
+            /// <param name="height">Hauteur.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetVolume(double lenght, double width, double height)
             {
                 return lenght * width * (height / 3); // Retourner le résultat
