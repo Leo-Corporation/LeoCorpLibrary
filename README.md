@@ -16,16 +16,14 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoC
 
 Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary) pour télécharger le package NuGet.
 
-## Nouveautés de la version 1.7.0.2007
+## Nouveautés de la version 1.8.0.2007
 ### Ajout(s)
-- Ajout d'une fonction pour sauvegarder le contenu d'une ListView
-- Ajout d'une variante de la fonction pour sauvegarder le contenu d'une ListView
-- Ajout d'une fonction pour charger un fichier de sauvegarde dans une ListView
-- Ajout d'une variante de la fonction pour charger un fichier de sauvegarde dans une ListView
+- Ajout d'une fonction pour obtenir le volume d'un cube
+- Ajout d'une fonction pour obtenir le volume d'un cylindre
+- Ajout d'une fonction pour obtenir le volume d'une pyramide
 ### Corrections(s)
 - Mise à jour de la documentation XML
-- Problème de chargement de la ListView (#65)
-- Erreur dans la documentation XML (#66)
+- Aucune fonction ne retourne le résultat attendu (#74)
 ## Documentation
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
