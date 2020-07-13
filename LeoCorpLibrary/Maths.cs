@@ -179,8 +179,10 @@ namespace LeoCorpLibrary
             /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetVolume(double side, double height)
             {
-                return Math.Sqrt(side) * height; // Retourne le résultat
+                return side * side * height; // Retourne le résultat
             }
+
+            
         }
 
         /// <summary>
@@ -196,7 +198,7 @@ namespace LeoCorpLibrary
             /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetVolume(double radius, double height)
             {
-                return Math.PI * Math.Sqrt(radius) * height; // Retourner le résultat
+                return Math.PI * radius * radius * height; // Retourner le résultat
             }
         }
     }
