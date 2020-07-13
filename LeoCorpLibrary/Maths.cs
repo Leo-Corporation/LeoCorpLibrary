@@ -182,7 +182,15 @@ namespace LeoCorpLibrary
                 return side * side * height; // Retourne le résultat
             }
 
-            
+            /// <summary>
+            /// Permet d'obtenir le volume d'un cube.
+            /// </summary>
+            /// <param name="side">Longeur du côté.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetVolume(double side)
+            {
+                return side * side * side; // Retourner le résultat
+            }
         }
 
         /// <summary>
