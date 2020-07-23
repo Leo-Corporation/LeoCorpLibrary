@@ -226,6 +226,11 @@ namespace LeoCorpLibrary
             {
                 return lenght * width * (height / 3); // Retourner le résultat
             }
+
+            public static double GetHeight(double width, double lenght, double volume)
+            {
+                return 3 * (volume / (width * lenght)); // Retourner le résultat
+            }
         }
     }
 }
