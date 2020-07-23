@@ -231,6 +231,11 @@ namespace LeoCorpLibrary
             {
                 return 3 * (volume / (width * lenght)); // Retourner le résultat
             }
+
+            public static double GetLenghtBase(double areaBase, double width)
+            {
+                return areaBase / width;
+            }
         }
     }
 }
