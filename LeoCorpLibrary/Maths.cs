@@ -191,6 +191,11 @@ namespace LeoCorpLibrary
             {
                 return side * side * side; // Retourner le résultat
             }
+
+            public static double GetEdge(double area)
+            {
+                return Math.Sqrt(area / 6); // Retourner le résultat
+            }
         }
 
         /// <summary>
