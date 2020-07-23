@@ -227,16 +227,35 @@ namespace LeoCorpLibrary
                 return lenght * width * (height / 3); // Retourner le résultat
             }
 
+            /// <summary>
+            /// Permet d'obtenir la hauteur d'une pyramide.
+            /// </summary>
+            /// <param name="width">Largeur.</param>
+            /// <param name="lenght">Longueur.</param>
+            /// <param name="volume">Volume.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetHeight(double width, double lenght, double volume)
             {
                 return 3 * (volume / (width * lenght)); // Retourner le résultat
             }
 
+            /// <summary>
+            /// Permet d'obtenir la longueur de la base.
+            /// </summary>
+            /// <param name="areaBase">Aire de la base.</param>
+            /// <param name="width">Largeur.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetLenghtBase(double areaBase, double width)
             {
                 return areaBase / width; // Retourner le résultat
             }
 
+            /// <summary>
+            /// Permet d'obtenir la largeur de la base.
+            /// </summary>
+            /// <param name="areaBase">Aire de la base.</param>
+            /// <param name="lenght">Longueur.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetWidthBase(double areaBase, double lenght)
             {
                 return areaBase / lenght; // Retourner le résultat
