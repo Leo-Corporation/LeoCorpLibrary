@@ -192,6 +192,11 @@ namespace LeoCorpLibrary
                 return side * side * side; // Retourner le résultat
             }
 
+            /// <summary>
+            /// Permet d'obtenir le bord d'un cube.
+            /// </summary>
+            /// <param name="area">Aire.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetEdge(double area)
             {
                 return Math.Sqrt(area / 6); // Retourner le résultat
