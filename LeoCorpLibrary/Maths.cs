@@ -219,14 +219,25 @@ namespace LeoCorpLibrary
                 return Math.PI * radius * radius * height; // Retourner le résultat
             }
 
+            /// <summary>
+            /// Permet d'obtenir la hauteur d'un cylindre.
+            /// </summary>
+            /// <param name="area">Aire.</param>
+            /// <param name="radius">Rayon.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetHeight(double area, double radius)
             {
                 return area / (2 * Math.PI * radius) - radius; // Retourner le résultat
             }
 
+            /// <summary>
+            /// Permet d'obtenir l'aire de la base d'un cylindre.
+            /// </summary>
+            /// <param name="radius">Rayon.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
             public static double GetBaseArea(double radius)
             {
-                return Math.PI * radius * radius;
+                return Math.PI * radius * radius; // Retourner le résultat
             }
         }
 
