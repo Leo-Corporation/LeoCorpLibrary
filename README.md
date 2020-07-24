@@ -16,14 +16,16 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LeoC
 
 Cliquez [ici](https://www.nuget.org/packages/LeoCorpLibrary) pour télécharger le package NuGet.
 
-## Nouveautés de la version 1.8.0.2007
+## Nouveautés de la version 1.8.1.2007
 ### Ajout(s)
-- Ajout d'une fonction pour obtenir le volume d'un cube
-- Ajout d'une fonction pour obtenir le volume d'un cylindre
-- Ajout d'une fonction pour obtenir le volume d'une pyramide
+- Ajout de la possibilité de calculer la hauteur d'une pyramide (#76)
+- Ajout de la possibilité de calculer la longueur de la base d'une pyramide (#77)
+- Ajout de la possibilité de calculer la largeur de la base d'une pyramide (#78)
+- Ajout de la possibilité de calculer la hauteur d'un cylindre (#80)
+- Ajout de la possibilité de calculer le bord d'un cube (#81)
+- Ajout de la possibilité de calculer l'aire de la base d'un cylindre (#82)
 ### Corrections(s)
 - Mise à jour de la documentation XML
-- Aucune fonction ne retourne le résultat attendu (#74)
 ## Documentation
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
@@ -60,9 +62,12 @@ Pour ajouter ce répertoire dans Visual Studio, vous pouver faire un fork et clo
 ### GitHub
 - [Leo-Corporation / Générateur de mots de passe](https://github.com/Leo-Corporation/Generateur-de-mots-de-passe)
 - [Leo-Corporation / InternetTest](https://github.com/Leo-Corporation/InternetTest)
+- [Leo-Corporation / LABS-Experiences](https://github.com/Leo-Corporation/LABS-Experiences)
 ### Autres
 - ColorPicker 2 par [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 - GestionBiblio X, édition Ultra par [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 - Générateur de codes barre 2 par [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 
 [Ajoutez votre logiciel à cette liste en proposant votre projet](https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=ajout+cr%C3%A9dit&template=credit_projet.md&title=%5BCr%C3%A9dit-Projet%5D+)
+## License
+Projet sous license [MIT](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LICENSE.md).
