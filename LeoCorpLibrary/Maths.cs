@@ -191,6 +191,16 @@ namespace LeoCorpLibrary
             {
                 return side * side * side; // Retourner le résultat
             }
+
+            /// <summary>
+            /// Permet d'obtenir le bord d'un cube.
+            /// </summary>
+            /// <param name="area">Aire.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetEdge(double area)
+            {
+                return Math.Sqrt(area / 6); // Retourner le résultat
+            }
         }
 
         /// <summary>
@@ -207,6 +217,27 @@ namespace LeoCorpLibrary
             public static double GetVolume(double radius, double height)
             {
                 return Math.PI * radius * radius * height; // Retourner le résultat
+            }
+
+            /// <summary>
+            /// Permet d'obtenir la hauteur d'un cylindre.
+            /// </summary>
+            /// <param name="area">Aire.</param>
+            /// <param name="radius">Rayon.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetHeight(double area, double radius)
+            {
+                return area / (2 * Math.PI * radius) - radius; // Retourner le résultat
+            }
+
+            /// <summary>
+            /// Permet d'obtenir l'aire de la base d'un cylindre.
+            /// </summary>
+            /// <param name="radius">Rayon.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetBaseArea(double radius)
+            {
+                return Math.PI * radius * radius; // Retourner le résultat
             }
         }
 
@@ -225,6 +256,40 @@ namespace LeoCorpLibrary
             public static double GetVolume(double lenght, double width, double height)
             {
                 return lenght * width * (height / 3); // Retourner le résultat
+            }
+
+            /// <summary>
+            /// Permet d'obtenir la hauteur d'une pyramide.
+            /// </summary>
+            /// <param name="width">Largeur.</param>
+            /// <param name="lenght">Longueur.</param>
+            /// <param name="volume">Volume.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetHeight(double width, double lenght, double volume)
+            {
+                return 3 * (volume / (width * lenght)); // Retourner le résultat
+            }
+
+            /// <summary>
+            /// Permet d'obtenir la longueur de la base.
+            /// </summary>
+            /// <param name="areaBase">Aire de la base.</param>
+            /// <param name="width">Largeur.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetLenghtBase(double areaBase, double width)
+            {
+                return areaBase / width; // Retourner le résultat
+            }
+
+            /// <summary>
+            /// Permet d'obtenir la largeur de la base.
+            /// </summary>
+            /// <param name="areaBase">Aire de la base.</param>
+            /// <param name="lenght">Longueur.</param>
+            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            public static double GetWidthBase(double areaBase, double lenght)
+            {
+                return areaBase / lenght; // Retourner le résultat
             }
         }
     }
