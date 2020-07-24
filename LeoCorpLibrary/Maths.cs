@@ -218,6 +218,11 @@ namespace LeoCorpLibrary
             {
                 return Math.PI * radius * radius * height; // Retourner le résultat
             }
+
+            public static double GetHeight(double area, double radius)
+            {
+                return area / (2 * Math.PI * radius) - radius; // Retourner le résultat
+            }
         }
 
         /// <summary>
