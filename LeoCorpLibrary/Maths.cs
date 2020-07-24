@@ -223,6 +223,11 @@ namespace LeoCorpLibrary
             {
                 return area / (2 * Math.PI * radius) - radius; // Retourner le résultat
             }
+
+            public static double GetBaseArea(double radius)
+            {
+                return Math.PI * radius * radius;
+            }
         }
 
         /// <summary>
