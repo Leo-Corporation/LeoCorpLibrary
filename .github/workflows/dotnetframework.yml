@@ -1,9 +1,6 @@
 name: .NET Framework
 on: 
     push:
-      branches:
-        - master
-        - vNext
     pull_request:
       branches:
         - master
