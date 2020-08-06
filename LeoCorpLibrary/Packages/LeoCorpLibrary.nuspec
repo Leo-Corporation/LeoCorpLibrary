@@ -6,11 +6,12 @@
     <title>LeoCorpLibrary</title>
     <authors>Leo Corporation + Contributeurs</authors>
     <owners>LeoCorporation</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</projectUrl>
     <icon>images\icon.png</icon>
     <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
+    <repository type="git" url="https://github.com/Leo-Corporation/LeoCorpLibrary" />
     <releaseNotes>
       Version 1.8.1.2007
     - Ajout de la possibilité de calculer la hauteur d'une pyramide (#76)
