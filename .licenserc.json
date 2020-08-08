@@ -1,0 +1,14 @@
+{
+    "**/*.cs": [
+        "/*",
+        "MIT License",
+        "",
+        "Copyright (c) Léo Corporation"
+    ],
+
+    "ignore": [
+        "**/*.Designer.cs",
+        "LeoCorpLibrary/Properties/",
+        "LeoCorpLibrary/obj/"
+    ]
+}
