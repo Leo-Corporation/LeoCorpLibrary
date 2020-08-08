@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>LeoCorpLibrary</id>
-    <version>1.8.1.2007</version>
+    <version>1.9.0.2008-pre1</version>
     <title>LeoCorpLibrary</title>
     <authors>Leo Corporation + Contributeurs</authors>
     <owners>LeoCorporation</owners>
@@ -13,14 +13,9 @@
     <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
     <repository type="git" url="https://github.com/Leo-Corporation/LeoCorpLibrary" />
     <releaseNotes>
-      Version 1.8.1.2007
-    - Ajout de la possibilité de calculer la hauteur d'une pyramide (#76)
-    - Ajout de la possibilité de calculer la longueur de la base d'une pyramide (#77)
-    - Ajout de la possibilité de calculer la largeur de la base d'une pyramide (#78)
-    - Ajout de la possibilité de calculer la hauteur d'un cylindre (#80)
-    - Ajout de la possibilité de calculer le bord d'un cube (#81)
-    - Ajout de la possibilité de calculer l'aire de la base d'un cylindre (#82)
+      Version 1.9.0.2008-pre1
     - Mise à jour de la documentation XML
+    - Ajout de la possibilité d'obtenir la version de Windows (#85)
     </releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>LeoCorporation Library Lib</tags>
