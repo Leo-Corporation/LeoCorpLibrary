@@ -230,6 +230,32 @@ namespace LeoCorpLibrary
             res = GetTotalDriveSpace(drive, unitType) - GetDriveAvailableFreeSpace(drive, unitType); // Obtenir l'espace occupé
             return res;
         }
+
+        public static WindowsVersion GetWindowsVersion()
+        {
+            WindowsVersion res = WindowsVersion.Unknown; // Résultat
+            switch (Environment.OSVersion.Version.Major)
+            {
+                case 6: // Si la version majeure est 6
+                    switch (Environment.OSVersion.Version.Minor)
+                    {
+                        case 1: // Si Windows 7 (6.1)
+                            res = WindowsVersion.Windows7; // Windows 7
+                            break;
+                        case 2: // Si Windows 8 (6.2)
+                            res = WindowsVersion.Windows8; // Windows 8
+                            break;
+                        case 3: // Si Windows 8.1 (6.3)
+                            res = WindowsVersion.Windows81; // Windows 8.1
+                            break;
+                    }
+                    break;
+                case 10: // Si Windows 10
+                    res = WindowsVersion.Windows10; // Windows 10
+                    break;
+            }
+            return res;
+        }
     }
 
     /// <summary>
@@ -268,6 +294,7 @@ namespace LeoCorpLibrary
         Windows7,
         Windows8,
         Windows81,
-        Windows10
+        Windows10,
+        Unknown
     }
 }
