@@ -294,7 +294,7 @@ namespace LeoCorpLibrary
     }
 
     /// <summary>
-    /// Systèmes d'exploitations.
+    /// Systèmes d'exploitations Windows.
     /// </summary>
     public enum WindowsVersion
     {
