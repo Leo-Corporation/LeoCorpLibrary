@@ -262,4 +262,12 @@ namespace LeoCorpLibrary
         /// </summary>
         Petabyte
     }
+
+    public enum WindowsVersion
+    {
+        Windows7,
+        Windows8,
+        Windows81,
+        Windows10
+    }
 }
