@@ -231,6 +231,10 @@ namespace LeoCorpLibrary
             return res;
         }
 
+        /// <summary>
+        /// Permet d'obtenir la version de Windows.
+        /// </summary>
+        /// <returns>Retourne une valeur de type <see cref="WindowsVersion"/>.</returns>
         public static WindowsVersion GetWindowsVersion()
         {
             WindowsVersion res = WindowsVersion.Unknown; // Résultat
@@ -289,12 +293,30 @@ namespace LeoCorpLibrary
         Petabyte
     }
 
+    /// <summary>
+    /// Systèmes d'exploitations.
+    /// </summary>
     public enum WindowsVersion
     {
+        /// <summary>
+        /// Windows 7 (Version 6.1).
+        /// </summary>
         Windows7,
+        /// <summary>
+        /// Windows 8 (Version 6.2).
+        /// </summary>
         Windows8,
+        /// <summary>
+        /// Windows 8.1 (Version 6.3).
+        /// </summary>
         Windows81,
+        /// <summary>
+        /// Windows 10 (Version 10.0)
+        /// </summary>
         Windows10,
+        /// <summary>
+        /// Système d'exploitation inconnu.
+        /// </summary>
         Unknown
     }
 }
