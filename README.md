@@ -9,7 +9,7 @@ Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework/Wind
 
 ## Télécharger la bibliothèque
 * [Nuget](https://www.nuget.org/packages/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
-* [GitHub Packages]()
+* [GitHub Packages](https://github.com/Leo-Corporation/LeoCorpLibrary/packages/345951)
 
 ## Nouveautés de la version 1.8.1.2007
 ### Ajout(s)
