@@ -324,7 +324,7 @@ namespace LeoCorpLibrary
 
             if (!File.Exists(filename)) // Si le fichier n'existe pas
             {
-                throw new FileNotFoundException("THe parameter 'filename' does not lead to an existing file."); // Message d'erreur
+                throw new FileNotFoundException("The parameter 'filename' does not lead to an existing file."); // Message d'erreur
             }
             Process process = new Process(); // Nouveau processus
             process.StartInfo.FileName = filename; // Mettre le fichier à ouvrir
