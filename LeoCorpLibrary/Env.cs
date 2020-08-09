@@ -23,6 +23,7 @@ SOFTWARE.
 */
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -282,6 +283,18 @@ namespace LeoCorpLibrary
                     break;
             }
             return res;
+        }
+
+        public static void ExecuteAsAdmin(Process process)
+        {
+            if (string.IsNullOrEmpty(process.StartInfo.FileName) || File.Exists(process.StartInfo.FileName)) // Si l'argument est vide
+            {
+                throw new FileNotFoundException("The parameter 'process' has no file specified, or the specified file doesn't exist."); // Message d'erreur
+            }
+
+            process.StartInfo.UseShellExecute = true;
+            process.StartInfo.Verb = "runas";
+            process.Start();
         }
     }
 
