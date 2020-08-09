@@ -285,11 +285,18 @@ namespace LeoCorpLibrary
             return res;
         }
 
+        /// <summary>
+        /// Permet de lancer un programme en mode administrateur.
+        /// </summary>
+        /// <param name="process">Processus à lancer en mode administrateur.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="FileNotFoundException"></exception>
+        /// <remarks>Le paramètre 'process' doit avoir un fichier/programme à lancer en mode administrateur dans la propriété StartInfo.FileName</remarks>
         public static void ExecuteAsAdmin(Process process)
         {
             if (string.IsNullOrEmpty(process.StartInfo.FileName)) // Si l'argument est vide
             {
-                throw new FileNotFoundException("The parameter 'process' is null or empty."); // Message d'erreur
+                throw new ArgumentNullException("The parameter 'process' has a 'FileName' that is null or empty."); // Message d'erreur
             }
 
             if (!File.Exists(process.StartInfo.FileName)) // Si le ficher n'existe pas
@@ -302,6 +309,12 @@ namespace LeoCorpLibrary
             process.Start(); // Démarrer
         }
 
+        /// <summary>
+        /// Permet de lancer un programme en mode administrateur.
+        /// </summary>
+        /// <param name="filename">Programme à lancer en mode administrateur.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="FileNotFoundException"></exception>
         public static void ExecuteAsAdmin(string filename)
         {
             if (string.IsNullOrEmpty(filename)) // Si l'argument est vide
