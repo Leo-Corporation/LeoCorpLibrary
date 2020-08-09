@@ -287,14 +287,37 @@ namespace LeoCorpLibrary
 
         public static void ExecuteAsAdmin(Process process)
         {
-            if (string.IsNullOrEmpty(process.StartInfo.FileName) || File.Exists(process.StartInfo.FileName)) // Si l'argument est vide
+            if (string.IsNullOrEmpty(process.StartInfo.FileName)) // Si l'argument est vide
             {
-                throw new FileNotFoundException("The parameter 'process' has no file specified, or the specified file doesn't exist."); // Message d'erreur
+                throw new FileNotFoundException("The parameter 'process' is null or empty."); // Message d'erreur
             }
 
+            if (!File.Exists(process.StartInfo.FileName)) // Si le ficher n'existe pas
+            {
+                throw new FileNotFoundException("The parameter 'process' has a 'FileName' that does not lead to an existing file."); // Message d'erreur
+            }
+
+            process.StartInfo.UseShellExecute = true; 
+            process.StartInfo.Verb = "runas"; // Mettre en mode administrateur
+            process.Start(); // Démarrer
+        }
+
+        public static void ExecuteAsAdmin(string filename)
+        {
+            if (string.IsNullOrEmpty(filename)) // Si l'argument est vide
+            {
+                throw new ArgumentNullException("The parameter 'filename' is null or empty."); // Message d'erreur
+            }
+
+            if (!File.Exists(filename)) // Si le fichier n'existe pas
+            {
+                throw new FileNotFoundException("THe parameter 'filename' does not lead to an existing file."); // Message d'erreur
+            }
+            Process process = new Process(); // Nouveau processus
+            process.StartInfo.FileName = filename; // Mettre le fichier à ouvrir
             process.StartInfo.UseShellExecute = true;
-            process.StartInfo.Verb = "runas";
-            process.Start();
+            process.StartInfo.Verb = "runas"; // Mettre le mode administrateur
+            process.Start(); // Démarrer
         }
     }
 
