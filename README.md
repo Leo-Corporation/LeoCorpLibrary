@@ -5,23 +5,24 @@
 Allez consultez le [wiki](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki) pour découvrir la documentation et l'emploi de ces méthodes.
 
 Cette bibliothèque est écrite en .NET Framework 4.7.2 en utilisant le C#.
-Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework/Windows Forms.
+Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework.
 
 ## Télécharger la bibliothèque
 * [Nuget](https://www.nuget.org/packages/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 * [GitHub Packages](https://github.com/Leo-Corporation/LeoCorpLibrary/packages/345951)
 
-## Nouveautés de la version 1.8.1.2007
+## Nouveautés de la version 1.9.0.2008
 ### Ajout(s)
-- Ajout de la possibilité de calculer la hauteur d'une pyramide (#76)
-- Ajout de la possibilité de calculer la longueur de la base d'une pyramide (#77)
-- Ajout de la possibilité de calculer la largeur de la base d'une pyramide (#78)
-- Ajout de la possibilité de calculer la hauteur d'un cylindre (#80)
-- Ajout de la possibilité de calculer le bord d'un cube (#81)
-- Ajout de la possibilité de calculer l'aire de la base d'un cylindre (#82)
+- Ajout de la possibilité d'obtenir la version de Windows (#85)
+- Ajout de la possibilité d'exécuter une application en mode administrateur (#86)
 ### Corrections(s)
+- Erreur de typo dans Env.ExecuteAsAdmin (#90)
 - Mise à jour de la documentation XML
 ## Documentation
+### Branches
+Il y   deux branches pour LeoCorpLibrary :
+- master ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary)
+- vNext ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary?include_prereleases)
 ### Consulter la documentation
 Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) pour obtenir la documentation de la librairie.
 ### Liens utiles :
