@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>LeoCorpLibrary</id>
-    <version>1.9.0.2008-rc1</version>
+    <version>1.9.0.2008</version>
     <title>LeoCorpLibrary</title>
     <authors>Leo Corporation + Contributeurs</authors>
     <owners>LeoCorporation</owners>
@@ -13,12 +13,11 @@
     <description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</description>
     <repository type="git" url="https://github.com/Leo-Corporation/LeoCorpLibrary" />
     <releaseNotes>
-      Version 1.9.0.2008-rc1
+      Version 1.9.0.2008
     - Ajout de la possibilité d'exécuter une application en mode administrateur (#86)
-    - Mise à jour de la documentation XML
-      Version 1.9.0.2008-pre1
-    - Mise à jour de la documentation XML
     - Ajout de la possibilité d'obtenir la version de Windows (#85)
+    - Erreur de typo dans Env.ExecuteAsAdmin (#90)
+    - Mise à jour de la documentation XML
     </releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>LeoCorporation Library Lib</tags>
