@@ -291,7 +291,7 @@ namespace LeoCorpLibrary
         /// <param name="process">Processus à lancer en mode administrateur.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="FileNotFoundException"></exception>
-        /// <remarks>Le paramètre 'process' doit avoir un fichier/programme à lancer en mode administrateur dans la propriété StartInfo.FileName</remarks>
+        /// <remarks>Le paramètre 'process' doit avoir un fichier/programme à lancer en mode administrateur dans la propriété StartInfo.FileName.</remarks>
         public static void ExecuteAsAdmin(Process process)
         {
             if (string.IsNullOrEmpty(process.StartInfo.FileName)) // Si l'argument est vide
