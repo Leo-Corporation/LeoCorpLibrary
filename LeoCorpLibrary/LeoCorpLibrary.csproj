@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProjectGuid>{42249739-9D60-4048-8691-B6536BCF49CE}</ProjectGuid>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
     <AssemblyTitle>LeoCorpLibrary</AssemblyTitle>
     <Company>Léo Corporation</Company>
     <Product>LeoCorpLibrary</Product>
     <Description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</Description>
     <Copyright>Copyright ©  2020</Copyright>
-    <AssemblyVersion>1.9.0.2008</AssemblyVersion>
-    <FileVersion>1.9.0.2008</FileVersion>
+    <AssemblyVersion>2.0.0.2008</AssemblyVersion>
+    <FileVersion>2.0.0.2008</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -20,6 +20,17 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>2.0.0.2008-pre1</Version>
+    <Authors>Léo Corporation</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
+    <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms</PackageTags>
+    <PackageReleaseNotes>Version 2.0.0.2008
+- Migrer le projet vers le format SDK (#100)
+- Rendre compatible avec .NET Core 3.1 (#101)</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />
@@ -29,5 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />
+    <None Include="images\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>
