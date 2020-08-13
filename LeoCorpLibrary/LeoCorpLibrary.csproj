@@ -32,6 +32,7 @@
     <PackageReleaseNotes>Version 2.0.0.2008
 - Migrer le projet vers le format SDK (#100)
 - Rendre compatible avec .NET Core 3.1 (#101)</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">
     <Reference Include="System.Windows.Forms" />
