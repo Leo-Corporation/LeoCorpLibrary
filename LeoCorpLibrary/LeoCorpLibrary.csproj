@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <ProjectGuid>{42249739-9D60-4048-8691-B6536BCF49CE}</ProjectGuid>
     <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
@@ -10,6 +10,7 @@
     <AssemblyVersion>2.0.0.2008</AssemblyVersion>
     <FileVersion>2.0.0.2008</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -32,7 +33,7 @@
 - Migrer le projet vers le format SDK (#100)
 - Rendre compatible avec .NET Core 3.1 (#101)</PackageReleaseNotes>
   </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
