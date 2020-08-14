@@ -60,7 +60,7 @@ namespace LeoCorpLibrary
         /// <para>Permet de savoir si l'utilisateur a une connexion à Internet.</para>
         /// <para>La connexion est testée sur le site spécifié.</para>
         /// </summary>
-        /// <param name="site">Site sur lequel al connexion est testée.</param>
+        /// <param name="site">Site sur lequel la connexion est testée.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
         /// <returns>Valeur de type <see cref="bool"/>.</returns>
         public static bool IsAvailableTestSite(string site)
