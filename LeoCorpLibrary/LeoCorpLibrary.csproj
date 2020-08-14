@@ -22,17 +22,24 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.0.0.2008-pre1</Version>
+    <Version>2.0.0.2008-rc1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms</PackageTags>
-    <PackageReleaseNotes>Version 2.0.0.2008
+    <PackageReleaseNotes>Version 2.0.0.2008-rc1
+- Erreur de typo dans la doc XML (#95)
+- Champ returns non rempli dans ColorConverter.cs (#96)
+- Ajouter une référence dans Maths.cs (#97)
+- Il manque un point dans Maths.cs, ligne 230 (#98)
+- Il manque un point dans Save.cs, ligne 85 (#99)
+Version 2.0.0.2008-pre1
 - Migrer le projet vers le format SDK (#100)
 - Rendre compatible avec .NET Core 3.1 (#101)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">
     <Reference Include="System.Windows.Forms" />
@@ -41,10 +48,18 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.manifest" />
+    <Compile Remove="images\**" />
+    <Compile Remove="Packages\**" />
+    <EmbeddedResource Remove="images\**" />
+    <EmbeddedResource Remove="Packages\**" />
+    <None Remove="images\**" />
+    <None Remove="Packages\**" />
     <None Include="images\icon.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
   </ItemGroup>
 </Project>
