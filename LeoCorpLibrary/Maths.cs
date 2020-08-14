@@ -36,7 +36,7 @@ namespace LeoCorpLibrary
     public static class Maths
     {
         /// <summary>
-        /// Permet de faire une somme de nombres de type double.
+        /// Permet de faire une somme de nombres de type <see cref="double"/>.
         /// </summary>
         /// <param name="args">Nombres.</param>
         /// <returns>Valeur de type <see cref="double"/>.</returns>
@@ -51,7 +51,7 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtneir à partir d'une liste de nombre de type double, le plus petit d'entre eux.
+        /// Permet d'obtneir à partir d'une liste de nombre de type <see cref="double"/>, le plus petit d'entre eux.
         /// </summary>
         /// <param name="numbers">Nombres.</param>
         /// <returns>Valeur de type <see cref="double"/>.</returns>
@@ -69,7 +69,7 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtenir à partir d'une liste de nombre de type double, le plus grand d'entre eux.
+        /// Permet d'obtenir à partir d'une liste de nombre de type <see cref="double"/>, le plus grand d'entre eux.
         /// </summary>
         /// <param name="numbers">Nombres.</param>
         /// <returns>Valeur de type <see cref="double"/>.</returns>
