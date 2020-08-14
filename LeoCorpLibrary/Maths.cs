@@ -226,7 +226,7 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Classe regroupant des méthodes liées au cylindre
+        /// Classe regroupant des méthodes liées au cylindre.
         /// </summary>
         public static class Cylinder
         {
