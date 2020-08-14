@@ -43,7 +43,7 @@ namespace LeoCorpLibrary
         /// <param name="red">Rouge.</param>
         /// <param name="green">Vert.</param>
         /// <param name="blue">Bleu.</param>
-        /// <returns>Couleur <see cref="HSVColor"/></returns>
+        /// <returns>Couleur <see cref="HSVColor"/>.</returns>
         public static HSVColor RGBtoHSV(int red, int green, int blue)
         {
             return HSVColor.FromRGB(red, green, blue);
@@ -53,7 +53,7 @@ namespace LeoCorpLibrary
         /// Permet de convertir une couleur RGB (<see cref="Color"/>) en couleur HSV (<see cref="HSVColor"/>).
         /// </summary>
         /// <param name="color">Couleur (<see cref="Color"/>).</param>
-        /// <returns></returns>
+        /// <returns>Couleur <see cref="HSVColor"/>.</returns>
         public static HSVColor RGBtoHSV(Color color)
         {
             return HSVColor.FromRGB(color);
