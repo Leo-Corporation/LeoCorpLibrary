@@ -11,13 +11,16 @@ Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework.
 * [Nuget](https://www.nuget.org/packages/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 * [GitHub Packages](https://github.com/Leo-Corporation/LeoCorpLibrary/packages/345951)
 
-## Nouveautés de la version 1.9.0.2008
+## Nouveautés de la version 2.0.0.2008
 ### Ajout(s)
-- Ajout de la possibilité d'obtenir la version de Windows (#85)
-- Ajout de la possibilité d'exécuter une application en mode administrateur (#86)
+- Migrer le projet vers le format SDK (#100)
+- Rendre compatible avec .NET Core 3.1 (#101)
 ### Corrections(s)
-- Erreur de typo dans Env.ExecuteAsAdmin (#90)
-- Mise à jour de la documentation XML
+- Erreur de typo dans la doc XML (#95)
+- Champ returns non rempli dans ColorConverter.cs (#96)
+- Ajouter une référence dans Maths.cs (#97)
+- Il manque un point dans Maths.cs, ligne 230 (#98)
+- Il manque un point dans Save.cs, ligne 85 (#99)
 ## Documentation
 ### Branches
 Il y   deux branches pour LeoCorpLibrary :
