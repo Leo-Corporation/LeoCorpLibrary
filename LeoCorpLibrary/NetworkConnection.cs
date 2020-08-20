@@ -94,5 +94,12 @@ namespace LeoCorpLibrary
             }
             return result;
         }
+
+        public static Task<bool> IsAvailableTestSiteAsync(string site)
+        {
+            Task<bool> task = new Task<bool>(() => IsAvailableTestSite(site));
+            task.Start();
+            return task;
+        }
     }
 }
