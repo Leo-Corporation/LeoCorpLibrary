@@ -332,6 +332,21 @@ namespace LeoCorpLibrary
             process.StartInfo.Verb = "runas"; // Mettre le mode administrateur
             process.Start(); // Démarrer
         }
+
+        public static int CountFileCharacters(string fileName)
+        {
+            if (string.IsNullOrEmpty(fileName)) // Si l'argument est vide ou null
+            {
+                throw new ArgumentNullException("The parameter 'fileName' is null or empty."); // Erreur
+            }
+
+            if (!File.Exists(fileName)) // Si le fichier n'existe pas
+            {
+                throw new FileNotFoundException("The parameter 'fileNale' does not lead to a specific file name."); // Erreur
+            }
+
+            return File.ReadAllText(fileName).Length;
+        }
     }
 
     /// <summary>
