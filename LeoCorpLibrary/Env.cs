@@ -333,6 +333,13 @@ namespace LeoCorpLibrary
             process.Start(); // Démarrer
         }
 
+        /// <summary>
+        /// Permet de compter le nombre de caractères présents dans un fichier.
+        /// </summary>
+        /// <param name="fileName">Emplacement du fichier.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="FileNotFoundException"></exception>
+        /// <returns>Retourne une valeur de type <see cref="Task{TResult}"/>.</returns>
         public static int CountFileCharacters(string fileName)
         {
             if (string.IsNullOrEmpty(fileName)) // Si l'argument est vide ou null
@@ -348,6 +355,13 @@ namespace LeoCorpLibrary
             return File.ReadAllText(fileName).Length;
         }
 
+        /// <summary>
+        /// Permet de compter le nombre de caractères présents dans un fichier de manière asynchrone.
+        /// </summary>
+        /// <param name="fileName">Emplacement du fichier.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="FileNotFoundException"></exception>
+        /// <returns>Retourne une valeur de type <see cref="Task{TResult}"/>.</returns>
         public static Task<int> CountFileCharactersAsync(string fileName)
         {
             Task<int> task = new Task<int>(() => CountFileCharacters(fileName));
