@@ -88,6 +88,13 @@ namespace LeoCorpLibrary
             return lastVersion;
         }
 
+        public static Task<string> GetLastVersionAsync(string lastVersionFileLink)
+        {
+            Task<string> task = new Task<string>(() => GetLastVersion(lastVersionFileLink));
+            task.Start();
+            return task;
+        }
+
         /// <summary>
         /// Permet de vérifier si des mises à jour sont disponibles pour votre logiciel.
         /// </summary>
