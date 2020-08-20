@@ -390,7 +390,7 @@ namespace LeoCorpLibrary
             {
                 throw new ArgumentNullException(""); // Erreur
             }
-            return (int)date.Subtract(new DateTime(1070, 1, 1)).TotalSeconds; // Calculer Unix Time
+            return (int)date.Subtract(new DateTime(1970, 1, 1)).TotalSeconds; // Calculer Unix Time
         }
     }
 
