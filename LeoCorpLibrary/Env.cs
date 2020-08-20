@@ -373,6 +373,11 @@ namespace LeoCorpLibrary
         {
             return (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
         }
+
+        public static int GetUnixTime(DateTime date)
+        {
+            return (int)date.Subtract(new DateTime(1070, 1, 1)).TotalSeconds;
+        }
     }
 
     /// <summary>
