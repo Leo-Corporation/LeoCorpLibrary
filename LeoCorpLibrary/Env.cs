@@ -347,6 +347,13 @@ namespace LeoCorpLibrary
 
             return File.ReadAllText(fileName).Length;
         }
+
+        public static Task<int> CountFileCharactersAsync(string fileName)
+        {
+            Task<int> task = new Task<int>(() => CountFileCharacters(fileName));
+            task.Start();
+            return task;
+        }
     }
 
     /// <summary>
