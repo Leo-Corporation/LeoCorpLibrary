@@ -56,6 +56,13 @@ namespace LeoCorpLibrary
             }
         }
 
+        public static Task<bool> IsAvailableAsync()
+        {
+            Task<bool> task = new Task<bool>(IsAvailable);
+            task.Start();
+            return task;
+        }
+
         /// <summary>
         /// <para>Permet de savoir si l'utilisateur a une connexion à Internet.</para>
         /// <para>La connexion est testée sur le site spécifié.</para>
