@@ -11,16 +11,17 @@ Vous pouvez l'ajouter en tant que référence dans un projet .NET Framework.
 * [Nuget](https://www.nuget.org/packages/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 * [GitHub Packages](https://github.com/Leo-Corporation/LeoCorpLibrary/packages/345951)
 
-## Nouveautés de la version 2.0.0.2008
+## Nouveautés de la version 2.1.0.2008
 ### Ajout(s)
-- Migrer le projet vers le format SDK (#100)
-- Rendre compatible avec .NET Core 3.1 (#101)
+- Ajout de la méthode GetLastVersionAsync() (#104)
+- Ajout de la méthode IsAvailableAsync() (#105)
+- Ajout de la méthode IsAvailableTestSiteAsync() (#106)
+- Ajout de la méthode CountFileCharacters() (#107)
+- Ajout de la méthode CountFileCharactersAsync() (#108)
+- Ajout de la méthode GetUnixTime() (#109)
 ### Corrections(s)
-- Erreur de typo dans la doc XML (#95)
-- Champ returns non rempli dans ColorConverter.cs (#96)
-- Ajouter une référence dans Maths.cs (#97)
-- Il manque un point dans Maths.cs, ligne 230 (#98)
-- Il manque un point dans Save.cs, ligne 85 (#99)
+- Mise à jour de la documentation XML (#110)
+- La méthode GetUnixTime(DateTime date) ne fonctionne pas (#111)
 ## Documentation
 ### Branches
 Il y   deux branches pour LeoCorpLibrary :
@@ -44,11 +45,11 @@ Cliquez [ici](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-L
 
 ## Roadmap 2020
 Voici la "Roadmap" de fin d'année 2020 concernant LeoCorpLibrary :
-<center>
+<p style="text-align: center;">
 
 ![Roadmap](https://raw.githubusercontent.com/Leo-Corporation/LeoCorp-Docs/master/Roadmaps/LeoCorpLibrary/LeoCorpLibrary%20Roadmap%202020.png)
 
-</center>
+</p>
 
 **Attention, d'autres ajouts peuvent être effectués sans qu'ils figurent sur la roadmap. Certains ajouts peuvent être retardés.**
 

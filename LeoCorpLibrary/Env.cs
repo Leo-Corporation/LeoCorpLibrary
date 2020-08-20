@@ -332,6 +332,66 @@ namespace LeoCorpLibrary
             process.StartInfo.Verb = "runas"; // Mettre le mode administrateur
             process.Start(); // Démarrer
         }
+
+        /// <summary>
+        /// Permet de compter le nombre de caractères présents dans un fichier.
+        /// </summary>
+        /// <param name="fileName">Emplacement du fichier.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="FileNotFoundException"></exception>
+        /// <returns>Retourne une valeur de type <see cref="Task{TResult}"/>.</returns>
+        public static int CountFileCharacters(string fileName)
+        {
+            if (string.IsNullOrEmpty(fileName)) // Si l'argument est vide ou null
+            {
+                throw new ArgumentNullException("The parameter 'fileName' is null or empty."); // Erreur
+            }
+
+            if (!File.Exists(fileName)) // Si le fichier n'existe pas
+            {
+                throw new FileNotFoundException("The parameter 'fileNale' does not lead to a specific file name."); // Erreur
+            }
+
+            return File.ReadAllText(fileName).Length; // Compter
+        }
+
+        /// <summary>
+        /// Permet de compter le nombre de caractères présents dans un fichier de manière asynchrone.
+        /// </summary>
+        /// <param name="fileName">Emplacement du fichier.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="FileNotFoundException"></exception>
+        /// <returns>Retourne une valeur de type <see cref="Task{TResult}"/>.</returns>
+        public static Task<int> CountFileCharactersAsync(string fileName)
+        {
+            Task<int> task = new Task<int>(() => CountFileCharacters(fileName)); // Tâche
+            task.Start(); // Démarrage de la tâche
+            return task; // Retourne le résultat de manière aynchrone
+        }
+
+        /// <summary>
+        /// Permet d'obtenir l'Unix Time actuel.
+        /// </summary>
+        /// <returns>Valeur de type <see cref="int"/>.</returns>
+        public static int GetUnixTime()
+        {
+            return (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds; // Calculer Unix Time
+        }
+
+        /// <summary>
+        /// Permet d'obtenir l'Unix Time à partir d'une <see cref="DateTime"/> spécifique.
+        /// </summary>
+        /// <param name="date">Date.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <returns>Valeur de type <see cref="int"/>.</returns>
+        public static int GetUnixTime(DateTime date)
+        {
+            if (date == null) // Si l'argument est null
+            {
+                throw new ArgumentNullException(""); // Erreur
+            }
+            return (int)date.Subtract(new DateTime(1970, 1, 1)).TotalSeconds; // Calculer Unix Time
+        }
     }
 
     /// <summary>
