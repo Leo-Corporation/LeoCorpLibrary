@@ -352,7 +352,7 @@ namespace LeoCorpLibrary
                 throw new FileNotFoundException("The parameter 'fileNale' does not lead to a specific file name."); // Erreur
             }
 
-            return File.ReadAllText(fileName).Length;
+            return File.ReadAllText(fileName).Length; // Compter
         }
 
         /// <summary>
@@ -364,19 +364,33 @@ namespace LeoCorpLibrary
         /// <returns>Retourne une valeur de type <see cref="Task{TResult}"/>.</returns>
         public static Task<int> CountFileCharactersAsync(string fileName)
         {
-            Task<int> task = new Task<int>(() => CountFileCharacters(fileName));
-            task.Start();
-            return task;
+            Task<int> task = new Task<int>(() => CountFileCharacters(fileName)); // Tâche
+            task.Start(); // Démarrage de la tâche
+            return task; // Retourne le résultat de manière aynchrone
         }
 
+        /// <summary>
+        /// Permet d'obtenir l'Unix Time actuel.
+        /// </summary>
+        /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetUnixTime()
         {
-            return (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+            return (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds; // Calculer Unix Time
         }
 
+        /// <summary>
+        /// Permet d'obtenir l'Unix Time à partir d'une <see cref="DateTime"/> spécifique.
+        /// </summary>
+        /// <param name="date">Date.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <returns>Valeur de type <see cref="int"/>.</returns>
         public static int GetUnixTime(DateTime date)
         {
-            return (int)date.Subtract(new DateTime(1070, 1, 1)).TotalSeconds;
+            if (date == null) // Si l'argument est null
+            {
+                throw new ArgumentNullException(""); // Erreur
+            }
+            return (int)date.Subtract(new DateTime(1070, 1, 1)).TotalSeconds; // Calculer Unix Time
         }
     }
 
