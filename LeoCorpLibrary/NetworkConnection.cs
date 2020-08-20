@@ -56,6 +56,11 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// <para>Cette fonction permet de savoir si l'utilisateur a une connexion à Internet de manière asynchrone.</para>
+        /// <para>La connexion est testée sur le site https://bing.com.</para>
+        /// </summary>
+        /// <returns>Valeur de type <see cref="Task{TResult}"/>.</returns>
         public static Task<bool> IsAvailableAsync()
         {
             Task<bool> task = new Task<bool>(IsAvailable);
@@ -95,6 +100,13 @@ namespace LeoCorpLibrary
             return result;
         }
 
+        /// <summary>
+        /// <para>Permet de savoir si l'utilisateur a une connexion à Internet de manière asynchrone.</para>
+        /// <para>La connexion est testée sur le site spécifié.</para>
+        /// </summary>
+        /// <param name="site">Site sur lequel la connexion est testée.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <returns>Valeur de type <see cref="Task{TResult}"/>.</returns>
         public static Task<bool> IsAvailableTestSiteAsync(string site)
         {
             Task<bool> task = new Task<bool>(() => IsAvailableTestSite(site));
