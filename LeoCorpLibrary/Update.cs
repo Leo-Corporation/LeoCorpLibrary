@@ -88,6 +88,13 @@ namespace LeoCorpLibrary
             return lastVersion;
         }
 
+        /// <summary>
+        /// Permet d'obtenir la dernière version d'un logiciel, à partir d'un fichier texte (*.txt), de manière asynchrone.
+        /// </summary>
+        /// <param name="lastVersionFileLink">Lien du fichier où se situe le numéro de la dernière version.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="Exception"></exception>
+        /// <returns>Valeur de type <see cref="Task{TResult}"/>.</returns>
         public static Task<string> GetLastVersionAsync(string lastVersionFileLink)
         {
             Task<string> task = new Task<string>(() => GetLastVersion(lastVersionFileLink));
