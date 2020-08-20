@@ -22,21 +22,22 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.1.0.2008-rc1</Version>
+    <Version>2.1.0.2008</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms</PackageTags>
-    <PackageReleaseNotes>Version 2.1.0.2008-rc1
+    <PackageReleaseNotes>Version 2.1.0.2008
 - Ajout de la méthode GetLastVersionAsync() (#104)
 - Ajout de la méthode IsAvailableAsync() (#105)
 - Ajout de la méthode IsAvailableTestSiteAsync() (#106)
 - Ajout de la méthode CountFileCharacters() (#107)
 - Ajout de la méthode CountFileCharactersAsync() (#108)
 - Ajout de la méthode GetUnixTime() (#109)
-- Mise à jour de la docuentation XML (#110)</PackageReleaseNotes>
+- Mise à jour de la docuentation XML (#110)
+- La méthode GetUnixTime(DateTime date) ne fonctionne pas (#111)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
