@@ -1,30 +1,30 @@
 ---
-name: Ajouter votre projet au README
-about: Ajouter votre projet (logiciel...) au README dans la section "Projets qui utilisent cette bibliothèque"
-title: "[Crédit-Projet] "
-labels: ajout crédit
+name: Add your project to the README
+about: Add your project (Software...) to the README
+title: "[Credit] "
+labels: credits
 assignees: ''
 
 ---
-<!---Vous pouvez supprimer les sections non-nécessaires--->
+<!---You can remove all the sections that aren't needed--->
 
-## Projet
-<!---Indiquez le nom  du projet.--->
-**Nom**
+## Project
+<!---The name of the project.--->
+**Name**
 
-<!---Indiquez le nom de la société et/ou du créateur--->
-**Société/Créateur**
+<!---Name of the creator/owner/entreprise.--->
+**Creator/Owner**
 
-<!---Lien vers le site Internet de l'entreprise/créateur.--->
-**Lien du site web**
+<!---Link to the creator/owner's website--->
+**Website**
 
-<!---Une description de votre projet--->
+<!---A description of the project--->
 **Description**
 
 ## LeoCorpLibrary
-<!---Insérez une preuve qui montre que vous utilisez LeoCorpLibrary, comme une image/capture d'écran.--->
-**Preuve que vous utilisez LeoCorpLibrary**
+<!---Insert a proof that you are using LeoCorpLibrary in your project such as a screenshot for instance.--->
+**Proof that you use LeoCorpLibrary**
 
-![Capture d'écran]()
+![Screenshot]()
 
-*Si certaines conditions ne sont pas respectées, votre projet sera rejeté.*
+*If some conditions aren't respected, your project will be rejected.*
