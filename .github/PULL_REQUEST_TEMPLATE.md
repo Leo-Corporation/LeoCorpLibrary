@@ -1,6 +1,6 @@
 # Pull Request
-<!--Mettez une description claire des changements que vous avez effectués-->
-## Description des changements
+<!--Put a description of the changes-->
+## Changes
 
-<!--Mettez le projet dans laquelle la pull request est (si possible)-->
-## Projet
+<!--Put the project's name (if possible)-->
+## Project
