@@ -5,10 +5,10 @@
     <AssemblyTitle>LeoCorpLibrary</AssemblyTitle>
     <Company>Léo Corporation</Company>
     <Product>LeoCorpLibrary</Product>
-    <Description>LeoCorpLibrary vous permet d'accèder à des fonctions utiles et/ou utilisées dans nos logiciels</Description>
+    <Description>A C# library with useful features for .NET Desktop Applications.</Description>
     <Copyright>Copyright ©  2020</Copyright>
-    <AssemblyVersion>2.1.0.2008</AssemblyVersion>
-    <FileVersion>2.1.0.2008</FileVersion>
+    <AssemblyVersion>2.1.1.2009</AssemblyVersion>
+    <FileVersion>2.1.1.2009</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
@@ -22,22 +22,17 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.1.0.2008</Version>
+    <Version>2.1.1.2009</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms</PackageTags>
-    <PackageReleaseNotes>Version 2.1.0.2008
-- Ajout de la méthode GetLastVersionAsync() (#104)
-- Ajout de la méthode IsAvailableAsync() (#105)
-- Ajout de la méthode IsAvailableTestSiteAsync() (#106)
-- Ajout de la méthode CountFileCharacters() (#107)
-- Ajout de la méthode CountFileCharactersAsync() (#108)
-- Ajout de la méthode GetUnixTime() (#109)
-- Mise à jour de la docuentation XML (#110)
-- La méthode GetUnixTime(DateTime date) ne fonctionne pas (#111)</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 2.1.1.2009
+- The XML Documentation is in English (#116)
+- The documentation is in English (#117)
+- Renamed the argument "weight" to "width" in Maths (#118)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>

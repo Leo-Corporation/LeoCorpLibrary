@@ -33,16 +33,16 @@ using System.Threading.Tasks;
 namespace LeoCorpLibrary
 {
     /// <summary>
-    /// Classe regroupant des méthodes sur l'environnement de l'utilisateur.
+    /// Class that contains methods for the user's environnement.
     /// </summary>
     public static class Env
     {
         /// <summary>
-        /// Obtient le nombre de fichiers dans un répertoire sans inclure les sous-répertoires.
+        /// Allows you to get the number of files in a directory without including subdirectories.
         /// </summary>
-        /// <param name="directory">Chemin du répertoire</param>
+        /// <param name="directory">Path of the directory</param>
         /// <exception cref="DirectoryNotFoundException"></exception>
-        /// <returns>Valeur de type <see cref="int"/>.</returns>
+        /// <returns>A <see cref="int"/> value.</returns>
         public static int GetFilesCount(string directory)
         {
             int result; // Résulat final
@@ -58,12 +58,12 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Obtient le nombre de fichiers dans un répertoire en offrant la possibilité d'inclure les sous-répertoires.
+        /// Allows you to get the number of files in a directory offering the possibility to include subdirectories.
         /// </summary>
-        /// <param name="directory">Chemin du répertoire.</param>
-        /// <param name="includeSubDirectories">Inclure ou non les sous-répertoires.</param>
+        /// <param name="directory">Path of the directory.</param>
+        /// <param name="includeSubDirectories">Include or not subdirectories.</param>
         /// <exception cref="FileNotFoundException"></exception>
-        /// <returns>Valeur de type <see cref="int"/>.</returns>
+        /// <returns>A <see cref="int"/> value.</returns>
         public static int GetFilesCount(string directory, bool includeSubDirectories)
         {
             int result; // Résulat final
@@ -86,11 +86,11 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Obtient le nombre de répertoires dans un répertoire sans inclure les sous-répertoires.
+        /// Allows you to get number of directories in a directory without including subdirectories.
         /// </summary>
-        /// <param name="directory">Chemin du répertoire.</param>
+        /// <param name="directory">Path of the directory.</param>
         /// <exception cref="DirectoryNotFoundException"></exception>
-        /// <returns>Valeur de type <see cref="int"/>.</returns>
+        /// <returns>A <see cref="int"/> value.</returns>
         public static int GetDirectoriesCount(string directory)
         {
             int result; // Résulat final
@@ -106,12 +106,12 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Obtient le nombre de répertoires dans un répertoire en offrant la possibilité d'inclure les sous-répertoires.
+        /// Allows you to get the number of directories in a directory offering the possibility to include subdirectories.
         /// </summary>
-        /// <param name="directory">Chemin du répertoire.</param>
-        /// <param name="includeSubDirectories">Inclure ou non les sous-répertoires.</param>
+        /// <param name="directory">Path of the directory.</param>
+        /// <param name="includeSubDirectories">Include or not subdirectories.</param>
         /// <exception cref="DirectoryNotFoundException"></exception>
-        /// <returns>Valeur de type <see cref="int"/>.</returns>
+        /// <returns>A <see cref="int"/> value.</returns>
         public static int GetDirectoriesCount(string directory, bool includeSubDirectories)
         {
             int result; // Résulat final
@@ -134,13 +134,13 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtenir l'espace du lecteur disponible.
+        /// Allows you to get the available space on a specified drive.
         /// </summary>
-        /// <param name="drive">Lecteur.</param>
-        /// <param name="unitType">Type de valeur retournée (MB, GB...)</param>
+        /// <param name="drive">Drive.</param>
+        /// <param name="unitType">The unit of the value returned (MB, GB...).</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="DriveNotFoundException"></exception>
-        /// <returns>Valeur de type <see cref="double"/>.</returns>
+        /// <returns>A <see cref="double"/> value.</returns>
         public static double GetDriveAvailableFreeSpace(string drive, UnitType unitType)
         {
             double res = 0; // Résulat final
@@ -182,13 +182,13 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtenir l'espace libre du lecteur.
+        /// Allows you to get the total space of a drive.
         /// </summary>
-        /// <param name="drive">Lecteur.</param>
-        /// <param name="unitType">Type de valeur retournée (MB, GB...)</param>
+        /// <param name="drive">Drive.</param>
+        /// <param name="unitType">The unit of the value returned (MB, GB...).</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="DriveNotFoundException"></exception>
-        /// <returns>Retourne une valeur de type <see cref="double"/>.</returns>
+        /// <returns>A <see cref="double"/> value.</returns>
         public static double GetTotalDriveSpace(string drive, UnitType unitType)
         {
             double res = 0; // Résulat final
@@ -231,13 +231,13 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtenir l'espace occupé du lecteur.
+        /// Allows you to get the occupied space of a drive.
         /// </summary>
-        /// <param name="drive">Lecteur.</param>
-        /// <param name="unitType">Type de valeur retournée (MB, GB...)</param>
+        /// <param name="drive">Drive.</param>
+        /// <param name="unitType">The unit of the value returned (MB, GB...).</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="DriveNotFoundException"></exception>
-        /// <returns>Retourne une valeur de type <see cref="double"/>.</returns>
+        /// <returns>A <see cref="double"/> value.</returns>
         public static double GetOccupiedDriveSpace(string drive, UnitType unitType)
         {
             double res;
@@ -256,9 +256,9 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtenir la version de Windows.
+        /// Allows you to get the Windows version of the user.
         /// </summary>
-        /// <returns>Retourne une valeur de type <see cref="WindowsVersion"/>.</returns>
+        /// <returns>A <see cref="WindowsVersion"/> value.</returns>
         public static WindowsVersion GetWindowsVersion()
         {
             WindowsVersion res = WindowsVersion.Unknown; // Résultat
@@ -286,12 +286,12 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet de lancer un programme en mode administrateur.
+        /// Allows you to launch a program in administrator mode.
         /// </summary>
-        /// <param name="process">Processus à lancer en mode administrateur.</param>
+        /// <param name="process">Process to launch as admin.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="FileNotFoundException"></exception>
-        /// <remarks>Le paramètre 'process' doit avoir un fichier/programme à lancer en mode administrateur dans la propriété StartInfo.FileName.</remarks>
+        /// <remarks>The 'process' parameter must have a valid path to the programm to launch in admin mode in <see cref="Process.StartInfo"/>.</remarks>
         public static void ExecuteAsAdmin(Process process)
         {
             if (string.IsNullOrEmpty(process.StartInfo.FileName)) // Si l'argument est vide
@@ -310,9 +310,9 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet de lancer un programme en mode administrateur.
+        /// Allows you to launch a program in administrator mode.
         /// </summary>
-        /// <param name="filename">Programme à lancer en mode administrateur.</param>
+        /// <param name="filename">Path to the program to launch in admin mode.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="FileNotFoundException"></exception>
         public static void ExecuteAsAdmin(string filename)
@@ -334,12 +334,12 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet de compter le nombre de caractères présents dans un fichier.
+        /// Allows you to count the number of characters in a specified file.
         /// </summary>
-        /// <param name="fileName">Emplacement du fichier.</param>
+        /// <param name="fileName">Location of the file.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="FileNotFoundException"></exception>
-        /// <returns>Retourne une valeur de type <see cref="Task{TResult}"/>.</returns>
+        /// <returns>A <see cref="Task{TResult}"/> value.</returns>
         public static int CountFileCharacters(string fileName)
         {
             if (string.IsNullOrEmpty(fileName)) // Si l'argument est vide ou null
@@ -356,12 +356,12 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet de compter le nombre de caractères présents dans un fichier de manière asynchrone.
+        /// Allows you to count the number of characters in specified file asynchronously.
         /// </summary>
-        /// <param name="fileName">Emplacement du fichier.</param>
+        /// <param name="fileName">Location of the file.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="FileNotFoundException"></exception>
-        /// <returns>Retourne une valeur de type <see cref="Task{TResult}"/>.</returns>
+        /// <returns>A <see cref="Task{TResult}"/> value.</returns>
         public static Task<int> CountFileCharactersAsync(string fileName)
         {
             Task<int> task = new Task<int>(() => CountFileCharacters(fileName)); // Tâche
@@ -370,20 +370,20 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtenir l'Unix Time actuel.
+        /// Allows you to get the current UnixTime.
         /// </summary>
-        /// <returns>Valeur de type <see cref="int"/>.</returns>
+        /// <returns>A <see cref="int"/> value.</returns>
         public static int GetUnixTime()
         {
             return (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds; // Calculer Unix Time
         }
 
         /// <summary>
-        /// Permet d'obtenir l'Unix Time à partir d'une <see cref="DateTime"/> spécifique.
+        /// Allows you to get the UnixTime from a specific <see cref="DateTime"/>.
         /// </summary>
         /// <param name="date">Date.</param>
         /// <exception cref="ArgumentNullException"></exception>
-        /// <returns>Valeur de type <see cref="int"/>.</returns>
+        /// <returns>A <see cref="int"/> value.</returns>
         public static int GetUnixTime(DateTime date)
         {
             if (date == null) // Si l'argument est null
@@ -395,38 +395,38 @@ namespace LeoCorpLibrary
     }
 
     /// <summary>
-    /// Type de taille de fichiers/répertoires.
+    /// Size of files/directories.
     /// </summary>
     public enum UnitType
     {
         /// <summary>
-        /// Unité Byte.
+        /// Byte Unit.
         /// </summary>
         Byte,
         /// <summary>
-        /// Unité Kilobyte.
+        /// Kilobyte Unit.
         /// </summary>
         Kilobyte,
         /// <summary>
-        /// Unité Megabyte.
+        /// Megabyte Unit.
         /// </summary>
         Megabyte,
         /// <summary>
-        /// Unité Gigabyte.
+        /// Gigabyte Unit.
         /// </summary>
         Gigabyte,
         /// <summary>
-        /// Unité Terabyte.
+        /// Terabyte Unit.
         /// </summary>
         Terabyte,
         /// <summary>
-        /// Unité Petabyte.
+        /// Petabyte Unit.
         /// </summary>
         Petabyte
     }
 
     /// <summary>
-    /// Systèmes d'exploitations Windows.
+    /// Windows Operating Systems.
     /// </summary>
     public enum WindowsVersion
     {
@@ -447,7 +447,7 @@ namespace LeoCorpLibrary
         /// </summary>
         Windows10,
         /// <summary>
-        /// Système d'exploitation inconnu.
+        /// Unknown operating system.
         /// </summary>
         Unknown
     }

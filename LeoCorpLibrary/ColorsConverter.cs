@@ -33,60 +33,60 @@ using System.Threading.Tasks;
 namespace LeoCorpLibrary
 {
     /// <summary>
-    /// Classe permettant de convertir des types de couleur.
+    /// Class containing methods that allows you to convert types of colors.
     /// </summary>
     public static class ColorsConverter
     {
         /// <summary>
-        /// Permet de convertir une couleur RGB en couleur HSV (<see cref="HSVColor"/>).
+        /// Allows you to convert a RGB color into a <see cref="HSVColor"/>.
         /// </summary>
-        /// <param name="red">Rouge.</param>
-        /// <param name="green">Vert.</param>
-        /// <param name="blue">Bleu.</param>
-        /// <returns>Couleur <see cref="HSVColor"/>.</returns>
+        /// <param name="red">Red.</param>
+        /// <param name="green">Green.</param>
+        /// <param name="blue">Blue.</param>
+        /// <returns>A <see cref="HSVColor"/> value.</returns>
         public static HSVColor RGBtoHSV(int red, int green, int blue)
         {
             return HSVColor.FromRGB(red, green, blue);
         }
 
         /// <summary>
-        /// Permet de convertir une couleur RGB (<see cref="Color"/>) en couleur HSV (<see cref="HSVColor"/>).
+        /// Allows you to convert a RGB <see cref="Color"/> into a <see cref="HSVColor"/>.
         /// </summary>
         /// <param name="color">Couleur (<see cref="Color"/>).</param>
-        /// <returns>Couleur <see cref="HSVColor"/>.</returns>
+        /// <returns>A <see cref="HSVColor"/> value.</returns>
         public static HSVColor RGBtoHSV(Color color)
         {
             return HSVColor.FromRGB(color);
         }
 
         /// <summary>
-        /// Permet de convertir une couleur RGB en couleur HEX (<see cref="HEXColor"/>).
+        /// Allows you to convert a RGB color into a <see cref="HEXColor"/>.
         /// </summary>
-        /// <param name="red">Rouge.</param>
-        /// <param name="green">Vert.</param>
-        /// <param name="blue">Bleu.</param>
-        /// <returns>Valeur <see cref="HEXColor"/>.</returns>
+        /// <param name="red">Red.</param>
+        /// <param name="green">Green.</param>
+        /// <param name="blue">Blue.</param>
+        /// <returns>A <see cref="HEXColor"/> value.</returns>
         public static HEXColor RGBtoHEX(int red, int green, int blue)
         {
             return HEXColor.FromRGB(red, green, blue);
         }
 
         /// <summary>
-        /// Permet de convertir une couleur RGB (<see cref="Color"/>) en couleur HEX (<see cref="HEXColor"/>).
+        /// Allows you to convert a RGB <see cref="Color"/> into a <see cref="HEXColor"/>.
         /// </summary>
         /// <param name="color">Couleur.</param>
-        /// <returns>Valeur <see cref="HEXColor"/>.</returns>
+        /// <returns>A <see cref="HEXColor"/> value.</returns>
         public static HEXColor RGBtoHEX(Color color)
         {
             return HEXColor.FromRGB(color);
         }
 
         /// <summary>
-        /// Permet de convertir une couleur HEX (<see cref="HEXColor"/>) en couleur RGB (<see cref="Color"/>).
+        /// Allows you to convert a <see cref="HEXColor"/> into a RGB <see cref="Color"/>.
         /// </summary>
-        /// <param name="hexColor">Couleur HEX.</param>
+        /// <param name="hexColor"><see cref="HEXColor"/> to convert.</param>
         /// <exception cref="Exceptions.HEXInvalidValueException"/>
-        /// <returns>Valeur <see cref="HEXColor"/></returns>
+        /// <returns>A <see cref="Color"/> value.</returns>
         public static Color HEXtoRGB(HEXColor hexColor)
         {
             try
@@ -107,11 +107,11 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet de convertir une couleur HEX (<see cref="HEXColor"/>) en couleur HSV (<see cref="HSVColor"/>).
+        /// Allows you to convert a <see cref="HEXColor"/> into a <see cref="HSVColor"/>.
         /// </summary>
-        /// <param name="hexColor">Couleur HEX.</param>
+        /// <param name="hexColor"><see cref="HEXColor"/> to convert.</param>
         /// <exception cref="Exceptions.HEXInvalidValueException"/>
-        /// <returns>Valeur <see cref="HSVColor"/></returns>
+        /// <returns>A <see cref="HSVColor"/> value.</returns>
         public static HSVColor HEXtoHSV(HEXColor hexColor)
         {
             HSVColor hSVColor = new HSVColor();
@@ -121,7 +121,7 @@ namespace LeoCorpLibrary
     }
 
     /// <summary>
-    /// Structure d'une couleur HSV.
+    /// A structure that contains infos and methods for a HSV Color.
     /// </summary>
     public struct HSVColor
     {
@@ -129,7 +129,7 @@ namespace LeoCorpLibrary
         // Il a été ici amélioré
 
         /// <summary>
-        /// Teinte.
+        /// Hue.
         /// </summary>
         public float Hue;
 
@@ -139,15 +139,15 @@ namespace LeoCorpLibrary
         public float Saturation;
 
         /// <summary>
-        /// Valeur.
+        /// Value.
         /// </summary>
         public float Value;
 
         /// <summary>
-        /// Permet de créer une couleur HSV à partir d'une couleur (<see cref="Color"/>).
+        /// Allows you to create a <see cref="HSVColor"/> from a <see cref="Color"/>.
         /// </summary>
-        /// <param name="color">Couleur (<see cref="Color"/>)</param>
-        /// <returns>Valeur <see cref="HSVColor"/></returns>
+        /// <param name="color"><see cref="Color"/> to convert.</param>
+        /// <returns>A <see cref="HSVColor"/> value.</returns>
         public static HSVColor FromRGB(Color color)
         {
             HSVColor toReturn = new HSVColor();
@@ -164,13 +164,13 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet de créer une couleur HSV à partir d'une couleur (<see cref="Color"/>).
+        /// Allows you to create a <see cref="HSVColor"/> from a RGB color.
         /// </summary>
-        /// <param name="red">Rouge.</param>
-        /// <param name="green">Vert.</param>
-        /// <param name="blue">Bleu.</param>
+        /// <param name="red">Red.</param>
+        /// <param name="green">Green.</param>
+        /// <param name="blue">Blue.</param>
         /// <exception cref="Exceptions.RGBInvalidValueException"/>
-        /// <returns>Valeur <see cref="HSVColor"/></returns>
+        /// <returns>A <see cref="HSVColor"/> value.</returns>
         public static HSVColor FromRGB(int red, int green, int blue)
         {
             if (!(red >= 0 && red <= 255 && green >= 0 && green <= 255 && blue >= 0 && blue <= 255)) // Si pas valide
@@ -192,21 +192,21 @@ namespace LeoCorpLibrary
     }
 
     /// <summary>
-    /// Structure d'une couleur HEX.
+    /// A structure that contains infos and methods of a <see cref="HEXColor"/>.
     /// </summary>
     public struct HEXColor
     {
 
         /// <summary>
-        /// Valeur de la couleur.
+        /// Value of the color.
         /// </summary>
         public string Value;
 
         /// <summary>
-        /// Permet de créer une couleur HEX (<see cref="HEXColor"/>) à partir d'une couleur (<see cref="Color"/>)
+        /// Allows you to create a <see cref="HEXColor"/> from a <see cref="Color"/>.
         /// </summary>
-        /// <param name="color">Couleur (<see cref="Color"/>).</param>
-        /// <returns>Valeur <see cref="HEXColor"/>.</returns>
+        /// <param name="color"><see cref="Color"/> to convert.</param>
+        /// <returns>A <see cref="HEXColor"/> value.</returns>
         public static HEXColor FromRGB(Color color)
         {
             HEXColor toReturn = new HEXColor();
@@ -215,13 +215,13 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet de créer une couleur HEX (<see cref="HEXColor"/>) à partir de valeurs <see cref="int"/>.
+        /// Allows you to create a <see cref="HEXColor"/>) from a RGB Color.
         /// </summary>
-        /// <param name="red">Rouge.</param>
-        /// <param name="blue">Bleu.</param>
-        /// <param name="green">Vert.</param>
+        /// <param name="red">Red.</param>
+        /// <param name="blue">Blue.</param>
+        /// <param name="green">Green.</param>
         /// <exception cref="Exceptions.RGBInvalidValueException"/>
-        /// <returns>Valeur <see cref="HEXColor"/></returns>
+        /// <returns>A <see cref="HEXColor"/> value.</returns>
         public static HEXColor FromRGB(int red, int green, int blue)
         {
             if (!(red >= 0 && red <= 255 && green >= 0 && green <= 255 && blue >= 0 && blue <= 255)) // Si pas valide

@@ -31,15 +31,15 @@ using System.Threading.Tasks;
 namespace LeoCorpLibrary
 {
     /// <summary>
-    /// Classe regroupant des méthodes liées aux mathématiques.
+    /// Class that contains methods relatives to maths.
     /// </summary>
     public static class Maths
     {
         /// <summary>
-        /// Permet de faire une somme de nombres de type <see cref="double"/>.
+        /// Allows you to do a sum of <see cref="double"/> numbers.
         /// </summary>
-        /// <param name="args">Nombres.</param>
-        /// <returns>Valeur de type <see cref="double"/>.</returns>
+        /// <param name="args">Numbers.</param>
+        /// <returns>A <see cref="double"/> value.</returns>
         public static double Sum(params double[] args) // Somme
         {
             double finalResult = 0;
@@ -51,10 +51,10 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtneir à partir d'une liste de nombre de type <see cref="double"/>, le plus petit d'entre eux.
+        /// Allows you to get the lowest number from specified <see cref="double"/> numbers.
         /// </summary>
-        /// <param name="numbers">Nombres.</param>
-        /// <returns>Valeur de type <see cref="double"/>.</returns>
+        /// <param name="numbers">Numbers.</param>
+        /// <returns>A <see cref="double"/> value.</returns>
         public static double GetLowestNumber(params double[] numbers)
         {
             double lowestNumber = numbers[0];
@@ -69,10 +69,10 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtenir à partir d'une liste de nombre de type <see cref="double"/>, le plus grand d'entre eux.
+        /// Allows you to get the biggest number from specified <see cref="double"/> numbers.
         /// </summary>
-        /// <param name="numbers">Nombres.</param>
-        /// <returns>Valeur de type <see cref="double"/>.</returns>
+        /// <param name="numbers">Numbers.</param>
+        /// <returns>A <see cref="double"/> value.</returns>
         public static double GetBiggestNumber(params double[] numbers) // Obtient le nombre le plus grand
         {
             double biggestNumber = numbers[0]; // Fonction compatible avec des nombres négatifs
@@ -87,25 +87,25 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Classe regroupant des méthodes liées aux cercles.
+        /// Class that coontains methods for circles.
         /// </summary>
         public static class Circle
         {
             /// <summary>
-            /// Permet d'obtenir l'aire d'un cercle à partir d'un rayon donné.
+            /// Allows you to get the area of a circle.
             /// </summary>
-            /// <param name="radius">Rayon du cercle.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="radius">Circle's radius</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetArea(double radius) // Obtenir l'aire d'un cercle
             {
                 return Math.PI * Math.Sqrt(radius); // Formule
             }
 
             /// <summary>
-            /// Permet d'obtenir le périmètre d'un cercle à partir d'un rayon donné.
+            /// Allows you to get the perimeter of a circle.
             /// </summary>
-            /// <param name="radius">Rayon du cercle.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="radius">Circle's radius.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetPerimeter(double radius) // Obtenir le périmètre d'un cercle
             {
                 return 2 * Math.PI * radius; // Formule
@@ -113,40 +113,40 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Classe regroupant des méthodes liées aux triangles.
+        /// Class that contains methods for triangles.
         /// </summary>
         public static class Triangle
         {
             /// <summary>
-            /// Permet d'obtenir l'aire d'un triangle à partir de la hauteur et de la base de ce dernier.
+            /// Allows you to get the area of triangle from it's height and width/base.
             /// </summary>
-            /// <param name="height">Hauteur du triangle.</param>
-            /// <param name="weight">Largeur/base du triangle.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
-            public static double GetArea(double height, double weight) // Obtenir l'aire d'un triangle
+            /// <param name="height">Triangle's height.</param>
+            /// <param name="width">Triangle's base/width.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetArea(double height, double width) // Obtenir l'aire d'un triangle
             {
-                return height * weight / 2; // Formule
+                return height * width / 2; // Formule
             }
 
             /// <summary>
-            /// Permet d'obtenir le prérimètre d'un triangle, à partir de la longueur de ses côtés.
+            /// Allows you to get the perimeter of a triangle.
             /// </summary>
-            /// <param name="side1">Côté du triangle.</param>
-            /// <param name="side2">Côté du triangle.</param>
-            /// <param name="side3">Côté du triangle.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="side1">Triangle's side.</param>
+            /// <param name="side2">Triangle's side.</param>
+            /// <param name="side3">Triangle's side.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetPerimeter(double side1, double side2, double side3) // Obtenir le périmètre d'un triangle
             {
                 return Sum(side1, side2, side3); // Formule
             }
 
             /// <summary>
-            /// Permet de connaître si un triangle est construisable ou non à partir des dimentions de ce triangle.
+            /// Allows you to know if a triangle is buildable or not.
             /// </summary>
-            /// <param name="side1">Côté du triangle.</param>
-            /// <param name="side2">Côté du triangle.</param>
-            /// <param name="side3">Côté du triangle.</param>
-            /// <returns>Valeur de type <see cref="bool"/>.</returns>
+            /// <param name="side1">Triangle's side.</param>
+            /// <param name="side2">Triangle's side.</param>
+            /// <param name="side3">Triangle's side.</param>
+            /// <returns>A <see cref="bool"/> value.</returns>
             public static bool IsBuildable(double side1, double side2, double side3) // Triangle construisable ?
             {
                 bool result = false; // Résultat final
@@ -189,36 +189,36 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Classe regroupant des méthodes liées au cube.
+        /// Class that contains methods for cubes.
         /// </summary>
         public static class Cube
         {
             /// <summary>
-            /// Permet d'obtenir le volume d'un cube.
+            /// Allows you to get the volume of a cube/cuboid.
             /// </summary>
-            /// <param name="side">Longueur du côté.</param>
-            /// <param name="height">Hauteur.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="side">Cube's side.</param>
+            /// <param name="height">Cube's height.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetVolume(double side, double height)
             {
                 return side * side * height; // Retourne le résultat
             }
 
             /// <summary>
-            /// Permet d'obtenir le volume d'un cube.
+            /// Allows you to get the volume of cube.
             /// </summary>
-            /// <param name="side">Longeur du côté.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="side">Cube's side.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetVolume(double side)
             {
                 return side * side * side; // Retourner le résultat
             }
 
             /// <summary>
-            /// Permet d'obtenir le bord d'un cube.
+            /// Allows you to get the edge of a cube.
             /// </summary>
-            /// <param name="area">Aire.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="area">Area.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetEdge(double area)
             {
                 return Math.Sqrt(area / 6); // Retourner le résultat
@@ -226,37 +226,37 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Classe regroupant des méthodes liées au cylindre.
+        /// Class that contains methods for cylinders.
         /// </summary>
         public static class Cylinder
         {
             /// <summary>
-            /// Permet d'obtenir le volume d'un cylindre.
+            /// Allows you to get the volume of a cylinder.
             /// </summary>
-            /// <param name="radius">Rayon.</param>
-            /// <param name="height">Hauteur.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="radius">Radius.</param>
+            /// <param name="height">Height.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetVolume(double radius, double height)
             {
                 return Math.PI * radius * radius * height; // Retourner le résultat
             }
 
             /// <summary>
-            /// Permet d'obtenir la hauteur d'un cylindre.
+            /// Allows you to get the height of cylinder.
             /// </summary>
-            /// <param name="area">Aire.</param>
-            /// <param name="radius">Rayon.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="area">Area.</param>
+            /// <param name="radius">Radius.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetHeight(double area, double radius)
             {
                 return area / (2 * Math.PI * radius) - radius; // Retourner le résultat
             }
 
             /// <summary>
-            /// Permet d'obtenir l'aire de la base d'un cylindre.
+            /// Allows you to get the area of cylinder.
             /// </summary>
-            /// <param name="radius">Rayon.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="radius">Radius.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetBaseArea(double radius)
             {
                 return Math.PI * radius * radius; // Retourner le résultat
@@ -264,51 +264,51 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Classe regroupant des méthodes liées à la pyramide.
+        /// Class that contains methods for pyramids.
         /// </summary>
         public static class Pyramid
         {
             /// <summary>
-            /// Permet d'obtenir le volume d'une pyramide.
+            /// Allows you to get the volume of a pyramid.
             /// </summary>
-            /// <param name="lenght">Longeur.</param>
-            /// <param name="width">Largeur.</param>
-            /// <param name="height">Hauteur.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="lenght">Lenght of the pyramid.</param>
+            /// <param name="width">Width of the pyramid.</param>
+            /// <param name="height">Height of the pyramid.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetVolume(double lenght, double width, double height)
             {
                 return lenght * width * (height / 3); // Retourner le résultat
             }
 
             /// <summary>
-            /// Permet d'obtenir la hauteur d'une pyramide.
+            /// Allows you to get the height of a pyramid.
             /// </summary>
-            /// <param name="width">Largeur.</param>
-            /// <param name="lenght">Longueur.</param>
+            /// <param name="width">Width of the pyramid.</param>
+            /// <param name="lenght">Lenght of the pyramid.</param>
             /// <param name="volume">Volume.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetHeight(double width, double lenght, double volume)
             {
                 return 3 * (volume / (width * lenght)); // Retourner le résultat
             }
 
             /// <summary>
-            /// Permet d'obtenir la longueur de la base.
+            /// Allows you to get the lenght of the base of a pyramid.
             /// </summary>
-            /// <param name="areaBase">Aire de la base.</param>
-            /// <param name="width">Largeur.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="areaBase">Base's area.</param>
+            /// <param name="width">Width of the pyramid.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetLenghtBase(double areaBase, double width)
             {
                 return areaBase / width; // Retourner le résultat
             }
 
             /// <summary>
-            /// Permet d'obtenir la largeur de la base.
+            /// Allows you to get hte width of the base of a pyramid.
             /// </summary>
-            /// <param name="areaBase">Aire de la base.</param>
-            /// <param name="lenght">Longueur.</param>
-            /// <returns>Valeur de type <see cref="double"/>.</returns>
+            /// <param name="areaBase">Base's are.</param>
+            /// <param name="lenght">Lenght of the pyramid.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetWidthBase(double areaBase, double lenght)
             {
                 return areaBase / lenght; // Retourner le résultat

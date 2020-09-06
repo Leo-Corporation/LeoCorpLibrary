@@ -31,15 +31,15 @@ using System.Threading.Tasks;
 namespace LeoCorpLibrary
 {
     /// <summary>
-    /// Classe regroupant des méthodes pour vérifier la connexion Internet de l'utilisateur.
+    /// Class that contains methods to get and test the user's Internet connection.
     /// </summary>
     public static class NetworkConnection
     {
         /// <summary>
-        /// <para>Cette fonction permet de savoir si l'utilisateur a une connexion à Internet.</para>
-        /// <para>La connexion est testée sur le site https://bing.com.</para>
+        /// <para>Allows you to know if the user is connected to Internet.</para>
+        /// <para>The connection is tested by default on https://bing.com.</para>
         /// </summary>
-        /// <returns>Valeur de type <see cref="bool"/>.</returns>
+        /// <returns>A <see cref="bool"/> value.</returns>
         public static bool IsAvailable() // Fonction pour tester la connexion Internet
         {
             try
@@ -57,10 +57,10 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// <para>Cette fonction permet de savoir si l'utilisateur a une connexion à Internet de manière asynchrone.</para>
-        /// <para>La connexion est testée sur le site https://bing.com.</para>
+        /// <para>Allows you to know if the user is connected to Internet asynchronously.</para>
+        /// <para>The connection is tested by default on https://bing.com.</para>
         /// </summary>
-        /// <returns>Valeur de type <see cref="Task{TResult}"/>.</returns>
+        /// <returns>A <see cref="Task{TResult}"/> value.</returns>
         public static Task<bool> IsAvailableAsync()
         {
             Task<bool> task = new Task<bool>(IsAvailable);
@@ -69,12 +69,12 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// <para>Permet de savoir si l'utilisateur a une connexion à Internet.</para>
-        /// <para>La connexion est testée sur le site spécifié.</para>
+        /// <para>Allows you to know if the user is connected to Internet.</para>
+        /// <para>The connection is tested on the specified website.</para>
         /// </summary>
-        /// <param name="site">Site sur lequel la connexion est testée.</param>
+        /// <param name="site">Website where the connection is tested.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
-        /// <returns>Valeur de type <see cref="bool"/>.</returns>
+        /// <returns>A <see cref="bool"/> value.</returns>
         public static bool IsAvailableTestSite(string site)
         {
             bool result = true;
@@ -101,12 +101,12 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// <para>Permet de savoir si l'utilisateur a une connexion à Internet de manière asynchrone.</para>
-        /// <para>La connexion est testée sur le site spécifié.</para>
+        /// <para>Allows you to know if the user is connected to Internet asynchronously.</para>
+        /// <para>The connection is tested on the specified website.</para>
         /// </summary>
-        /// <param name="site">Site sur lequel la connexion est testée.</param>
+        /// <param name="site">Website where the connection is tested.</param>
         /// <exception cref="ArgumentNullException"></exception>
-        /// <returns>Valeur de type <see cref="Task{TResult}"/>.</returns>
+        /// <returns>A <see cref="Task{TResult}"/> value.</returns>
         public static Task<bool> IsAvailableTestSiteAsync(string site)
         {
             Task<bool> task = new Task<bool>(() => IsAvailableTestSite(site));
