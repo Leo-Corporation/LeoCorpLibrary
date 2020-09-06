@@ -32,17 +32,17 @@ using System.Windows.Forms;
 namespace LeoCorpLibrary
 {
     /// <summary>
-    /// Classe regroupant des méthodes sur la sauvegarde de contrôles dans des fichiers.
+    /// Class containing methods to save files.
     /// </summary>
     public static class Save
     {
         /// <summary>
-        /// Permet de sauvegarder le contenu d'une <see cref="ListView"/>.
+        /// Allows you to save the content of a <see cref="ListView"/>.
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="Exception"></exception>
         /// <param name="listView"><see cref="ListView"/>.</param>
-        /// <param name="filePath">Emplacement où enregistrer le contenu d'une <see cref="ListView"/>.</param>
+        /// <param name="filePath">Location where to save the content of a <see cref="ListView"/>.</param>
         public static void ListViewContent(ListView listView, string filePath)
         {
             if (string.IsNullOrEmpty(filePath)) // Si l'argument 'filePath' est vide ou null
@@ -75,14 +75,14 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet de sauvegarder le contenu d'une <see cref="ListView"/>.
+        /// Allows you to save the content of a <see cref="ListView"/>.
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="Exception"></exception>
         /// <param name="listView"><see cref="ListView"/>.</param>
-        /// <param name="filePath">Emplacement où enregistrer le contenu d'une <see cref="ListView"/>.</param>
-        /// <param name="itemSplit">Séparateur d'éléments (ex: /*E*/).</param>
-        /// <param name="columnSplit">Séparateur de colonnes (ex: /*C*/).</param>
+        /// <param name="filePath">Location where to save the content of a <see cref="ListView"/>.</param>
+        /// <param name="itemSplit">Elements separator (ex: /*E*/).</param>
+        /// <param name="columnSplit">Columns separator (ex: /*C*/).</param>
         public static void ListViewContent(ListView listView, string filePath, string itemSplit, string columnSplit)
         {
             if (string.IsNullOrEmpty(filePath) || string.IsNullOrEmpty(itemSplit) || string.IsNullOrEmpty(columnSplit)) // Vérifier les paramètres

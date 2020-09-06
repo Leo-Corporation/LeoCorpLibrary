@@ -32,18 +32,18 @@ using System.Windows.Forms;
 namespace LeoCorpLibrary
 {
     /// <summary>
-    /// Classe regroupant des méthodes sur le chargement de fichiers dans des contrôles.
+    /// Class containing methods to load saved file using the methods in <see cref="Save"/>.
     /// </summary>
     public static class Load
     {
         /// <summary>
-        /// Permet de charger un fichier de sauvegarde dans une <see cref="ListView"/>.
+        /// Allows you to load a saved file in a <see cref="ListView"/>.
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="Exception"></exception>
         /// <exception cref="FileNotFoundException"></exception>
         /// <param name="listView"><see cref="ListView"/>.</param>
-        /// <param name="filePath">Emplacement du fichier à charger dans la <see cref="ListView"/>.</param>
+        /// <param name="filePath">Location of the file to load in a <see cref="ListView"/>.</param>
         public static void ListViewContent(ListView listView, string filePath)
         {
             if (string.IsNullOrEmpty(filePath)) // Si l'argument 'filePath' est vide ou null
@@ -86,15 +86,15 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet de charger un fichier de sauvegarde dans une <see cref="ListView"/>.
+        /// Allows you to load a saved file in a <see cref="ListView"/>.
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="Exception"></exception>
         /// <exception cref="FileNotFoundException"></exception>
         /// <param name="listView"><see cref="ListView"/>.</param>
-        /// <param name="filePath">Emplacement du fichier à charger dans la <see cref="ListView"/>.</param>
-        /// <param name="itemSplit">Séparateur d'éléments utilisé lors de la sauvegarde.</param>
-        /// <param name="columnSplit">Séparateur de colonnes utilisé lors de la sauvegarde.</param>
+        /// <param name="filePath">Location of the file to load in a <see cref="ListView"/>.</param>
+        /// <param name="itemSplit">Elements separator used during saving.</param>
+        /// <param name="columnSplit">Columns separator used during saving.</param>
         public static void ListViewContent(ListView listView, string filePath, string itemSplit, string columnSplit)
         {
             if (string.IsNullOrEmpty(filePath) || string.IsNullOrEmpty(itemSplit) || string.IsNullOrEmpty(columnSplit)) // Si les paramètres sont vides ou null

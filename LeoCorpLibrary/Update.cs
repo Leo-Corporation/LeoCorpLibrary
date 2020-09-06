@@ -35,16 +35,16 @@ using System.Windows.Forms;
 namespace LeoCorpLibrary
 {
     /// <summary>
-    /// Classe regroupant des méthodes pour metttre à jour votre logiciel.
+    /// Class that contains methods to help you implement an update system to your product.
     /// </summary>
     public static class Update
     {
         /// <summary>
-        /// Permet de vérifier si des mises à jour sont disponibles.
+        /// Allows you to verify if updates are available.
         /// </summary>
-        /// <param name="version">Version actuelle du logiciel.</param>
-        /// <param name="lastVersion">Dernière version du logiciel.</param>
-        /// <returns>Valeur de type <see cref="bool"/>.</returns>
+        /// <param name="version">Current software version.</param>
+        /// <param name="lastVersion">Latest software version.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
         public static bool IsAvailable(string version, string lastVersion)
         {
             bool res;
@@ -60,12 +60,12 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtenir la dernière version d'un logiciel, à partir d'un fichier texte (*.txt).
+        /// Allows you to get the latest version of the software from a .txt file.
         /// </summary>
-        /// <param name="lastVersionFileLink">Lien du fichier où se situe le numéro de la dernière version.</param>
+        /// <param name="lastVersionFileLink">Link of the file where the lastest version is stocked.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
         /// <exception cref="System.Exception"></exception>
-        /// <returns>Valeur de type <see cref="string"/>.</returns>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string GetLastVersion(string lastVersionFileLink)
         {
             string lastVersion = "";
@@ -89,12 +89,12 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'obtenir la dernière version d'un logiciel, à partir d'un fichier texte (*.txt), de manière asynchrone.
+        /// Allows you to get the lastest version of the software from a .txt file asynchronously.
         /// </summary>
-        /// <param name="lastVersionFileLink">Lien du fichier où se situe le numéro de la dernière version.</param>
+        /// <param name="lastVersionFileLink">Link of the file where the lastest version is stocked.</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="Exception"></exception>
-        /// <returns>Valeur de type <see cref="Task{TResult}"/>.</returns>
+        /// <returns>A <see cref="Task{TResult}"/> value.</returns>
         public static Task<string> GetLastVersionAsync(string lastVersionFileLink)
         {
             Task<string> task = new Task<string>(() => GetLastVersion(lastVersionFileLink));
@@ -103,12 +103,12 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet de vérifier si des mises à jour sont disponibles pour votre logiciel.
+        /// Allows you to check if updates are available and open a <see cref="Form"/> depending on the result.
         /// </summary>
-        /// <param name="version">Version actuelle du logiciel.</param>
-        /// <param name="lastVersion">Dernière version du logiciel.</param>
-        /// <param name="availableUpdateForm">Fenêtre qui s'affiche si des mises à jour sont disponibles.</param>
-        /// <param name="noUpdateForm">Fenêtre qui s'affiche lorsqu'aucune mises à jour n'est disponibles.</param>
+        /// <param name="version">Current software version.</param>
+        /// <param name="lastVersion">Latest software version.</param>
+        /// <param name="availableUpdateForm"><see cref="Form"/> that opens if updates are available.</param>
+        /// <param name="noUpdateForm"><see cref="Form"/> that opens if updates aren't available.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
         public static void Check(string version, string lastVersion, Form availableUpdateForm, Form noUpdateForm)
         {
@@ -130,11 +130,11 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Permet d'installer une mise à jour.
+        /// Allows you to install an update.
         /// </summary>
-        /// <param name="filePath">Emplacement du fichier.</param>
-        /// <param name="newVersionLink">Lien du nouveau fichier.</param>
-        /// <param name="fromAppStartupPath">(facultatif) Ouvrir le fichier depuis l'emplacement du programme.</param>
+        /// <param name="filePath">File location.</param>
+        /// <param name="newVersionLink">Link of the new file.</param>
+        /// <param name="fromAppStartupPath">(optionnal) Open the file from the <see cref="Application.StartupPath"/>.</param>
         /// <exception cref="System.ArgumentNullException"></exception>
         /// <exception cref="System.Exception"></exception>
         /// <exception cref="System.IO.FileNotFoundException"></exception>
