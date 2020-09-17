@@ -112,7 +112,7 @@ namespace LeoCorpLibrary
         /// <exception cref="System.ArgumentNullException"></exception>
         public static void Check(string version, string lastVersion, Form availableUpdateForm, Form noUpdateForm)
         {
-            if (availableUpdateForm != null && noUpdateForm != null)
+            if (availableUpdateForm != null && noUpdateForm != null) // If the forms are not null
             {
                 if (version == lastVersion)
                 {
@@ -123,9 +123,28 @@ namespace LeoCorpLibrary
                     availableUpdateForm.Show();
                 }
             }
-            else // Dans le cas où l'utilisateur ne spécifie pas de valeur pour les forms
+            else // If there is no value for the forms
             {
                 throw new ArgumentNullException("The argument 'availableUpdateForm' and/or 'noUpdateForm' cannot be 'null'");
+            }
+        }
+
+        public static void Check(string version, string lastVersion, System.Windows.Window availableUpdateWindow, System.Windows.Window noUpdateWindow)
+        {
+            if (availableUpdateWindow != null && noUpdateWindow != null) // If the windows aren't null
+            {
+                if (version == lastVersion) // If there is no updates
+                {
+                    noUpdateWindow.Show(); // Show the correct window
+                }
+                else // If there is updates
+                {
+                    availableUpdateWindow.Show(); // Show the correct window
+                }
+            }
+            else
+            {
+                throw new ArgumentNullException("The argument 'availableUpdateWindow' and/or 'noUpdateWindow' cannot be 'null'"); // Error
             }
         }
 
