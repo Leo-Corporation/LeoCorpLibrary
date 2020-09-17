@@ -129,6 +129,13 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Allows you to check if updates are available and open a <see cref="System.Windows.Window"/> depending on the result.
+        /// </summary>
+        /// <param name="version">Current software version.</param>
+        /// <param name="lastVersion">Latest software version.</param>
+        /// <param name="availableUpdateWindow"><see cref="System.Windows.Window"/> that opens if updates are available.</param>
+        /// <param name="noUpdateWindow"><see cref="System.Windows.Window"/> that opens if updates aren't available.</param>
         public static void Check(string version, string lastVersion, System.Windows.Window availableUpdateWindow, System.Windows.Window noUpdateWindow)
         {
             if (availableUpdateWindow != null && noUpdateWindow != null) // If the windows aren't null
