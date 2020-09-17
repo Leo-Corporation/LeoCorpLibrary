@@ -393,6 +393,10 @@ namespace LeoCorpLibrary
             return (int)date.Subtract(new DateTime(1970, 1, 1)).TotalSeconds; // Calculer Unix Time
         }
 
+        /// <summary>
+        /// Allows you to get the <c>%APPDATA%</c> path.
+        /// </summary>
+        /// <returns></returns>
         public static string GetAppDataPath()
         {
             return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); // Return the path
