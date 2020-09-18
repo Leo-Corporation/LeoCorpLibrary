@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using LeoCorpLibrary.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,13 +36,27 @@ namespace LeoCorpLibrary
     public static class GuidGenerator
     {
         /// <summary>
-        /// Generates a new <see cref="Guid"/>.
+        /// Generates a new Guid and convert it's value to a string value.
         /// </summary>
-        /// <returns>A <see cref="Guid"/> value.</returns>
-        public static Guid Generate()
+        /// <returns>A <see cref="string"/> value.</returns>
+        public static string Generate()
         {
-            return Guid.NewGuid();
+            return Guid.NewGuid().ToString();
         }
-        
+
+        /// <summary>
+        /// Generates a new Guid and convert it's value to a string value.
+        /// </summary>
+        /// <param name="lenght">Lenght of the Guid.</param>
+        /// <exception cref="InvalidGuidLenghtException"></exception>
+        /// <returns>A <see cref="string"/> value.</returns>
+        public static string Generate(int lenght)
+        {
+            if (lenght <= 0)
+            {
+                throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0.");
+            }
+            return Guid.NewGuid().ToString("N").Substring(0, lenght);
+        }
     }
 }
