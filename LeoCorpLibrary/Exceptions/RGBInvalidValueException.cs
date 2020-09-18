@@ -30,12 +30,12 @@ using System.Threading.Tasks;
 namespace LeoCorpLibrary.Exceptions
 {
     /// <summary>
-    /// Se produit lorsqu'une valeur RGB n'est pas valide.
+    /// Is thrown when a RGB color is invalid.
     /// </summary>
     public class RGBInvalidValueException : Exception
     {
         /// <summary>
-        /// Initialise une nouvelle instance de la classe <see cref="RGBInvalidValueException"/>.
+        /// Initialize a new instance of the <see cref="RGBInvalidValueException"/> class.
         /// </summary>
         public RGBInvalidValueException()
         {
@@ -43,20 +43,19 @@ namespace LeoCorpLibrary.Exceptions
         }
 
         /// <summary>
-        /// Initialise une nouvelle instance de la classe <see cref="RGBInvalidValueException"/> avec un message d'erreur spécifié.
+        /// Initialize a new instance of the <see cref="RGBInvalidValueException"/> class with a specified error message.
         /// </summary>
-        /// <param name="message">Message d'erreur qui explique la raison de l'exception.</param>
+        /// <param name="message">Message of the error.</param>
         public RGBInvalidValueException(string message) : base(message)
         {
 
         }
 
         /// <summary>
-        /// Initialise une nouvelle instance de la classe <see cref="RGBInvalidValueException"/> avec un message d'erreur spécifié.
+        /// Initialize a new instance of the <see cref="RGBInvalidValueException"/> class with a specified error message.
         /// </summary>
-        /// <param name="message">Message d'erreur qui explique la raison de l'exception.</param>
-        /// <param name="innerException">Exception à l'origine de l'exception actuelle, ou une référence null (Nothing
-        /// en Visual Basic) si aucune exception interne n'est spécifiée.</param>
+        /// <param name="message">Message of the error.</param>
+        /// <param name="innerException">The inner exception that cause this exception.</param>
         public RGBInvalidValueException(string message, Exception innerException) : base(message, innerException)
         {
 
