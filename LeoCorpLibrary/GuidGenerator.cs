@@ -25,6 +25,7 @@ using LeoCorpLibrary.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,7 +42,7 @@ namespace LeoCorpLibrary
         /// <returns>A <see cref="string"/> value.</returns>
         public static string Generate()
         {
-            return Guid.NewGuid().ToString();
+            return Guid.NewGuid().ToString(); // Return the value
         }
 
         /// <summary>
@@ -52,11 +53,29 @@ namespace LeoCorpLibrary
         /// <returns>A <see cref="string"/> value.</returns>
         public static string Generate(int lenght)
         {
-            if (lenght <= 0)
+            if (lenght <= 0) // If the lenght is invalid
             {
-                throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0.");
+                throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0."); // Error
             }
-            return Guid.NewGuid().ToString("N").Substring(0, lenght);
+            return Guid.NewGuid().ToString("N").Substring(0, lenght); // Return the value
+        }
+
+        /// <summary>
+        /// Generates a Guid from a specified <see cref="string"/>.
+        /// </summary>
+        /// <param name="fromString">Generate the guid from a specified <see cref="string"/>.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <returns>A <see cref="string"/> value.</returns>
+        public static string Generate(string fromString)
+        {
+            if (string.IsNullOrEmpty(fromString)) // If no value is specified
+            {
+                throw new ArgumentNullException("'fromString' is null or empty.");
+            }
+
+            MD5 mD5 = MD5.Create();
+            byte[] data = mD5.ComputeHash(Encoding.Default.GetBytes(fromString)); // Get the bytes
+            return new Guid(data).ToString();
         }
     }
 }
