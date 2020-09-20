@@ -77,5 +77,28 @@ namespace LeoCorpLibrary
             byte[] data = mD5.ComputeHash(Encoding.Default.GetBytes(fromString)); // Get the bytes
             return new Guid(data).ToString();
         }
+
+        public static string Generate(GuidGeneratorParameters guidGeneratorParameters)
+        {
+            Guid guid = Guid.NewGuid();
+            string result = guid.ToString();
+
+            if (guidGeneratorParameters.UseUpperCaseOnly)
+            {
+                if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
+                {
+                    result = "{" + guid.ToString("N").ToUpper() + "}";
+                }
+            }
+            else
+            {
+                if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
+                {
+                    result = "{" + guid.ToString("N").ToUpper() + "}";
+                }
+            }
+
+            return result;
+        }
     }
 }
