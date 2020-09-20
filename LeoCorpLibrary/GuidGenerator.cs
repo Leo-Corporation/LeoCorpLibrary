@@ -78,9 +78,88 @@ namespace LeoCorpLibrary
             return new Guid(data).ToString();
         }
 
+        /// <summary>
+        /// Generates a new Guid from <see cref="GuidGeneratorParameters"/>.
+        /// </summary>
+        /// <param name="guidGeneratorParameters">Parameters of the Guid Generation.</param>
+        /// <exception cref="InvalidGuidLenghtException"></exception>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string Generate(GuidGeneratorParameters guidGeneratorParameters)
         {
             Guid guid = Guid.NewGuid();
+            string result = guid.ToString();
+
+            if (guidGeneratorParameters.Lenght <= 0) // If the lenght is invalid
+            {
+                throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0."); // Error
+            }
+
+            if (guidGeneratorParameters.UseUpperCaseOnly)
+            {
+                if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
+                {
+                    result = "{" + guid.ToString("N").ToUpper() + "}";
+                }
+                else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString().ToUpper();
+                }
+                else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString("B").ToUpper();
+                }
+                else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString("N").ToUpper();
+                }
+            }
+            else
+            {
+                if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
+                {
+                    result = "{" + guid.ToString("N") + "}";
+                }
+                else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString();
+                }
+                else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString("B");
+                }
+                else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString("N");
+                }
+            }
+
+            return result.Substring(0, guidGeneratorParameters.Lenght);
+        }
+
+        /// <summary>
+        /// Generates a new Guid from string and from <see cref="GuidGeneratorParameters"/>.
+        /// </summary>
+        /// <param name="fromString">Generate the guid from a specified <see cref="string"/>.</param>
+        /// <param name="guidGeneratorParameters">Parameters of the Guid Generation.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="InvalidGuidLenghtException"></exception>
+        /// <returns>A <see cref="string"/> value.</returns>
+        public static string Generate(string fromString, GuidGeneratorParameters guidGeneratorParameters)
+        {
+            if (string.IsNullOrEmpty(fromString)) // If no value is specified
+            {
+                throw new ArgumentNullException("'fromString' is null or empty.");
+            }
+
+            if (guidGeneratorParameters.Lenght <= 0) // If the lenght is invalid
+            {
+                throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0."); // Error
+            }
+
+            MD5 mD5 = MD5.Create();
+            byte[] data = mD5.ComputeHash(Encoding.Default.GetBytes(fromString)); // Get the bytes
+
+            Guid guid = new Guid(data);
             string result = guid.ToString();
 
             if (guidGeneratorParameters.UseUpperCaseOnly)
@@ -89,16 +168,40 @@ namespace LeoCorpLibrary
                 {
                     result = "{" + guid.ToString("N").ToUpper() + "}";
                 }
+                else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString().ToUpper();
+                }
+                else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString("B");
+                }
+                else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString("N").ToUpper();
+                }
             }
             else
             {
                 if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
-                    result = "{" + guid.ToString("N").ToUpper() + "}";
+                    result = "{" + guid.ToString("N") + "}";
+                }
+                else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString();
+                }
+                else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString("B");
+                }
+                else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
+                {
+                    result = guid.ToString("N");
                 }
             }
 
-            return result;
+            return result.Substring(0, guidGeneratorParameters.Lenght);
         }
     }
 }
