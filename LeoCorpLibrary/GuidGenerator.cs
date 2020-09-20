@@ -53,7 +53,7 @@ namespace LeoCorpLibrary
         /// <returns>A <see cref="string"/> value.</returns>
         public static string Generate(int lenght)
         {
-            if (lenght <= 0) // If the lenght is invalid
+            if (lenght <= 0 || lenght > 32) // If the lenght is invalid
             {
                 throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0."); // Error
             }
@@ -89,7 +89,7 @@ namespace LeoCorpLibrary
             Guid guid = Guid.NewGuid();
             string result = guid.ToString();
 
-            if (guidGeneratorParameters.Lenght <= 0) // If the lenght is invalid
+            if (guidGeneratorParameters.Lenght <= 0 || guidGeneratorParameters.Lenght > 32) // If the lenght is invalid
             {
                 throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0."); // Error
             }
@@ -151,7 +151,7 @@ namespace LeoCorpLibrary
                 throw new ArgumentNullException("'fromString' is null or empty.");
             }
 
-            if (guidGeneratorParameters.Lenght <= 0) // If the lenght is invalid
+            if (guidGeneratorParameters.Lenght <= 0 || guidGeneratorParameters.Lenght > 32) // If the lenght is invalid
             {
                 throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0."); // Error
             }
