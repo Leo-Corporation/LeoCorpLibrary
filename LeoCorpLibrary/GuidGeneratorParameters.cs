@@ -35,6 +35,17 @@ namespace LeoCorpLibrary
     public class GuidGeneratorParameters
     {
         /// <summary>
+        /// The constructor for <see cref="GuidGeneratorParameters"/>.
+        /// </summary>
+        public GuidGeneratorParameters()
+        {
+            Lenght = 32; // Set the default value
+            WithHyphens = true; // Set the default value
+            WithBraces = false; // Set the default value
+            UseUpperCaseOnly = false; // Set the default value
+        }
+
+        /// <summary>
         /// Lenght of the Guid to generate.
         /// </summary>
         public int Lenght { get; set; }
