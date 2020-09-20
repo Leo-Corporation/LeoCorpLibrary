@@ -23,7 +23,7 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.2.0.2009-rc1</Version>
+    <Version>2.2.0.2009-rc2</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
@@ -39,7 +39,10 @@
 - Added the Generate(guidGeneratorParameters)
 - Added the method Generate(fromString) (#124)
 - Added the method Generate(fromString, guidGeneratorParameters) (#124)
-- Translated and added the XML Documentation (#125)</PackageReleaseNotes>
+- Translated and added the XML Documentation (#125)
+- Fixed The generated Guid is cut (#126)
+- Fixed The generated Guid is not in upper case (#127)
+- Fixed Possibility to generate a Guid with a lenght higher than 32 (#128)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
