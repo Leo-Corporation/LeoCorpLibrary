@@ -23,14 +23,14 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.2.0.2009-rc2</Version>
+    <Version>2.2.0.2009</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms</PackageTags>
-    <PackageReleaseNotes>Version 2.2.0.2009-rc1
+    <PackageReleaseNotes>Version 2.2.0.2009
 - Made the update system compatible with WPF (#122)
 - Added a method that get the %APPDATA% path (#121)
 - Added the InvalidGuidLenghtException

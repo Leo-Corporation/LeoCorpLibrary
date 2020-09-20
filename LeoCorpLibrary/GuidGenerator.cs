@@ -133,7 +133,7 @@ namespace LeoCorpLibrary
                 }
             }
 
-            return result.Substring(0, guidGeneratorParameters.Lenght);
+            return result;
         }
 
         /// <summary>
