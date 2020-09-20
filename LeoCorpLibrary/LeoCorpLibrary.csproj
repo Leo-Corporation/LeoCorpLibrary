@@ -23,17 +23,23 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.2.0.2009-pre1</Version>
+    <Version>2.2.0.2009-rc1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms</PackageTags>
-    <PackageReleaseNotes>Version 2.1.1.2009
-- The XML Documentation is in English (#116)
-- The documentation is in English (#117)
-- Renamed the argument "weight" to "width" in Maths (#118)</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 2.2.0.2009-rc1
+- Made the update system compatible with WPF (#122)
+- Added a method that get the %APPDATA% path (#121)
+- Added the InvalidGuidLenghtException
+- Added the Generate() method (#124)
+- Added the Generate(lenght) method (#124)
+- Added the Generate(guidGeneratorParameters)
+- Added the method Generate(fromString) (#124)
+- Added the method Generate(fromString, guidGeneratorParameters) (#124)
+- Translated and added the XML Documentation (#125)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
