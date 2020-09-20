@@ -34,6 +34,24 @@ namespace LeoCorpLibrary
     /// </summary>
     public class GuidGeneratorParameters
     {
+        /// <summary>
+        /// Lenght of the Guid to generate.
+        /// </summary>
+        public int Lenght { get; set; }
 
+        /// <summary>
+        /// Include or not hyphens, such as: <c>00000000-0000-0000-0000-00000000</c>
+        /// </summary>
+        public bool WithHyphens { get; set; }
+
+        /// <summary>
+        /// Include or not braces, such as: <c>{00000000-0000-0000-0000-00000000}</c>
+        /// </summary>
+        public bool WithBraces { get; set; }
+
+        /// <summary>
+        /// Use only upper case if <see cref="true"/>. Uses only lower case if <see cref="false"/>.
+        /// </summary>
+        public bool UseUpperCaseOnly { get; set; }
     }
 }
