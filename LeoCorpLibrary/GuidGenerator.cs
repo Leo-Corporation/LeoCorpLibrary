@@ -106,7 +106,7 @@ namespace LeoCorpLibrary
                 }
                 else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("B").Substring(0, guidGeneratorParameters.Lenght).ToUpper();
+                    result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.Lenght).ToUpper() + "}";
                 }
                 else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
@@ -125,7 +125,7 @@ namespace LeoCorpLibrary
                 }
                 else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("B").Substring(0, guidGeneratorParameters.Lenght);
+                    result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.Lenght) + "}";
                 }
                 else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
@@ -174,7 +174,7 @@ namespace LeoCorpLibrary
                 }
                 else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("B").Substring(0, guidGeneratorParameters.Lenght);
+                    result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.Lenght).ToUpper() + "}";
                 }
                 else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
@@ -193,7 +193,7 @@ namespace LeoCorpLibrary
                 }
                 else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("B").Substring(0, guidGeneratorParameters.Lenght);
+                    result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.Lenght) + "}";
                 }
                 else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
