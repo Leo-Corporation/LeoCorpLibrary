@@ -8,10 +8,21 @@
 * [Nuget](https://www.nuget.org/packages/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 * [GitHub Packages](https://github.com/Leo-Corporation/LeoCorpLibrary/packages/345951)
 
-## New in version 2.1.1.2009
-- The XML Documentation is in English (#116)
-- The documentation is in English (#117)
-- Renamed the argument "weight" to "width" in Maths (#118)
+## New in version 2.2.0.2009
+### New
+- The update system is compatible with WPF (#122)
+- Added a method that get the %APPDATA% path (#121)
+- Added the InvalidGuidLenghtException
+- Added the Generate() method (#124)
+- Added the Generate(lenght) method (#124)
+- Added the Generate(guidGeneratorParameters)
+- Added the method Generate(fromString) (#124)
+- Added the method Generate(fromString, guidGeneratorParameters) (#124)
+### Fixed
+- Translated and added the XML Documentation (#125)
+- Fixed The generated Guid is cut (#126)
+- Fixed The generated Guid is not in upper case (#127)
+- Fixed Possibility to generate a Guid with a lenght higher than 32 (#128)
 
 ## Documentation
 ### Branches

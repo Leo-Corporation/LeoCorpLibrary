@@ -27,38 +27,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeoCorpLibrary.Exceptions
+namespace LeoCorpLibrary
 {
     /// <summary>
-    /// Is thrown when a RGB color is invalid.
+    /// A class that can be used in <see cref="GuidGenerator.Generate()"/> as an argument.
     /// </summary>
-    public class RGBInvalidValueException : Exception
+    public class GuidGeneratorParameters
     {
         /// <summary>
-        /// Initialize a new instance of the <see cref="RGBInvalidValueException"/> class.
+        /// The constructor for <see cref="GuidGeneratorParameters"/>.
         /// </summary>
-        public RGBInvalidValueException()
+        public GuidGeneratorParameters()
         {
-
+            Lenght = 32; // Set the default value
+            WithHyphens = true; // Set the default value
+            WithBraces = false; // Set the default value
+            UseUpperCaseOnly = false; // Set the default value
         }
 
         /// <summary>
-        /// Initialize a new instance of the <see cref="RGBInvalidValueException"/> class with a specified error message.
+        /// Lenght of the Guid to generate.
         /// </summary>
-        /// <param name="message">Message of the error.</param>
-        public RGBInvalidValueException(string message) : base(message)
-        {
-
-        }
+        public int Lenght { get; set; }
 
         /// <summary>
-        /// Initialize a new instance of the <see cref="RGBInvalidValueException"/> class with a specified error message.
+        /// Include or not hyphens, such as: <c>00000000-0000-0000-0000-00000000</c>
         /// </summary>
-        /// <param name="message">Message of the error.</param>
-        /// <param name="innerException">The inner exception that cause this exception.</param>
-        public RGBInvalidValueException(string message, Exception innerException) : base(message, innerException)
-        {
+        public bool WithHyphens { get; set; }
 
-        }
+        /// <summary>
+        /// Include or not braces, such as: <c>{00000000-0000-0000-0000-00000000}</c>
+        /// </summary>
+        public bool WithBraces { get; set; }
+
+        /// <summary>
+        /// Use only upper case if <see cref="true"/>. Uses only lower case if <see cref="false"/>.
+        /// </summary>
+        public bool UseUpperCaseOnly { get; set; }
     }
 }

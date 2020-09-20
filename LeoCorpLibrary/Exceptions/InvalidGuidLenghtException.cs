@@ -30,33 +30,33 @@ using System.Threading.Tasks;
 namespace LeoCorpLibrary.Exceptions
 {
     /// <summary>
-    /// Is thrown when a RGB color is invalid.
+    /// Is thrown when the lenght of a Guid is invalid
     /// </summary>
-    public class RGBInvalidValueException : Exception
+    public class InvalidGuidLenghtException : Exception
     {
         /// <summary>
-        /// Initialize a new instance of the <see cref="RGBInvalidValueException"/> class.
+        /// Initialize a new instance of the class <see cref="InvalidGuidLenghtException"/>.
         /// </summary>
-        public RGBInvalidValueException()
+        public InvalidGuidLenghtException()
         {
 
         }
 
         /// <summary>
-        /// Initialize a new instance of the <see cref="RGBInvalidValueException"/> class with a specified error message.
+        /// Initialize a new instance of the class <see cref="InvalidGuidLenghtException"/> with a specified error message.
         /// </summary>
-        /// <param name="message">Message of the error.</param>
-        public RGBInvalidValueException(string message) : base(message)
+        /// <param name="message">Message of the error</param>
+        public InvalidGuidLenghtException(string message) : base(message)
         {
 
         }
 
         /// <summary>
-        /// Initialize a new instance of the <see cref="RGBInvalidValueException"/> class with a specified error message.
+        /// Initialize a new instance of the class <see cref="InvalidGuidLenghtException"/> with a specified error message.
         /// </summary>
-        /// <param name="message">Message of the error.</param>
+        /// <param name="message">Message of the error</param>
         /// <param name="innerException">The inner exception that cause this exception.</param>
-        public RGBInvalidValueException(string message, Exception innerException) : base(message, innerException)
+        public InvalidGuidLenghtException(string message, Exception innerException) : base(message, innerException)
         {
 
         }
