@@ -98,38 +98,38 @@ namespace LeoCorpLibrary
             {
                 if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
-                    result = "{" + guid.ToString("N").ToUpper() + "}";
+                    result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.Lenght).ToUpper() + "}";
                 }
                 else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString().ToUpper();
+                    result = guid.ToString().Substring(0, guidGeneratorParameters.Lenght).ToUpper();
                 }
                 else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("B").ToUpper();
+                    result = guid.ToString("B").Substring(0, guidGeneratorParameters.Lenght).ToUpper();
                 }
                 else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("N").ToUpper();
+                    result = guid.ToString("N").Substring(0, guidGeneratorParameters.Lenght).ToUpper();
                 }
             }
             else
             {
                 if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
-                    result = "{" + guid.ToString("N") + "}";
+                    result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.Lenght) + "}";
                 }
                 else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString();
+                    result = guid.ToString().Substring(0, guidGeneratorParameters.Lenght);
                 }
                 else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("B");
+                    result = guid.ToString("B").Substring(0, guidGeneratorParameters.Lenght);
                 }
                 else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("N");
+                    result = guid.ToString("N").Substring(0, guidGeneratorParameters.Lenght);
                 }
             }
 
@@ -166,42 +166,42 @@ namespace LeoCorpLibrary
             {
                 if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
-                    result = "{" + guid.ToString("N").ToUpper() + "}";
+                    result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.Lenght).ToUpper() + "}";
                 }
                 else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString().ToUpper();
+                    result = guid.ToString().Substring(0, guidGeneratorParameters.Lenght).ToUpper();
                 }
                 else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("B");
+                    result = guid.ToString("B").Substring(0, guidGeneratorParameters.Lenght);
                 }
                 else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("N").ToUpper();
+                    result = guid.ToString("N").Substring(0, guidGeneratorParameters.Lenght).ToUpper();
                 }
             }
             else
             {
                 if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
-                    result = "{" + guid.ToString("N") + "}";
+                    result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.Lenght) + "}";
                 }
                 else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString();
+                    result = guid.ToString().Substring(0, guidGeneratorParameters.Lenght);
                 }
                 else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("B");
+                    result = guid.ToString("B").Substring(0, guidGeneratorParameters.Lenght);
                 }
                 else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
                 {
-                    result = guid.ToString("N");
+                    result = guid.ToString("N").Substring(0, guidGeneratorParameters.Lenght);
                 }
             }
 
-            return result.Substring(0, guidGeneratorParameters.Lenght);
+            return result;
         }
     }
 }
