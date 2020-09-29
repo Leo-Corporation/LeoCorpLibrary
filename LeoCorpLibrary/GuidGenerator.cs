@@ -55,7 +55,7 @@ namespace LeoCorpLibrary
         {
             if (lenght <= 0 || lenght > 32) // If the lenght is invalid
             {
-                throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0."); // Error
+                throw new InvalidGuidLenghtException("The lenght of a Guid must be between 0 and 32."); // Error
             }
             return Guid.NewGuid().ToString("N").Substring(0, lenght); // Return the value
         }
@@ -91,7 +91,7 @@ namespace LeoCorpLibrary
 
             if (guidGeneratorParameters.Lenght <= 0 || guidGeneratorParameters.Lenght > 32) // If the lenght is invalid
             {
-                throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0."); // Error
+                throw new InvalidGuidLenghtException("The lenght of a Guid must be between 0 and 32."); // Error
             }
 
             if (guidGeneratorParameters.UseUpperCaseOnly)
@@ -153,7 +153,7 @@ namespace LeoCorpLibrary
 
             if (guidGeneratorParameters.Lenght <= 0 || guidGeneratorParameters.Lenght > 32) // If the lenght is invalid
             {
-                throw new InvalidGuidLenghtException("The lenght of a Guid must be higher than 0."); // Error
+                throw new InvalidGuidLenghtException("The lenght of a Guid must be between 0 and 32."); // Error
             }
 
             MD5 mD5 = MD5.Create();
