@@ -68,6 +68,12 @@ namespace LeoCorpLibrary.UI
                     break;
             }
         }
+
+        public static void CenterFormOnScreen(Form form)
+        {
+            form.Left = (Screen.PrimaryScreen.WorkingArea.Width - form.Width); // Center horizontally
+            form.Top = (Screen.PrimaryScreen.WorkingArea.Height - form.Height); // Center vertically
+        }
     }
 
     /// <summary>
