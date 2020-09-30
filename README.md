@@ -8,21 +8,13 @@
 * [Nuget](https://www.nuget.org/packages/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 * [GitHub Packages](https://github.com/Leo-Corporation/LeoCorpLibrary/packages/345951)
 
-## New in version 2.2.0.2009
+## New in version 2.3.0.2010
 ### New
-- The update system is compatible with WPF (#122)
-- Added a method that get the %APPDATA% path (#121)
-- Added the InvalidGuidLenghtException
-- Added the Generate() method (#124)
-- Added the Generate(lenght) method (#124)
-- Added the Generate(guidGeneratorParameters)
-- Added the method Generate(fromString) (#124)
-- Added the method Generate(fromString, guidGeneratorParameters) (#124)
+- Added the CenterControlOnForm() method
+- Added the CenterFormOnScreen() method
 ### Fixed
-- Translated and added the XML Documentation (#125)
-- Fixed The generated Guid is cut (#126)
-- Fixed The generated Guid is not in upper case (#127)
-- Fixed Possibility to generate a Guid with a lenght higher than 32 (#128)
+- Fixed and updated XML Documentation (#133)
+- The form is not correctly center on the screen (#134)
 
 ## Documentation
 ### Branches
@@ -32,16 +24,16 @@ There is two branches:
 ### Consult documentation
 [Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) to go to the documentation.
 ### Useful links :
-* [Load a file](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/load-a-file)
 * [ColorConverter](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Colors-converter)
-* [Compatibility](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Compatibility)
-* [Environnement](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Environnement)
-* [Exceptions](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Exceptions)
-* [Mathematics functions](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Mathematics-functions)
-* [Generate a password](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Generate-a-password)
 * [Check updates](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Check-for-updates)
-* [Save a file](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Save-in-a-file)
+* [Environnement](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Environnement)
 * [Check an internet connection](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Verify-an-internet-connection)
+* [Generate a Guid](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Generate-a-Guid)
+* [Generate a password](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Generate-a-password)
+* [Load a file](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/load-a-file)
+* [Mathematics functions](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Mathematics-functions)
+* [Save a file](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Save-in-a-file)
+* [User Interface](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/User-Interface)
 
 ## How to add LeoCorpLibrary to a project?
 [Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary#1-ajouter-la-bibliothèque-dans-un-projet) to go to the documentation about this topic.

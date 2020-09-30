@@ -61,7 +61,7 @@ namespace LeoCorpLibrary
         public bool WithBraces { get; set; }
 
         /// <summary>
-        /// Use only upper case if <see cref="true"/>. Uses only lower case if <see cref="false"/>.
+        /// Use only upper case if true. Uses only lower case if false.
         /// </summary>
         public bool UseUpperCaseOnly { get; set; }
     }
