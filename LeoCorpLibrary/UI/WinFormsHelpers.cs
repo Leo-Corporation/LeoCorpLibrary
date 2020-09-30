@@ -75,8 +75,8 @@ namespace LeoCorpLibrary.UI
         /// <param name="form"><see cref="Form"/> to center.</param>
         public static void CenterFormOnScreen(Form form)
         {
-            form.Left = (Screen.PrimaryScreen.WorkingArea.Width - form.Width); // Center horizontally
-            form.Top = (Screen.PrimaryScreen.WorkingArea.Height - form.Height); // Center vertically
+            form.Left = (Screen.PrimaryScreen.WorkingArea.Width - form.Width) / 2; // Center horizontally
+            form.Top = (Screen.PrimaryScreen.WorkingArea.Height - form.Height) / 2; // Center vertically
         }
     }
 
