@@ -35,7 +35,7 @@ namespace LeoCorpLibrary
     public static class Password
     {
         /// <summary>
-        /// Allows you to generate a password.
+        /// Generates a password.
         /// </summary>
         /// <param name="lenght">Lenght of the password.</param>
         /// <param name="chars">Characters that can be in the generated password.</param>
@@ -71,6 +71,13 @@ namespace LeoCorpLibrary
             return finalPassword; // Retourne le mot de passe final
         }
 
+        /// <summary>
+        /// Generates a password asynchronously.
+        /// </summary>
+        /// <param name="lenght">Lenght of the password.</param>
+        /// <param name="chars">Characters that can be in the generated password.</param>
+        /// <param name="separator">Separator of the characters.</param>
+        /// <returns>A <see cref="Task{TResult}"/> value.</returns>
         public static Task<string> GenerateAsync(int lenght, string chars, string separator)
         {
             Task<string> task = new Task<string>(() => Generate(lenght, chars, separator));
