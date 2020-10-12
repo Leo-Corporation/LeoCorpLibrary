@@ -70,5 +70,12 @@ namespace LeoCorpLibrary
             }
             return finalPassword; // Retourne le mot de passe final
         }
+
+        public static Task<string> GenerateAsync(int lenght, string chars, string separator)
+        {
+            Task<string> task = new Task<string>(() => Generate(lenght, chars, separator));
+            task.Start();
+            return task;
+        }
     }
 }
