@@ -7,8 +7,8 @@
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
     <Copyright>Copyright ©  2020</Copyright>
-    <AssemblyVersion>2.3.0.2010</AssemblyVersion>
-    <FileVersion>2.3.0.2010</FileVersion>
+    <AssemblyVersion>2.4.0.2010</AssemblyVersion>
+    <FileVersion>2.4.0.2010</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
@@ -23,18 +23,18 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.3.0.2010</Version>
+    <Version>2.4.0.2010-rc1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms</PackageTags>
-    <PackageReleaseNotes>Version 2.3.0.2010
+    <PackageReleaseNotes>Version 2.4.0.2010-rc1
 - Fixed and updated XML Documentation
-- Added the CenterControlOnForm() method
-- Added the CenterFormOnScreen() method
-- The form is not correctly centered on the screen (#134)</PackageReleaseNotes>
+- Add the possibility to generate a password asynchronously (#136)
+- Added password presets (#137)
+- Added a variation to the "Generate()" and "GenerateAsync()" methods</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
