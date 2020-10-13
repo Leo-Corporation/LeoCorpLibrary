@@ -106,6 +106,13 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Generates a password asynchronously.
+        /// </summary>
+        /// <param name="lenght">Lenght of the password.</param>
+        /// <param name="passwordPresets">The preset used for the password.</param>
+        /// <exception cref="Exception"></exception>
+        /// <returns>A <see cref="Task{TResult}"/> value.</returns>
         public static async Task<string> GenerateAsync(int lenght, PasswordPresets passwordPresets)
         {
             switch (passwordPresets) // For each case
