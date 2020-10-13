@@ -105,6 +105,19 @@ namespace LeoCorpLibrary
                     return "";
             }
         }
+
+        public static async Task<string> GenerateAsync(int lenght, PasswordPresets passwordPresets)
+        {
+            switch (passwordPresets) // For each case
+            {
+                case PasswordPresets.Simple: // If the preset is simple
+                    return await GenerateAsync(lenght, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9", ","); // Generate password
+                case PasswordPresets.Complex: // If the presete is complex
+                    return await GenerateAsync(lenght, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,/,é,&,ç,à,@,°,{,},(,),#,&", ","); // Generate password
+                default:
+                    return "";
+            }
+        }
     }
 
     /// <summary>
