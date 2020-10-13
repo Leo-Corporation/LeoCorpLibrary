@@ -77,6 +77,7 @@ namespace LeoCorpLibrary
         /// <param name="lenght">Lenght of the password.</param>
         /// <param name="chars">Characters that can be in the generated password.</param>
         /// <param name="separator">Separator of the characters.</param>
+        /// <exception cref="Exception"></exception>
         /// <returns>A <see cref="Task{TResult}"/> value.</returns>
         public static Task<string> GenerateAsync(int lenght, string chars, string separator)
         {
@@ -85,6 +86,13 @@ namespace LeoCorpLibrary
             return task;
         }
 
+        /// <summary>
+        /// Generates a password.
+        /// </summary>
+        /// <param name="lenght">Lenght of the password.</param>
+        /// <param name="passwordPresets">The preset used for the password.</param>
+        /// <exception cref="Exception"></exception>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string Generate(int lenght, PasswordPresets passwordPresets)
         {
             switch (passwordPresets) // For each case
@@ -99,9 +107,19 @@ namespace LeoCorpLibrary
         }
     }
 
+    /// <summary>
+    /// Presets that can be used for password generation.
+    /// </summary>
     public enum PasswordPresets
     {
+        /// <summary>
+        /// The "Simple" preset generates a password with simple characters.
+        /// </summary>
         Simple,
+
+        /// <summary>
+        /// The "Complex" preset generates a password with unusual, hard and complex characters.
+        /// </summary>
         Complex
     }
 }
