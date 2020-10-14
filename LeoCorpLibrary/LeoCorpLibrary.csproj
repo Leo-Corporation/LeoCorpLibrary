@@ -23,14 +23,14 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.4.0.2010-rc1</Version>
+    <Version>2.4.0.2010</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms</PackageTags>
-    <PackageReleaseNotes>Version 2.4.0.2010-rc1
+    <PackageReleaseNotes>Version 2.4.0.2010
 - Fixed and updated XML Documentation
 - Add the possibility to generate a password asynchronously (#136)
 - Added password presets (#137)
