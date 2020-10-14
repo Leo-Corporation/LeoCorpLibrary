@@ -10,11 +10,11 @@
 
 ## New in version 2.3.0.2010
 ### New
-- Added the CenterControlOnForm() method
-- Added the CenterFormOnScreen() method
+- Added the possibility to generate a password asynchronously (#136)
+- Added password presets (#137)
+- Added a variation to the "GenerateAsync()" method (#137)
 ### Fixed
-- Fixed and updated XML Documentation (#133)
-- The form is not correctly center on the screen (#134)
+- Fixed and updated XML Documentation (#138)
 
 ## Documentation
 ### Branches
