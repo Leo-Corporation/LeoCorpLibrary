@@ -58,6 +58,7 @@ Here's what you'll need to contribute to this project:
 
 ## Projects using LeoCorpLibrary
 ### GitHub
+- [Leo-Corporation / Gavilya](https://github.com/Leo-Corporation/Gavilya)
 - [Leo-Corporation / Générateur de mots de passe](https://github.com/Leo-Corporation/Generateur-de-mots-de-passe)
 - [Leo-Corporation / InternetTest](https://github.com/Leo-Corporation/InternetTest)
 - [Leo-Corporation / LABS-Experiences](https://github.com/Leo-Corporation/LABS-Experiences)
