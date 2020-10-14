@@ -10,11 +10,11 @@
 
 ## New in version 2.3.0.2010
 ### New
-- Added the CenterControlOnForm() method
-- Added the CenterFormOnScreen() method
+- Added the possibility to generate a password asynchronously (#136)
+- Added password presets (#137)
+- Added a variation to the "GenerateAsync()" method (#137)
 ### Fixed
-- Fixed and updated XML Documentation (#133)
-- The form is not correctly center on the screen (#134)
+- Fixed and updated XML Documentation (#138)
 
 ## Documentation
 ### Branches
@@ -58,6 +58,7 @@ Here's what you'll need to contribute to this project:
 
 ## Projects using LeoCorpLibrary
 ### GitHub
+- [Leo-Corporation / Gavilya](https://github.com/Leo-Corporation/Gavilya)
 - [Leo-Corporation / Générateur de mots de passe](https://github.com/Leo-Corporation/Generateur-de-mots-de-passe)
 - [Leo-Corporation / InternetTest](https://github.com/Leo-Corporation/InternetTest)
 - [Leo-Corporation / LABS-Experiences](https://github.com/Leo-Corporation/LABS-Experiences)
