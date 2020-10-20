@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace LeoCorpLibrary.Extensions
 {
+    /// <summary>
+    /// Methods that extends the <see cref="int"/> type.
+    /// </summary>
     public static class IntExtensions
     {
+        /// <summary>
+        /// Determines if the <see cref="int"/> value is even.
+        /// </summary>
+        /// <param name="value">The <see cref="int"/> to check.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
         public static bool IsEven(this int value)
         {
             string str = value.ToString(); // Convert to string
