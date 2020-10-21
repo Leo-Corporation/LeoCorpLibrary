@@ -52,5 +52,15 @@ namespace LeoCorpLibrary.Extensions
                 return false; // The number is odd
             }
         }
+
+        /// <summary>
+        /// Converts an <see cref="int"/> value to a <see cref="double"/> value.
+        /// </summary>
+        /// <param name="value">The <see cref="int"/> value to convert.</param>
+        /// <returns>A <see cref="double"/> value.</returns>
+        public static double ToDouble(this int value)
+        {
+            return Convert.ToDouble(value);
+        }
     }
 }
