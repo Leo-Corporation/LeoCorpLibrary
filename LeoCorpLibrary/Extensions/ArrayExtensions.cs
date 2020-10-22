@@ -27,6 +27,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.TextFormatting;
 
 namespace LeoCorpLibrary.Extensions
 {
@@ -88,6 +89,18 @@ namespace LeoCorpLibrary.Extensions
             }
 
             return new List<T>(array.Concat(finalArray)).ToArray(); // Return the final array
+        }
+
+        public static T[] RemoveItem<T>(this T[] array, T item)
+        {
+            if (array.Length <= 0) // If the array is null or empty
+            {
+                throw new ArgumentNullException($"The '{nameof(array)}' parameter cannot be null or empty."); // Error
+            }
+
+            List<T> list = new List<T>(array); // Create list from the array
+            list.Remove(item); // Remove the item
+            return list.ToArray(); // Return the new array
         }
     }
 }
