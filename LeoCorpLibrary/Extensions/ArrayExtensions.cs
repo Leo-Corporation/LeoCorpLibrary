@@ -91,6 +91,13 @@ namespace LeoCorpLibrary.Extensions
             return new List<T>(array.Concat(finalArray)).ToArray(); // Return the final array
         }
 
+        /// <summary>
+        /// Removes a specific item from an array.
+        /// </summary>
+        /// <typeparam name="T">The type of the array.</typeparam>
+        /// <param name="array">The array where the item is going to be removed.</param>
+        /// <param name="item">The item to remove.</param>
+        /// <returns>An <see cref="Array"/>.</returns>
         public static T[] RemoveItem<T>(this T[] array, T item)
         {
             if (array.Length <= 0) // If the array is null or empty
@@ -103,6 +110,13 @@ namespace LeoCorpLibrary.Extensions
             return list.ToArray(); // Return the new array
         }
 
+        /// <summary>
+        /// Removes a specific item from an array.
+        /// </summary>
+        /// <typeparam name="T">The type of the array.</typeparam>
+        /// <param name="array">The array where the items are going to be removed.</param>
+        /// <param name="items">The items to remove.</param>
+        /// <returns>An <see cref="Array"/>.</returns>
         public static T[] RemoveItem<T>(this T[] array, params T[] items)
         {
             if (array.Length <= 0) // If the array is null or empty
