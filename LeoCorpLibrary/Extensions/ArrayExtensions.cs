@@ -30,8 +30,18 @@ using System.Threading.Tasks;
 
 namespace LeoCorpLibrary.Extensions
 {
+    /// <summary>
+    /// Methods that extends arrays.
+    /// </summary>
     public static class ArrayExtensions
     {
+        /// <summary>
+        /// Adds an item to an existing array.
+        /// </summary>
+        /// <typeparam name="T">The type of the array.</typeparam>
+        /// <param name="array">The array where the item is going to be append.</param>
+        /// <param name="item">The item which is going to be append in the array.</param>
+        /// <returns>An <see cref="Array"/>.</returns>
         public static T[] Append<T>(this T[] array, T item)
         {
             if (array.Length == 0) // If the array is empty
@@ -43,8 +53,21 @@ namespace LeoCorpLibrary.Extensions
             return new List<T>(array.Concat(items)).ToArray(); // Return the final array
         }
 
+        /// <summary>
+        /// Adds items to an existing array.
+        /// </summary>
+        /// <typeparam name="T">The type of the array.</typeparam>
+        /// <param name="array">The array where the items are going to be append.</param>
+        /// <param name="items">The items which are going to be append in the array.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <returns>An <see cref="Array"/>.</returns>
         public static T[] Append<T>(this T[] array, params T[] items)
         {
+            if (items.Length <= 0) // If there is no items
+            {
+                throw new ArgumentNullException($"The '{nameof(items)}' parameter cannot be null or empty."); // Error
+            }
+
             if (array.Length == 0) // If the array is empty
             {
                 T[] finalArrayEmpty = new T[items.Length]; // Final array
