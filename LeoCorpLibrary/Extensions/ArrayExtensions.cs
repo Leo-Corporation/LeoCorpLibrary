@@ -102,5 +102,25 @@ namespace LeoCorpLibrary.Extensions
             list.Remove(item); // Remove the item
             return list.ToArray(); // Return the new array
         }
+
+        public static T[] RemoveItem<T>(this T[] array, params T[] items)
+        {
+            if (array.Length <= 0) // If the array is null or empty
+            {
+                throw new ArgumentNullException($"The '{nameof(array)}' parameter cannot be null or empty."); // Error
+            }
+
+            List<T> list = new List<T>(array); // Create list from array
+
+            foreach (T item in items) // For each item
+            {
+                if (list.Contains(item)) // If the mist contains the item
+                {
+                    list.Remove(item); // Remove the item
+                }
+            }
+
+            return list.ToArray(); // Return the new array
+        }
     }
 }
