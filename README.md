@@ -8,13 +8,18 @@
 * [Nuget](https://www.nuget.org/packages/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 * [GitHub Packages](https://github.com/Leo-Corporation/LeoCorpLibrary/packages/345951)
 
-## New in version 2.3.0.2010
+## New in version 2.5.0.2010
 ### New
-- Added the possibility to generate a password asynchronously (#136)
-- Added password presets (#137)
-- Added a variation to the "GenerateAsync()" method (#137)
+- Added the possibility to check if the number is odd or even (#141)
+- Added the possibility to count the number of words in a string (#142)
+- Added a variation of the CountWord() method (#142)
+- Added the possibility to convert an int value to a double value (#143)
+- Added the possibility to append an element to an array (#144)
+- Added a varation of the Append() method (#144)
+- Added the possibility to remove an element from an array (#145)
+- Added a variation to the RemoveItem() method (#145)
 ### Fixed
-- Fixed and updated XML Documentation (#138)
+- Fixed and updated XML Documentation (#146)
 
 ## Documentation
 ### Branches
