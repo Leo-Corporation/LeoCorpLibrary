@@ -23,22 +23,22 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.5.0.2010-rc1</Version>
+    <Version>2.5.0.2010</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms</PackageTags>
-    <PackageReleaseNotes>Version 2.5.0.2010-rc1
+    <PackageReleaseNotes>Version 2.5.0.2010
 - Fixed and updated XML Documentation
 - Added the possibility to check if the number is odd or even (#141)
 - Added the possibility to count the number of words in a string (#142)
 - Added a variation of the CountWord() method (#142)
 - Added the possibility to convert an int value to a double value (#143)
 - Added the possibility to append an element to an array (#144)
-- Add a varation of the Append() method (#144)
-- Add the possibility to remove an element from an array (#145)
+- Added a varation of the Append() method (#144)
+- Added the possibility to remove an element from an array (#145)
 - Added a variation to the RemoveItem() method (#145)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
