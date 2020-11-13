@@ -71,5 +71,10 @@ namespace LeoCorpLibrary.Extensions
         {
             return Crypt.Encrypt(source, key); // Return the encrypted string
         }
+
+        public static string Decrypt(this string encrypt, string key)
+        {
+            return Crypt.Decrypt(encrypt, key); // Return the decrypted value
+        }
     }
 }
