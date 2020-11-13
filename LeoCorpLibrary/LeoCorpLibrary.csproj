@@ -23,17 +23,20 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.6.0.2011-pre1</Version>
+    <Version>2.6.0.2011-rc1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms</PackageTags>
-    <PackageReleaseNotes>Version 2.6.0.2011-pre1
+    <PackageReleaseNotes>Version 2.6.0.2011-rc1
 - Fixed and updated XML Documentation
 - Added the possibility to encrypt a string (#148)
-- Added the possibility to decrypt a string (#149)</PackageReleaseNotes>
+- Added an extension method to encrypt a string (#148)
+- Added the possibility to decrypt a string (#149)
+- Added an extension method to decrypt a string (#149)
+</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
