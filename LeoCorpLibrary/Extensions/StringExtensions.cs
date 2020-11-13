@@ -67,11 +67,23 @@ namespace LeoCorpLibrary.Extensions
             return words.Length; // Number of words
         }
 
+        /// <summary>
+        /// Encrypts a <see cref="string"/>.
+        /// </summary>
+        /// <param name="source">The <see cref="string"/> to encrypt.</param>
+        /// <param name="key">The key that will be used to encrypt and decrypt the string.</param>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string Encrypt(this string source, string key)
         {
             return Crypt.Encrypt(source, key); // Return the encrypted string
         }
 
+        /// <summary>
+        /// Decrypts an encrypted <see cref="string"/>.
+        /// </summary>
+        /// <param name="encrypt">The encrypted <see cref="string"/>.</param>
+        /// <param name="key">The key that will be used to encrypt and decrypt the string.</param>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string Decrypt(this string encrypt, string key)
         {
             return Crypt.Decrypt(encrypt, key); // Return the decrypted value
