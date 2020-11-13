@@ -66,5 +66,10 @@ namespace LeoCorpLibrary.Extensions
             string[] words = value.Split(wordSeparator, StringSplitOptions.RemoveEmptyEntries); // Get all the words
             return words.Length; // Number of words
         }
+
+        public static string Encrypt(this string source, string key)
+        {
+            return Crypt.Encrypt(source, key); // Return the encrypted string
+        }
     }
 }
