@@ -8,18 +8,14 @@
 * [Nuget](https://www.nuget.org/packages/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 * [GitHub Packages](https://github.com/Leo-Corporation/LeoCorpLibrary/packages/345951)
 
-## New in version 2.5.0.2010
+## New in version 2.6.0.2011
 ### New
-- Added the possibility to check if the number is odd or even (#141)
-- Added the possibility to count the number of words in a string (#142)
-- Added a variation of the CountWord() method (#142)
-- Added the possibility to convert an int value to a double value (#143)
-- Added the possibility to append an element to an array (#144)
-- Added a varation of the Append() method (#144)
-- Added the possibility to remove an element from an array (#145)
-- Added a variation to the RemoveItem() method (#145)
+- Added the possibility to encrypt a string (#148)
+- Added an extension method to encrypt a string (#148)
+- Added the possibility to decrypt a string (#149)
+- Added an extension method to decrypt a string (#149)
 ### Fixed
-- Fixed and updated XML Documentation (#146)
+- Fixed and updated XML Documentation (#150)
 
 ## Documentation
 ### Branches
@@ -29,10 +25,17 @@ There is two branches:
 ### Consult documentation
 [Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) to go to the documentation.
 ### Useful links :
+**Get Started**
+- [1. Add the library to a project](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/install-LeoCorpLibrary#1-add-the-library-to-a-project)
+- [2. Start coding](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/install-LeoCorpLibrary#2-start-coding)
+
+**Functions**
 * [ColorConverter](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Colors-converter)
 * [Check updates](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Check-for-updates)
-* [Environnement](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Environnement)
 * [Check an internet connection](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Verify-an-internet-connection)
+* [Crypt](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Crypt)
+* [Environnement](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Environnement)
+* [Extensions](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Extensions)
 * [Generate a Guid](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Generate-a-Guid)
 * [Generate a password](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Generate-a-password)
 * [Load a file](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/load-a-file)
@@ -41,7 +44,7 @@ There is two branches:
 * [User Interface](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/User-Interface)
 
 ## How to add LeoCorpLibrary to a project?
-[Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/installer-LeoCorpLibrary#1-ajouter-la-bibliothèque-dans-un-projet) to go to the documentation about this topic.
+[Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/install-LeoCorpLibrary#1-add-the-library-to-a-project) to go to the documentation about this topic.
 
 ## Roadmap 2020
 Here's LeoCorpLibrary's roadmap:
@@ -55,11 +58,13 @@ Here's LeoCorpLibrary's roadmap:
 
 ## Contribute
 Here's what you'll need to contribute to this project:
-- Visual Studio 2019 (toutes éditions) avec :
+- Visual Studio 2019 with:
    - .NET Desktop Developpement
    - Git
-- .NET Framework 4.7.2
-- .NET Core SDK (3.1)
+- .NET
+   - .NET Framework 4.7.2
+   - .NET Core 3.1
+   - .NET 5 *(optionnal)*
 
 ## Projects using LeoCorpLibrary
 ### GitHub
