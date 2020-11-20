@@ -194,6 +194,12 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Allows you to save the content of a <see cref="ListView"/> in a XML file.
+        /// </summary>
+        /// <param name="listView"><see cref="ListView"/>.</param>
+        /// <param name="filePath">Where to save the file.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public static void ListViewContentXML(ListView listView, string filePath)
         {
             if (listView.Items.Count > 0) // If the listview isn't empty
@@ -205,6 +211,10 @@ namespace LeoCorpLibrary
 
                 xmlSerializer.Serialize(streamWriter, items); // Create the file
                 streamWriter.Dispose(); // Release used resources.
+            }
+            else
+            {
+                throw new ArgumentNullException("The 'listView' argument must have items.");
             }
         }
     }
