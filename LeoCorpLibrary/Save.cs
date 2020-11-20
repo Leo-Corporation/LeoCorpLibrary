@@ -28,6 +28,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace LeoCorpLibrary
 {
@@ -190,6 +191,20 @@ namespace LeoCorpLibrary
             catch (Exception ex)
             {
                 throw new Exception("An error occured: " + ex.Message); // Afficher un message d'erreur
+            }
+        }
+
+        public static void ListViewContentXML(ListView listView, string filePath)
+        {
+            if (listView.Items.Count > 0) // If the listview isn't empty
+            {
+                ListView.ListViewItemCollection items = listView.Items; // Items
+
+                XmlSerializer xmlSerializer = new XmlSerializer(items.GetType()); // Create XML Serializer
+                StreamWriter streamWriter = new StreamWriter(filePath); // Where to write
+
+                xmlSerializer.Serialize(streamWriter, items); // Create the file
+                streamWriter.Dispose(); // Release used resources.
             }
         }
     }
