@@ -44,6 +44,7 @@ namespace LeoCorpLibrary
         /// <exception cref="FileNotFoundException"></exception>
         /// <param name="listView"><see cref="ListView"/>.</param>
         /// <param name="filePath">Location of the file to load in a <see cref="ListView"/>.</param>
+        [Obsolete("Use ListViewContentCustom instead.")]
         public static void ListViewContent(ListView listView, string filePath)
         {
             if (string.IsNullOrEmpty(filePath)) // Si l'argument 'filePath' est vide ou null
@@ -95,7 +96,106 @@ namespace LeoCorpLibrary
         /// <param name="filePath">Location of the file to load in a <see cref="ListView"/>.</param>
         /// <param name="itemSplit">Elements separator used during saving.</param>
         /// <param name="columnSplit">Columns separator used during saving.</param>
+        [Obsolete("Use ListViewContentCustom instead.")]
         public static void ListViewContent(ListView listView, string filePath, string itemSplit, string columnSplit)
+        {
+            if (string.IsNullOrEmpty(filePath) || string.IsNullOrEmpty(itemSplit) || string.IsNullOrEmpty(columnSplit)) // Si les paramètres sont vides ou null
+            {
+                throw new ArgumentNullException("One of the specified parameters is null or empty."); // Message d'erreur
+            }
+
+            if (!File.Exists(filePath)) // Si le fichier n'existe pas
+            {
+                throw new FileNotFoundException("The specified file in 'filePath' does not exist."); // Message d'erreur
+            }
+
+            try
+            {
+                string data = File.ReadAllText(filePath); // Données
+                string[] elements = data.Split(new string[] { itemSplit }, StringSplitOptions.None); // Séparer avec itemSplit
+
+                foreach (string element in elements) // Pour chaque élément dans 'elements'
+                {
+                    string[] values = element.Split(new string[] { columnSplit }, StringSplitOptions.None); // Séparer avec 'columnSplit'
+                    ListViewItem listViewItem = new ListViewItem(); // Nouvel élément à ajouter dans la ListView
+
+                    for (int i = 0; i <= values.Length - 1; i++) // Pour chaque valeur dans 'values[]'
+                    {
+                        if (i == 0)
+                            listViewItem.Text = values[i]; // Ajouer la valeur dans la première colonne
+                        else
+                            listViewItem.SubItems.Add(values[i]); // Si i = 1 c'est la deuxième colonne, etc...
+                    }
+
+                    listView.Items.Add(listViewItem); // Ajouter l'élement à la ListView
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occured: " + ex.Message); // Message d'erreur
+            }
+        }
+
+        /// <summary>
+        /// Allows you to load a saved file in a <see cref="ListView"/>.
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="Exception"></exception>
+        /// <exception cref="FileNotFoundException"></exception>
+        /// <param name="listView"><see cref="ListView"/>.</param>
+        /// <param name="filePath">Location of the file to load in a <see cref="ListView"/>.</param>
+        public static void ListViewContentCustom(ListView listView, string filePath)
+        {
+            if (string.IsNullOrEmpty(filePath)) // Si l'argument 'filePath' est vide ou null
+            {
+                throw new ArgumentNullException("The parameter 'filePath' can not be empty or null."); // Message d'erreur
+            }
+
+            if (!File.Exists(filePath)) // Si le fichier n'existe pas
+            {
+                throw new FileNotFoundException("The specified file in 'filePath' does not exist."); // Message d'erreur
+            }
+            string itemSplit = "(*E*)"; // Séparer entre les éléments => item1(*E*)item2
+            string columnSplit = "(*C*)"; // Séparer entre les valeurs => item1(*E*)item2(*C*)item1(*E*)item2
+
+            try
+            {
+                string data = File.ReadAllText(filePath); // Données
+                string[] elements = data.Split(new string[] { itemSplit }, StringSplitOptions.RemoveEmptyEntries); // Séparer avec itemSplit
+
+                foreach (string element in elements) // Pour chaque élément dans 'elements'
+                {
+                    string[] values = element.Split(new string[] { columnSplit }, StringSplitOptions.None); // Séparer avec 'columnSplit'
+                    ListViewItem listViewItem = new ListViewItem(); // Nouvel élément à ajouter dans la ListView
+
+                    for (int i = 0; i <= values.Length - 1; i++) // Pour chaque valeur dans 'values[]'
+                    {
+                        if (i == 0)
+                            listViewItem.Text = values[i]; // Ajouer la valeur dans la première colonne
+                        else
+                            listViewItem.SubItems.Add(values[i]); // Si i = 1 c'est la deuxième colonne, etc...
+                    }
+
+                    listView.Items.Add(listViewItem); // Ajouter l'élement à la ListView
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occured: " + ex.Message); // Message d'erreur
+            }
+        }
+
+        /// <summary>
+        /// Allows you to load a saved file in a <see cref="ListView"/>.
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="Exception"></exception>
+        /// <exception cref="FileNotFoundException"></exception>
+        /// <param name="listView"><see cref="ListView"/>.</param>
+        /// <param name="filePath">Location of the file to load in a <see cref="ListView"/>.</param>
+        /// <param name="itemSplit">Elements separator used during saving.</param>
+        /// <param name="columnSplit">Columns separator used during saving.</param>
+        public static void ListViewContentCustom(ListView listView, string filePath, string itemSplit, string columnSplit)
         {
             if (string.IsNullOrEmpty(filePath) || string.IsNullOrEmpty(itemSplit) || string.IsNullOrEmpty(columnSplit)) // Si les paramètres sont vides ou null
             {
