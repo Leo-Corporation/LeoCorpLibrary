@@ -235,6 +235,12 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Allows you to load a saved file in a <see cref="ListView"/>.
+        /// </summary>
+        /// <param name="listView"><see cref="ListView"/>.</param>
+        /// <param name="filePath">The location of the file where the items are.</param>
+        /// <exception cref="FileNotFoundException"></exception>
         public static void ListViewContentXML(ListView listView, string filePath)
         {
             if (!File.Exists(filePath)) // If the file doesn't exist
