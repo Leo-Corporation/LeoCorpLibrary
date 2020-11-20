@@ -28,6 +28,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace LeoCorpLibrary
 {
@@ -232,6 +233,19 @@ namespace LeoCorpLibrary
             {
                 throw new Exception("An error occured: " + ex.Message); // Message d'erreur
             }
+        }
+
+        public static void ListViewContentXML(ListView listView, string filePath)
+        {
+            if (!File.Exists(filePath)) // If the file doesn't exist
+            {
+                throw new FileNotFoundException("The 'filePath' argument led to a file that does not exist."); // Error
+            }
+
+            XmlSerializer xmlSerializer = new XmlSerializer(listView.Items.GetType()); // Create XML Serializer
+            StreamReader streamReader = new StreamReader(filePath); // Where is the specified file
+
+            listView.Items.AddRange((ListView.ListViewItemCollection)xmlSerializer.Deserialize(streamReader)); // Deserialize
         }
     }
 }
