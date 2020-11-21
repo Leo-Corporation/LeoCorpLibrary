@@ -259,6 +259,13 @@ namespace LeoCorpLibrary
         }
 
 #if NETCOREAPP3_1 || NET5_0
+        /// <summary>
+        /// Allows you to load a saved file in a <see cref="ListView"/>.
+        /// </summary>
+        /// <param name="listView"><see cref="ListView"/>.</param>
+        /// <param name="filePath">The location of the file where the items are.</param>
+        /// <exception cref="FileNotFoundException"></exception>
+        /// <remarks>Only works in .NET Core 3.1 or .NET 5.</remarks>
         public static void ListViewContentJSON(ListView listView, string filePath)
         {
             if (!File.Exists(filePath)) // If the file doesn't exist
