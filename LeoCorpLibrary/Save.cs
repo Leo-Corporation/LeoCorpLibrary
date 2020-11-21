@@ -30,6 +30,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
+#if NETCOREAPP3_1 || NET5_0
+using System.Text.Json;
+#endif
+
 namespace LeoCorpLibrary
 {
     /// <summary>
@@ -214,8 +218,25 @@ namespace LeoCorpLibrary
             }
             else
             {
-                throw new ArgumentNullException("The 'listView' argument must have items.");
+                throw new ArgumentNullException("The 'listView' argument must have items."); // Error
             }
         }
+
+#if NETCOREAPP3_1 || NET5_0
+        public static void ListViewContentJSON(ListView listView, string filePath)
+        {
+            if (listView.Items.Count > 0)
+            {
+                ListView.ListViewItemCollection items = listView.Items; // Items 
+
+                string json = JsonSerializer.Serialize(items); // Serialize
+                File.WriteAllText(filePath, json); // Write file
+            }
+            else
+            {
+                throw new ArgumentNullException("The 'listView' argument must have items."); // Error
+            }
+        } 
+#endif
     }
 }
