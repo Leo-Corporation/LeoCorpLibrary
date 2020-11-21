@@ -223,6 +223,13 @@ namespace LeoCorpLibrary
         }
 
 #if NETCOREAPP3_1 || NET5_0
+        /// <summary>
+        /// Allows you to save the content of a <see cref="ListView"/> in a JSON file.
+        /// </summary>
+        /// <param name="listView"><see cref="ListView"/>.</param>
+        /// <param name="filePath">Where to save the file.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <remarks>Only available in .NET Core 3.1 or .NET 5.</remarks>
         public static void ListViewContentJSON(ListView listView, string filePath)
         {
             if (listView.Items.Count > 0)
@@ -236,7 +243,7 @@ namespace LeoCorpLibrary
             {
                 throw new ArgumentNullException("The 'listView' argument must have items."); // Error
             }
-        } 
+        }
 #endif
     }
 }
