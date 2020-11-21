@@ -30,6 +30,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
+#if NETCOREAPP3_1 || NET5_0
+using System.Text.Json;
+#endif
+
 namespace LeoCorpLibrary
 {
     /// <summary>
@@ -253,5 +257,18 @@ namespace LeoCorpLibrary
 
             listView.Items.AddRange((ListView.ListViewItemCollection)xmlSerializer.Deserialize(streamReader)); // Deserialize
         }
+
+#if NETCOREAPP3_1 || NET5_0
+        public static void ListViewContentJSON(ListView listView, string filePath)
+        {
+            if (!File.Exists(filePath)) // If the file doesn't exist
+            {
+                throw new FileNotFoundException("The 'filePath' argument led to a file that does not exist."); // Error
+            }
+
+            string json = File.ReadAllText(filePath); // Read the file
+            listView.Items.AddRange(JsonSerializer.Deserialize<ListView.ListViewItemCollection>(json)); // Deserialize and udate
+        } 
+#endif
     }
 }
