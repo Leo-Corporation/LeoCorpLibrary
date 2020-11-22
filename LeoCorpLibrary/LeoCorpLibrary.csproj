@@ -23,14 +23,14 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.7.0.2011-rc1</Version>
+    <Version>2.7.0.2011-rc2</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 2.7.0.2011-rc1
+    <PackageReleaseNotes>Version 2.7.0.2011-rc2
 - Fixed and updated XML Documentation
 - Added the possibility to save a ListView's content in a XML file (#154)
 - Added the possibility to load a ListView's content from a XML file (#155)
