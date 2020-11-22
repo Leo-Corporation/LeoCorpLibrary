@@ -208,13 +208,25 @@ namespace LeoCorpLibrary
         {
             if (listView.Items.Count > 0) // If the listview isn't empty
             {
-                ListView.ListViewItemCollection items = listView.Items; // Items
+                List<string[]> items = new List<string[]>(); // Items
+
+                for (int i = 0; i < listView.Items.Count; i++) // For each item
+                {
+                    string[] a = new string[listView.Items[i].SubItems.Count]; // Subitems
+
+                    for (int j = 0; j < listView.Items[i].SubItems.Count; j++) // For each subitem
+                    {
+                        a[j] = listView.Items[i].SubItems[j].Text; // Add the subitem to the Subitems array
+                    }
+
+                    items.Add(a); // Add the subitems
+                }
 
                 XmlSerializer xmlSerializer = new XmlSerializer(items.GetType()); // Create XML Serializer
-                StreamWriter streamWriter = new StreamWriter(filePath); // Where to write
+                StreamWriter streamWriter = new StreamWriter(filePath); // Where to save
 
-                xmlSerializer.Serialize(streamWriter, items); // Create the file
-                streamWriter.Dispose(); // Release used resources.
+                xmlSerializer.Serialize(streamWriter, items); // Save
+                streamWriter.Dispose(); // Free used resources
             }
             else
             {
@@ -234,10 +246,22 @@ namespace LeoCorpLibrary
         {
             if (listView.Items.Count > 0)
             {
-                ListView.ListViewItemCollection items = listView.Items; // Items 
+                List<string[]> items = new List<string[]>(); // Items
+
+                for (int i = 0; i < listView.Items.Count; i++) // For each item
+                {
+                    string[] a = new string[listView.Items[i].SubItems.Count]; // Subitems
+
+                    for (int j = 0; j < listView.Items[i].SubItems.Count; j++) // For each subitem
+                    {
+                        a[j] = listView.Items[i].SubItems[j].Text; // Add the subitem to the Subitems array
+                    }
+
+                    items.Add(a); // Add the subitems
+                }
 
                 string json = JsonSerializer.Serialize(items); // Serialize
-                File.WriteAllText(filePath, json); // Write file
+                File.WriteAllText(filePath, json); // Save
             }
             else
             {

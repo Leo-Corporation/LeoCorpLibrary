@@ -252,10 +252,18 @@ namespace LeoCorpLibrary
                 throw new FileNotFoundException("The 'filePath' argument led to a file that does not exist."); // Error
             }
 
-            XmlSerializer xmlSerializer = new XmlSerializer(listView.Items.GetType()); // Create XML Serializer
+            List<string[]> items = new List<string[]>(); // Items of the listview
+
+            XmlSerializer xmlSerializer = new XmlSerializer(items.GetType()); // Create XML Serializer
             StreamReader streamReader = new StreamReader(filePath); // Where is the specified file
 
-            listView.Items.AddRange((ListView.ListViewItemCollection)xmlSerializer.Deserialize(streamReader)); // Deserialize
+            items = (List<string[]>)xmlSerializer.Deserialize(streamReader); // Open and deserialize
+            streamReader.Dispose(); // Free used resources
+
+            for (int i = 0; i < items.Count; i++) // For each item
+            {
+                listView.Items.Add(new ListViewItem(items[i])); // Add the item
+            }
         }
 
 #if NETCOREAPP3_1 || NET5_0
@@ -273,8 +281,15 @@ namespace LeoCorpLibrary
                 throw new FileNotFoundException("The 'filePath' argument led to a file that does not exist."); // Error
             }
 
+            List<string[]> items; // Items of the listview
             string json = File.ReadAllText(filePath); // Read the file
-            listView.Items.AddRange(JsonSerializer.Deserialize<ListView.ListViewItemCollection>(json)); // Deserialize and udate
+
+            items = JsonSerializer.Deserialize<List<string[]>>(json); // Deserialize
+
+            for (int i = 0; i < items.Count; i++) // For each item
+            {
+                listView.Items.Add(new ListViewItem(items[i])); // Add the items
+            }
         } 
 #endif
     }
