@@ -10,12 +10,13 @@
 
 ## New in version 2.6.0.2011
 ### New
-- Added the possibility to encrypt a string (#148)
-- Added an extension method to encrypt a string (#148)
-- Added the possibility to decrypt a string (#149)
-- Added an extension method to decrypt a string (#149)
+- Added the possibility to save a ListView's content in a XML file (#154)
+- Added the possibility to load a ListView's content from a XML file (#155)
+- Added the possibility to save a ListView's content in a JSON file (#158)
+- Added the possibility to load a ListView's content from a JSON file (#159)
+- Changed the name of the ListViewContent() method to ListViewContentCustom()
 ### Fixed
-- Fixed and updated XML Documentation (#150)
+- Fixed and updated XML Documentation (#157)
 
 ## Documentation
 ### Branches
@@ -48,11 +49,9 @@ There is two branches:
 
 ## Roadmap 2020
 Here's LeoCorpLibrary's roadmap:
-<p style="text-align: center;">
 
 ![Roadmap](https://raw.githubusercontent.com/Leo-Corporation/LeoCorp-Docs/master/Roadmaps/LeoCorpLibrary/LeoCorpLibrary%20Roadmap%202020.png)
 
-</p>
 
 **Warning: Some new features can be added without being in the roadmap. Release dates are suggestions.**
 
