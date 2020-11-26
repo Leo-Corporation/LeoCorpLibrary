@@ -8,7 +8,7 @@
 * [Nuget](https://www.nuget.org/packages/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 * [GitHub Packages](https://github.com/Leo-Corporation/LeoCorpLibrary/packages/345951)
 
-## New in version 2.6.0.2011
+## New in version 2.7.0.2011
 ### New
 - Added the possibility to save a ListView's content in a XML file (#154)
 - Added the possibility to load a ListView's content from a XML file (#155)
