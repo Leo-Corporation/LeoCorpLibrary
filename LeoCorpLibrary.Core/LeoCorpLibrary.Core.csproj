@@ -13,6 +13,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary.Core\LeoCorpLibrary.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
