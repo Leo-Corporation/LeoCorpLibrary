@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1;net5.0</TargetFramework>
+    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
     <Version>3.0.0.2012-pre1</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
