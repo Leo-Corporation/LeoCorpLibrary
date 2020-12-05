@@ -1,7 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1;net5.0</TargetFramework>
+    <Version>3.0.0.2012-pre1</Version>
+    <Description>A C# library with useful features for .NET Applications.</Description>
+    <Authors>Léo Corporation</Authors>
+    <Company>Léo Corporation</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LeoCorpLibrary\images\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

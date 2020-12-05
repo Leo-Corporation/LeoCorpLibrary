@@ -7,8 +7,8 @@
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
     <Copyright>Copyright ©  2020</Copyright>
-    <AssemblyVersion>2.7.0.2011</AssemblyVersion>
-    <FileVersion>2.7.0.2011</FileVersion>
+    <AssemblyVersion>3.0.0.2012</AssemblyVersion>
+    <FileVersion>3.0.0.2012</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
@@ -23,7 +23,7 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.7.0.2011</Version>
+    <Version>3.0.0.2012-pre1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
