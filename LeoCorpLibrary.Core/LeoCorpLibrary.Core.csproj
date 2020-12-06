@@ -14,6 +14,23 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Version 3.0.0.2012-pre1
+- Fixed and updated XML Documentation
+- Added "StringExtensions" (#164)
+- Added "IntExtensions" (#164)
+- Added "ArrayExtensions" (#164)
+- Added "RGBInvalidValueException" (#164)
+- Added "InvalidGuidLenghtException" (#164)
+- Added "HEXInvalidValueException" (#164)
+- Added "ColorsConverter" (#164)
+- Added "Crypt" (#164)
+- Added "GuidGenerator" (#164)
+- Added "GuidGeneratorParameters" (#164)
+- Added "NetworkConnection" (#164)
+- Added "Password" (#164)
+- Added "Update" (#164)
+
+-</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

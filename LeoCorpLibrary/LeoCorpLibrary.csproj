@@ -30,13 +30,8 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 2.7.0.2011
-- Fixed and updated XML Documentation
-- Added the possibility to save a ListView's content in a XML file (#154)
-- Added the possibility to load a ListView's content from a XML file (#155)
-- Added the possibility to save a ListView's content in a JSON file (#158)
-- Added the possibility to load a ListView's content from a JSON file (#159)
-- Changed the name of the ListViewContent() method to ListViewContentCustom()</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 3.0.0.2012-pre1
+- Fixed and updated XML Documentation</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
