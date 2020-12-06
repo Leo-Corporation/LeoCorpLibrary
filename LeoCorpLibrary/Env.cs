@@ -349,7 +349,7 @@ namespace LeoCorpLibrary
 
             if (!File.Exists(fileName)) // Si le fichier n'existe pas
             {
-                throw new FileNotFoundException("The parameter 'fileNale' does not lead to a specific file name."); // Erreur
+                throw new FileNotFoundException("The parameter 'fileName' does not lead to a specific file name."); // Erreur
             }
 
             return File.ReadAllText(fileName).Length; // Compter
