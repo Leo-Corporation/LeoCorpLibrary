@@ -1,6 +1,20 @@
 # LeoCorpLibrary ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) ![GitHub issues](https://img.shields.io/github/issues/Leo-Corporation/LeoCorpLibrary) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LeoCorpLibrary/.NET%20Framework)
 ## What is it?
-"LeoCorpLibrary" is library writen in C# that contains useful methods for software developpers, such as password generation, update system, network tester, and more.
+"LeoCorpLibrary" is library writen in C# that contains useful methods for software developpers, such as password generation, update system, maths and geometry methods and more.
+
+There is two variations of LeoCorpLibrary that are available in different platforms:
+
+| OSs | LeoCorpLibrary | LeoCorpLibrary.Core |
+| :-: | :-----------: | :-----------------: |
+| Windows | ✔ | ✔ |
+| macOS | ❌ | ✔ |
+| Linux | ❌ | ✔ |
+| - | - | - |
+| **Frameworks** |  |  |
+| .NET 5 | ✔ | ✔ |
+| .NET Core 3.1 | ✔ | ✔ |
+| .NET Framework 4.7.2 | ✔ | ✔ |
+| .NET Framework 4.5 | ❌ | ✔ |
 
 [Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki) to go to the documentation.
 
@@ -8,15 +22,8 @@
 * [Nuget](https://www.nuget.org/packages/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/v/LeoCorpLibrary) ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 * [GitHub Packages](https://github.com/Leo-Corporation/LeoCorpLibrary/packages/345951)
 
-## New in version 2.7.0.2011
-### New
-- Added the possibility to save a ListView's content in a XML file (#154)
-- Added the possibility to load a ListView's content from a XML file (#155)
-- Added the possibility to save a ListView's content in a JSON file (#158)
-- Added the possibility to load a ListView's content from a JSON file (#159)
-- Changed the name of the ListViewContent() method to ListViewContentCustom()
-### Fixed
-- Fixed and updated XML Documentation (#157)
+## What's new?
+[Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/releases) to see the changelog of the latest version.
 
 ## Documentation
 ### Branches
@@ -47,7 +54,7 @@ There is two branches:
 ## How to add LeoCorpLibrary to a project?
 [Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/install-LeoCorpLibrary#1-add-the-library-to-a-project) to go to the documentation about this topic.
 
-## Roadmap 2020
+## Roadmap 2021
 Here's LeoCorpLibrary's roadmap:
 
 ![Roadmap](https://raw.githubusercontent.com/Leo-Corporation/LeoCorp-Docs/master/Roadmaps/LeoCorpLibrary/LeoCorpLibrary%20Roadmap%202020.png)
@@ -71,6 +78,7 @@ Here's what you'll need to contribute to this project:
 - [Leo-Corporation / Générateur de mots de passe](https://github.com/Leo-Corporation/Generateur-de-mots-de-passe)
 - [Leo-Corporation / InternetTest](https://github.com/Leo-Corporation/InternetTest)
 - [Leo-Corporation / LABS-Experiences](https://github.com/Leo-Corporation/LABS-Experiences)
+- [Leo-Corporation / LABS-ExperimentalConsole](https://github.com/Leo-Corporation/LABS-ExperimentalConsole)
 - [Leo-Corporation / LABS-WPF](https://github.com/Leo-Corporation/LABS-WPF)
 ### Others
 - ColorPicker 2 by [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)

@@ -25,12 +25,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeoCorpLibrary
+namespace LeoCorpLibrary.Core
 {
     /// <summary>
     /// Class that contains methods for the user's environnement.
@@ -149,7 +147,7 @@ namespace LeoCorpLibrary
             {
                 throw new ArgumentNullException("The parameter 'drive' is empty."); // Retourner une erreur
             }
-            
+
             if (!Directory.Exists(drive))
             {
                 throw new DriveNotFoundException("The specified drive does not exist."); // Retourner une erreur
@@ -304,7 +302,7 @@ namespace LeoCorpLibrary
                 throw new FileNotFoundException("The parameter 'process' has a 'FileName' that does not lead to an existing file."); // Message d'erreur
             }
 
-            process.StartInfo.UseShellExecute = true; 
+            process.StartInfo.UseShellExecute = true;
             process.StartInfo.Verb = "runas"; // Mettre en mode administrateur
             process.Start(); // Démarrer
         }

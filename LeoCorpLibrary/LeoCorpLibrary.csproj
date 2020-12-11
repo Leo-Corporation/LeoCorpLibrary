@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <ProjectGuid>{42249739-9D60-4048-8691-B6536BCF49CE}</ProjectGuid>
-    <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net5.0-windows</TargetFrameworks>
     <AssemblyTitle>LeoCorpLibrary</AssemblyTitle>
     <Company>Léo Corporation</Company>
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
     <Copyright>Copyright ©  2020</Copyright>
-    <AssemblyVersion>2.7.0.2011</AssemblyVersion>
-    <FileVersion>2.7.0.2011</FileVersion>
+    <AssemblyVersion>3.0.0.2012</AssemblyVersion>
+    <FileVersion>3.0.0.2012</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
@@ -23,20 +23,16 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>2.7.0.2011</Version>
+    <Version>3.0.0.2012</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 2.7.0.2011
+    <PackageReleaseNotes>Version 3.0.0.2012
 - Fixed and updated XML Documentation
-- Added the possibility to save a ListView's content in a XML file (#154)
-- Added the possibility to load a ListView's content from a XML file (#155)
-- Added the possibility to save a ListView's content in a JSON file (#158)
-- Added the possibility to load a ListView's content from a JSON file (#159)
-- Changed the name of the ListViewContent() method to ListViewContentCustom()</PackageReleaseNotes>
+- Fixed: The Maths.Circle.GetArea() method returns wrong value (#166)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
