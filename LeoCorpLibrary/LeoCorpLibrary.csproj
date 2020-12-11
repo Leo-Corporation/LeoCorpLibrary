@@ -23,15 +23,16 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.0.0.2012-pre1</Version>
+    <Version>3.0.0.2012-rc1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.0.0.2012-pre1
-- Fixed and updated XML Documentation</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 3.0.0.2012-rc1
+- Fixed and updated XML Documentation
+- Fixed: The Maths.Circle.GetArea() method returns wrong value (#166)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
