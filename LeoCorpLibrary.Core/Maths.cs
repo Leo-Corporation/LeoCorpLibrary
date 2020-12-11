@@ -93,7 +93,7 @@ namespace LeoCorpLibrary.Core
             /// <returns>A <see cref="double"/> value.</returns>
             public static double GetArea(double radius) // Obtenir l'aire d'un cercle
             {
-                return Math.PI * Math.Sqrt(radius); // Formule
+                return Math.PI * radius * radius; // Formule
             }
 
             /// <summary>
