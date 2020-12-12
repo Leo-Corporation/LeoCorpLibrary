@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>3.0.0.2012</Version>
+    <Version>3.0.1.2012</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,35 +14,8 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 3.0.0.2012
-- Fixed and updated XML Documentation
-
-- Added "StringExtensions" (#164)
-
-- Added "IntExtensions" (#164)
-
-- Added "ArrayExtensions" (#164)
-
-- Added "RGBInvalidValueException" (#164)
-
-- Added "InvalidGuidLenghtException" (#164)
-
-- Added "HEXInvalidValueException" (#164)
-
-- Added "ColorsConverter" (#164)
-
-- Added "Crypt" (#164)
-
-- Added "GuidGenerator" (#164)
-
-- Added "GuidGeneratorParameters" (#164)
-
-- Added "NetworkConnection" (#164)
-
-- Added "Password" (#164)
-
-- Added "Update" (#164)
-- Fixed: The Maths.Circle.GetArea() method returns wrong value (#166)</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 3.0.1.2012
+- Fixed a target framework issue</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
