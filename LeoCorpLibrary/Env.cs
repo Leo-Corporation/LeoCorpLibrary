@@ -421,6 +421,9 @@ namespace LeoCorpLibrary
         /// </summary>
         public static string AppDataPath { get => GetAppDataPath(); }
 
+        /// <summary>
+        /// Allows you to get the current Operating system.
+        /// </summary>
         public static OperatingSystems CurrentOperatingSystem
         {
             get
