@@ -408,12 +408,16 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Allows you to get the <c>%APPDATA%</c> path.
         /// </summary>
-        /// <returns></returns>
+        /// <remarks>You can now use the <see cref="AppDataPath"/> property instead of this method.</remarks>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string GetAppDataPath()
         {
             return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); // Return the path
         }
 
+        /// <summary>
+        /// Allows you to get the <c>%APPDATA%</c> path.
+        /// </summary>
         public static string AppDataPath { get => GetAppDataPath(); }
     }
 
