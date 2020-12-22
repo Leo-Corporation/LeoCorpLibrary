@@ -378,6 +378,7 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Allows you to get the current UnixTime.
         /// </summary>
+        /// <remarks>You can now use the <see cref="UnixTime"/> property instead of this method.</remarks>
         /// <returns>A <see cref="int"/> value.</returns>
         public static int GetUnixTime()
         {
@@ -399,6 +400,9 @@ namespace LeoCorpLibrary
             return (int)date.Subtract(new DateTime(1970, 1, 1)).TotalSeconds; // Calculer Unix Time
         }
 
+        /// <summary>
+        /// Allows you to get the current UnixTime.
+        /// </summary>
         public static int UnixTime { get => GetUnixTime(); }
 
         /// <summary>
