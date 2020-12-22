@@ -413,6 +413,8 @@ namespace LeoCorpLibrary
         {
             return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); // Return the path
         }
+
+        public static string AppDataPath { get => GetAppDataPath(); }
     }
 
     /// <summary>
