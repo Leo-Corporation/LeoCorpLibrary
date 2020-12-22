@@ -421,6 +421,14 @@ namespace LeoCorpLibrary
         public static string AppDataPath { get => GetAppDataPath(); }
     }
 
+    public enum OperatingSystems
+    {
+        Windows,
+        macOS,
+        Linux,
+        Unknown
+    }
+
     /// <summary>
     /// Size of files/directories.
     /// </summary>
