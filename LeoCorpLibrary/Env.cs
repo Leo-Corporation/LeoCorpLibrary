@@ -286,6 +286,9 @@ namespace LeoCorpLibrary
             return res;
         }
 
+        /// <summary>
+        /// Allows you to get the Windows version of the user.
+        /// </summary>
         public static WindowsVersion WindowsVersion { get => GetWindowsVersion(); }
 
         /// <summary>
