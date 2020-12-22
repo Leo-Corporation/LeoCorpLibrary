@@ -27,6 +27,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+#if !NET45
+using System.Runtime.InteropServices;
+#endif
 
 namespace LeoCorpLibrary.Core
 {
@@ -417,6 +420,60 @@ namespace LeoCorpLibrary.Core
         /// Allows you to get the <c>%APPDATA%</c> path.
         /// </summary>
         public static string AppDataPath { get => GetAppDataPath(); }
+
+#if !NET45
+        /// <summary>
+        /// Allows you to get the current Operating system.
+        /// </summary>
+        public static OperatingSystems CurrentOperatingSystem
+        {
+            get
+            {
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) // If the OS is Windows
+                {
+                    return OperatingSystems.Windows; // Return Windows
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) // If the OS is macOS
+                {
+                    return OperatingSystems.macOS; // Return macOS
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    return OperatingSystems.Linux; // Return Linux
+                }
+                else
+                {
+                    return OperatingSystems.Unknown; // Return unknown
+                }
+            }
+        } 
+#endif
+    }
+
+    /// <summary>
+    /// Operating systems.
+    /// </summary>
+    public enum OperatingSystems
+    {
+        /// <summary>
+        /// The Windows Operating system.
+        /// </summary>
+        Windows,
+
+        /// <summary>
+        /// The macOS Operating system.
+        /// </summary>
+        macOS,
+
+        /// <summary>
+        /// The Linux Operating system.
+        /// </summary>
+        Linux,
+
+        /// <summary>
+        /// An unknown Operating system.
+        /// </summary>
+        Unknown
     }
 
     /// <summary>
