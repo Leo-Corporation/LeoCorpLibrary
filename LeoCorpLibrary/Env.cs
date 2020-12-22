@@ -421,11 +421,29 @@ namespace LeoCorpLibrary
         public static string AppDataPath { get => GetAppDataPath(); }
     }
 
+    /// <summary>
+    /// Operating systems.
+    /// </summary>
     public enum OperatingSystems
     {
+        /// <summary>
+        /// The Windows Operating system.
+        /// </summary>
         Windows,
+
+        /// <summary>
+        /// The macOS Operating system.
+        /// </summary>
         macOS,
+
+        /// <summary>
+        /// The Linux Operating system.
+        /// </summary>
         Linux,
+
+        /// <summary>
+        /// An unknown Operating system.
+        /// </summary>
         Unknown
     }
 
