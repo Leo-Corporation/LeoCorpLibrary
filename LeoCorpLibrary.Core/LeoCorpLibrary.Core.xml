@@ -215,7 +215,13 @@
             <summary>
             Allows you to get the Windows version of the user.
             </summary>
-            <returns>A <see cref="T:LeoCorpLibrary.Core.WindowsVersion"/> value.</returns>
+            <remarks>You can now use the <see cref="P:LeoCorpLibrary.Core.Env.WindowsVersion"/> property instead of this method.</remarks>
+            <returns>A <see cref="P:LeoCorpLibrary.Core.Env.WindowsVersion"/> value.</returns>
+        </member>
+        <member name="P:LeoCorpLibrary.Core.Env.WindowsVersion">
+            <summary>
+            Allows you to get the Windows version of the user.
+            </summary>
         </member>
         <member name="M:LeoCorpLibrary.Core.Env.ExecuteAsAdmin(System.Diagnostics.Process)">
             <summary>
@@ -256,6 +262,7 @@
             <summary>
             Allows you to get the current UnixTime.
             </summary>
+            <remarks>You can now use the <see cref="P:LeoCorpLibrary.Core.Env.UnixTime"/> property instead of this method.</remarks>
             <returns>A <see cref="T:System.Int32"/> value.</returns>
         </member>
         <member name="M:LeoCorpLibrary.Core.Env.GetUnixTime(System.DateTime)">
@@ -266,11 +273,47 @@
             <exception cref="T:System.ArgumentNullException"></exception>
             <returns>A <see cref="T:System.Int32"/> value.</returns>
         </member>
+        <member name="P:LeoCorpLibrary.Core.Env.UnixTime">
+            <summary>
+            Allows you to get the current UnixTime.
+            </summary>
+        </member>
         <member name="M:LeoCorpLibrary.Core.Env.GetAppDataPath">
             <summary>
             Allows you to get the <c>%APPDATA%</c> path.
             </summary>
-            <returns></returns>
+            <remarks>You can now use the <see cref="P:LeoCorpLibrary.Core.Env.AppDataPath"/> property instead of this method.</remarks>
+            <returns>A <see cref="T:System.String"/> value.</returns>
+        </member>
+        <member name="P:LeoCorpLibrary.Core.Env.AppDataPath">
+            <summary>
+            Allows you to get the <c>%APPDATA%</c> path.
+            </summary>
+        </member>
+        <member name="T:LeoCorpLibrary.Core.OperatingSystems">
+            <summary>
+            Operating systems.
+            </summary>
+        </member>
+        <member name="F:LeoCorpLibrary.Core.OperatingSystems.Windows">
+            <summary>
+            The Windows Operating system.
+            </summary>
+        </member>
+        <member name="F:LeoCorpLibrary.Core.OperatingSystems.macOS">
+            <summary>
+            The macOS Operating system.
+            </summary>
+        </member>
+        <member name="F:LeoCorpLibrary.Core.OperatingSystems.Linux">
+            <summary>
+            The Linux Operating system.
+            </summary>
+        </member>
+        <member name="F:LeoCorpLibrary.Core.OperatingSystems.Unknown">
+            <summary>
+            An unknown Operating system.
+            </summary>
         </member>
         <member name="T:LeoCorpLibrary.Core.UnitType">
             <summary>
@@ -356,6 +399,9 @@
         <member name="M:LeoCorpLibrary.Core.Exceptions.HEXInvalidValueException.#ctor(System.String,System.Exception)">
             <summary>
             Initialize a new instance of the <see cref="T:LeoCorpLibrary.Core.Exceptions.HEXInvalidValueException"/> class with a specified error message.
+            </summary>
+            <param name="message">Message of the error.</param>
+            <param name="iny.Core.Exceptions.HEXInvalidValueException"/> class with a specified error message.
             </summary>
             <param name="message">Message of the error.</param>
             <param name="innerException">The inner exception that cause this exception.</param>
@@ -496,10 +542,6 @@
             <returns>A <see cref="T:System.String"/> value.</returns>
         </member>
         <member name="M:LeoCorpLibrary.Core.Extensions.StringExtensions.Decrypt(System.String,System.String)">
-            <summary>
-            Decrypts an encrypted <see cref="T:System.String"/>.
-            </summary>
-            <param name="encrypt">The encrypted <see cref="T:System.String"/>.</param>
             <param name="key">The key that will be used to encrypt and decrypt the string.</param>
             <returns>A <see cref="T:System.String"/> value.</returns>
         </member>
@@ -569,6 +611,11 @@
             </summary>
         </member>
         <member name="P:LeoCorpLibrary.Core.GuidGeneratorParameters.WithBraces">
+            <summary>
+            Include or not braces, such as: <c>{00000000-0000-0000-0000-00000000}</c>
+            </summary>
+        </member>
+        <member name="PParameters.WithBraces">
             <summary>
             Include or not braces, such as: <c>{00000000-0000-0000-0000-00000000}</c>
             </summary>
@@ -652,12 +699,7 @@
             <param name="side1">Triangle's side.</param>
             <param name="side2">Triangle's side.</param>
             <param name="side3">Triangle's side.</param>
-            <returns>A <see cref="T:System.Boolean"/> value.</returns>
-        </member>
-        <member name="T:LeoCorpLibrary.Core.Maths.Cube">
-            <summary>
-            Class that contains methods for cubes.
-            </summary>
+            <returns>A <see cref="T:Ssummary>
         </member>
         <member name="M:LeoCorpLibrary.Core.Maths.Cube.GetVolume(System.Double,System.Double)">
             <summary>
@@ -811,6 +853,11 @@
             <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> value.</returns>
         </member>
         <member name="M:LeoCorpLibrary.Core.Password.Generate(System.Int32,LeoCorpLibrary.Core.PasswordPresets)">
+            <summary>
+            Generates a password.
+            </summary>
+            <param name="lenght">Lenght of the password.</param>
+           2,LeoCorpLibrary.Core.PasswordPresets)">
             <summary>
             Generates a password.
             </summary>
