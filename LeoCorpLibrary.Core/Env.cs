@@ -256,6 +256,7 @@ namespace LeoCorpLibrary.Core
         /// <summary>
         /// Allows you to get the Windows version of the user.
         /// </summary>
+        /// <remarks>You can now use the <see cref="WindowsVersion"/> property instead of this method.</remarks>
         /// <returns>A <see cref="WindowsVersion"/> value.</returns>
         public static WindowsVersion GetWindowsVersion()
         {
@@ -282,6 +283,11 @@ namespace LeoCorpLibrary.Core
             }
             return res;
         }
+
+        /// <summary>
+        /// Allows you to get the Windows version of the user.
+        /// </summary>
+        public static WindowsVersion WindowsVersion { get => GetWindowsVersion(); }
 
         /// <summary>
         /// Allows you to launch a program in administrator mode.
@@ -370,6 +376,7 @@ namespace LeoCorpLibrary.Core
         /// <summary>
         /// Allows you to get the current UnixTime.
         /// </summary>
+        /// <remarks>You can now use the <see cref="UnixTime"/> property instead of this method.</remarks>
         /// <returns>A <see cref="int"/> value.</returns>
         public static int GetUnixTime()
         {
@@ -392,13 +399,24 @@ namespace LeoCorpLibrary.Core
         }
 
         /// <summary>
+        /// Allows you to get the current UnixTime.
+        /// </summary>
+        public static int UnixTime { get => GetUnixTime(); }
+
+        /// <summary>
         /// Allows you to get the <c>%APPDATA%</c> path.
         /// </summary>
-        /// <returns></returns>
+        /// <remarks>You can now use the <see cref="AppDataPath"/> property instead of this method.</remarks>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string GetAppDataPath()
         {
             return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); // Return the path
         }
+
+        /// <summary>
+        /// Allows you to get the <c>%APPDATA%</c> path.
+        /// </summary>
+        public static string AppDataPath { get => GetAppDataPath(); }
     }
 
     /// <summary>
