@@ -26,6 +26,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -419,6 +420,29 @@ namespace LeoCorpLibrary
         /// Allows you to get the <c>%APPDATA%</c> path.
         /// </summary>
         public static string AppDataPath { get => GetAppDataPath(); }
+
+        public static OperatingSystems CurrentOperatingSystem
+        {
+            get
+            {
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) // If the OS is Windows
+                {
+                    return OperatingSystems.Windows; // Return Windows
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) // If the OS is macOS
+                {
+                    return OperatingSystems.macOS; // Return macOS
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    return OperatingSystems.Linux; // Return Linux
+                }
+                else
+                {
+                    return OperatingSystems.Unknown; // Return unknown
+                }
+            }
+        }
     }
 
     /// <summary>
