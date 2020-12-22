@@ -258,6 +258,7 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Allows you to get the Windows version of the user.
         /// </summary>
+        /// <remarks>You can now use the <see cref="WindowsVersion"/> property instead of this method.</remarks>
         /// <returns>A <see cref="WindowsVersion"/> value.</returns>
         public static WindowsVersion GetWindowsVersion()
         {
@@ -284,6 +285,8 @@ namespace LeoCorpLibrary
             }
             return res;
         }
+
+        public static WindowsVersion WindowsVersion { get => GetWindowsVersion(); }
 
         /// <summary>
         /// Allows you to launch a program in administrator mode.
