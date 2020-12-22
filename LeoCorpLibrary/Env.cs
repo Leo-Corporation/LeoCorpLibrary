@@ -399,6 +399,8 @@ namespace LeoCorpLibrary
             return (int)date.Subtract(new DateTime(1970, 1, 1)).TotalSeconds; // Calculer Unix Time
         }
 
+        public static int UnixTime { get => GetUnixTime(); }
+
         /// <summary>
         /// Allows you to get the <c>%APPDATA%</c> path.
         /// </summary>
