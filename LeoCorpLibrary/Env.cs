@@ -26,6 +26,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -258,6 +259,7 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Allows you to get the Windows version of the user.
         /// </summary>
+        /// <remarks>You can now use the <see cref="WindowsVersion"/> property instead of this method.</remarks>
         /// <returns>A <see cref="WindowsVersion"/> value.</returns>
         public static WindowsVersion GetWindowsVersion()
         {
@@ -284,6 +286,11 @@ namespace LeoCorpLibrary
             }
             return res;
         }
+
+        /// <summary>
+        /// Allows you to get the Windows version of the user.
+        /// </summary>
+        public static WindowsVersion WindowsVersion { get => GetWindowsVersion(); }
 
         /// <summary>
         /// Allows you to launch a program in administrator mode.
@@ -372,6 +379,7 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Allows you to get the current UnixTime.
         /// </summary>
+        /// <remarks>You can now use the <see cref="UnixTime"/> property instead of this method.</remarks>
         /// <returns>A <see cref="int"/> value.</returns>
         public static int GetUnixTime()
         {
@@ -394,13 +402,82 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
+        /// Allows you to get the current UnixTime.
+        /// </summary>
+        public static int UnixTime { get => GetUnixTime(); }
+
+        /// <summary>
         /// Allows you to get the <c>%APPDATA%</c> path.
         /// </summary>
-        /// <returns></returns>
+        /// <remarks>You can now use the <see cref="AppDataPath"/> property instead of this method.</remarks>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string GetAppDataPath()
         {
             return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData); // Return the path
         }
+
+        /// <summary>
+        /// Allows you to get the <c>%APPDATA%</c> path.
+        /// </summary>
+        public static string AppDataPath { get => GetAppDataPath(); }
+
+        /// <summary>
+        /// Allows you to get the current Operating system.
+        /// </summary>
+        public static OperatingSystems CurrentOperatingSystem
+        {
+            get
+            {
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) // If the OS is Windows
+                {
+                    return OperatingSystems.Windows; // Return Windows
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) // If the OS is macOS
+                {
+                    return OperatingSystems.macOS; // Return macOS
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    return OperatingSystems.Linux; // Return Linux
+                }
+                else
+                {
+                    return OperatingSystems.Unknown; // Return unknown
+                }
+            }
+        }
+
+        /// <summary>
+        /// Allows you to get the system drive (<see cref="DriveInfo"/>).
+        /// </summary>
+        /// <remarks>Works only on Windows.</remarks>
+        public static DriveInfo SystemDrive { get => (CurrentOperatingSystem == OperatingSystems.Windows) ? new DriveInfo(Environment.SystemDirectory) : DriveInfo.GetDrives()[0]; }
+    }
+
+    /// <summary>
+    /// Operating systems.
+    /// </summary>
+    public enum OperatingSystems
+    {
+        /// <summary>
+        /// The Windows Operating system.
+        /// </summary>
+        Windows,
+
+        /// <summary>
+        /// The macOS Operating system.
+        /// </summary>
+        macOS,
+
+        /// <summary>
+        /// The Linux Operating system.
+        /// </summary>
+        Linux,
+
+        /// <summary>
+        /// An unknown Operating system.
+        /// </summary>
+        Unknown
     }
 
     /// <summary>

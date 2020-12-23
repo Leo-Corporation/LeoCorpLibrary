@@ -215,7 +215,13 @@
             <summary>
             Allows you to get the Windows version of the user.
             </summary>
-            <returns>A <see cref="T:LeoCorpLibrary.Core.WindowsVersion"/> value.</returns>
+            <remarks>You can now use the <see cref="P:LeoCorpLibrary.Core.Env.WindowsVersion"/> property instead of this method.</remarks>
+            <returns>A <see cref="P:LeoCorpLibrary.Core.Env.WindowsVersion"/> value.</returns>
+        </member>
+        <member name="P:LeoCorpLibrary.Core.Env.WindowsVersion">
+            <summary>
+            Allows you to get the Windows version of the user.
+            </summary>
         </member>
         <member name="M:LeoCorpLibrary.Core.Env.ExecuteAsAdmin(System.Diagnostics.Process)">
             <summary>
@@ -256,6 +262,7 @@
             <summary>
             Allows you to get the current UnixTime.
             </summary>
+            <remarks>You can now use the <see cref="P:LeoCorpLibrary.Core.Env.UnixTime"/> property instead of this method.</remarks>
             <returns>A <see cref="T:System.Int32"/> value.</returns>
         </member>
         <member name="M:LeoCorpLibrary.Core.Env.GetUnixTime(System.DateTime)">
@@ -266,11 +273,58 @@
             <exception cref="T:System.ArgumentNullException"></exception>
             <returns>A <see cref="T:System.Int32"/> value.</returns>
         </member>
+        <member name="P:LeoCorpLibrary.Core.Env.UnixTime">
+            <summary>
+            Allows you to get the current UnixTime.
+            </summary>
+        </member>
         <member name="M:LeoCorpLibrary.Core.Env.GetAppDataPath">
             <summary>
             Allows you to get the <c>%APPDATA%</c> path.
             </summary>
-            <returns></returns>
+            <remarks>You can now use the <see cref="P:LeoCorpLibrary.Core.Env.AppDataPath"/> property instead of this method.</remarks>
+            <returns>A <see cref="T:System.String"/> value.</returns>
+        </member>
+        <member name="P:LeoCorpLibrary.Core.Env.AppDataPath">
+            <summary>
+            Allows you to get the <c>%APPDATA%</c> path.
+            </summary>
+        </member>
+        <member name="P:LeoCorpLibrary.Core.Env.CurrentOperatingSystem">
+            <summary>
+            Allows you to get the current Operating system.
+            </summary>
+        </member>
+        <member name="P:LeoCorpLibrary.Core.Env.SystemDrive">
+            <summary>
+            Allows you to get the system drive (<see cref="T:System.IO.DriveInfo"/>).
+            </summary>
+            <remarks>Works only on Windows.</remarks>
+        </member>
+        <member name="T:LeoCorpLibrary.Core.OperatingSystems">
+            <summary>
+            Operating systems.
+            </summary>
+        </member>
+        <member name="F:LeoCorpLibrary.Core.OperatingSystems.Windows">
+            <summary>
+            The Windows Operating system.
+            </summary>
+        </member>
+        <member name="F:LeoCorpLibrary.Core.OperatingSystems.macOS">
+            <summary>
+            The macOS Operating system.
+            </summary>
+        </member>
+        <member name="F:LeoCorpLibrary.Core.OperatingSystems.Linux">
+            <summary>
+            The Linux Operating system.
+            </summary>
+        </member>
+        <member name="F:LeoCorpLibrary.Core.OperatingSystems.Unknown">
+            <summary>
+            An unknown Operating system.
+            </summary>
         </member>
         <member name="T:LeoCorpLibrary.Core.UnitType">
             <summary>
