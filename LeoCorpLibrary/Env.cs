@@ -447,6 +447,9 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Allows you to get the system drive (<see cref="DriveInfo"/>).
+        /// </summary>
         public static DriveInfo SystemDrive { get => (CurrentOperatingSystem == OperatingSystems.Windows) ? new DriveInfo(Environment.SystemDirectory) : DriveInfo.GetDrives()[0]; }
     }
 
