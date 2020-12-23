@@ -23,15 +23,20 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.1.0.2012-rc1</Version>
+    <Version>3.1.0.2012</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.1.0.2012-rc1
+    <PackageReleaseNotes>Version 3.1.0.2012
 - Added and updated XML Documentation
+- Converted the "GetWindowsVersion()" method to a property (#169)
+- Converted the "GetUnixTime()" method to a property (#169)
+- Converted the "GetAppDataPath()" method to a property (#169)
+- Added the "OperatingSystems" enum (#170)
+- Added the possibility to get the OS (#170)
 - Added the possibility to get the system drive (Windows only) (#171)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
