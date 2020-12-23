@@ -446,6 +446,8 @@ namespace LeoCorpLibrary
                 }
             }
         }
+
+        public static DriveInfo SystemDrive { get => (CurrentOperatingSystem == OperatingSystems.Windows) ? new DriveInfo(Environment.SystemDirectory) : DriveInfo.GetDrives()[0]; }
     }
 
     /// <summary>
