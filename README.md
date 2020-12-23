@@ -42,7 +42,7 @@ There is two branches:
 * [Check updates](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Check-for-updates)
 * [Check an internet connection](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Verify-an-internet-connection)
 * [Crypt](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Crypt)
-* [Environnement](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Environnement)
+* [Environment](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Environment)
 * [Extensions](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Extensions)
 * [Generate a Guid](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Generate-a-Guid)
 * [Generate a password](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Generate-a-password)
