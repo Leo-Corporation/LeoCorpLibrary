@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>3.1.0.2012-pre1</Version>
+    <Version>3.1.0.2012-rc1</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,10 +14,9 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 3.1.0.2012-pre1
+    <PackageReleaseNotes>Version 3.1.0.2012-rc1
 - Added and updated XML Documentation
-- Converted methods to properties (#169)
-- Added the possibility to get the OS (#170)</PackageReleaseNotes>
+- Added the possibility to get the system drive (Windows only) (#171)</PackageReleaseNotes>
     <AssemblyVersion>3.1.0.2012</AssemblyVersion>
   </PropertyGroup>
 
