@@ -421,7 +421,7 @@ namespace LeoCorpLibrary.Core
         /// </summary>
         public static string AppDataPath { get => GetAppDataPath(); }
 
-#if !NET45
+#if NETCOREAPP || NET5_0
         /// <summary>
         /// Allows you to get the current Operating system.
         /// </summary>
@@ -446,7 +446,21 @@ namespace LeoCorpLibrary.Core
                     return OperatingSystems.Unknown; // Return unknown
                 }
             }
-        } 
+        }
+#endif
+
+#if NETCOREAPP || NET5_0
+        /// <summary>
+        /// Allows you to get the system drive (<see cref="DriveInfo"/>).
+        /// </summary>
+        public static DriveInfo SystemDrive { get => (CurrentOperatingSystem == OperatingSystems.Windows) ? new DriveInfo(Environment.SystemDirectory) : DriveInfo.GetDrives()[0]; }
+#endif
+
+#if NETFRAMEWORK
+        /// <summary>
+        /// Allows you to get the system drive (<see cref="DriveInfo"/>).
+        /// </summary>
+        public static DriveInfo SystemDrive { get => new DriveInfo(Environment.SystemDirectory); } 
 #endif
     }
 
