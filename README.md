@@ -1,11 +1,37 @@
-# LeoCorpLibrary ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) ![GitHub issues](https://img.shields.io/github/issues/Leo-Corporation/LeoCorpLibrary) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LeoCorpLibrary/.NET%20Framework)
+![GitHub contributors](https://img.shields.io/github/contributors/Leo-Corporation/LeoCorpLibrary)
+![GitHub issues](https://img.shields.io/github/issues/Leo-Corporation/LeoCorpLibrary) 
+![GitHub](https://img.shields.io/github/license/Leo-Corporation/LeoCorpLibrary)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LeoCorpLibrary/.NET%20Framework)
+<br />
+<p align="center">
+  <a href="https://github.com/Leo-Corporation/LABS-Experiences">
+    <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">LeoCorpLibrary</h3>
+
+  <p align="center">
+    A C# library with useful features for .NET Applications.
+    <br />
+    <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/wiki"><strong>View documentation »</strong></a>
+    <br />
+    <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBug%5D+">Report Bug</a>
+    ·
+    <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=%5BEnhancement%5D+">Request Feature</a>
+    ·
+    <a href="https://www.nuget.org/packages/LeoCorpLibrary/">NuGet</a>
+
+  </p>
+</p>
+
 ## What is it?
 "LeoCorpLibrary" is library writen in C# that contains useful methods for software developpers, such as password generation, update system, maths and geometry methods and more.
 
 There is two variations of LeoCorpLibrary that are available in different platforms:
 
-| OSs | LeoCorpLibrary | LeoCorpLibrary.Core |
-| :-: | :-----------: | :-----------------: |
+| **OSs** | **LeoCorpLibrary** | **LeoCorpLibrary.Core** |
+| :-----: | :----------------: | :---------------------: |
 | Windows | ✔ | ✔ |
 | macOS | ❌ | ✔ |
 | Linux | ❌ | ✔ |
