@@ -145,7 +145,7 @@ namespace LeoCorpLibrary
             /// </summary>
             /// <param name="side1">The first side of the triangle.</param>
             /// <param name="side2">The second side of the triangle.</param>
-            /// <returns>A <see cref="string"/> value.</returns>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetHypotenuse(double side1, double side2)
             {
                 return Math.Sqrt(side1 * side1 + side2 * side2); // Get hypotenuse (Pythagore)
@@ -323,6 +323,23 @@ namespace LeoCorpLibrary
             public static double GetWidthBase(double areaBase, double lenght)
             {
                 return areaBase / lenght; // Retourner le résultat
+            }
+        }
+
+        /// <summary>
+        /// Class that contains methods for rectangles.
+        /// </summary>
+        public static class Rectangle
+        {
+            /// <summary>
+            /// Allows you to get a rectangle's diagonal.
+            /// </summary>
+            /// <param name="width">The width of the rectangle.</param>
+            /// <param name="lenght">The lenght of the rectangle.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetDiagonal(double width, double lenght)
+            {
+                return Math.Sqrt(width * width + lenght * lenght); // Get diagonal
             }
         }
     }
