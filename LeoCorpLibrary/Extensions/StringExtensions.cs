@@ -89,6 +89,11 @@ namespace LeoCorpLibrary.Extensions
             return Crypt.Decrypt(encrypt, key); // Return the decrypted value
         }
 
+        /// <summary>
+        /// Allows you to upper the first letter of a <see cref="string"/>.
+        /// </summary>
+        /// <param name="s">The <see cref="string"/>.</param>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string UpperFirstLetter(this string s)
         {
             return s.Substring(0, 1).ToUpper() + s.Remove(0, 1); // Upper the first letter
