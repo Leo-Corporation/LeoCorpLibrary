@@ -88,5 +88,10 @@ namespace LeoCorpLibrary.Core.Extensions
         {
             return Crypt.Decrypt(encrypt, key); // Return the decrypted value
         }
+
+        public static string UpperFirstLetter(this string s)
+        {
+            return s.Substring(0, 1).ToUpper() + s.Remove(0, 1); // Upper the first letter
+        }
     }
 }
