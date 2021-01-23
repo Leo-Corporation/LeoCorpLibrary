@@ -139,6 +139,18 @@ namespace LeoCorpLibrary
                 return Sum(side1, side2, side3); // Formule
             }
 
+
+            /// <summary>
+            /// Allows you to get a triangle's hypotenuse from its sides, using Pythagore.
+            /// </summary>
+            /// <param name="side1">The first side of the triangle.</param>
+            /// <param name="side2">The second side of the triangle.</param>
+            /// <returns>A <see cref="string"/> value.</returns>
+            public static double GetHypotenuse(double side1, double side2)
+            {
+                return Math.Sqrt(side1 * side1 + side2 * side2); // Get hypotenuse (Pythagore)
+            }
+
             /// <summary>
             /// Allows you to know if a triangle is buildable or not.
             /// </summary>
