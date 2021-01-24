@@ -337,5 +337,21 @@ namespace LeoCorpLibrary.Core
                 return Math.Sqrt(width * width + lenght * lenght); // Get diagonal
             }
         }
+
+        /// <summary>
+        /// Class that contains methods for diamonds.
+        /// </summary>
+        public static class Diamond
+        {
+            /// <summary>
+            /// Allows you to get the perimeter of diamond from it's side.
+            /// </summary>
+            /// <param name="side">The lenght of the side of the diamond.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetPerimeter(double side)
+            {
+                return 4 * side; // Get perimeter
+            }
+        }
     }
 }
