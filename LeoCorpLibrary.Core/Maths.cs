@@ -352,6 +352,17 @@ namespace LeoCorpLibrary.Core
             {
                 return 4 * side; // Get perimeter
             }
+
+            /// <summary>
+            /// Allows you to get the area of a diamond.
+            /// </summary>
+            /// <param name="diag1">The diagonal of the diamond.</param>
+            /// <param name="diag2">The diagonal of the diamond.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetArea(double diag1, double diag2)
+            {
+                return diag1 * (diag2 / 2); // Get the area
+            }
         }
     }
 }
