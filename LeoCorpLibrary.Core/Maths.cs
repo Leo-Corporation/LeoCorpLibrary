@@ -379,6 +379,16 @@ namespace LeoCorpLibrary.Core
             {
                 return 6 * side; // Get the perimeter
             }
+
+            /// <summary>
+            /// Allows you to get the area of an hexagon from it's side.
+            /// </summary>
+            /// <param name="side">The lenght of the side of the hexagon.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetArea(double side)
+            {
+                return 3 * (Math.Sqrt(3) / 2) * side * side; // Get the area
+            }
         }
     }
 }
