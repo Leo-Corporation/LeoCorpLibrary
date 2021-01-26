@@ -364,5 +364,21 @@ namespace LeoCorpLibrary.Core
                 return diag1 * (diag2 / 2); // Get the area
             }
         }
+
+        /// <summary>
+        /// Class that contains methods for hexagons.
+        /// </summary>
+        public static class Hexagon
+        {
+            /// <summary>
+            /// Allows you to get the perimeter of an hexagon from it's side.
+            /// </summary>
+            /// <param name="side">The lenght of the side of the hexagon.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetPerimeter(double side)
+            {
+                return 6 * side; // Get the perimeter
+            }
+        }
     }
 }
