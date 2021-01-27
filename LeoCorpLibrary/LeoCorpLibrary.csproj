@@ -23,14 +23,14 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.2.0.2101-rc1</Version>
+    <Version>3.2.0.2101</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.2.0.2101-rc1
+    <PackageReleaseNotes>Version 3.2.0.2101
 - Added and updated XML Documentation
 - Added the possibility to upper the first letter of a string (#175)
 - Added the possibility to get a triangle's hypotenuse (#176)
