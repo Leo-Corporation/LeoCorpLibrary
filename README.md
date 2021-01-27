@@ -3,6 +3,8 @@
 ![GitHub](https://img.shields.io/github/license/Leo-Corporation/LeoCorpLibrary)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LeoCorpLibrary/.NET%20Framework)
+![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
+
 <br />
 <p align="center">
   <a href="https://github.com/Leo-Corporation/LABS-Experiences">
@@ -106,11 +108,17 @@ Here's what you'll need to contribute to this project:
 - [Leo-Corporation / LABS-Experiences](https://github.com/Leo-Corporation/LABS-Experiences)
 - [Leo-Corporation / LABS-ExperimentalConsole](https://github.com/Leo-Corporation/LABS-ExperimentalConsole)
 - [Leo-Corporation / LABS-WPF](https://github.com/Leo-Corporation/LABS-WPF)
+- [Leo-Corporation / Passliss](https://github.com/Leo-Corporation/Passliss)
 ### Others
 - ColorPicker 2 by [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 - GestionBiblio X, édition Ultra by [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 - Générateur de codes barre 2 by [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 
 [Add your software to this list](https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=ajout+cr%C3%A9dit&template=credit_projet.md&title=%5BCr%C3%A9dit-Projet%5D+)
+## Badge
+~~~ md
+![Using LeoCorpLibrary](https://img.shields.io/badge/using-LeoCorpLibrary-blue)
+~~~
+
 ## License
 Projec under the [MIT](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LICENSE.md) license.

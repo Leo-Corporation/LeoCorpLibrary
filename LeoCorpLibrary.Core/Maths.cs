@@ -124,6 +124,17 @@ namespace LeoCorpLibrary.Core
             }
 
             /// <summary>
+            /// Allows you to get a triangle's hypotenuse from its sides, using Pythagore.
+            /// </summary>
+            /// <param name="side1">The first side of the triangle.</param>
+            /// <param name="side2">The second side of the triangle.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetHypotenuse(double side1, double side2)
+            {
+                return Math.Sqrt(side1 * side1 + side2 * side2); // Get hypotenuse (Pythagore)
+            }
+
+            /// <summary>
             /// Allows you to get the perimeter of a triangle.
             /// </summary>
             /// <param name="side1">Triangle's side.</param>
@@ -307,6 +318,76 @@ namespace LeoCorpLibrary.Core
             public static double GetWidthBase(double areaBase, double lenght)
             {
                 return areaBase / lenght; // Retourner le résultat
+            }
+        }
+
+        /// <summary>
+        /// Class that contains methods for rectangles.
+        /// </summary>
+        public static class Rectangle
+        {
+            /// <summary>
+            /// Allows you to get a rectangle's diagonal.
+            /// </summary>
+            /// <param name="width">The width of the rectangle.</param>
+            /// <param name="lenght">The lenght of the rectangle.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetDiagonal(double width, double lenght)
+            {
+                return Math.Sqrt(width * width + lenght * lenght); // Get diagonal
+            }
+        }
+
+        /// <summary>
+        /// Class that contains methods for diamonds.
+        /// </summary>
+        public static class Diamond
+        {
+            /// <summary>
+            /// Allows you to get the perimeter of diamond from it's side.
+            /// </summary>
+            /// <param name="side">The lenght of the side of the diamond.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetPerimeter(double side)
+            {
+                return 4 * side; // Get perimeter
+            }
+
+            /// <summary>
+            /// Allows you to get the area of a diamond.
+            /// </summary>
+            /// <param name="diag1">The diagonal of the diamond.</param>
+            /// <param name="diag2">The diagonal of the diamond.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetArea(double diag1, double diag2)
+            {
+                return diag1 * (diag2 / 2); // Get the area
+            }
+        }
+
+        /// <summary>
+        /// Class that contains methods for hexagons.
+        /// </summary>
+        public static class Hexagon
+        {
+            /// <summary>
+            /// Allows you to get the perimeter of an hexagon from it's side.
+            /// </summary>
+            /// <param name="side">The lenght of the side of the hexagon.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetPerimeter(double side)
+            {
+                return 6 * side; // Get the perimeter
+            }
+
+            /// <summary>
+            /// Allows you to get the area of an hexagon from it's side.
+            /// </summary>
+            /// <param name="side">The lenght of the side of the hexagon.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
+            public static double GetArea(double side)
+            {
+                return 3 * (Math.Sqrt(3) / 2) * side * side; // Get the area
             }
         }
     }
