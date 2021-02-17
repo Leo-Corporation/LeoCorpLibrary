@@ -40,9 +40,15 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <param name="source">The <see cref="string"/> to encrypt.</param>
         /// <param name="key">The key that will be used to encrypt and decrypt the string.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns>A <see cref="string"/> value.</returns>
         public static string Encrypt(string source, string key)
         {
+            if (string.IsNullOrEmpty(source))
+            {
+                throw new ArgumentNullException(nameof(source), "The string cannot be null.");
+            }
+
             using (TripleDESCryptoServiceProvider tripleDESCryptoService = new TripleDESCryptoServiceProvider())
             {
                 using (MD5CryptoServiceProvider hashMD5Provider = new MD5CryptoServiceProvider()) // Create MD5CryptoServiceProvider
@@ -61,9 +67,15 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <param name="encrypt">The encrypted <see cref="string"/>.</param>
         /// <param name="key">The key that will be used to encrypt and decrypt the string.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns>A <see cref="string"/> value.</returns>
         public static string Decrypt(string encrypt, string key)
         {
+            if (string.IsNullOrEmpty(encrypt))
+            {
+                throw new ArgumentNullException(nameof(encrypt), "The string cannot be null.");
+            }
+
             using (TripleDESCryptoServiceProvider tripleDESCryptoService = new TripleDESCryptoServiceProvider())
             {
                 using (MD5CryptoServiceProvider hashMD5Provider = new MD5CryptoServiceProvider()) // Create MD5CryptoServiceProvider
@@ -82,9 +94,15 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <param name="str">The <see cref="string"/> to encrypt.</param>
         /// <param name="rsaParameters">The RSA Key.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns>A <see cref="string"/> value.</returns>
         public static string EncryptRSA(string str, RSAParameters rsaParameters)
         {
+            if (string.IsNullOrEmpty(str))
+            {
+                throw new ArgumentNullException(nameof(str), "The string cannot be null.");
+            }
+
             UnicodeEncoding unicodeEncoding = new UnicodeEncoding(); // Create a new UnicodeEncoding
 
             byte[] encryptedData;
@@ -101,9 +119,15 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <param name="encrypted">The encrypted <see cref="string"/>.</param>
         /// <param name="rsaParameters">The RSA Key.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns>A <see cref="string"/> value.</returns>
         public static string DecryptRSA(string encrypted, RSAParameters rsaParameters)
         {
+            if (string.IsNullOrEmpty(encrypted))
+            {
+                throw new ArgumentNullException(nameof(encrypted), "The string cannot be null.");
+            }
+
             UnicodeEncoding unicodeEncoding = new UnicodeEncoding(); // Create a new UnicodeEncoding
 
             byte[] decryptedData;
