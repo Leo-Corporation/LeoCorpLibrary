@@ -77,6 +77,12 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Encrypts a string using RSA encryption.
+        /// </summary>
+        /// <param name="str">The <see cref="string"/> to encrypt.</param>
+        /// <param name="rsaParameters">The RSA Key.</param>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string EncryptRSA(string str, RSAParameters rsaParameters)
         {
             UnicodeEncoding unicodeEncoding = new UnicodeEncoding(); // Create a new UnicodeEncoding
@@ -90,14 +96,20 @@ namespace LeoCorpLibrary
             return unicodeEncoding.GetString(encryptedData); // Convert byte[] to string
         }
 
-        public static string DecryptRSA(string encrypted, RSAParameters rSAParameters)
+        /// <summary>
+        /// Decrypts a string using RSA encryption.
+        /// </summary>
+        /// <param name="encrypted">The encrypted <see cref="string"/>.</param>
+        /// <param name="rsaParameters">The RSA Key.</param>
+        /// <returns>A <see cref="string"/> value.</returns>
+        public static string DecryptRSA(string encrypted, RSAParameters rsaParameters)
         {
             UnicodeEncoding unicodeEncoding = new UnicodeEncoding(); // Create a new UnicodeEncoding
 
             byte[] decryptedData;
             using (RSACryptoServiceProvider rSACryptoServiceProvider = new RSACryptoServiceProvider())
             {
-                rSACryptoServiceProvider.ImportParameters(rSAParameters);
+                rSACryptoServiceProvider.ImportParameters(rsaParameters);
                 decryptedData = rSACryptoServiceProvider.Decrypt(unicodeEncoding.GetBytes(encrypted), false); // Decrypt
             }
             return unicodeEncoding.GetString(decryptedData); // Convert byte[] to string
