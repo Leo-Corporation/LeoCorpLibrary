@@ -23,6 +23,7 @@ SOFTWARE.
 */
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -138,5 +139,33 @@ namespace LeoCorpLibrary
             }
             return unicodeEncoding.GetString(decryptedData); // Convert byte[] to string
         }
+
+        public static string EncryptAES(string str, string key)
+        {
+            byte[] IV = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+            int BlockSize = 128;
+
+            byte[] bytes = Encoding.Unicode.GetBytes(str); // Convert
+
+
+            SymmetricAlgorithm crypt = Aes.Create(); // Create AES
+            HashAlgorithm hash = MD5.Create(); // Create MD5
+
+            crypt.BlockSize = BlockSize; // Define block size
+            crypt.Key = hash.ComputeHash(Encoding.Unicode.GetBytes(key)); // Create key
+            crypt.IV = IV; // IV
+
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                using (CryptoStream cryptoStream = new CryptoStream(memoryStream, crypt.CreateEncryptor(), CryptoStreamMode.Write))
+                {
+                    cryptoStream.Write(bytes, 0, bytes.Length);
+                }
+
+                return Convert.ToBase64String(memoryStream.ToArray()); // Convert and return
+            }
+        }
+
+        
     }
 }
