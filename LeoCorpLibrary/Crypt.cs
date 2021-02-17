@@ -142,6 +142,11 @@ namespace LeoCorpLibrary
 
         public static string EncryptAES(string str, string key)
         {
+            if (string.IsNullOrEmpty(str))
+            {
+                throw new ArgumentNullException(nameof(str), "The string cannot be null.");
+            }
+
             byte[] IV = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
             int BlockSize = 128;
 
@@ -168,6 +173,11 @@ namespace LeoCorpLibrary
 
         public static string DecryptAES(string encrypted, string key)
         {
+            if (string.IsNullOrEmpty(encrypted))
+            {
+                throw new ArgumentNullException(nameof(encrypted), "The string cannot be null.");
+            }
+
             byte[] IV = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
             int BlockSize = 128;
 
