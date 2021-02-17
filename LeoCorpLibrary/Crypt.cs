@@ -79,15 +79,28 @@ namespace LeoCorpLibrary
 
         public static string EncryptRSA(string str, RSAParameters rsaParameters)
         {
-            UnicodeEncoding unicodeEncoding = new UnicodeEncoding();
+            UnicodeEncoding unicodeEncoding = new UnicodeEncoding(); // Create a new UnicodeEncoding
 
             byte[] encryptedData;
             using (RSACryptoServiceProvider rSACryptoServiceProvider = new RSACryptoServiceProvider())
             {
                 rSACryptoServiceProvider.ImportParameters(rsaParameters);
-                encryptedData = rSACryptoServiceProvider.Encrypt(unicodeEncoding.GetBytes(str), false);
+                encryptedData = rSACryptoServiceProvider.Encrypt(unicodeEncoding.GetBytes(str), false); // Encrypt
             }
-            return unicodeEncoding.GetString(encryptedData);
+            return unicodeEncoding.GetString(encryptedData); // Convert byte[] to string
+        }
+
+        public static string DecryptRSA(string encrypted, RSAParameters rSAParameters)
+        {
+            UnicodeEncoding unicodeEncoding = new UnicodeEncoding(); // Create a new UnicodeEncoding
+
+            byte[] decryptedData;
+            using (RSACryptoServiceProvider rSACryptoServiceProvider = new RSACryptoServiceProvider())
+            {
+                rSACryptoServiceProvider.ImportParameters(rSAParameters);
+                decryptedData = rSACryptoServiceProvider.Decrypt(unicodeEncoding.GetBytes(encrypted), false); // Decrypt
+            }
+            return unicodeEncoding.GetString(decryptedData); // Convert byte[] to string
         }
     }
 }
