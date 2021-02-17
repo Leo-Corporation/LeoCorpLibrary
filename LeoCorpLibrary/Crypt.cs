@@ -76,5 +76,18 @@ namespace LeoCorpLibrary
                 }
             }
         }
+
+        public static string EncryptRSA(string str, RSAParameters rsaParameters)
+        {
+            UnicodeEncoding unicodeEncoding = new UnicodeEncoding();
+
+            byte[] encryptedData;
+            using (RSACryptoServiceProvider rSACryptoServiceProvider = new RSACryptoServiceProvider())
+            {
+                rSACryptoServiceProvider.ImportParameters(rsaParameters);
+                encryptedData = rSACryptoServiceProvider.Encrypt(unicodeEncoding.GetBytes(str), false);
+            }
+            return unicodeEncoding.GetString(encryptedData);
+        }
     }
 }
