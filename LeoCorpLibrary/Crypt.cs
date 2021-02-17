@@ -91,7 +91,7 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Encrypts a string using RSA encryption.
+        /// Encrypts a <see cref="string"/> using RSA encryption.
         /// </summary>
         /// <param name="str">The <see cref="string"/> to encrypt.</param>
         /// <param name="rsaParameters">The RSA Key.</param>
@@ -116,7 +116,7 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
-        /// Decrypts a string using RSA encryption.
+        /// Decrypts a <see cref="string"/> using RSA encryption.
         /// </summary>
         /// <param name="encrypted">The encrypted <see cref="string"/>.</param>
         /// <param name="rsaParameters">The RSA Key.</param>
@@ -140,6 +140,13 @@ namespace LeoCorpLibrary
             return unicodeEncoding.GetString(decryptedData); // Convert byte[] to string
         }
 
+        /// <summary>
+        /// Encrypt a <see cref="string"/> using AES ecnryption.
+        /// </summary>
+        /// <param name="str">The <see cref="string"/> to encrypt.</param>
+        /// <param name="key">The key.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string EncryptAES(string str, string key)
         {
             if (string.IsNullOrEmpty(str))
@@ -171,6 +178,13 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Decrypts a <see cref="string"/> using AES ecnryption.
+        /// </summary>
+        /// <param name="encrypted">The <see cref="string"/> to decrypt.</param>
+        /// <param name="key">The key.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <returns>A <see cref="string"/> value.</returns>
         public static string DecryptAES(string encrypted, string key)
         {
             if (string.IsNullOrEmpty(encrypted))
@@ -179,7 +193,6 @@ namespace LeoCorpLibrary
             }
 
             byte[] IV = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
-            int BlockSize = 128;
 
             byte[] bytes = Convert.FromBase64String(encrypted); // Convert string to byte[]
 
