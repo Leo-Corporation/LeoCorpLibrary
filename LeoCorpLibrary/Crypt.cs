@@ -96,8 +96,8 @@ namespace LeoCorpLibrary
         /// <param name="str">The <see cref="string"/> to encrypt.</param>
         /// <param name="rsaParameters">The RSA Key.</param>
         /// <exception cref="ArgumentNullException"></exception>
-        /// <returns>A <see cref="string"/> value.</returns>
-        public static string EncryptRSA(string str, RSAParameters rsaParameters)
+        /// <returns>A <see cref="byte"/>[] value.</returns>
+        public static byte[] EncryptRSA(string str, RSAParameters rsaParameters)
         {
             if (string.IsNullOrEmpty(str))
             {
@@ -112,7 +112,7 @@ namespace LeoCorpLibrary
                 rSACryptoServiceProvider.ImportParameters(rsaParameters);
                 encryptedData = rSACryptoServiceProvider.Encrypt(unicodeEncoding.GetBytes(str), false); // Encrypt
             }
-            return unicodeEncoding.GetString(encryptedData); // Convert byte[] to string
+            return encryptedData; // Return byte[]
         }
 
         /// <summary>
@@ -120,25 +120,19 @@ namespace LeoCorpLibrary
         /// </summary>
         /// <param name="encrypted">The encrypted <see cref="string"/>.</param>
         /// <param name="rsaParameters">The RSA Key.</param>
-        /// <exception cref="ArgumentNullException"></exception>
-        /// <returns>A <see cref="string"/> value.</returns>
-        public static string DecryptRSA(string encrypted, RSAParameters rsaParameters)
+        /// <returns>A <see cref="byte"/>[] value.</returns>
+        public static byte[] DecryptRSA(byte[] encrypted, RSAParameters rsaParameters)
         {
-            if (string.IsNullOrEmpty(encrypted))
-            {
-                throw new ArgumentNullException(nameof(encrypted), "The string cannot be null.");
-            }
-
-            UnicodeEncoding unicodeEncoding = new UnicodeEncoding(); // Create a new UnicodeEncoding
-
             byte[] decryptedData;
             using (RSACryptoServiceProvider rSACryptoServiceProvider = new RSACryptoServiceProvider())
             {
                 rSACryptoServiceProvider.ImportParameters(rsaParameters);
-                decryptedData = rSACryptoServiceProvider.Decrypt(unicodeEncoding.GetBytes(encrypted), false); // Decrypt
+                decryptedData = rSACryptoServiceProvider.Decrypt(encrypted, false); // Decrypt
             }
-            return unicodeEncoding.GetString(decryptedData); // Convert byte[] to string
+            return decryptedData; // Return byte[]
         }
+
+        
 
         /// <summary>
         /// Encrypt a <see cref="string"/> using AES ecnryption.
