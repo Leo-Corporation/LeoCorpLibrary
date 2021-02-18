@@ -6,9 +6,9 @@
     <Company>Léo Corporation</Company>
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
-    <Copyright>Copyright ©  2020</Copyright>
-    <AssemblyVersion>3.2.0.2101</AssemblyVersion>
-    <FileVersion>3.2.0.2101</FileVersion>
+    <Copyright>© 2021</Copyright>
+    <AssemblyVersion>3.3.0.2102</AssemblyVersion>
+    <FileVersion>3.3.0.2102</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
@@ -23,22 +23,21 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.2.0.2101</Version>
+    <Version>3.3.0.2102</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.2.0.2101
-- Added and updated XML Documentation
-- Added the possibility to upper the first letter of a string (#175)
-- Added the possibility to get a triangle's hypotenuse (#176)
-- Added the possibility to get a rectangle's diagonal (#177)
-- Added the possibility to get a diamond's perimeter (#178)
-- Added the possibility to get a diamond's area (#179)
-- Added the possibility to get a hexagon's perimeter (#180)
-- Added the possibility to get a hexagon's area (#181)</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 3.2.0.2102
+- Added the possibility to encrypt a string with RSA encryption (#184)
+- Added the possibility to decrypt a string with RSA encryption (#184)
+- Added the possibility to encrypt a string with AES encryption (#185)
+- Added the possibility to decrypt a string with AES encryption (#185)
+- Added exceptions to encrypt/decrypt methods (#184/#185)
+- Fixed RSA encryption fails (#186)
+- Added a method that converts byte[] into string (#186)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
