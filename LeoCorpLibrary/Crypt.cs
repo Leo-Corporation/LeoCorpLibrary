@@ -132,7 +132,15 @@ namespace LeoCorpLibrary
             return decryptedData; // Return byte[]
         }
 
-        
+        /// <summary>
+        /// Converts <see cref="byte"/>[] into a <see cref="string"/>.
+        /// </summary>
+        /// <param name="bytesToConvert">The bytes to convert.</param>
+        /// <returns>A <see cref="string"/> value.</returns>
+        public static string ConvertBytesToString(byte[] bytesToConvert)
+        {
+            return Encoding.Unicode.GetString(bytesToConvert); // Return
+        }
 
         /// <summary>
         /// Encrypt a <see cref="string"/> using AES ecnryption.
