@@ -56,7 +56,7 @@ There is two variations of LeoCorpLibrary that are available in different platfo
 ## Documentation
 ### Branches
 There is two branches:
-- master ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary)
+- main ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary)
 - vNext ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary?include_prereleases)
 ### Consult documentation
 [Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) to go to the documentation.
@@ -98,7 +98,8 @@ Here's what you'll need to contribute to this project:
 - .NET
    - .NET Framework 4.7.2
    - .NET Core 3.1
-   - .NET 5 *(optionnal)*
+   - .NET 5
+- (*optionnal*) NuGet
 
 ## Projects using LeoCorpLibrary
 ### GitHub
