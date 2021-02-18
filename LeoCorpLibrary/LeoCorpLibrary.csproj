@@ -6,7 +6,7 @@
     <Company>Léo Corporation</Company>
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
-    <Copyright>Copyright ©  2020</Copyright>
+    <Copyright>© 2021</Copyright>
     <AssemblyVersion>3.3.0.2102</AssemblyVersion>
     <FileVersion>3.3.0.2102</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -23,19 +23,21 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.3.0.2102-rc1</Version>
+    <Version>3.3.0.2102-rc2</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.2.0.2102-rc1
+    <PackageReleaseNotes>Version 3.2.0.2102-rc2
 - Added the possibility to encrypt a string with RSA encryption (#184)
 - Added the possibility to decrypt a string with RSA encryption (#184)
 - Added the possibility to encrypt a string with AES encryption (#185)
 - Added the possibility to decrypt a string with AES encryption (#185)
-- Added exceptions to encrypt/decrypt methods (#184/#185)</PackageReleaseNotes>
+- Added exceptions to encrypt/decrypt methods (#184/#185)
+- Fixed RSA encryption fails (#186)
+- Added a method that converts byte[] into string (#186)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
