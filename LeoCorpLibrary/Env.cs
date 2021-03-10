@@ -449,7 +449,7 @@ namespace LeoCorpLibrary
 
         public static System.Drawing.Point GetMouseCursorPosition() => System.Windows.Forms.Cursor.Position;
 
-        
+        public static System.Windows.Point GetMouseCursorPositionWPF() => new System.Windows.Point(System.Windows.Forms.Cursor.Position.X, System.Windows.Forms.Cursor.Position.Y);
 
         /// <summary>
         /// Allows you to get the system drive (<see cref="DriveInfo"/>).
