@@ -96,6 +96,11 @@ namespace LeoCorpLibrary.Core.Extensions
         /// <returns>A <see cref="string"/> value.</returns>
         public static string UpperFirstLetter(this string s)
         {
+            if (string.IsNullOrEmpty(s) || string.IsNullOrWhiteSpace(s)) // If the string is null, empty, or contains only whitespaces
+            {
+                throw new ArgumentNullException(nameof(s), "The specified string shouldn't be null, empty, or only equal to whitespaces."); // Error
+            }
+
             return s.Substring(0, 1).ToUpper() + s.Remove(0, 1); // Upper the first letter
         }
 
@@ -108,6 +113,16 @@ namespace LeoCorpLibrary.Core.Extensions
         /// <returns>A <see cref="string"/> value.</returns>
         public static string UpperLettersAt(this string s, int startIndex, int length)
         {
+            if (length <= 0) // If the length is equal or lower than 0
+            {
+                throw new ArgumentNullException(nameof(length), "The 'length' parameter should be at least equal to 1."); // Error
+            }
+
+            if (string.IsNullOrEmpty(s) || string.IsNullOrWhiteSpace(s)) // If the string is null, empty, or contains only whitespaces
+            {
+                throw new ArgumentNullException(nameof(s), "The specified string shouldn't be null, empty, or only equal to whitespaces."); // Error
+            }
+
             return s.Substring(startIndex, length).ToUpper() + s.Remove(startIndex, length); // Upper letter(s)
         }
     }
