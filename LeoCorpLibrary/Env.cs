@@ -465,6 +465,11 @@ namespace LeoCorpLibrary
         /// <remarks>Works only on Windows.</remarks>
         public static DriveInfo SystemDrive { get => (CurrentOperatingSystem == OperatingSystems.Windows) ? new DriveInfo(Environment.SystemDirectory) : DriveInfo.GetDrives()[0]; }
 
+        /// <summary>
+        /// Converts Unix Time to a <see cref="DateTime"/>.
+        /// </summary>
+        /// <param name="unixTime">The Unix Time.</param>
+        /// <returns>A <see cref="DateTime"/> value.</returns>
         public static DateTime UnixTimeToDateTime(int unixTime)
         {
             DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc); // Create a date
