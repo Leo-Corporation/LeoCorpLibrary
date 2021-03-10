@@ -462,8 +462,20 @@ namespace LeoCorpLibrary.Core
         /// Allows you to get the system drive (<see cref="DriveInfo"/>).
         /// </summary>
         /// <remarks>Works only on Windows.</remarks>
-        public static DriveInfo SystemDrive { get => new DriveInfo(Environment.SystemDirectory); } 
+        public static DriveInfo SystemDrive { get => new DriveInfo(Environment.SystemDirectory); }
 #endif
+
+        /// <summary>
+        /// Converts Unix Time to a <see cref="DateTime"/>.
+        /// </summary>
+        /// <param name="unixTime">The Unix Time.</param>
+        /// <returns>A <see cref="DateTime"/> value.</returns>
+        public static DateTime UnixTimeToDateTime(int unixTime)
+        {
+            DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc); // Create a date
+            dtDateTime = dtDateTime.AddSeconds(unixTime).ToLocalTime(); // Add the seconds
+            return dtDateTime; // Return the result
+        }
     }
 
     /// <summary>
