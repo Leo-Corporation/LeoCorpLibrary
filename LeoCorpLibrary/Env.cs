@@ -447,6 +447,10 @@ namespace LeoCorpLibrary
             }
         }
 
+        public static System.Drawing.Point GetMouseCursorPosition() => System.Windows.Forms.Cursor.Position;
+
+        
+
         /// <summary>
         /// Allows you to get the system drive (<see cref="DriveInfo"/>).
         /// </summary>
