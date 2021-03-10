@@ -98,5 +98,10 @@ namespace LeoCorpLibrary.Extensions
         {
             return s.Substring(0, 1).ToUpper() + s.Remove(0, 1); // Upper the first letter
         }
+
+        public static string UpperLettersAt(this string s, int startIndex, int endIndex)
+        {
+            return s.Substring(startIndex, endIndex).ToUpper() + s.Remove(startIndex, endIndex); // Upper letter(s)
+        }
     }
 }
