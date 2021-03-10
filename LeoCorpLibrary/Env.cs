@@ -447,8 +447,16 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Gets the curent mouse cursor position on screen for <see cref="System.Windows.Forms"/>.
+        /// </summary>
+        /// <returns>A <see cref="System.Drawing.Point"/> value.</returns>
         public static System.Drawing.Point GetMouseCursorPosition() => System.Windows.Forms.Cursor.Position;
 
+        /// <summary>
+        /// Gets the curent mouse cursor position on screen for WPF.
+        /// </summary>
+        /// <returns>A <see cref="System.Windows.Point"/> value.</returns>
         public static System.Windows.Point GetMouseCursorPositionWPF() => new System.Windows.Point(System.Windows.Forms.Cursor.Position.X, System.Windows.Forms.Cursor.Position.Y);
 
         /// <summary>
