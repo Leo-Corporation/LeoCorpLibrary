@@ -99,9 +99,16 @@ namespace LeoCorpLibrary.Extensions
             return s.Substring(0, 1).ToUpper() + s.Remove(0, 1); // Upper the first letter
         }
 
-        public static string UpperLettersAt(this string s, int startIndex, int endIndex)
+        /// <summary>
+        /// Uppers letter(s) of a specified string from a starting postion and a lenght.
+        /// </summary>
+        /// <param name="s">The <see cref="string"/>.</param>
+        /// <param name="startIndex">The index where the letter(s) should be uppered.</param>
+        /// <param name="length">The length of the part of the <see cref="string"/> that should be uppered.</param>
+        /// <returns>A <see cref="string"/> value.</returns>
+        public static string UpperLettersAt(this string s, int startIndex, int length)
         {
-            return s.Substring(startIndex, endIndex).ToUpper() + s.Remove(startIndex, endIndex); // Upper letter(s)
+            return s.Substring(startIndex, length).ToUpper() + s.Remove(startIndex, length); // Upper letter(s)
         }
     }
 }
