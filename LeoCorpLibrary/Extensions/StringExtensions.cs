@@ -125,5 +125,10 @@ namespace LeoCorpLibrary.Extensions
 
             return s.Substring(startIndex, length).ToUpper() + s.Remove(startIndex, length); // Upper letter(s)
         }
+
+        public static bool IsEndingWithSamePunctuation(this string s, string stringToCheck)
+        {
+            return s[s.Length - 1].ToString() == stringToCheck[stringToCheck.Length - 1].ToString();
+        }
     }
 }
