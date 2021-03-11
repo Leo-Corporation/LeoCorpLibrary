@@ -476,6 +476,20 @@ namespace LeoCorpLibrary
             dtDateTime = dtDateTime.AddSeconds(unixTime).ToLocalTime(); // Add the seconds
             return dtDateTime; // Return the result
         }
+
+        public static bool IsProcessRunning(string processName)
+        {
+            Process[] processes = Process.GetProcessesByName(processName); // Get the process(es) that match the name
+
+            if (processes.Length == 0) // If the process is not running
+            {
+                return false; // Return false
+            }
+            else // If the process is running
+            {
+                return true; // Return true
+            }
+        }
     }
 
     /// <summary>
