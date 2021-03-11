@@ -477,6 +477,11 @@ namespace LeoCorpLibrary
             return dtDateTime; // Return the result
         }
 
+        /// <summary>
+        /// Gets if a specified process name is currently running.
+        /// </summary>
+        /// <param name="processName">The process name to find.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
         public static bool IsProcessRunning(string processName)
         {
             Process[] processes = Process.GetProcessesByName(processName); // Get the process(es) that match the name
