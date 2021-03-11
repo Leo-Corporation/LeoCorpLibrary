@@ -128,7 +128,12 @@ namespace LeoCorpLibrary.Extensions
 
         public static bool IsEndingWithSamePunctuation(this string s, string stringToCheck)
         {
-            return s[s.Length - 1].ToString() == stringToCheck[stringToCheck.Length - 1].ToString();
+            return s[s.Length - 1].ToString() == stringToCheck[stringToCheck.Length - 1].ToString(); // Return true or false
+        }
+
+        public static bool IsEndingWithSamePunctuation(this string s, string stringToCheck, string punctuationToCheck)
+        {
+            return s.EndsWith(punctuationToCheck) && stringToCheck.EndsWith(punctuationToCheck); // Return true or false
         }
     }
 }
