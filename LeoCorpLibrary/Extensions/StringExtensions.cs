@@ -126,11 +126,24 @@ namespace LeoCorpLibrary.Extensions
             return s.Substring(startIndex, length).ToUpper() + s.Remove(startIndex, length); // Upper letter(s)
         }
 
+        /// <summary>
+        /// Checks if a <see cref="string"/> is ending with the same punctuation than an other one.
+        /// </summary>
+        /// <param name="s">The <see cref="string"/> to check.</param>
+        /// <param name="stringToCheck">The <see cref="string"/> to compare.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
         public static bool IsEndingWithSamePunctuation(this string s, string stringToCheck)
         {
             return s[s.Length - 1].ToString() == stringToCheck[stringToCheck.Length - 1].ToString(); // Return true or false
         }
 
+        /// <summary>
+        /// Checks if a <see cref="string"/> is ending with the same punctuation than an other one.
+        /// </summary>
+        /// <param name="s">The <see cref="string"/> to check.</param>
+        /// <param name="stringToCheck">The <see cref="string"/> to compare.</param>
+        /// <param name="punctuationToCheck">The punctuation sign to check for.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
         public static bool IsEndingWithSamePunctuation(this string s, string stringToCheck, string punctuationToCheck)
         {
             return s.EndsWith(punctuationToCheck) && stringToCheck.EndsWith(punctuationToCheck); // Return true or false
