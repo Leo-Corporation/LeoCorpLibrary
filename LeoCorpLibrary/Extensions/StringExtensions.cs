@@ -123,7 +123,19 @@ namespace LeoCorpLibrary.Extensions
                 throw new ArgumentNullException(nameof(s), "The specified string shouldn't be null, empty, or only equal to whitespaces."); // Error
             }
 
-            return s.Substring(startIndex, length).ToUpper() + s.Remove(startIndex, length); // Upper letter(s)
+            string r = ""; // Final string
+            for (int i = 0; i < s.Length; i++) // For each character
+            {
+                if (i >= startIndex && i <= length) // If should be in upper case
+                {
+                    r += s[i].ToString().ToUpper(); // Upper
+                }
+                else
+                {
+                    r += s[i].ToString(); // Do nothing
+                }
+            }
+            return r; // Return result
         }
 
         /// <summary>
