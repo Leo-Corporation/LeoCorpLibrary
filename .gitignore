@@ -346,3 +346,4 @@ MigrationBackup/
 LeoCorpLibrary/Packages/nuget.exe
 eOnExit  true,
 *.exe,
+.vs/LeoCorpLibrary/v16/.suo
