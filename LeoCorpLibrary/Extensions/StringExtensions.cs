@@ -96,7 +96,69 @@ namespace LeoCorpLibrary.Extensions
         /// <returns>A <see cref="string"/> value.</returns>
         public static string UpperFirstLetter(this string s)
         {
+            if (string.IsNullOrEmpty(s) || string.IsNullOrWhiteSpace(s)) // If the string is null, empty, or contains only whitespaces
+            {
+                throw new ArgumentNullException(nameof(s), "The specified string shouldn't be null, empty, or only equal to whitespaces."); // Error
+            }
+
             return s.Substring(0, 1).ToUpper() + s.Remove(0, 1); // Upper the first letter
+        }
+
+        /// <summary>
+        /// Uppers letter(s) of a specified string from a starting postion and a lenght.
+        /// </summary>
+        /// <param name="s">The <see cref="string"/>.</param>
+        /// <param name="startIndex">The index where the letter(s) should be uppered.</param>
+        /// <param name="length">The length of the part of the <see cref="string"/> that should be uppered.</param>
+        /// <returns>A <see cref="string"/> value.</returns>
+        public static string UpperLettersAt(this string s, int startIndex, int length)
+        {
+            if (length <= 0) // If the length is equal or lower than 0
+            {
+                throw new ArgumentNullException(nameof(length), "The 'length' parameter should be at least equal to 1."); // Error
+            }
+
+            if (string.IsNullOrEmpty(s) || string.IsNullOrWhiteSpace(s)) // If the string is null, empty, or contains only whitespaces
+            {
+                throw new ArgumentNullException(nameof(s), "The specified string shouldn't be null, empty, or only equal to whitespaces."); // Error
+            }
+
+            string r = ""; // Final string
+            for (int i = 0; i < s.Length; i++) // For each character
+            {
+                if (i >= startIndex && i <= length) // If should be in upper case
+                {
+                    r += s[i].ToString().ToUpper(); // Upper
+                }
+                else
+                {
+                    r += s[i].ToString(); // Do nothing
+                }
+            }
+            return r; // Return result
+        }
+
+        /// <summary>
+        /// Checks if a <see cref="string"/> is ending with the same punctuation than an other one.
+        /// </summary>
+        /// <param name="s">The <see cref="string"/> to check.</param>
+        /// <param name="stringToCheck">The <see cref="string"/> to compare.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
+        public static bool IsEndingWithSamePunctuation(this string s, string stringToCheck)
+        {
+            return s[s.Length - 1].ToString() == stringToCheck[stringToCheck.Length - 1].ToString(); // Return true or false
+        }
+
+        /// <summary>
+        /// Checks if a <see cref="string"/> is ending with the same punctuation than an other one.
+        /// </summary>
+        /// <param name="s">The <see cref="string"/> to check.</param>
+        /// <param name="stringToCheck">The <see cref="string"/> to compare.</param>
+        /// <param name="punctuationToCheck">The punctuation sign to check for.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
+        public static bool IsEndingWithSamePunctuation(this string s, string stringToCheck, string punctuationToCheck)
+        {
+            return s.EndsWith(punctuationToCheck) && stringToCheck.EndsWith(punctuationToCheck); // Return true or false
         }
     }
 }

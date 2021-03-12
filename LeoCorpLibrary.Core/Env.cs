@@ -462,8 +462,39 @@ namespace LeoCorpLibrary.Core
         /// Allows you to get the system drive (<see cref="DriveInfo"/>).
         /// </summary>
         /// <remarks>Works only on Windows.</remarks>
-        public static DriveInfo SystemDrive { get => new DriveInfo(Environment.SystemDirectory); } 
+        public static DriveInfo SystemDrive { get => new DriveInfo(Environment.SystemDirectory); }
 #endif
+
+        /// <summary>
+        /// Converts Unix Time to a <see cref="DateTime"/>.
+        /// </summary>
+        /// <param name="unixTime">The Unix Time.</param>
+        /// <returns>A <see cref="DateTime"/> value.</returns>
+        public static DateTime UnixTimeToDateTime(int unixTime)
+        {
+            DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc); // Create a date
+            dtDateTime = dtDateTime.AddSeconds(unixTime).ToLocalTime(); // Add the seconds
+            return dtDateTime; // Return the result
+        }
+
+        /// <summary>
+        /// Gets if a specified process name is currently running.
+        /// </summary>
+        /// <param name="processName">The process name to find.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
+        public static bool IsProcessRunning(string processName)
+        {
+            Process[] processes = Process.GetProcessesByName(processName); // Get the process(es) that match the name
+
+            if (processes.Length == 0) // If the process is not running
+            {
+                return false; // Return false
+            }
+            else // If the process is running
+            {
+                return true; // Return true
+            }
+        }
     }
 
     /// <summary>

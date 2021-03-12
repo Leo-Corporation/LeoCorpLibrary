@@ -448,10 +448,53 @@ namespace LeoCorpLibrary
         }
 
         /// <summary>
+        /// Gets the curent mouse cursor position on screen for <see cref="System.Windows.Forms"/>.
+        /// </summary>
+        /// <returns>A <see cref="System.Drawing.Point"/> value.</returns>
+        public static System.Drawing.Point GetMouseCursorPosition() => System.Windows.Forms.Cursor.Position;
+
+        /// <summary>
+        /// Gets the curent mouse cursor position on screen for WPF.
+        /// </summary>
+        /// <returns>A <see cref="System.Windows.Point"/> value.</returns>
+        public static System.Windows.Point GetMouseCursorPositionWPF() => new System.Windows.Point(System.Windows.Forms.Cursor.Position.X, System.Windows.Forms.Cursor.Position.Y);
+
+        /// <summary>
         /// Allows you to get the system drive (<see cref="DriveInfo"/>).
         /// </summary>
         /// <remarks>Works only on Windows.</remarks>
         public static DriveInfo SystemDrive { get => (CurrentOperatingSystem == OperatingSystems.Windows) ? new DriveInfo(Environment.SystemDirectory) : DriveInfo.GetDrives()[0]; }
+
+        /// <summary>
+        /// Converts Unix Time to a <see cref="DateTime"/>.
+        /// </summary>
+        /// <param name="unixTime">The Unix Time.</param>
+        /// <returns>A <see cref="DateTime"/> value.</returns>
+        public static DateTime UnixTimeToDateTime(int unixTime)
+        {
+            DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc); // Create a date
+            dtDateTime = dtDateTime.AddSeconds(unixTime).ToLocalTime(); // Add the seconds
+            return dtDateTime; // Return the result
+        }
+
+        /// <summary>
+        /// Gets if a specified process name is currently running.
+        /// </summary>
+        /// <param name="processName">The process name to find.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
+        public static bool IsProcessRunning(string processName)
+        {
+            Process[] processes = Process.GetProcessesByName(processName); // Get the process(es) that match the name
+
+            if (processes.Length == 0) // If the process is not running
+            {
+                return false; // Return false
+            }
+            else // If the process is running
+            {
+                return true; // Return true
+            }
+        }
     }
 
     /// <summary>
