@@ -398,9 +398,14 @@ namespace LeoCorpLibrary
 
         public static class Trigonometry
 		{
-            public static double GetTriangleOpposedSide(double angle, double hypotenuse)
+            public static double GetTriangleOpposedSideFromHypotenuse(double angle, double hypotenuse)
 			{
                 return Math.Sin(angle) * hypotenuse; // Return the opposed side
+			}
+
+            public static double GetTriangleOpposedSideFromAdjacent(double angle, double adjacent)
+			{
+                return Math.Tan(angle) * adjacent; // Return the opposed side
 			}
 		}
     }
