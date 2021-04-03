@@ -445,11 +445,23 @@ namespace LeoCorpLibrary
                 return opposed / Math.Tan(angle); // Return the adjacent side
             }
 
+            /// <summary>
+            /// Gets a triangl's hypotenuse from an angle and its opposed side.
+            /// </summary>
+            /// <param name="angle">The angle value (in radians).</param>
+            /// <param name="opposed">The opposed side length value.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetTriangleHypotenuseFromOpposedSide(double angle, double opposed)
 			{
                 return opposed / Math.Sin(angle); // Return the hypotenuse
 			}
 
+            /// <summary>
+            /// Gets a triangl's hypotenuse from an angle and its adjacent side.
+            /// </summary>
+            /// <param name="angle">The angle value (in radians).</param>
+            /// <param name="adjacent">The adjacent side length value.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetTriangleHypotenuseFromAdjacentSide(double angle, double adjacent)
 			{
                 return adjacent / Math.Cos(angle); // Return the hypotenuse
