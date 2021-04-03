@@ -444,6 +444,11 @@ namespace LeoCorpLibrary
 			{
                 return opposed / Math.Tan(angle); // Return the adjacent side
             }
+
+            public static double GetTriangleHypotenuseFromOpposedSide(double angle, double opposed)
+			{
+                return opposed / Math.Sin(angle); // Return the hypotenuse
+			}
 		}
     }
 }
