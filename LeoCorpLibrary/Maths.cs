@@ -427,6 +427,11 @@ namespace LeoCorpLibrary
 			{
                 return Math.Cos(angle) * hypotenuse; // Return the adjacent side
 			}
+
+            public static double GetTriangleAdjacentSideFromOpposedSide(double angle, double opposed)
+			{
+                return opposed / Math.Tan(angle); // Return the adjacent side
+            }
 		}
     }
 }
