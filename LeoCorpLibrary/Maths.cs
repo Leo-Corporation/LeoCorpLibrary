@@ -395,5 +395,13 @@ namespace LeoCorpLibrary
                 return 3 * (Math.Sqrt(3) / 2) * side * side; // Get the area
             }
         }
+
+        public static class Trigonometry
+		{
+            public static double GetTriangleOpposedSide(double angle, double hypotenuse)
+			{
+                return Math.Sin(angle) * hypotenuse; // Return the opposed side
+			}
+		}
     }
 }
