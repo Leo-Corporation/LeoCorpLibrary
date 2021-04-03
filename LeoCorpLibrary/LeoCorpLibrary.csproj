@@ -7,8 +7,8 @@
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
     <Copyright>© 2021</Copyright>
-    <AssemblyVersion>3.4.0.2103</AssemblyVersion>
-    <FileVersion>3.4.0.2103</FileVersion>
+    <AssemblyVersion>3.5.0.2104</AssemblyVersion>
+    <FileVersion>3.5.0.2104</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
@@ -23,23 +23,21 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.4.0.2103</Version>
+    <Version>3.5.0.2104-pre1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.4.0.2103
-- Add the possibility to get the cursor position (#188)
-- Add the possibility to get the cursor position for WPF (#188)
+    <PackageReleaseNotes>Version 3.5.0.2104-pre1
 - Added XML documentation
-- Added the possibility to upper letters of a specific position in a string (#189)
-- Added the possibility to convert UnixTime into a DateTime object (#190)
-- Added the possibility to check if a process is running (#191)
-- Added the possibility to check if a string is ending with the correct punctuation (#192)
-- Added checks to handle exceptions
-- Fixed: The UpperLettersAt() method doesn't work (#195)</PackageReleaseNotes>
+- Added the possibility to get a triangle's opposed side from an angle and its hypotenuse (#197)
+- Added the possibility to get a triangle's opposed side from an angle and its adjacent side (#197)
+- Added the possibility to get a triangle's adjacent side from an angle and its hypotenuse (#198)
+- Added the possibility to get a triangle's adjacent side from an angle and its opposed side (#198)
+- Added the possibility to get a triangle's hypotenuse from an angle and its opposed side (#199)
+- Added the possibility to get a triangle's hypotenuse from an angle and its adjacent side (#199)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
