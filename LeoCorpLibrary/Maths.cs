@@ -396,13 +396,28 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Trigonometry related methods.
+        /// </summary>
         public static class Trigonometry
 		{
+            /// <summary>
+            /// Gets a triangle's opposed side from an angle and its hypotenuse.
+            /// </summary>
+            /// <param name="angle">The angle value (in radians).</param>
+            /// <param name="hypotenuse">The hypotenuse length value.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetTriangleOpposedSideFromHypotenuse(double angle, double hypotenuse)
 			{
                 return Math.Sin(angle) * hypotenuse; // Return the opposed side
 			}
 
+            /// <summary>
+            /// Gets a triangle's opposed side from an angle and its adjacent side.
+            /// </summary>
+            /// <param name="angle">The angle value (in radians).</param>
+            /// <param name="adjacent">The adjacent side length value.</param>
+            /// <returns>A <see cref="double"/> value.</returns>
             public static double GetTriangleOpposedSideFromAdjacent(double angle, double adjacent)
 			{
                 return Math.Tan(angle) * adjacent; // Return the opposed side
