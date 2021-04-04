@@ -85,6 +85,11 @@ namespace LeoCorpLibrary
             return biggestNumber;
         }
 
+        public static double RadiansToDegrees(double radians)
+	    {
+            return radians * 57.2957795; // Degrees
+        }
+
         /// <summary>
         /// Class that coontains methods for circles.
         /// </summary>
