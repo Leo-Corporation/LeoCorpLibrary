@@ -90,6 +90,11 @@ namespace LeoCorpLibrary
             return radians * 57.2957795; // Degrees
         }
 
+        public static double DegreesToRadians(double degrees)
+		{
+            return degrees / 57.2957795; // Radians
+        }
+
         /// <summary>
         /// Class that coontains methods for circles.
         /// </summary>
