@@ -92,7 +92,7 @@ namespace LeoCorpLibrary
         /// <param name="radians">Radians to convert.</param>
         /// <returns>A <see cref="double"/> value.</returns>
         public static double RadiansToDegrees(double radians)
-	    {
+        {
             return radians * 57.2957795; // Degrees
         }
 
@@ -102,7 +102,7 @@ namespace LeoCorpLibrary
         /// <param name="degrees">Degrees to convert.</param>
         /// <returns>A <see cref="double"/> value.</returns>
         public static double DegreesToRadians(double degrees)
-		{
+        {
             return degrees / 57.2957795; // Radians
         }
 
@@ -421,7 +421,7 @@ namespace LeoCorpLibrary
         /// Trigonometry related methods.
         /// </summary>
         public static class Trigonometry
-		{
+        {
             /// <summary>
             /// Gets a triangle's opposed side from an angle and its hypotenuse.
             /// </summary>
@@ -429,9 +429,9 @@ namespace LeoCorpLibrary
             /// <param name="hypotenuse">The hypotenuse length value.</param>
             /// <returns>A <see cref="double"/> value.</returns>
             public static double GetTriangleOpposedSideFromHypotenuse(double angle, double hypotenuse)
-			{
+            {
                 return Math.Sin(angle) * hypotenuse; // Return the opposed side
-			}
+            }
 
             /// <summary>
             /// Gets a triangle's opposed side from an angle and its adjacent side.
@@ -440,9 +440,9 @@ namespace LeoCorpLibrary
             /// <param name="adjacent">The adjacent side length value.</param>
             /// <returns>A <see cref="double"/> value.</returns>
             public static double GetTriangleOpposedSideFromAdjacent(double angle, double adjacent)
-			{
+            {
                 return Math.Tan(angle) * adjacent; // Return the opposed side
-			}
+            }
 
             /// <summary>
             /// Gets a triangle's adjacent side from an angle and its hypotenuse.
@@ -451,9 +451,9 @@ namespace LeoCorpLibrary
             /// <param name="hypotenuse">The hypotenuse length value.</param>
             /// <returns>A <see cref="double"/> value.</returns>
             public static double GetTriangleAdjacentSideFromHypotenuse(double angle, double hypotenuse)
-			{
+            {
                 return Math.Cos(angle) * hypotenuse; // Return the adjacent side
-			}
+            }
 
             /// <summary>
             /// Gets a triangle's adjacent side from an angle and its opposed side.
@@ -462,7 +462,7 @@ namespace LeoCorpLibrary
             /// <param name="opposed">The opposed side length value.</param>
             /// <returns>A <see cref="double"/> value.</returns>
             public static double GetTriangleAdjacentSideFromOpposedSide(double angle, double opposed)
-			{
+            {
                 return opposed / Math.Tan(angle); // Return the adjacent side
             }
 
@@ -473,9 +473,9 @@ namespace LeoCorpLibrary
             /// <param name="opposed">The opposed side length value.</param>
             /// <returns>A <see cref="double"/> value.</returns>
             public static double GetTriangleHypotenuseFromOpposedSide(double angle, double opposed)
-			{
+            {
                 return opposed / Math.Sin(angle); // Return the hypotenuse
-			}
+            }
 
             /// <summary>
             /// Gets a triangl's hypotenuse from an angle and its adjacent side.
@@ -484,9 +484,9 @@ namespace LeoCorpLibrary
             /// <param name="adjacent">The adjacent side length value.</param>
             /// <returns>A <see cref="double"/> value.</returns>
             public static double GetTriangleHypotenuseFromAdjacentSide(double angle, double adjacent)
-			{
+            {
                 return adjacent / Math.Cos(angle); // Return the hypotenuse
             }
-		}
+        }
     }
 }
