@@ -85,11 +85,22 @@ namespace LeoCorpLibrary
             return biggestNumber;
         }
 
+
+        /// <summary>
+        /// Converts radians to degrees.
+        /// </summary>
+        /// <param name="radians">Radians to convert.</param>
+        /// <returns>A <see cref="double"/> value.</returns>
         public static double RadiansToDegrees(double radians)
 	    {
             return radians * 57.2957795; // Degrees
         }
 
+        /// <summary>
+        /// Converts degrees to radians.
+        /// </summary>
+        /// <param name="degrees">Degrees to convert.</param>
+        /// <returns>A <see cref="double"/> value.</returns>
         public static double DegreesToRadians(double degrees)
 		{
             return degrees / 57.2957795; // Radians
