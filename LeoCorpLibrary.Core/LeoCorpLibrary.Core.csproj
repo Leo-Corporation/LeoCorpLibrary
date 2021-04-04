@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>3.5.0.2104-pre1</Version>
+    <Version>3.5.0.2104-rc1</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,14 +14,10 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 3.5.0.2104-pre1
+    <PackageReleaseNotes>Version 3.5.0.2104-rc1
 - Added XML documentation
-- Added the possibility to get a triangle's opposed side from an angle and its hypotenuse (#197)
-- Added the possibility to get a triangle's opposed side from an angle and its adjacent side (#197)
-- Added the possibility to get a triangle's adjacent side from an angle and its hypotenuse (#198)
-- Added the possibility to get a triangle's adjacent side from an angle and its opposed side (#198)
-- Added the possibility to get a triangle's hypotenuse from an angle and its opposed side (#199)
-- Added the possibility to get a triangle's hypotenuse from an angle and its adjacent side (#199)</PackageReleaseNotes>
+- Added the possibility to convert radians to degrees (#200)
+- Added the possibility to convert degrees to radians (#200)</PackageReleaseNotes>
     <AssemblyVersion>3.5.0.2104</AssemblyVersion>
     <Copyright>© 2021</Copyright>
   </PropertyGroup>
