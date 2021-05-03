@@ -122,5 +122,25 @@ namespace LeoCorpLibrary.Extensions
                 default: return i; // Convert and return value
             }
         }
+
+        /// <summary>
+        /// Converts a size (kb, mb, ...) to Gigabyte.
+        /// </summary>
+        /// <param name="i">The size.</param>
+        /// <param name="unitType">The source <see cref="UnitType"/> (kb, mb...).</param>
+        /// <returns>A <see cref="double"/> value.</returns>
+        public static double ConvertSizeUnitToGigabyte(this int i, UnitType unitType)
+        {
+            switch (unitType)
+            {
+                case UnitType.Byte: return i / 1000000000; // Convert and return value
+                case UnitType.Kilobyte: return i / 1000000; // Convert and return value
+                case UnitType.Megabyte: return i / 1000; // Convert and return value
+                case UnitType.Gigabyte: return i; // Convert and return value
+                case UnitType.Petabyte: return i * 1000; // Convert and return value
+                case UnitType.Terabyte: return i * 1000000; // Convert and return value
+                default: return i; // Convert and return value
+            }
+        }
     }
 }
