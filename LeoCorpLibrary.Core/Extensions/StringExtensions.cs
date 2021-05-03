@@ -160,5 +160,7 @@ namespace LeoCorpLibrary.Core.Extensions
         {
             return s.EndsWith(punctuationToCheck) && stringToCheck.EndsWith(punctuationToCheck); // Return true or false
         }
+
+        public static string[] SplitLines(this string s) => s.Split(new string[] { "\n" }, StringSplitOptions.None);
     }
 }
