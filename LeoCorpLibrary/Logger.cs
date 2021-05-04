@@ -49,5 +49,21 @@ namespace LeoCorpLibrary
 
 			File.AppendAllText(filePath, message); // Log
 		}
+
+		/// <summary>
+		/// Logs a message to a file.
+		/// </summary>
+		/// <param name="message">The log message to be written.</param>
+		/// <param name="filePath">The path to the log file. Must contain an extension.</param>
+		/// <param name="dateTime">The date time of the log.</param>
+		public static void Log(string message, string filePath, DateTime dateTime)
+		{
+			if (!File.Exists(filePath))
+			{
+				File.Create(filePath); // Create file
+			}
+
+			File.AppendAllText(filePath, $"[{dateTime}] {message}"); // Log
+		}
 	}
 }
