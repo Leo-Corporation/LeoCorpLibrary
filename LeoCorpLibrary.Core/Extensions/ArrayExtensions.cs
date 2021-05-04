@@ -134,5 +134,30 @@ namespace LeoCorpLibrary.Core.Extensions
 
             return list.ToArray(); // Return the new array
         }
+
+        /// <summary>
+        /// Unsplits an array of <see cref="string"/> in to a <see cref="string"/>.
+        /// </summary>
+        /// <param name="array">The <see cref="string"/> array.</param>
+        /// <param name="separator">The separator</param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <returns>A <see cref="string"/> value.</returns>
+        public static string UnSplit(this string[] array, string separator)
+        {
+            if (array.Length <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(array), "The length of an array must be higher than zero");
+            }
+
+            string unsplitted = ""; // Final result
+
+            for (int i = 0; i < array.Length; i++) // For each element
+            {
+                string s = (i == array.Length - 1) ? "" : separator;
+                unsplitted += array[i] + s;
+            }
+
+            return unsplitted; // Return
+        }
     }
 }
