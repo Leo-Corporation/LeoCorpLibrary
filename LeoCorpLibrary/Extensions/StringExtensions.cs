@@ -160,5 +160,12 @@ namespace LeoCorpLibrary.Extensions
         {
             return s.EndsWith(punctuationToCheck) && stringToCheck.EndsWith(punctuationToCheck); // Return true or false
         }
+
+        /// <summary>
+        /// Splits a <see cref="string"/> lines to an array.
+        /// </summary>
+        /// <param name="s">The<see cref="string"/>.</param>
+        /// <returns>A <see cref="string"/>[] value.</returns>
+        public static string[] SplitLines(this string s) => s.Split(new string[] { "\n" }, StringSplitOptions.None);
     }
 }

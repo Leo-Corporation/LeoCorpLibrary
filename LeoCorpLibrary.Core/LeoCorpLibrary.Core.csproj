@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>3.5.0.2104</Version>
+    <Version>3.6.0.2105</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,22 +14,19 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 3.5.0.2104
+    <PackageReleaseNotes>Version 3.6.0.2105
 - Added XML documentation
-- Added the possibility to get a triangle's opposed side from an angle and its hypotenuse (#197)
-
-- Added the possibility to get a triangle's opposed side from an angle and its adjacent side (#197)
-
-- Added the possibility to get a triangle's adjacent side from an angle and its hypotenuse (#198)
-
-- Added the possibility to get a triangle's adjacent side from an angle and its opposed side (#198)
-
-- Added the possibility to get a triangle's hypotenuse from an angle and its opposed side (#199)
-
-- Added the possibility to get a triangle's hypotenuse from an angle and its adjacent side (#199)
-- Added the possibility to convert radians to degrees (#200)
-- Added the possibility to convert degrees to radians (#200)</PackageReleaseNotes>
-    <AssemblyVersion>3.5.0.2104</AssemblyVersion>
+- Added the possibility to split lines in a string (#204)
+- Added the possibility to convert a size unit to byte (#205)
+- Added the possibility to convert a size unit to kilobyte (#205)
+- Added the possibility to convert a size unit to megabyte (#205)
+- Added the possibility to convert a size unit to gigabyte (#205)
+- Added the possibility to convert a size unit to terabyte (#205)
+- Added the possibility to convert a size unit to petabyte (#205)
+- Added the possibility to "Unsplit" a string array (#206)
+- Added a logger (#207)
+- Added a variation to the logger (#207)</PackageReleaseNotes>
+    <AssemblyVersion>3.6.0.2105</AssemblyVersion>
     <Copyright>© 2021</Copyright>
   </PropertyGroup>
 
