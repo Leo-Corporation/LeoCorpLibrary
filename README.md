@@ -103,17 +103,17 @@ Here's what you'll need to contribute to this project:
 
 ## Projects using LeoCorpLibrary
 ### GitHub
+- [Leo-Corporation / ColorPicker](https://github.com/Leo-Corporation/ColorPicker)
 - [Leo-Corporation / Gavilya](https://github.com/Leo-Corporation/Gavilya)
 - [Leo-Corporation / Générateur de mots de passe](https://github.com/Leo-Corporation/Generateur-de-mots-de-passe)
+- [Leo-Corporation / Gerayis](https://github.com/Leo-Corporation/Gerayis)
 - [Leo-Corporation / InternetTest](https://github.com/Leo-Corporation/InternetTest)
 - [Leo-Corporation / LABS-Experiences](https://github.com/Leo-Corporation/LABS-Experiences)
 - [Leo-Corporation / LABS-ExperimentalConsole](https://github.com/Leo-Corporation/LABS-ExperimentalConsole)
 - [Leo-Corporation / LABS-WPF](https://github.com/Leo-Corporation/LABS-WPF)
 - [Leo-Corporation / Passliss](https://github.com/Leo-Corporation/Passliss)
 ### Others
-- ColorPicker 2 by [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 - GestionBiblio X, édition Ultra by [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
-- Générateur de codes barre 2 by [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 
 [Add your software to this list](https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=ajout+cr%C3%A9dit&template=credit_projet.md&title=%5BCr%C3%A9dit-Projet%5D+)
 ## Badge
