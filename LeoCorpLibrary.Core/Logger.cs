@@ -42,6 +42,10 @@ namespace LeoCorpLibrary.Core
 		/// <param name="filePath">The path to the log file. Must contain an extension.</param>
 		public static void Log(string message, string filePath)
 		{
+			if (!Directory.Exists(filePath))
+			{
+				Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+			}
 			if (!File.Exists(filePath))
 			{
 				File.Create(filePath); // Create file
@@ -58,6 +62,10 @@ namespace LeoCorpLibrary.Core
 		/// <param name="dateTime">The date time of the log.</param>
 		public static void Log(string message, string filePath, DateTime dateTime)
 		{
+			if (!Directory.Exists(filePath))
+			{
+				Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+			}
 			if (!File.Exists(filePath))
 			{
 				File.Create(filePath); // Create file
