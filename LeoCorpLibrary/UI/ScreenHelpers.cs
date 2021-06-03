@@ -26,6 +26,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LeoCorpLibrary.UI
 {
@@ -37,6 +38,12 @@ namespace LeoCorpLibrary.UI
 		public static double GetScreenDPIFromWinForm(System.Windows.Forms.Form form)
 		{
 			System.Drawing.Graphics graphics = System.Drawing.Graphics.FromHwnd(form.Handle);
+			return graphics.DpiX;
+		}
+
+		public static double GetScreenDPIFromWPFWindow(System.Windows.Window window)
+		{
+			System.Drawing.Graphics graphics = System.Drawing.Graphics.FromHwnd(new System.Windows.Interop.WindowInteropHelper(window).Handle);
 			return graphics.DpiX;
 		}
 	}
