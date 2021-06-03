@@ -35,12 +35,22 @@ namespace LeoCorpLibrary.UI
 	/// </summary>
 	public static class ScreenHelpers
 	{
+		/// <summary>
+		/// Gets the current screen's DPI.
+		/// </summary>
+		/// <param name="form">The window to get the DPI.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
 		public static double GetScreenDPIFromWinForm(System.Windows.Forms.Form form)
 		{
 			System.Drawing.Graphics graphics = System.Drawing.Graphics.FromHwnd(form.Handle);
 			return graphics.DpiX;
 		}
 
+		/// <summary>
+		/// Gets the current screen's DPI.
+		/// </summary>
+		/// <param name="window">The window to get the DPI.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
 		public static double GetScreenDPIFromWPFWindow(System.Windows.Window window)
 		{
 			System.Drawing.Graphics graphics = System.Drawing.Graphics.FromHwnd(new System.Windows.Interop.WindowInteropHelper(window).Handle);
