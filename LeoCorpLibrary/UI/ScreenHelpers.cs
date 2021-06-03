@@ -55,5 +55,24 @@ namespace LeoCorpLibrary.UI
 			System.Drawing.Graphics graphics = System.Drawing.Graphics.FromHwnd(new System.Windows.Interop.WindowInteropHelper(window).Handle);
 			return graphics.DpiX;
 		}
+
+		public static double GetScreenScalingFromWinForm(System.Windows.Forms.Form form)
+		{
+			double dpiX;
+			using (System.Drawing.Graphics graphics = System.Drawing.Graphics.FromHwnd(form.Handle))
+			{
+				dpiX = graphics.DpiX; // Get the DPI
+
+				switch (dpiX)
+				{
+					case 96: return 100; // Get the %
+					case 120: return 125; // Get the %
+					case 144: return 150; // Get the %
+					case 168: return 175; // Get the %
+					case 200: return 200; // Get the %
+					default: return 100; // Get the %
+				}
+			}
+		}
 	}
 }
