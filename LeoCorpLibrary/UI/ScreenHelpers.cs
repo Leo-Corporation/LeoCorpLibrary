@@ -57,6 +57,11 @@ namespace LeoCorpLibrary.UI
 			return graphics.DpiX;
 		}
 
+		/// <summary>
+		/// Gets the scaling of a screen.
+		/// </summary>
+		/// <param name="form">The window to get the scaling.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
 		public static double GetScreenScalingFromWinForm(System.Windows.Forms.Form form)
 		{
 			double dpiX;
@@ -76,6 +81,11 @@ namespace LeoCorpLibrary.UI
 			}
 		}
 
+		/// <summary>
+		/// Gets the scaling of a screen.
+		/// </summary>
+		/// <param name="window">The window to get the scaling.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
 		public static double GetScreenScalingFromWPFWindow(System.Windows.Window window)
 		{
 			double dpiX;
