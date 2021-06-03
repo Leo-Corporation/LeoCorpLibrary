@@ -26,6 +26,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LeoCorpLibrary.UI
 {
@@ -70,7 +71,26 @@ namespace LeoCorpLibrary.UI
 					case 144: return 150; // Get the %
 					case 168: return 175; // Get the %
 					case 200: return 200; // Get the %
-					default: return 100; // Get the %
+					default: return -100; // Get the %
+				}
+			}
+		}
+
+		public static double GetScreenScalingFromWPFWindow(System.Windows.Window window)
+		{
+			double dpiX;
+			using (System.Drawing.Graphics graphics = System.Drawing.Graphics.FromHwnd(new System.Windows.Interop.WindowInteropHelper(window).Handle))
+			{
+				dpiX = graphics.DpiX; // Get the DPI
+
+				switch (dpiX)
+				{
+					case 96: return 100; // Get the %
+					case 120: return 125; // Get the %
+					case 144: return 150; // Get the %
+					case 168: return 175; // Get the %
+					case 200: return 200; // Get the %
+					default: return -100; // Get the %
 				}
 			}
 		}
