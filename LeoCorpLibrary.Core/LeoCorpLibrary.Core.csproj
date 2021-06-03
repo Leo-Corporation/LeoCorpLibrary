@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>3.6.0.2105</Version>
+    <Version>3.7.0.2106-pre1</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,19 +14,10 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 3.6.0.2105
+    <PackageReleaseNotes>Version 3.7.0.2106-pre1
 - Added XML documentation
-- Added the possibility to split lines in a string (#204)
-- Added the possibility to convert a size unit to byte (#205)
-- Added the possibility to convert a size unit to kilobyte (#205)
-- Added the possibility to convert a size unit to megabyte (#205)
-- Added the possibility to convert a size unit to gigabyte (#205)
-- Added the possibility to convert a size unit to terabyte (#205)
-- Added the possibility to convert a size unit to petabyte (#205)
-- Added the possibility to "Unsplit" a string array (#206)
-- Added a logger (#207)
-- Added a variation to the logger (#207)</PackageReleaseNotes>
-    <AssemblyVersion>3.6.0.2105</AssemblyVersion>
+- Fixed an issue when logging text to a file in a new directory, an error is thrown (#214)</PackageReleaseNotes>
+    <AssemblyVersion>3.7.0.2106</AssemblyVersion>
     <Copyright>© 2021</Copyright>
   </PropertyGroup>
 
