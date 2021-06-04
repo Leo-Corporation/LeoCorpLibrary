@@ -495,6 +495,26 @@ namespace LeoCorpLibrary
                 return true; // Return true
             }
         }
+
+        public static bool IsDirectoryHasPermission(string filePath)
+		{
+            if (!Directory.Exists(filePath))
+			{
+                throw new DirectoryNotFoundException("The directory does not exist or is invalid.");
+			}
+
+            try
+			{
+                Directory.CreateDirectory($@"{filePath}\LeoCorpLibraryTest");
+                Directory.Delete($@"{filePath}\LeoCorpLibraryTest");
+			}
+            catch
+			{
+                return false;
+			}
+
+            return true;
+		}
     }
 
     /// <summary>
