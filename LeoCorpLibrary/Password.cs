@@ -139,13 +139,37 @@ namespace LeoCorpLibrary
             return result; // Return all generated passwords
 		}
 
+        public static async Task<List<string>> GenerateAmountAsync(int amount, int length, string chars, string separator)
+		{
+            List<string> result = new List<string>();
+
+            for (int i = 0; i < amount; i++)
+            {
+                result.Add(await GenerateAsync(length, chars, separator)); // Add password
+            }
+
+            return result; // Return all generated passwords
+        }
+
         public static List<string> GenerateAmount(int amount, int length, PasswordPresets passwordPresets)
 		{
             List<string> result = new List<string>();
 
             for (int i = 0; i < amount; i++)
-{
+            {
                 result.Add(Generate(length, passwordPresets)); // Add password
+            }
+
+            return result; // Return all generated passwords
+        }
+
+        public static async Task<List<string>> GenerateAmountAsync(int amount, int length, PasswordPresets passwordPresets)
+		{
+            List<string> result = new List<string>();
+
+            for (int i = 0; i < amount; i++)
+            {
+                result.Add(await GenerateAsync(length, passwordPresets)); // Add password
             }
 
             return result; // Return all generated passwords
