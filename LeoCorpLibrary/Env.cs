@@ -496,6 +496,11 @@ namespace LeoCorpLibrary
             }
         }
 
+        /// <summary>
+        /// Checks if your program has the permission to write a specific directory.
+        /// </summary>
+        /// <param name="filePath">The path to the directory.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
         public static bool IsDirectoryHasPermission(string filePath)
 		{
             if (!Directory.Exists(filePath))
