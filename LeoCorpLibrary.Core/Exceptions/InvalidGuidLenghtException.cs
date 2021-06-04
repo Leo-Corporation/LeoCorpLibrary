@@ -29,36 +29,36 @@ using System.Threading.Tasks;
 
 namespace LeoCorpLibrary.Core.Exceptions
 {
-    /// <summary>
-    /// Is thrown when the length of a Guid is invalid
-    /// </summary>
-    public class InvalidGuidlengthException : Exception
-    {
-        /// <summary>
-        /// Initialize a new instance of the class <see cref="InvalidGuidlengthException"/>.
-        /// </summary>
-        public InvalidGuidlengthException()
-        {
+	/// <summary>
+	/// Is thrown when the length of a Guid is invalid
+	/// </summary>
+	public class InvalidGuidlengthException : Exception
+	{
+		/// <summary>
+		/// Initialize a new instance of the class <see cref="InvalidGuidlengthException"/>.
+		/// </summary>
+		public InvalidGuidlengthException()
+		{
 
-        }
+		}
 
-        /// <summary>
-        /// Initialize a new instance of the class <see cref="InvalidGuidlengthException"/> with a specified error message.
-        /// </summary>
-        /// <param name="message">Message of the error</param>
-        public InvalidGuidlengthException(string message) : base(message)
-        {
+		/// <summary>
+		/// Initialize a new instance of the class <see cref="InvalidGuidlengthException"/> with a specified error message.
+		/// </summary>
+		/// <param name="message">Message of the error</param>
+		public InvalidGuidlengthException(string message) : base(message)
+		{
 
-        }
+		}
 
-        /// <summary>
-        /// Initialize a new instance of the class <see cref="InvalidGuidlengthException"/> with a specified error message.
-        /// </summary>
-        /// <param name="message">Message of the error</param>
-        /// <param name="innerException">The inner exception that cause this exception.</param>
-        public InvalidGuidlengthException(string message, Exception innerException) : base(message, innerException)
-        {
+		/// <summary>
+		/// Initialize a new instance of the class <see cref="InvalidGuidlengthException"/> with a specified error message.
+		/// </summary>
+		/// <param name="message">Message of the error</param>
+		/// <param name="innerException">The inner exception that cause this exception.</param>
+		public InvalidGuidlengthException(string message, Exception innerException) : base(message, innerException)
+		{
 
-        }
-    }
+		}
+	}
 }
