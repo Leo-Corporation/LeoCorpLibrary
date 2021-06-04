@@ -37,12 +37,12 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Generates a password.
         /// </summary>
-        /// <param name="lenght">Lenght of the password.</param>
+        /// <param name="length">length of the password.</param>
         /// <param name="chars">Characters that can be in the generated password.</param>
         /// <param name="separator">Separator of the characters.</param>
         /// <exception cref="Exception"></exception>
         /// <returns>A <see cref="string"/> value.</returns>
-        public static string Generate(int lenght, string chars, string separator)
+        public static string Generate(int length, string chars, string separator)
         {
             string[] usableChars = { };
             if (chars.Contains(separator)) // Si les caractères contiennent le séparateur
@@ -56,9 +56,9 @@ namespace LeoCorpLibrary
             string finalPassword = ""; // Mot de passe final
             Random random = new Random(); // Nombre aléatoire
             int number = 0;
-            if (lenght > 0)
+            if (length > 0)
             {
-                for (int i = 1; i < lenght; i++) // Génération du mot de passe
+                for (int i = 1; i < length; i++) // Génération du mot de passe
                 {
                     number = random.Next(0, usableChars.Length); // Génération d'un nombre aléatoire
                     finalPassword = finalPassword + usableChars[number];
@@ -66,7 +66,7 @@ namespace LeoCorpLibrary
             }
             else
             {
-                throw new Exception("The parameter 'lenght' (int) must be higher than 0.");
+                throw new Exception("The parameter 'length' (int) must be higher than 0.");
             }
             return finalPassword; // Retourne le mot de passe final
         }
@@ -74,14 +74,14 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Generates a password asynchronously.
         /// </summary>
-        /// <param name="lenght">Lenght of the password.</param>
+        /// <param name="length">length of the password.</param>
         /// <param name="chars">Characters that can be in the generated password.</param>
         /// <param name="separator">Separator of the characters.</param>
         /// <exception cref="Exception"></exception>
         /// <returns>A <see cref="Task{TResult}"/> value.</returns>
-        public static Task<string> GenerateAsync(int lenght, string chars, string separator)
+        public static Task<string> GenerateAsync(int length, string chars, string separator)
         {
-            Task<string> task = new Task<string>(() => Generate(lenght, chars, separator));
+            Task<string> task = new Task<string>(() => Generate(length, chars, separator));
             task.Start();
             return task;
         }
@@ -89,18 +89,18 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Generates a password.
         /// </summary>
-        /// <param name="lenght">Lenght of the password.</param>
+        /// <param name="length">length of the password.</param>
         /// <param name="passwordPresets">The preset used for the password.</param>
         /// <exception cref="Exception"></exception>
         /// <returns>A <see cref="string"/> value.</returns>
-        public static string Generate(int lenght, PasswordPresets passwordPresets)
+        public static string Generate(int length, PasswordPresets passwordPresets)
         {
             switch (passwordPresets) // For each case
             {
                 case PasswordPresets.Simple: // If the preset is simple
-                    return Generate(lenght, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9", ","); // Generate password
+                    return Generate(length, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9", ","); // Generate password
                 case PasswordPresets.Complex: // If the presete is complex
-                    return Generate(lenght, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,/,é,&,ç,à,@,°,{,},(,),#,&", ","); // Generate password
+                    return Generate(length, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,/,é,&,ç,à,@,°,{,},(,),#,&", ","); // Generate password
                 default:
                     return "";
             }
@@ -109,30 +109,30 @@ namespace LeoCorpLibrary
         /// <summary>
         /// Generates a password asynchronously.
         /// </summary>
-        /// <param name="lenght">Lenght of the password.</param>
+        /// <param name="length">length of the password.</param>
         /// <param name="passwordPresets">The preset used for the password.</param>
         /// <exception cref="Exception"></exception>
         /// <returns>A <see cref="Task{TResult}"/> value.</returns>
-        public static async Task<string> GenerateAsync(int lenght, PasswordPresets passwordPresets)
+        public static async Task<string> GenerateAsync(int length, PasswordPresets passwordPresets)
         {
             switch (passwordPresets) // For each case
             {
                 case PasswordPresets.Simple: // If the preset is simple
-                    return await GenerateAsync(lenght, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9", ","); // Generate password
+                    return await GenerateAsync(length, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9", ","); // Generate password
                 case PasswordPresets.Complex: // If the presete is complex
-                    return await GenerateAsync(lenght, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,/,é,&,ç,à,@,°,{,},(,),#,&", ","); // Generate password
+                    return await GenerateAsync(length, "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,/,é,&,ç,à,@,°,{,},(,),#,&", ","); // Generate password
                 default:
                     return "";
             }
         }
 
-        public static List<string> GenerateAmount(int amount, int lenght, string chars, string separator)
+        public static List<string> GenerateAmount(int amount, int length, string chars, string separator)
 		{
             List<string> result = new List<string>();
 
             for (int i = 0; i < amount; i++)
 			{
-                result.Add(Generate(lenght, chars, separator)); // Add password
+                result.Add(Generate(length, chars, separator)); // Add password
 			}
 
             return result; // Return all generated passwords

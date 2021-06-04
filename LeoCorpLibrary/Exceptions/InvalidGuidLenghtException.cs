@@ -30,33 +30,33 @@ using System.Threading.Tasks;
 namespace LeoCorpLibrary.Exceptions
 {
     /// <summary>
-    /// Is thrown when the lenght of a Guid is invalid
+    /// Is thrown when the length of a Guid is invalid
     /// </summary>
-    public class InvalidGuidLenghtException : Exception
+    public class InvalidGuidlengthException : Exception
     {
         /// <summary>
-        /// Initialize a new instance of the class <see cref="InvalidGuidLenghtException"/>.
+        /// Initialize a new instance of the class <see cref="InvalidGuidlengthException"/>.
         /// </summary>
-        public InvalidGuidLenghtException()
+        public InvalidGuidlengthException()
         {
 
         }
 
         /// <summary>
-        /// Initialize a new instance of the class <see cref="InvalidGuidLenghtException"/> with a specified error message.
+        /// Initialize a new instance of the class <see cref="InvalidGuidlengthException"/> with a specified error message.
         /// </summary>
         /// <param name="message">Message of the error</param>
-        public InvalidGuidLenghtException(string message) : base(message)
+        public InvalidGuidlengthException(string message) : base(message)
         {
 
         }
 
         /// <summary>
-        /// Initialize a new instance of the class <see cref="InvalidGuidLenghtException"/> with a specified error message.
+        /// Initialize a new instance of the class <see cref="InvalidGuidlengthException"/> with a specified error message.
         /// </summary>
         /// <param name="message">Message of the error</param>
         /// <param name="innerException">The inner exception that cause this exception.</param>
-        public InvalidGuidLenghtException(string message, Exception innerException) : base(message, innerException)
+        public InvalidGuidlengthException(string message, Exception innerException) : base(message, innerException)
         {
 
         }

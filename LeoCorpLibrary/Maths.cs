@@ -303,34 +303,34 @@ namespace LeoCorpLibrary
             /// <summary>
             /// Allows you to get the volume of a pyramid.
             /// </summary>
-            /// <param name="lenght">Lenght of the pyramid.</param>
+            /// <param name="length">length of the pyramid.</param>
             /// <param name="width">Width of the pyramid.</param>
             /// <param name="height">Height of the pyramid.</param>
             /// <returns>A <see cref="double"/> value.</returns>
-            public static double GetVolume(double lenght, double width, double height)
+            public static double GetVolume(double length, double width, double height)
             {
-                return lenght * width * (height / 3); // Retourner le résultat
+                return length * width * (height / 3); // Retourner le résultat
             }
 
             /// <summary>
             /// Allows you to get the height of a pyramid.
             /// </summary>
             /// <param name="width">Width of the pyramid.</param>
-            /// <param name="lenght">Lenght of the pyramid.</param>
+            /// <param name="length">length of the pyramid.</param>
             /// <param name="volume">Volume.</param>
             /// <returns>A <see cref="double"/> value.</returns>
-            public static double GetHeight(double width, double lenght, double volume)
+            public static double GetHeight(double width, double length, double volume)
             {
-                return 3 * (volume / (width * lenght)); // Retourner le résultat
+                return 3 * (volume / (width * length)); // Retourner le résultat
             }
 
             /// <summary>
-            /// Allows you to get the lenght of the base of a pyramid.
+            /// Allows you to get the length of the base of a pyramid.
             /// </summary>
             /// <param name="areaBase">Base's area.</param>
             /// <param name="width">Width of the pyramid.</param>
             /// <returns>A <see cref="double"/> value.</returns>
-            public static double GetLenghtBase(double areaBase, double width)
+            public static double GetlengthBase(double areaBase, double width)
             {
                 return areaBase / width; // Retourner le résultat
             }
@@ -339,11 +339,11 @@ namespace LeoCorpLibrary
             /// Allows you to get hte width of the base of a pyramid.
             /// </summary>
             /// <param name="areaBase">Base's are.</param>
-            /// <param name="lenght">Lenght of the pyramid.</param>
+            /// <param name="length">length of the pyramid.</param>
             /// <returns>A <see cref="double"/> value.</returns>
-            public static double GetWidthBase(double areaBase, double lenght)
+            public static double GetWidthBase(double areaBase, double length)
             {
-                return areaBase / lenght; // Retourner le résultat
+                return areaBase / length; // Retourner le résultat
             }
         }
 
@@ -356,11 +356,11 @@ namespace LeoCorpLibrary
             /// Allows you to get a rectangle's diagonal.
             /// </summary>
             /// <param name="width">The width of the rectangle.</param>
-            /// <param name="lenght">The lenght of the rectangle.</param>
+            /// <param name="length">The length of the rectangle.</param>
             /// <returns>A <see cref="double"/> value.</returns>
-            public static double GetDiagonal(double width, double lenght)
+            public static double GetDiagonal(double width, double length)
             {
-                return Math.Sqrt(width * width + lenght * lenght); // Get diagonal
+                return Math.Sqrt(width * width + length * length); // Get diagonal
             }
         }
 
@@ -372,7 +372,7 @@ namespace LeoCorpLibrary
             /// <summary>
             /// Allows you to get the perimeter of diamond from it's side.
             /// </summary>
-            /// <param name="side">The lenght of the side of the diamond.</param>
+            /// <param name="side">The length of the side of the diamond.</param>
             /// <returns>A <see cref="double"/> value.</returns>
             public static double GetPerimeter(double side)
             {
@@ -399,7 +399,7 @@ namespace LeoCorpLibrary
             /// <summary>
             /// Allows you to get the perimeter of an hexagon from it's side.
             /// </summary>
-            /// <param name="side">The lenght of the side of the hexagon.</param>
+            /// <param name="side">The length of the side of the hexagon.</param>
             /// <returns>A <see cref="double"/> value.</returns>
             public static double GetPerimeter(double side)
             {
@@ -409,7 +409,7 @@ namespace LeoCorpLibrary
             /// <summary>
             /// Allows you to get the area of an hexagon from it's side.
             /// </summary>
-            /// <param name="side">The lenght of the side of the hexagon.</param>
+            /// <param name="side">The length of the side of the hexagon.</param>
             /// <returns>A <see cref="double"/> value.</returns>
             public static double GetArea(double side)
             {

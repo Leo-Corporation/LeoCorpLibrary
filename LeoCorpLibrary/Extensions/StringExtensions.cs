@@ -41,7 +41,7 @@ namespace LeoCorpLibrary.Extensions
         /// <returns>A <see cref="int"/> value.</returns>
         public static int CountWords(this string value)
         {
-            if (value.Length <= 0) // If the lenght of the string is less or equal to 0
+            if (value.Length <= 0) // If the length of the string is less or equal to 0
             {
                 throw new ArgumentException("The 'value' argument cannot be null or empty"); // Error
             }
@@ -58,7 +58,7 @@ namespace LeoCorpLibrary.Extensions
         /// <returns>A <see cref="int"/> value.</returns>
         public static int CountWords(this string value, string[] wordSeparator)
         {
-            if (value.Length <= 0) // If the lenght of the string is less or equal to 0
+            if (value.Length <= 0) // If the length of the string is less or equal to 0
             {
                 throw new ArgumentException("The 'value' argument cannot be null or empty"); // Error
             }
@@ -105,7 +105,7 @@ namespace LeoCorpLibrary.Extensions
         }
 
         /// <summary>
-        /// Uppers letter(s) of a specified string from a starting postion and a lenght.
+        /// Uppers letter(s) of a specified string from a starting postion and a length.
         /// </summary>
         /// <param name="s">The <see cref="string"/>.</param>
         /// <param name="startIndex">The index where the letter(s) should be uppered.</param>
