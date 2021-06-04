@@ -495,6 +495,31 @@ namespace LeoCorpLibrary.Core
                 return true; // Return true
             }
         }
+
+        /// <summary>
+        /// Checks if your program has the permission to write a specific directory.
+        /// </summary>
+        /// <param name="filePath">The path to the directory.</param>
+        /// <returns>A <see cref="bool"/> value.</returns>
+        public static bool IsDirectoryHasPermission(string filePath)
+        {
+            if (!Directory.Exists(filePath))
+            {
+                throw new DirectoryNotFoundException("The directory does not exist or is invalid.");
+            }
+
+            try
+            {
+                Directory.CreateDirectory($@"{filePath}\LeoCorpLibraryTest");
+                Directory.Delete($@"{filePath}\LeoCorpLibraryTest");
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 
     /// <summary>
