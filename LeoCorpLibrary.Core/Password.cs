@@ -124,6 +124,84 @@ namespace LeoCorpLibrary.Core
                     return "";
             }
         }
+
+        /// <summary>
+        /// Generates a specifed amount of passwords.
+        /// </summary>
+        /// <param name="amount">The number of passwords to generate.</param>
+        /// <param name="length">The length of passwords.</param>
+        /// <param name="chars">Characters that can be in the generated password.</param>
+        /// <param name="separator">Separator of the characters.</param>
+        /// <returns>A <see cref="List{T}"/> of <see cref="string"/>.</returns>
+        public static List<string> GenerateAmount(int amount, int length, string chars, string separator)
+        {
+            List<string> result = new List<string>();
+
+            for (int i = 0; i < amount; i++)
+            {
+                result.Add(Generate(length, chars, separator)); // Add password
+            }
+
+            return result; // Return all generated passwords
+        }
+
+        /// <summary>
+        /// Generates a specified amount of passwords asynchronously.
+        /// </summary>
+        /// <param name="amount">The number of passwords to generate.</param>
+        /// <param name="length">The length of passwords.</param>
+        /// <param name="chars">Characters that can be in the generated password.</param>
+        /// <param name="separator">Separator of the characters.</param>
+        /// <returns>A <see cref="List{T}"/> of <see cref="string"/> (<see cref="Task{TResult}"/>).</returns>
+        public static async Task<List<string>> GenerateAmountAsync(int amount, int length, string chars, string separator)
+        {
+            List<string> result = new List<string>();
+
+            for (int i = 0; i < amount; i++)
+            {
+                result.Add(await GenerateAsync(length, chars, separator)); // Add password
+            }
+
+            return result; // Return all generated passwords
+        }
+
+        /// <summary>
+        /// Generates a specified amount of passwords.
+        /// </summary>
+        /// <param name="amount">The number of passwords to generate.</param>
+        /// <param name="length">The length of passwords.</param>
+        /// <param name="passwordPresets">The preset used for the password.</param>
+        /// <returns>A <see cref="List{T}"/> of <see cref="string"/>.</returns>
+        public static List<string> GenerateAmount(int amount, int length, PasswordPresets passwordPresets)
+        {
+            List<string> result = new List<string>();
+
+            for (int i = 0; i < amount; i++)
+            {
+                result.Add(Generate(length, passwordPresets)); // Add password
+            }
+
+            return result; // Return all generated passwords
+        }
+
+        /// <summary>
+        /// Generates a specified amount of passwords asynchronously.
+        /// </summary>
+        /// <param name="amount">The number of passwords to generate.</param>
+        /// <param name="length">The length of passwords.</param>
+        /// <param name="passwordPresets">The preset used for the password.</param>
+        /// <returns>A <see cref="List{T}"/> of <see cref="string"/> (<see cref="Task{TResult}"/>).</returns>
+        public static async Task<List<string>> GenerateAmountAsync(int amount, int length, PasswordPresets passwordPresets)
+        {
+            List<string> result = new List<string>();
+
+            for (int i = 0; i < amount; i++)
+            {
+                result.Add(await GenerateAsync(length, passwordPresets)); // Add password
+            }
+
+            return result; // Return all generated passwords
+        }
     }
 
     /// <summary>
