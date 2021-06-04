@@ -24,6 +24,7 @@ SOFTWARE.
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -137,6 +138,18 @@ namespace LeoCorpLibrary
 
             return result; // Return all generated passwords
 		}
+
+        public static List<string> GenerateAmount(int amount, int length, PasswordPresets passwordPresets)
+		{
+            List<string> result = new List<string>();
+
+            for (int i = 0; i < amount; i++)
+{
+                result.Add(Generate(length, passwordPresets)); // Add password
+            }
+
+            return result; // Return all generated passwords
+        }
     }
 
     /// <summary>
