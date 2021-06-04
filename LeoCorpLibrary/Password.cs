@@ -125,6 +125,18 @@ namespace LeoCorpLibrary
                     return "";
             }
         }
+
+        public static List<string> GenerateAmount(int amount, int lenght, string chars, string separator)
+		{
+            List<string> result = new List<string>();
+
+            for (int i = 0; i < amount; i++)
+			{
+                result.Add(Generate(lenght, chars, separator)); // Add password
+			}
+
+            return result; // Return all generated passwords
+		}
     }
 
     /// <summary>
