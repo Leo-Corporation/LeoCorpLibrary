@@ -414,25 +414,25 @@
             <param name="message">Message of the error.</param>
             <param name="innerException">The inner exception that cause this exception.</param>
         </member>
-        <member name="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidLenghtException">
+        <member name="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidlengthException">
             <summary>
-            Is thrown when the lenght of a Guid is invalid
+            Is thrown when the length of a Guid is invalid
             </summary>
         </member>
-        <member name="M:LeoCorpLibrary.Core.Exceptions.InvalidGuidLenghtException.#ctor">
+        <member name="M:LeoCorpLibrary.Core.Exceptions.InvalidGuidlengthException.#ctor">
             <summary>
-            Initialize a new instance of the class <see cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidLenghtException"/>.
+            Initialize a new instance of the class <see cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidlengthException"/>.
             </summary>
         </member>
-        <member name="M:LeoCorpLibrary.Core.Exceptions.InvalidGuidLenghtException.#ctor(System.String)">
+        <member name="M:LeoCorpLibrary.Core.Exceptions.InvalidGuidlengthException.#ctor(System.String)">
             <summary>
-            Initialize a new instance of the class <see cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidLenghtException"/> with a specified error message.
+            Initialize a new instance of the class <see cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidlengthException"/> with a specified error message.
             </summary>
             <param name="message">Message of the error</param>
         </member>
-        <member name="M:LeoCorpLibrary.Core.Exceptions.InvalidGuidLenghtException.#ctor(System.String,System.Exception)">
+        <member name="M:LeoCorpLibrary.Core.Exceptions.InvalidGuidlengthException.#ctor(System.String,System.Exception)">
             <summary>
-            Initialize a new instance of the class <see cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidLenghtException"/> with a specified error message.
+            Initialize a new instance of the class <see cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidlengthException"/> with a specified error message.
             </summary>
             <param name="message">Message of the error</param>
             <param name="innerException">The inner exception that cause this exception.</param>
@@ -572,8 +572,8 @@
             <summary>
             Generates a new Guid and convert it's value to a string value.
             </summary>
-            <param name="lenght">Lenght of the Guid.</param>
-            <exception cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidLenghtException"></exception>
+            <param name="length">length of the Guid.</param>
+            <exception cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidlengthException"></exception>
             <returns>A <see cref="T:System.String"/> value.</returns>
         </member>
         <member name="M:LeoCorpLibrary.Core.GuidGenerator.Generate(System.String)">
@@ -589,7 +589,7 @@
             Generates a new Guid from <see cref="T:LeoCorpLibrary.Core.GuidGeneratorParameters"/>.
             </summary>
             <param name="guidGeneratorParameters">Parameters of the Guid Generation.</param>
-            <exception cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidLenghtException"></exception>
+            <exception cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidlengthException"></exception>
             <returns>A <see cref="T:System.String"/> value.</returns>
         </member>
         <member name="M:LeoCorpLibrary.Core.GuidGenerator.Generate(System.String,LeoCorpLibrary.Core.GuidGeneratorParameters)">
@@ -599,7 +599,7 @@
             <param name="fromString">Generate the guid from a specified <see cref="T:System.String"/>.</param>
             <param name="guidGeneratorParameters">Parameters of the Guid Generation.</param>
             <exception cref="T:System.ArgumentNullException"></exception>
-            <exception cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidLenghtException"></exception>
+            <exception cref="T:LeoCorpLibrary.Core.Exceptions.InvalidGuidlengthException"></exception>
             <returns>A <see cref="T:System.String"/> value.</returns>
         </member>
         <member name="T:LeoCorpLibrary.Core.GuidGeneratorParameters">
@@ -612,9 +612,9 @@
             The constructor for <see cref="T:LeoCorpLibrary.Core.GuidGeneratorParameters"/>.
             </summary>
         </member>
-        <member name="P:LeoCorpLibrary.Core.GuidGeneratorParameters.Lenght">
+        <member name="P:LeoCorpLibrary.Core.GuidGeneratorParameters.length">
             <summary>
-            Lenght of the Guid to generate.
+            length of the Guid to generate.
             </summary>
         </member>
         <member name="P:LeoCorpLibrary.Core.GuidGeneratorParameters.WithHyphens">
@@ -772,7 +772,7 @@
             <summary>
             Allows you to get the volume of a pyramid.
             </summary>
-            <param name="lenght">Lenght of the pyramid.</param>
+            <param name="length">length of the pyramid.</param>
             <param name="width">Width of the pyramid.</param>
             <param name="height">Height of the pyramid.</param>
             <returns>A <see cref="T:System.Double"/> value.</returns>
@@ -782,13 +782,13 @@
             Allows you to get the height of a pyramid.
             </summary>
             <param name="width">Width of the pyramid.</param>
-            <param name="lenght">Lenght of the pyramid.</param>
+            <param name="length">length of the pyramid.</param>
             <param name="volume">Volume.</param>
             <returns>A <see cref="T:System.Double"/> value.</returns>
         </member>
-        <member name="M:LeoCorpLibrary.Core.Maths.Pyramid.GetLenghtBase(System.Double,System.Double)">
+        <member name="M:LeoCorpLibrary.Core.Maths.Pyramid.GetlengthBase(System.Double,System.Double)">
             <summary>
-            Allows you to get the lenght of the base of a pyramid.
+            Allows you to get the length of the base of a pyramid.
             </summary>
             <param name="areaBase">Base's area.</param>
             <param name="width">Width of the pyramid.</param>
@@ -799,7 +799,7 @@
             Allows you to get hte width of the base of a pyramid.
             </summary>
             <param name="areaBase">Base's are.</param>
-            <param name="lenght">Lenght of the pyramid.</param>
+            <param name="length">length of the pyramid.</param>
             <returns>A <see cref="T:System.Double"/> value.</returns>
         </member>
         <member name="T:LeoCorpLibrary.Core.NetworkConnection">
@@ -848,7 +848,7 @@
             <summary>
             Generates a password.
             </summary>
-            <param name="lenght">Lenght of the password.</param>
+            <param name="length">length of the password.</param>
             <param name="chars">Characters that can be in the generated password.</param>
             <param name="separator">Separator of the characters.</param>
             <exception cref="T:System.Exception"></exception>
@@ -858,7 +858,7 @@
             <summary>
             Generates a password asynchronously.
             </summary>
-            <param name="lenght">Lenght of the password.</param>
+            <param name="length">length of the password.</param>
             <param name="chars">Characters that can be in the generated password.</param>
             <param name="separator">Separator of the characters.</param>
             <exception cref="T:System.Exception"></exception>
@@ -868,7 +868,7 @@
             <summary>
             Generates a password.
             </summary>
-            <param name="lenght">Lenght of the password.</param>
+            <param name="length">length of the password.</param>
             <param name="passwordPresets">The preset used for the password.</param>
             <exception cref="T:System.Exception"></exception>
             <returns>A <see cref="T:System.String"/> value.</returns>
@@ -877,7 +877,7 @@
             <summary>
             Generates a password asynchronously.
             </summary>
-            <param name="lenght">Lenght of the password.</param>
+            <param name="length">length of the password.</param>
             <param name="passwordPresets">The preset used for the password.</param>
             <exception cref="T:System.Exception"></exception>
             <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> value.</returns>
