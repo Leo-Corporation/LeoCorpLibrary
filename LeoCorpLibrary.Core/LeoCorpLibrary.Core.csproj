@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>3.7.0.2106</Version>
+    <Version>3.7.1.2106</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,7 +14,7 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 3.7.0.2106
+    <PackageReleaseNotes>Version 3.7.1.2106
 - Added XML documentation
 - Added the possibility to get the DPI of the screen for WinForms (#212)
 - Added the possibility to get the DPI of the screen for WPF (#212)
@@ -25,8 +25,9 @@
 - Added the possibility to generate multiple passwords asynchronously (#215)
 - Added the possibility to check permissions of a directory (#216)
 - Fixed an issue when logging text to a file in a new directory, an error is thrown (#214)
-- Fixed typo issue: "lenght" to "length"</PackageReleaseNotes>
-    <AssemblyVersion>3.7.0.2106</AssemblyVersion>
+- Fixed typo issue: "lenght" to "length"
+- Fixed issues with names in lower case</PackageReleaseNotes>
+    <AssemblyVersion>3.7.1.2106</AssemblyVersion>
     <Copyright>© 2021</Copyright>
   </PropertyGroup>
 
