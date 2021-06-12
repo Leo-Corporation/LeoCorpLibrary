@@ -39,16 +39,16 @@ namespace LeoCorpLibrary
 		/// </summary>
 		public GuidGeneratorParameters()
 		{
-			length = 32; // Set the default value
+			Length = 32; // Set the default value
 			WithHyphens = true; // Set the default value
 			WithBraces = false; // Set the default value
 			UseUpperCaseOnly = false; // Set the default value
 		}
 
 		/// <summary>
-		/// length of the Guid to generate.
+		/// Length of the Guid to generate.
 		/// </summary>
-		public int length { get; set; }
+		public int Length { get; set; }
 
 		/// <summary>
 		/// Include or not hyphens, such as: <c>00000000-0000-0000-0000-00000000</c>
