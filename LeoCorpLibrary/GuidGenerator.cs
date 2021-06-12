@@ -49,13 +49,13 @@ namespace LeoCorpLibrary
 		/// Generates a new Guid and convert it's value to a string value.
 		/// </summary>
 		/// <param name="length">length of the Guid.</param>
-		/// <exception cref="InvalidGuidlengthException"></exception>
+		/// <exception cref="InvalidGuidLengthException"></exception>
 		/// <returns>A <see cref="string"/> value.</returns>
 		public static string Generate(int length)
 		{
 			if (length <= 0 || length > 32) // If the length is invalid
 			{
-				throw new InvalidGuidlengthException("The length of a Guid must be between 0 and 32."); // Error
+				throw new InvalidGuidLengthException("The length of a Guid must be between 0 and 32."); // Error
 			}
 			return Guid.NewGuid().ToString("N").Substring(0, length); // Return the value
 		}
@@ -82,54 +82,54 @@ namespace LeoCorpLibrary
 		/// Generates a new Guid from <see cref="GuidGeneratorParameters"/>.
 		/// </summary>
 		/// <param name="guidGeneratorParameters">Parameters of the Guid Generation.</param>
-		/// <exception cref="InvalidGuidlengthException"></exception>
+		/// <exception cref="InvalidGuidLengthException"></exception>
 		/// <returns>A <see cref="string"/> value.</returns>
 		public static string Generate(GuidGeneratorParameters guidGeneratorParameters)
 		{
 			Guid guid = Guid.NewGuid();
 			string result = guid.ToString();
 
-			if (guidGeneratorParameters.length <= 0 || guidGeneratorParameters.length > 32) // If the length is invalid
+			if (guidGeneratorParameters.Length <= 0 || guidGeneratorParameters.Length > 32) // If the length is invalid
 			{
-				throw new InvalidGuidlengthException("The length of a Guid must be between 0 and 32."); // Error
+				throw new InvalidGuidLengthException("The length of a Guid must be between 0 and 32."); // Error
 			}
 
 			if (guidGeneratorParameters.UseUpperCaseOnly)
 			{
 				if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
 				{
-					result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.length).ToUpper() + "}";
+					result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.Length).ToUpper() + "}";
 				}
 				else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
 				{
-					result = guid.ToString().Substring(0, guidGeneratorParameters.length).ToUpper();
+					result = guid.ToString().Substring(0, guidGeneratorParameters.Length).ToUpper();
 				}
 				else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
 				{
-					result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.length).ToUpper() + "}";
+					result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.Length).ToUpper() + "}";
 				}
 				else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
 				{
-					result = guid.ToString("N").Substring(0, guidGeneratorParameters.length).ToUpper();
+					result = guid.ToString("N").Substring(0, guidGeneratorParameters.Length).ToUpper();
 				}
 			}
 			else
 			{
 				if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
 				{
-					result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.length) + "}";
+					result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.Length) + "}";
 				}
 				else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
 				{
-					result = guid.ToString().Substring(0, guidGeneratorParameters.length);
+					result = guid.ToString().Substring(0, guidGeneratorParameters.Length);
 				}
 				else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
 				{
-					result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.length) + "}";
+					result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.Length) + "}";
 				}
 				else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
 				{
-					result = guid.ToString("N").Substring(0, guidGeneratorParameters.length);
+					result = guid.ToString("N").Substring(0, guidGeneratorParameters.Length);
 				}
 			}
 
@@ -142,7 +142,7 @@ namespace LeoCorpLibrary
 		/// <param name="fromString">Generate the guid from a specified <see cref="string"/>.</param>
 		/// <param name="guidGeneratorParameters">Parameters of the Guid Generation.</param>
 		/// <exception cref="ArgumentNullException"></exception>
-		/// <exception cref="InvalidGuidlengthException"></exception>
+		/// <exception cref="InvalidGuidLengthException"></exception>
 		/// <returns>A <see cref="string"/> value.</returns>
 		public static string Generate(string fromString, GuidGeneratorParameters guidGeneratorParameters)
 		{
@@ -151,9 +151,9 @@ namespace LeoCorpLibrary
 				throw new ArgumentNullException("'fromString' is null or empty.");
 			}
 
-			if (guidGeneratorParameters.length <= 0 || guidGeneratorParameters.length > 32) // If the length is invalid
+			if (guidGeneratorParameters.Length <= 0 || guidGeneratorParameters.Length > 32) // If the length is invalid
 			{
-				throw new InvalidGuidlengthException("The length of a Guid must be between 0 and 32."); // Error
+				throw new InvalidGuidLengthException("The length of a Guid must be between 0 and 32."); // Error
 			}
 
 			MD5 mD5 = MD5.Create();
@@ -166,38 +166,38 @@ namespace LeoCorpLibrary
 			{
 				if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
 				{
-					result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.length).ToUpper() + "}";
+					result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.Length).ToUpper() + "}";
 				}
 				else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
 				{
-					result = guid.ToString().Substring(0, guidGeneratorParameters.length).ToUpper();
+					result = guid.ToString().Substring(0, guidGeneratorParameters.Length).ToUpper();
 				}
 				else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
 				{
-					result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.length).ToUpper() + "}";
+					result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.Length).ToUpper() + "}";
 				}
 				else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
 				{
-					result = guid.ToString("N").Substring(0, guidGeneratorParameters.length).ToUpper();
+					result = guid.ToString("N").Substring(0, guidGeneratorParameters.Length).ToUpper();
 				}
 			}
 			else
 			{
 				if (guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
 				{
-					result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.length) + "}";
+					result = "{" + guid.ToString("N").Substring(0, guidGeneratorParameters.Length) + "}";
 				}
 				else if (!guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
 				{
-					result = guid.ToString().Substring(0, guidGeneratorParameters.length);
+					result = guid.ToString().Substring(0, guidGeneratorParameters.Length);
 				}
 				else if (guidGeneratorParameters.WithBraces && guidGeneratorParameters.WithHyphens)
 				{
-					result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.length) + "}";
+					result = "{" + guid.ToString().Substring(0, guidGeneratorParameters.Length) + "}";
 				}
 				else if (!guidGeneratorParameters.WithBraces && !guidGeneratorParameters.WithHyphens)
 				{
-					result = guid.ToString("N").Substring(0, guidGeneratorParameters.length);
+					result = guid.ToString("N").Substring(0, guidGeneratorParameters.Length);
 				}
 			}
 

@@ -330,7 +330,7 @@ namespace LeoCorpLibrary
 			/// <param name="areaBase">Base's area.</param>
 			/// <param name="width">Width of the pyramid.</param>
 			/// <returns>A <see cref="double"/> value.</returns>
-			public static double GetlengthBase(double areaBase, double width)
+			public static double GetLengthBase(double areaBase, double width)
 			{
 				return areaBase / width; // Retourner le résultat
 			}
