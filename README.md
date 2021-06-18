@@ -7,7 +7,7 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/Leo-Corporation/LABS-Experiences">
+  <a href="https://github.com/Leo-Corporation/LeoCorpLibrary">
     <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
