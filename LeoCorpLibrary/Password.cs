@@ -221,4 +221,35 @@ namespace LeoCorpLibrary
 		/// </summary>
 		Complex
 	}
+
+	/// <summary>
+	/// The password strenght enum.
+	/// </summary>
+	public enum PasswordStrength
+	{
+		/// <summary>
+		/// Very good password strenght.
+		/// </summary>
+		VeryGood,
+
+		/// <summary>
+		/// Good password strenght.
+		/// </summary>
+		Good,
+
+		/// <summary>
+		/// Medium password strenght.
+		/// </summary>
+		Medium,
+
+		/// <summary>
+		/// Low password strenght.
+		/// </summary>
+		Low,
+
+		/// <summary>
+		/// Unknown password strenght.
+		/// </summary>
+		Unknown
+	}
 }
