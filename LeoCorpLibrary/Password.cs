@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using LeoCorpLibrary.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -203,6 +204,147 @@ namespace LeoCorpLibrary
 			}
 
 			return result; // Return all generated passwords
+		}
+
+		internal static string Numbers => "0,1,2,3,4,5,6,7,8,8,9";
+		internal static string SpecialCaracters => ";,:,!,/,§,ù,*,$,%,µ,£,),=,+,*,-,&,é,',(,-,è,_,ç,<,>,?,^,¨";
+		internal static string[] ForbidenCaracters => new string[] { "123", "456", "789", "password", "mdp", "pswr", "000", "admin", "111", "222", "333", "444", "555", "666", "777", "888", "999" };
+		internal static string LowerCaseLetters => "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+		internal static string UpperCaseLetters => "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
+
+		/// <summary>
+		/// Checks if a string contains lower cases.
+		/// </summary>
+		/// <param name="s"></param>
+		/// <returns>A <see cref="bool"/> value.</returns>
+		internal static bool ContainsLowerCases(this string s)
+		{
+			string[] lowerCase = LowerCaseLetters.Split(new string[] { "," }, StringSplitOptions.None); // Lower case
+
+			for (int i = 0; i < lowerCase.Length; i++)
+			{
+				for (int j = 0; j < s.Length; j++)
+				{
+					if (s[j].ToString().Contains(lowerCase[i]))
+					{
+						return true; // Return
+					}
+				}
+			}
+
+			return false; // Return
+		}
+
+		/// <summary>
+		/// Checks if a string contains upper cases.
+		/// </summary>
+		/// <param name="s"></param>
+		/// <returns>A <see cref="bool"/> value.</returns>
+		internal static bool ContainsUpperCases(this string s)
+		{
+			string[] upperCase = UpperCaseLetters.Split(new string[] { "," }, StringSplitOptions.None); // Upper case
+
+			for (int i = 0; i < upperCase.Length; i++)
+			{
+				for (int j = 0; j < s.Length; j++)
+				{
+					if (s[j].ToString().Contains(upperCase[i]))
+					{
+						return true; // Return
+					}
+				}
+			}
+
+			return false; // Return
+		}
+
+		/// <summary>
+		/// Gets the password strenght of a password.
+		/// </summary>
+		/// <param name="password">The password.</param>
+		/// <returns>A <see cref="PasswordStrength"/> enum.</returns>
+		public static PasswordStrength GetPasswordStrength(string password)
+		{
+			int lenght = password.Length; // Lenght
+			int pswrScore = 0; // Score
+
+			if (lenght == 0)
+			{
+				return PasswordStrength.Unknown;
+			}
+
+			if (lenght >= 0 && lenght <= 5) // If the lenght of the password is between 0 & 5
+			{
+				pswrScore += 1; // Add 1
+			}
+			else if (lenght >= 6 && lenght <= 10) // If the lenght of the password is between 6 & 10
+			{
+				pswrScore += 2; // Add 2
+			}
+			else if (lenght >= 11 && lenght <= 15) // If the lenght of the password is between 11 & 15
+			{
+				pswrScore += 5; // Add 5
+			}
+			else if (lenght > 15) // If the lenght of the password is higher than 15
+			{
+				pswrScore += 10; // Add 10
+			}
+
+			for (int i = 0; i < Numbers.Length; i++)
+			{
+				for (int j = 0; j < lenght; j++)
+				{
+					pswrScore += password[j].ToString().Contains(Numbers[i]) ? 1 : 0;
+				}
+			}
+
+			for (int i = 0; i < SpecialCaracters.Length; i++)
+			{
+				for (int j = 0; j < lenght; j++)
+				{
+					pswrScore += password[j].ToString().Contains(SpecialCaracters[i]) ? 4 : 0;
+				}
+			}
+
+			for (int i = 0; i < ForbidenCaracters.Length; i++)
+			{
+				pswrScore -= password.Contains(ForbidenCaracters[i]) ? 10 : 0;
+			}
+
+			if (password.ContainsLowerCases() && password.ContainsUpperCases()) // If there is upper and lower cases
+			{
+				pswrScore += 5; // Add 2
+			}
+			else
+			{
+				pswrScore -= 5; // Sub 5
+			}
+
+			if (password.HasRepeatedCharacters())
+			{
+				pswrScore -= 5; // Sub 5
+			}
+
+			if (pswrScore < 2)
+			{
+				return PasswordStrength.Low; // Return
+			}
+			else if (pswrScore >= 3 && pswrScore <= 7)
+			{
+				return PasswordStrength.Medium; // Return
+			}
+			else if (pswrScore >= 8 && pswrScore <= 12)
+			{
+				return PasswordStrength.Good; // Return
+			}
+			else if (pswrScore >= 13)
+			{
+				return PasswordStrength.VeryGood; // Return
+			}
+			else
+			{
+				return PasswordStrength.Good; // Return
+			}
 		}
 	}
 
