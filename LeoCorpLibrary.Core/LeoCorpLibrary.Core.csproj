@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>3.7.1.2106</Version>
+    <Version>3.8.0.2107-pre1</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,20 +14,13 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 3.7.1.2106
+    <PackageReleaseNotes>Version 3.8.0.2107-pre1
 - Added XML documentation
-- Added the possibility to get the DPI of the screen for WinForms (#212)
-- Added the possibility to get the DPI of the screen for WPF (#212)
-- Added the possibility to get the scale of the screen for WinForms (#213)
-- Added the possibility to get the scale of the screen for WPF (#213)
-- Added the possibility to generate multiple passwords (#215)
-- Added a variation of the possibility to generate multiple passwords (#215)
-- Added the possibility to generate multiple passwords asynchronously (#215)
-- Added the possibility to check permissions of a directory (#216)
-- Fixed an issue when logging text to a file in a new directory, an error is thrown (#214)
-- Fixed typo issue: "lenght" to "length"
-- Fixed issues with names in lower case</PackageReleaseNotes>
-    <AssemblyVersion>3.7.1.2106</AssemblyVersion>
+- Added to SplitLines() new splitters: \r, \r\n (#224)
+- Added PasswordStrength enum (#225)
+- Added HasRepeatedCharacters() method
+- Added Passliss' password strength system (#225)</PackageReleaseNotes>
+    <AssemblyVersion>3.8.0.2107</AssemblyVersion>
     <Copyright>© 2021</Copyright>
   </PropertyGroup>
 
