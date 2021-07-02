@@ -166,6 +166,6 @@ namespace LeoCorpLibrary.Core.Extensions
 		/// </summary>
 		/// <param name="s">The<see cref="string"/>.</param>
 		/// <returns>A <see cref="string"/>[] value.</returns>
-		public static string[] SplitLines(this string s) => s.Split(new string[] { "\n" }, StringSplitOptions.None);
+		public static string[] SplitLines(this string s) => s.Split(new string[] { "\n", "\r", "\r\n" }, StringSplitOptions.None);
 	}
 }
