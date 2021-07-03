@@ -482,5 +482,21 @@ namespace LeoCorpLibrary.Core
 				return adjacent / Math.Cos(angle); // Return the hypotenuse
 			}
 		}
+
+		/// <summary>
+		/// Class that contains methods for spheres.
+		/// </summary>
+		public static class Sphere
+		{
+			/// <summary>
+			/// Gets the area of a sphere.
+			/// </summary>
+			/// <param name="radius">The radius of the sphere.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetArea(double radius)
+			{
+				return 4 * Math.PI * (radius * radius);
+			}
+		}
 	}
 }
