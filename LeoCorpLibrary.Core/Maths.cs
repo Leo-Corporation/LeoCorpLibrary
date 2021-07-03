@@ -497,6 +497,16 @@ namespace LeoCorpLibrary.Core
 			{
 				return 4 * Math.PI * (radius * radius);
 			}
+
+			/// <summary>
+			/// Gets the volume of a sphere.
+			/// </summary>
+			/// <param name="radius">The radius of the sphere.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetVolume(double radius)
+			{
+				return 4 * Math.PI * (radius * radius * radius) / 3;
+			}
 		}
 	}
 }
