@@ -166,6 +166,16 @@ namespace LeoCorpLibrary.Core.Extensions
 		/// </summary>
 		/// <param name="s">The<see cref="string"/>.</param>
 		/// <returns>A <see cref="string"/>[] value.</returns>
-		public static string[] SplitLines(this string s) => s.Split(new string[] { "\n" }, StringSplitOptions.None);
+		public static string[] SplitLines(this string s) => s.Split(new string[] { "\n", "\r", "\r\n" }, StringSplitOptions.None);
+
+		/// <summary>
+		/// Checks if a letter is being repeated in a <see cref="string"/>.
+		/// </summary>
+		/// <param name="s"></param>
+		/// <returns>A <see cref="bool"/> value.</returns>
+		public static bool HasRepeatedCharacters(this string s)
+		{
+			return !s.Where((c, i) => i >= 2 && s[i - 1] == c && s[i - 2] == c).Any();
+		}
 	}
 }
