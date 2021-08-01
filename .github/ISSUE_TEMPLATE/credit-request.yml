@@ -1,0 +1,41 @@
+name: Credit Request
+description: File a credit request.
+title: "[Credit] "
+labels: [credits]
+body:
+- type: markdown
+  attributes:
+      value: |
+        You are going to create a credit request. You must use LeoCorpLibrary in your project, and prove it.
+- type: input
+  attributes:
+    label: Name
+    description: What is your name?
+    placeholder: Name here
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Website
+    description: What is your website?
+    placeholder: https://leocorporation.dev
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Description
+    description: Describe your project.
+    placeholder: Password generator.
+  validations:
+    required: true
+- type: textarea:
+  attributes:
+    label: Prove that you are using LeoCorpLibrary
+    description: You need to join a proof that you are using LeoCorpLibrary.
+    placeholder: Join a proof (.csproj file, screenshot, etc.)
+  validations:
+    required: true
+- type: markdown
+  attributes:
+      value: |
+        *If some conditions aren't respected, your project will be rejected.*
