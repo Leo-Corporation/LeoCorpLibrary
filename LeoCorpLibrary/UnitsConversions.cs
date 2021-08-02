@@ -29,8 +29,16 @@ using System.Threading.Tasks;
 
 namespace LeoCorpLibrary
 {
+	/// <summary>
+	/// Class that contains methods related to unit conversions.
+	/// </summary>
 	public static class UnitsConversions
 	{
+		/// <summary>
+		/// Converts miles to kilometers.
+		/// </summary>
+		/// <param name="miles">Number of mile(s) to convert.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
 		public static double MilesToKm(double miles) => miles * 1.609344; // Convert
 	}
 }
