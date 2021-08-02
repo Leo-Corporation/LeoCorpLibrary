@@ -7,8 +7,8 @@
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
     <Copyright>© 2021</Copyright>
-    <AssemblyVersion>3.8.0.2107</AssemblyVersion>
-    <FileVersion>3.8.0.2107</FileVersion>
+    <AssemblyVersion>3.9.0.2108</AssemblyVersion>
+    <FileVersion>3.9.0.2108</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
@@ -23,21 +23,18 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.8.0.2107</Version>
+    <Version>3.9.0.2108-pre1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.8.0.2107
-- Added XML documentation
-- Added to SplitLines() new splitters: \r, \r\n (#224)
-- Added PasswordStrength enum (#225)
-- Added HasRepeatedCharacters() method
-- Added Passliss' password strength system (#225)
-- Added the possibility to get the area of a sphere (#226)
-- Added the possibility to get the volume of a sphere (#227)</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 3.9.0.2108-pre1
+- Updated XML Documentation
+- Added the possibility to launch an UWP app (#236)
+- Added the possibility to convert Miles to Kilometers (#237)
+- Added the possibility to convert Kilometers to Miles (#237)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
