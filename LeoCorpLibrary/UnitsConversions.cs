@@ -40,5 +40,7 @@ namespace LeoCorpLibrary
 		/// <param name="miles">Number of mile(s) to convert.</param>
 		/// <returns>A <see cref="double"/> value.</returns>
 		public static double MilesToKm(double miles) => miles * 1.609344; // Convert
+
+		public static double KmToMiles(double kilometers) => kilometers / 1.609344; // Convert
 	}
 }
