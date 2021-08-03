@@ -18,9 +18,9 @@
     <br />
     <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/wiki"><strong>View documentation »</strong></a>
     <br />
-    <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBug%5D+">Report Bug</a>
+    <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBug%5D+">Report Bug</a>
     ·
-    <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=%5BEnhancement%5D+">Request Feature</a>
+    <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=enhancement&template=feature-request.yml&title=%5BEnhancement%5D+">Request Feature</a>
     ·
     <a href="https://www.nuget.org/packages/LeoCorpLibrary/">NuGet</a>
 
