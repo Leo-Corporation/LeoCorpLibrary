@@ -61,5 +61,7 @@ namespace LeoCorpLibrary
 		/// <param name="fahrenheit">Number of Fahrenheit to convert.</param>
 		/// <returns>A <see cref="double"/> value.</returns>
 		public static double FahrenheitToCelsius(double fahrenheit) => (fahrenheit - 32) / 1.8; // Convert
+
+		public static double M3ToLitre(double m3) => m3 * 1000; // Convert
 	}
 }
