@@ -61,5 +61,19 @@ namespace LeoCorpLibrary.Core
 		/// <param name="fahrenheit">Number of Fahrenheit to convert.</param>
 		/// <returns>A <see cref="double"/> value.</returns>
 		public static double FahrenheitToCelsius(double fahrenheit) => (fahrenheit - 32) / 1.8; // Convert
+
+		/// <summary>
+		/// Converts Cubic Meters (m³) to Litre (L).
+		/// </summary>
+		/// <param name="m3">Number of Cubic meter(s) to convert.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double M3ToLitre(double m3) => m3 * 1000; // Convert
+
+		/// <summary>
+		/// Converts Litre (L) to Cubic meters (m³).
+		/// </summary>
+		/// <param name="litre">Number of Litre(s) to convert.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double LitreToM3(double litre) => litre / 1000; // Convert
 	}
 }
