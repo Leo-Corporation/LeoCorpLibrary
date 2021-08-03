@@ -47,5 +47,19 @@ namespace LeoCorpLibrary.Core
 		/// <param name="kilometers">Number of kilometer(s) to convert.</param>
 		/// <returns>A <see cref="double"/> value.</returns>
 		public static double KmToMiles(double kilometers) => kilometers / 1.609344; // Convert
+
+		/// <summary>
+		/// Converts Celsius (°C) to Fahrenhait (°F).
+		/// </summary>
+		/// <param name="celsius">Number of Celsius to convert.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double CelsiusToFahrenheit(double celsius) => celsius * 1.8 + 32; // Convert
+
+		/// <summary>
+		/// Converts Fahrenheit (°F) to Celcius (°C).
+		/// </summary>
+		/// <param name="fahrenheit">Number of Fahrenheit to convert.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double FahrenheitToCelsius(double fahrenheit) => (fahrenheit - 32) / 1.8; // Convert
 	}
 }
