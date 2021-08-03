@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>3.9.0.2108-pre1</Version>
+    <Version>3.9.0.2108-rc1</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,10 +14,12 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 3.9.0.2108-pre1
+    <PackageReleaseNotes>Version 3.9.0.2108-rc1
 - Updated XML Documentation
-- Added the possibility to convert Miles to Kilometers (#237)
-- Added the possibility to convert Kilometers to Miles (#237)</PackageReleaseNotes>
+- Added the possibility to convert °C to °F (#238)
+- Added the possibility to convert °F to °C (#238)
+- Added the possibility to convert m³ to Litre (#239)
+- Added the possibility to convert Litre to m³ (#239)</PackageReleaseNotes>
     <AssemblyVersion>3.9.0.2108</AssemblyVersion>
     <Copyright>© 2021</Copyright>
   </PropertyGroup>
