@@ -16,7 +16,6 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Version 3.9.0.2108-pre1
 - Updated XML Documentation
-- Added the possibility to launch an UWP app (#236)
 - Added the possibility to convert Miles to Kilometers (#237)
 - Added the possibility to convert Kilometers to Miles (#237)</PackageReleaseNotes>
     <AssemblyVersion>3.9.0.2108</AssemblyVersion>
