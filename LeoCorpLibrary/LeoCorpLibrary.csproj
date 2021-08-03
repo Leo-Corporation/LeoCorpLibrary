@@ -23,19 +23,24 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.9.0.2108-rc1</Version>
+    <Version>3.9.0.2108</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.9.0.2108-rc1
-- Updated XML Documentation
+    <PackageReleaseNotes>Version 3.9.0.2108
+- Added the possibility to launch an UWP app (#236)
+
+- Added the possibility to convert Miles to Kilometers (#237)
+
+- Added the possibility to convert Kilometers to Miles (#237)
 - Added the possibility to convert °C to °F (#238)
 - Added the possibility to convert °F to °C (#238)
 - Added the possibility to convert m³ to Litre (#239)
-- Added the possibility to convert Litre to m³ (#239)</PackageReleaseNotes>
+- Added the possibility to convert Litre to m³ (#239)
+- Updated XML Documentation</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
