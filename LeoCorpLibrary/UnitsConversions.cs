@@ -49,5 +49,7 @@ namespace LeoCorpLibrary
 		public static double KmToMiles(double kilometers) => kilometers / 1.609344; // Convert
 
 		public static double CelsiusToFahrenheit(double celsius) => celsius * 1.8 + 32; // Convert
+
+		public static double FahrenheitToCelsius(double fahrenheit) => (fahrenheit - 32) / 1.8; // Convert
 	}
 }
