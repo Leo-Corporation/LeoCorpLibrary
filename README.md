@@ -11,7 +11,7 @@
     <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">LeoCorpLibrary</h3>
+  <h1 align="center">LeoCorpLibrary</h1>
 
   <p align="center">
     A C# library with useful features for .NET Applications.
@@ -56,8 +56,13 @@ There is two variations of LeoCorpLibrary that are available in different platfo
 ## Documentation
 ### Branches
 There is two branches:
-- main ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary)
-- vNext ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary?include_prereleases)
+| Name | Release | Description |
+| :--: | :-----: | :---------: |
+| `main` | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) | Stable versions |
+| `vNext` | ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary?include_prereleases) | Next version of InternetTest (unstable) |
+
+> Note: Other branches can also - of course - exists.
+
 ### Consult documentation
 [Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) to go to the documentation.
 ### Useful links :
