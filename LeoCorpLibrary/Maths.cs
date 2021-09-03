@@ -387,6 +387,17 @@ namespace LeoCorpLibrary
 			{
 				return Math.Sqrt(width * width + length * length); // Get diagonal
 			}
+
+			/// <summary>
+			/// Gets the area of a rectangle
+			/// </summary>
+			/// <param name="width">The width of the rectangle.</param>
+			/// <param name="length">The length of the rectangle.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetArea(double width, double length)
+			{
+				return width * length; // Get area
+			}
 		}
 
 		/// <summary>
