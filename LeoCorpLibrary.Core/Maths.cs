@@ -544,5 +544,13 @@ namespace LeoCorpLibrary.Core
 				return 4 * Math.PI * (radius * radius * radius) / 3;
 			}
 		}
+
+		public static class Cone
+		{
+			public static double GetVolume(double radius, double height)
+			{
+
+			}
+		}
 	}
 }
