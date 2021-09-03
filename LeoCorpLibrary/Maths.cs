@@ -550,5 +550,22 @@ namespace LeoCorpLibrary
 				return 4 * Math.PI * (radius * radius * radius) / 3;
 			}
 		}
+
+		/// <summary>
+		/// Class that contains methods for cones.
+		/// </summary>
+		public static class Cone
+		{
+			/// <summary>
+			/// Gets the volume of cone.
+			/// </summary>
+			/// <param name="radius">The radius of the cone.</param>
+			/// <param name="height">The height of the cone.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetVolume(double radius, double height)
+			{
+				return Math.PI * (radius * radius) * height / 3;
+			}
+		}
 	}
 }
