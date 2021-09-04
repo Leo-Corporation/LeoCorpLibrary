@@ -75,5 +75,19 @@ namespace LeoCorpLibrary.Core
 		/// <param name="litre">Number of Litre(s) to convert.</param>
 		/// <returns>A <see cref="double"/> value.</returns>
 		public static double LitreToM3(double litre) => litre / 1000; // Convert
+
+		/// <summary>
+		/// Converts Feet to Meters.
+		/// </summary>
+		/// <param name="feet">Number of feet to convert.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double FeetToMeters(double feet) => feet / 3.2808399; // Convert
+
+		/// <summary>
+		/// Converts Meters to Feet.
+		/// </summary>
+		/// <param name="meters">Number of meters to convert.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double MetersToFeet(double meters) => meters * 3.2808399; // Convert
 	}
 }
