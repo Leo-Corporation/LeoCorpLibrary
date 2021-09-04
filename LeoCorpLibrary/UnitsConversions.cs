@@ -96,5 +96,12 @@ namespace LeoCorpLibrary
 		/// <param name="pounds">Number of pounds to convert.</param>
 		/// <returns>A <see cref="double"/> value.</returns>
 		public static double PoundsToKilograms(double pounds) => pounds / 2.20462262; // Convert
+
+		/// <summary>
+		/// Converts Kilogram(s) to Pound(s).
+		/// </summary>
+		/// <param name="kg">Number of kilograms to convert.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double KilogramsToPounds(double kg) => kg * 2.20462262; // Convert
 	}
 }
