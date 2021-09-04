@@ -89,5 +89,12 @@ namespace LeoCorpLibrary.Core
 		/// <param name="meters">Number of meters to convert.</param>
 		/// <returns>A <see cref="double"/> value.</returns>
 		public static double MetersToFeet(double meters) => meters * 3.2808399; // Convert
+
+		/// <summary>
+		/// Converts Pound(s) to Kilogram(s).
+		/// </summary>
+		/// <param name="pounds">Number of pounds to convert.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double PoundsToKilograms(double pounds) => pounds / 2.20462262; // Convert
 	}
 }
