@@ -16,7 +16,7 @@
   <p align="center">
     A C# library with useful features for .NET Applications.
     <br />
-    <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/wiki"><strong>View documentation »</strong></a>
+    <a href="https://leocorplibrary.leocorporation.dev/"><strong>View documentation »</strong></a>
     <br />
     <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBug%5D+">Report Bug</a>
     ·
@@ -64,28 +64,28 @@ There is two branches:
 > Note: Other branches can also - of course - exists.
 
 ### Consult documentation
-[Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/) to go to the documentation.
+[Click here](https://leocorplibrary.leocorporation.dev/) to go to the documentation.
 ### Useful links :
 **Get Started**
-- [1. Add the library to a project](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/install-LeoCorpLibrary#1-add-the-library-to-a-project)
-- [2. Start coding](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/install-LeoCorpLibrary#2-start-coding)
+- [1. Add the library to a project](https://leocorplibrary.leocorporation.dev/install-LeoCorpLibrary#1-add-the-library-to-a-project)
+- [2. Start coding](https://leocorplibrary.leocorporation.dev/install-LeoCorpLibrary#2-start-coding)
 
 **Functions**
-* [ColorConverter](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Colors-converter)
-* [Check updates](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Check-for-updates)
-* [Check an internet connection](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Verify-an-internet-connection)
-* [Crypt](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Crypt)
-* [Environment](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Environment)
-* [Extensions](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Extensions)
-* [Generate a Guid](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Generate-a-Guid)
-* [Generate a password](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Generate-a-password)
-* [Load a file](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/load-a-file)
-* [Mathematics functions](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Mathematics-functions)
-* [Save a file](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/Save-in-a-file)
-* [User Interface](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/User-Interface)
+* [ColorConverter](https://leocorplibrary.leocorporation.dev/Colors-converter)
+* [Check updates](https://leocorplibrary.leocorporation.dev/Check-for-updates)
+* [Check an internet connection](https://leocorplibrary.leocorporation.dev/Verify-an-internet-connection)
+* [Crypt](https://leocorplibrary.leocorporation.dev/Crypt)
+* [Environment](https://leocorplibrary.leocorporation.dev/Environment)
+* [Extensions](https://leocorplibrary.leocorporation.dev/Extensions)
+* [Generate a Guid](https://leocorplibrary.leocorporation.dev/Generate-a-Guid)
+* [Generate a password](https://leocorplibrary.leocorporation.dev/Generate-a-password)
+* [Load a file](https://leocorplibrary.leocorporation.dev/load-a-file)
+* [Mathematics functions](https://leocorplibrary.leocorporation.dev/Mathematics-functions)
+* [Save a file](https://leocorplibrary.leocorporation.dev/Save-in-a-file)
+* [User Interface](https://leocorplibrary.leocorporation.dev/User-Interface)
 
 ## How to add LeoCorpLibrary to a project?
-[Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki/install-LeoCorpLibrary#1-add-the-library-to-a-project) to go to the documentation about this topic.
+[Click here](https://leocorplibrary.leocorporation.dev/install-LeoCorpLibrary#1-add-the-library-to-a-project) to go to the documentation about this topic.
 
 ## Roadmap 2021
 Here's LeoCorpLibrary's roadmap:
@@ -109,6 +109,7 @@ Here's what you'll need to contribute to this project:
 ## Projects using LeoCorpLibrary
 ### GitHub
 - [Leo-Corporation / ColorPicker](https://github.com/Leo-Corporation/ColorPicker)
+- [Leo-Corporation / Datalya](https://github.com/Leo-Corporation/Datalya)
 - [Leo-Corporation / Gavilya](https://github.com/Leo-Corporation/Gavilya)
 - [Leo-Corporation / Générateur de mots de passe](https://github.com/Leo-Corporation/Generateur-de-mots-de-passe)
 - [Leo-Corporation / Gerayis](https://github.com/Leo-Corporation/Gerayis)
@@ -117,8 +118,6 @@ Here's what you'll need to contribute to this project:
 - [Leo-Corporation / LABS-ExperimentalConsole](https://github.com/Leo-Corporation/LABS-ExperimentalConsole)
 - [Leo-Corporation / LABS-WPF](https://github.com/Leo-Corporation/LABS-WPF)
 - [Leo-Corporation / Passliss](https://github.com/Leo-Corporation/Passliss)
-### Others
-- GestionBiblio X, édition Ultra by [Léo Corporation](https://leopeyronnet.wixsite.com/leopeyronnetcorp)
 
 [Add your software to this list](https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=ajout+cr%C3%A9dit&template=credit_projet.md&title=%5BCr%C3%A9dit-Projet%5D+)
 ## Badge
@@ -127,4 +126,4 @@ Here's what you'll need to contribute to this project:
 ~~~
 
 ## License
-Projec under the [MIT](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LICENSE.md) license.
+Project under the [MIT](https://github.com/Leo-Corporation/LeoCorpLibrary/blob/master/LICENSE.md) license.
