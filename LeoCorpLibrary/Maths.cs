@@ -218,6 +218,31 @@ namespace LeoCorpLibrary
 				}
 				return result;
 			}
+
+			/// <summary>
+			/// Returns <c>true</c> if a triangle is right.
+			/// </summary>
+			/// <param name="side1">A side of the triangle</param>
+			/// <param name="side2">A side of the triangle</param>
+			/// <param name="side3">A side of the triangle</param>
+			/// <returns>A <see cref="bool"/> value.</returns>
+			public static bool IsRight(double side1, double side2, double side3)
+			{
+				double hypotenuse = GetBiggestNumber(side1, side2, side3); // Get hypotenuse
+
+				if (hypotenuse == side1)
+				{
+					return (side1 * side1) == (side2 * side2) + (side3 * side3); // Pythagorus
+				}
+				else if (hypotenuse == side2)
+				{
+					return (side1 * side2) == (side1 * side1) + (side3 * side3); // Pythagorus
+				}
+				else
+				{
+					return (side3 * side3) == (side2 * side2) + (side1 * side1); // Pythagorus
+				}
+			}
 		}
 
 		/// <summary>
@@ -361,6 +386,17 @@ namespace LeoCorpLibrary
 			public static double GetDiagonal(double width, double length)
 			{
 				return Math.Sqrt(width * width + length * length); // Get diagonal
+			}
+
+			/// <summary>
+			/// Gets the area of a rectangle
+			/// </summary>
+			/// <param name="width">The width of the rectangle.</param>
+			/// <param name="length">The length of the rectangle.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetArea(double width, double length)
+			{
+				return width * length; // Get area
 			}
 		}
 
@@ -512,6 +548,23 @@ namespace LeoCorpLibrary
 			public static double GetVolume(double radius)
 			{
 				return 4 * Math.PI * (radius * radius * radius) / 3;
+			}
+		}
+
+		/// <summary>
+		/// Class that contains methods for cones.
+		/// </summary>
+		public static class Cone
+		{
+			/// <summary>
+			/// Gets the volume of cone.
+			/// </summary>
+			/// <param name="radius">The radius of the cone.</param>
+			/// <param name="height">The height of the cone.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetVolume(double radius, double height)
+			{
+				return Math.PI * (radius * radius) * height / 3;
 			}
 		}
 	}

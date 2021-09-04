@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0</TargetFrameworks>
-    <Version>3.9.0.2108</Version>
+    <Version>3.10.0.2109</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,17 +14,17 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 3.9.0.2108
+    <PackageReleaseNotes>Version 3.10.0.2109
+- Added the possibility to get if a triangle is a right triangle (#246)
+- Added the possibility to get a rectangle's area (#247)
 
-- Added the possibility to convert Miles to Kilometers (#237)
-
-- Added the possibility to convert Kilometers to Miles (#237)
-- Added the possibility to convert °C to °F (#238)
-- Added the possibility to convert °F to °C (#238)
-- Added the possibility to convert m³ to Litre (#239)
-- Added the possibility to convert Litre to m³ (#239)
+- Added the possibility to get a cone's volume (#248)
+- Added the possibility to convert feet to meters (#249)
+- Added the possibility to convert meters to feet (#249)
+- Added the possibility to convert pounds to kilograms (#250)
+- Added the possibility to convert kilograms to pounds (#250)
 - Updated XML Documentation</PackageReleaseNotes>
-    <AssemblyVersion>3.9.0.2108</AssemblyVersion>
+    <AssemblyVersion>3.10.0.2109</AssemblyVersion>
     <Copyright>© 2021</Copyright>
   </PropertyGroup>
 

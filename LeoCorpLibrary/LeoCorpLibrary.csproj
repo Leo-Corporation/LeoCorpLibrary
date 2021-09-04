@@ -7,8 +7,8 @@
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
     <Copyright>© 2021</Copyright>
-    <AssemblyVersion>3.9.0.2108</AssemblyVersion>
-    <FileVersion>3.9.0.2108</FileVersion>
+    <AssemblyVersion>3.10.0.2109</AssemblyVersion>
+    <FileVersion>3.10.0.2109</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
@@ -23,23 +23,22 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.9.0.2108</Version>
+    <Version>3.10.0.2109</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.9.0.2108
-- Added the possibility to launch an UWP app (#236)
+    <PackageReleaseNotes>Version 3.10.0.2109
+- Added the possibility to get if a triangle is a right triangle (#246)
+- Added the possibility to get a rectangle's area (#247)
 
-- Added the possibility to convert Miles to Kilometers (#237)
-
-- Added the possibility to convert Kilometers to Miles (#237)
-- Added the possibility to convert °C to °F (#238)
-- Added the possibility to convert °F to °C (#238)
-- Added the possibility to convert m³ to Litre (#239)
-- Added the possibility to convert Litre to m³ (#239)
+- Added the possibility to get a cone's volume (#248)
+- Added the possibility to convert feet to meters (#249)
+- Added the possibility to convert meters to feet (#249)
+- Added the possibility to convert pounds to kilograms (#250)
+- Added the possibility to convert kilograms to pounds (#250)
 - Updated XML Documentation</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
