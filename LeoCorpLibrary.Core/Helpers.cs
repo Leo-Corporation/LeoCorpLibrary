@@ -24,10 +24,11 @@ SOFTWARE.
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace LeoCorpLibrary
+namespace LeoCorpLibrary.Core
 {
 	/// <summary>
 	/// Contains usefull methods that don't fit in other categories.
