@@ -47,10 +47,17 @@ namespace LeoCorpLibrary.Core
 		}
 
 		/// <summary>
-		/// Get the URL's protocol as a string.
+		/// Gets the URL's protocol as a string.
 		/// </summary>
 		/// <param name="url">The URL.</param>
 		/// <returns>A <see cref="string"/> value.</returns>
 		public static string GetUrlProtocol(string url) => url.Split(new string[] { "://" }, StringSplitOptions.None)[0];
+
+		/// <summary>
+		/// Returns <c>true</c> if the url's protocol is "HTTPS".
+		/// </summary>
+		/// <param name="url">The URL to check.</param>
+		/// <returns>A <see cref="bool"/> value.</returns>
+		public static bool IsUrlHttps(string url) => GetUrlProtocol(url) == "https";
 	}
 }
