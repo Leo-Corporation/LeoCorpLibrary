@@ -44,5 +44,7 @@ namespace LeoCorpLibrary
 			Regex regex = new Regex("[a-zA-Z]+://[a-zA-Z]+\\.[a-zA-Z]+", RegexOptions.IgnoreCase);
 			return regex.IsMatch(url);
 		}
+
+		public static string GetUrlProtocol(string url) => url.Split(new string[] { "://" }, StringSplitOptions.None)[0];
 	}
 }
