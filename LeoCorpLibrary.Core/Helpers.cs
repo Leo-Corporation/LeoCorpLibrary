@@ -45,5 +45,12 @@ namespace LeoCorpLibrary.Core
 			Regex regex = new Regex("[a-zA-Z]+://[a-zA-Z]+\\.[a-zA-Z]+", RegexOptions.IgnoreCase);
 			return regex.IsMatch(url);
 		}
+
+		/// <summary>
+		/// Get the URL's protocol as a string.
+		/// </summary>
+		/// <param name="url">The URL.</param>
+		/// <returns>A <see cref="string"/> value.</returns>
+		public static string GetUrlProtocol(string url) => url.Split(new string[] { "://" }, StringSplitOptions.None)[0];
 	}
 }
