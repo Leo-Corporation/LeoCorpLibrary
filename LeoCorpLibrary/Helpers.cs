@@ -51,5 +51,7 @@ namespace LeoCorpLibrary
 		/// <param name="url">The URL.</param>
 		/// <returns>A <see cref="string"/> value.</returns>
 		public static string GetUrlProtocol(string url) => url.Split(new string[] { "://" }, StringSplitOptions.None)[0];
+
+		public static bool IsUrlHttps(string url) => GetUrlProtocol(url) == "https";
 	}
 }
