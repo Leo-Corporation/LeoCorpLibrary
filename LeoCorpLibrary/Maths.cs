@@ -106,6 +106,11 @@ namespace LeoCorpLibrary
 			return degrees / 57.2957795; // Radians
 		}
 
+		/// <summary>
+		/// Returns <c>true</c> if the given <see cref="double"/> number is an integer (<see cref="int"/>).
+		/// </summary>
+		/// <param name="number">The number to test.</param>
+		/// <returns>A <see cref="bool"/> value.</returns>
 		public static bool IsInteger(double number) => (double)(int)number == number;
 
 		/// <summary>
