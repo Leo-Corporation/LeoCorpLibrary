@@ -22,52 +22,38 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
 using System;
-using System.IO;
+using System.Text.RegularExpressions;
 
 namespace LeoCorpLibrary.Core
 {
 	/// <summary>
-	/// Class that contains methods to log information to a file.
+	/// Contains usefull methods that don't fit in other categories.
 	/// </summary>
-	public static class Logger
+	public static class Helpers
 	{
 		/// <summary>
-		/// Logs a message to a file.
+		/// Checks if a specified URL is valid or not.
 		/// </summary>
-		/// <param name="message">The log message to be written.</param>
-		/// <param name="filePath">The path to the log file. Must contain an extension.</param>
-		public static void Log(string message, string filePath)
+		/// <param name="url">The URL to check.</param>
+		/// <returns>A <see cref="bool"/> value.</returns>
+		public static bool IsUrlValid(string url)
 		{
-			if (!Directory.Exists(filePath))
-			{
-				Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-			}
-			if (!File.Exists(filePath))
-			{
-				File.Create(filePath); // Create file
-			}
-
-			File.AppendAllText(filePath, message); // Log
+			Regex regex = new Regex("[a-zA-Z]+://[a-zA-Z]+\\.[a-zA-Z]+", RegexOptions.IgnoreCase);
+			return regex.IsMatch(url);
 		}
 
 		/// <summary>
-		/// Logs a message to a file.
+		/// Gets the URL's protocol as a string.
 		/// </summary>
-		/// <param name="message">The log message to be written.</param>
-		/// <param name="filePath">The path to the log file. Must contain an extension.</param>
-		/// <param name="dateTime">The date time of the log.</param>
-		public static void Log(string message, string filePath, DateTime dateTime)
-		{
-			if (!Directory.Exists(filePath))
-			{
-				Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-			}
-			if (!File.Exists(filePath))
-			{
-				File.Create(filePath); // Create file
-			}
+		/// <param name="url">The URL.</param>
+		/// <returns>A <see cref="string"/> value.</returns>
+		public static string GetUrlProtocol(string url) => url.Split(new string[] { "://" }, StringSplitOptions.None)[0];
 
-			File.AppendAllText(filePath, $"[{dateTime}] {message}"); // Log
-		}
+		/// <summary>
+		/// Returns <c>true</c> if the url's protocol is "HTTPS".
+		/// </summary>
+		/// <param name="url">The URL to check.</param>
+		/// <returns>A <see cref="bool"/> value.</returns>
+		public static bool IsUrlHttps(string url) => GetUrlProtocol(url) == "https";
 	}
 }

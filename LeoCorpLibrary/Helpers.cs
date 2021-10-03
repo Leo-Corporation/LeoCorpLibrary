@@ -21,43 +21,39 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using System;
+using System.Text.RegularExpressions;
 
 namespace LeoCorpLibrary
 {
 	/// <summary>
-	/// A class that can be used in <see cref="GuidGenerator.Generate()"/> as an argument.
+	/// Contains usefull methods that don't fit in other categories.
 	/// </summary>
-	public class GuidGeneratorParameters
+	public static class Helpers
 	{
 		/// <summary>
-		/// The constructor for <see cref="GuidGeneratorParameters"/>.
+		/// Checks if a specified URL is valid or not.
 		/// </summary>
-		public GuidGeneratorParameters()
+		/// <param name="url">The URL to check.</param>
+		/// <returns>A <see cref="bool"/> value.</returns>
+		public static bool IsUrlValid(string url)
 		{
-			Length = 32; // Set the default value
-			WithHyphens = true; // Set the default value
-			WithBraces = false; // Set the default value
-			UseUpperCaseOnly = false; // Set the default value
+			Regex regex = new Regex("[a-zA-Z]+://[a-zA-Z]+\\.[a-zA-Z]+", RegexOptions.IgnoreCase);
+			return regex.IsMatch(url);
 		}
 
 		/// <summary>
-		/// Length of the Guid to generate.
+		/// Gets the URL's protocol as a string.
 		/// </summary>
-		public int Length { get; set; }
+		/// <param name="url">The URL.</param>
+		/// <returns>A <see cref="string"/> value.</returns>
+		public static string GetUrlProtocol(string url) => url.Split(new string[] { "://" }, StringSplitOptions.None)[0];
 
 		/// <summary>
-		/// Include or not hyphens, such as: <c>00000000-0000-0000-0000-00000000</c>
+		/// Returns <c>true</c> if the url's protocol is "HTTPS".
 		/// </summary>
-		public bool WithHyphens { get; set; }
-
-		/// <summary>
-		/// Include or not braces, such as: <c>{00000000-0000-0000-0000-00000000}</c>
-		/// </summary>
-		public bool WithBraces { get; set; }
-
-		/// <summary>
-		/// Use only upper case if true. Uses only lower case if false.
-		/// </summary>
-		public bool UseUpperCaseOnly { get; set; }
+		/// <param name="url">The URL to check.</param>
+		/// <returns>A <see cref="bool"/> value.</returns>
+		public static bool IsUrlHttps(string url) => GetUrlProtocol(url) == "https";
 	}
 }
