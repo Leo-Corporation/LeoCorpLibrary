@@ -23,17 +23,16 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.11.0.2110-pre1</Version>
+    <Version>3.11.0.2110-rc1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.11.0.2110-pre1
-- Added the possibility to check if a link is valid (#256)
-- Added the possibility to get the protocol of an URL (#257)
-- Added the possibility to check if an URL is using HTTPS (#258)
+    <PackageReleaseNotes>Version 3.11.0.2110-rc1
+- Added the possibility to check if a number is an integer (#259)
+- Refactored the IsEven() method (#260)
 - Updated XML Documentation</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
