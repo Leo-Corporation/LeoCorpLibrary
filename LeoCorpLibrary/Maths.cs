@@ -106,6 +106,8 @@ namespace LeoCorpLibrary
 			return degrees / 57.2957795; // Radians
 		}
 
+		public static bool IsInteger(double number) => (double)(int)number == number;
+
 		/// <summary>
 		/// Class that coontains methods for circles.
 		/// </summary>
