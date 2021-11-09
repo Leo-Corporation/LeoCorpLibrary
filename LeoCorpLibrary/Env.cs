@@ -420,6 +420,7 @@ namespace LeoCorpLibrary
 		/// <summary>
 		/// Allows you to get the current Operating system.
 		/// </summary>
+#if !NET45
 		public static OperatingSystems CurrentOperatingSystem
 		{
 			get
@@ -441,7 +442,8 @@ namespace LeoCorpLibrary
 					return OperatingSystems.Unknown; // Return unknown
 				}
 			}
-		}
+		} 
+#endif
 
 		/// <summary>
 		/// Gets the curent mouse cursor position on screen for <see cref="System.Windows.Forms"/>.
@@ -459,7 +461,12 @@ namespace LeoCorpLibrary
 		/// Allows you to get the system drive (<see cref="DriveInfo"/>).
 		/// </summary>
 		/// <remarks>Works only on Windows.</remarks>
-		public static DriveInfo SystemDrive { get => (CurrentOperatingSystem == OperatingSystems.Windows) ? new DriveInfo(Environment.SystemDirectory) : DriveInfo.GetDrives()[0]; }
+#if !NET45
+		public static DriveInfo SystemDrive { get => (CurrentOperatingSystem == OperatingSystems.Windows) ? new DriveInfo(Environment.SystemDirectory) : DriveInfo.GetDrives()[0]; } 
+#endif
+#if NET45
+		public static DriveInfo SystemDrive { get => new DriveInfo(Environment.SystemDirectory); } 
+#endif
 
 		/// <summary>
 		/// Converts Unix Time to a <see cref="DateTime"/>.
