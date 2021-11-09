@@ -23,6 +23,7 @@ SOFTWARE.
 */
 using System;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace LeoCorpLibrary.Core
@@ -56,9 +57,11 @@ namespace LeoCorpLibrary.Core
 		/// Allows you to get the latest version of the software from a .txt file.
 		/// </summary>
 		/// <param name="lastVersionFileLink">Link of the file where the lastest version is stocked.</param>
-		/// <exception cref="System.ArgumentNullException"></exception>
-		/// <exception cref="System.Exception"></exception>
+		/// <exception cref="ArgumentNullException"></exception>
+		/// <exception cref="Exception"></exception>
+		/// <remarks>This method is obsolete, use <see cref="GetLastVersionAsync(string)"/> instead.</remarks>
 		/// <returns>A <see cref="string"/> value.</returns>
+		[Obsolete("Use GetLastVersionAsync() instead.")]
 		public static string GetLastVersion(string lastVersionFileLink)
 		{
 			string lastVersion = "";
@@ -90,9 +93,8 @@ namespace LeoCorpLibrary.Core
 		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
 		public static Task<string> GetLastVersionAsync(string lastVersionFileLink)
 		{
-			Task<string> task = new Task<string>(() => GetLastVersion(lastVersionFileLink));
-			task.Start();
-			return task;
+			HttpClient httpClient = new HttpClient();
+			return httpClient.GetStringAsync(lastVersionFileLink);
 		}
 	}
 }
