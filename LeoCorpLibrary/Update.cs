@@ -25,6 +25,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -59,9 +60,11 @@ namespace LeoCorpLibrary
 		/// Allows you to get the latest version of the software from a .txt file.
 		/// </summary>
 		/// <param name="lastVersionFileLink">Link of the file where the lastest version is stocked.</param>
-		/// <exception cref="System.ArgumentNullException"></exception>
-		/// <exception cref="System.Exception"></exception>
+		/// <exception cref="ArgumentNullException"></exception>
+		/// <exception cref="Exception"></exception>
+		/// <remarks>This method is obsolete, use <see cref="GetLastVersionAsync(string)"/> instead.</remarks>
 		/// <returns>A <see cref="string"/> value.</returns>
+		[Obsolete("Use GetLastVersionAsync() instead.")]
 		public static string GetLastVersion(string lastVersionFileLink)
 		{
 			string lastVersion = "";
@@ -93,9 +96,8 @@ namespace LeoCorpLibrary
 		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
 		public static Task<string> GetLastVersionAsync(string lastVersionFileLink)
 		{
-			Task<string> task = new Task<string>(() => GetLastVersion(lastVersionFileLink));
-			task.Start();
-			return task;
+			HttpClient httpClient = new HttpClient();
+			return httpClient.GetStringAsync(lastVersionFileLink);
 		}
 
 		/// <summary>
@@ -157,9 +159,9 @@ namespace LeoCorpLibrary
 		/// <param name="filePath">File location.</param>
 		/// <param name="newVersionLink">Link of the new file.</param>
 		/// <param name="fromAppStartupPath">(optionnal) Open the file from the <see cref="Application.StartupPath"/>.</param>
-		/// <exception cref="System.ArgumentNullException"></exception>
-		/// <exception cref="System.Exception"></exception>
-		/// <exception cref="System.IO.FileNotFoundException"></exception>
+		/// <exception cref="ArgumentNullException"></exception>
+		/// <exception cref="Exception"></exception>
+		/// <exception cref="FileNotFoundException"></exception>
 		public static void Install(string filePath, string newVersionLink, bool fromAppStartupPath = false)
 		{
 			if (File.Exists(filePath)) // Si fichier existe
