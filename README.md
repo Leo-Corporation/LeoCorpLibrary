@@ -39,10 +39,10 @@ There is two variations of LeoCorpLibrary that are available in different platfo
 | Linux | ❌ | ✔ |
 | - | - | - |
 | **Frameworks** |  |  |
+| .NET 6 | ✔ | ✔ |
 | .NET 5 | ✔ | ✔ |
 | .NET Core 3.1 | ✔ | ✔ |
-| .NET Framework 4.7.2 | ✔ | ✔ |
-| .NET Framework 4.5 | ❌ | ✔ |
+| .NET Framework 4.5 | ✔ | ✔ |
 
 [Click here](https://github.com/Leo-Corporation/LeoCorpLibrary/wiki) to go to the documentation.
 
@@ -97,13 +97,14 @@ Here's LeoCorpLibrary's roadmap:
 
 ## Contribute
 Here's what you'll need to contribute to this project:
-- Visual Studio 2019 with:
+- Visual Studio 2019/2022 with:
    - .NET Desktop Developpement
    - Git
 - .NET
-   - .NET Framework 4.7.2
-   - .NET Core 3.1
-   - .NET 5
+   - .NET Framework 4.5
+   - .NET Core 3.1 (SDK + runtime)
+   - .NET 5 (SDK + runtime)
+   - .NET 6 (SDK + runtime)
 - (*optionnal*) NuGet
 
 ## Projects using LeoCorpLibrary
