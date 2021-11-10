@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <ProjectGuid>{42249739-9D60-4048-8691-B6536BCF49CE}</ProjectGuid>
-    <TargetFrameworks>net472;netcoreapp3.1;net5.0-windows</TargetFrameworks>
+    <TargetFrameworks>net45;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
     <AssemblyTitle>LeoCorpLibrary</AssemblyTitle>
     <Company>Léo Corporation</Company>
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
     <Copyright>© 2021</Copyright>
-    <AssemblyVersion>3.11.0.2110</AssemblyVersion>
-    <FileVersion>3.11.0.2110</FileVersion>
+    <AssemblyVersion>4.0.0.2111</AssemblyVersion>
+    <FileVersion>4.0.0.2111</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
@@ -23,20 +23,19 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>3.11.0.2110</Version>
+    <Version>4.0.0.2111</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.11.0.2110
-- Added the possibility to check if a link is valid (#256)
-- Added the possibility to get the protocol of an URL (#257)
-- Added the possibility to check if an URL is using HTTPS (#258)
-- Added the possibility to check if a number is an integer (#259)
-- Refactored the IsEven() method (#260)
-- Updated XML Documentation</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 4.0.0.2111
+- Replaced WebClient with HttpClient if possible (#266)
+- Made GetLastVersion() obsolete (#266)
+- Added support for .NET 6 (#267)
+- Unified supported frameworks between LeoCorpLibrary and LeoCorpLibrary.Core (#268)
+- Fixed compatibility issues</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
@@ -60,5 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

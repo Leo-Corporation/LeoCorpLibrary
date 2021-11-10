@@ -419,7 +419,7 @@ namespace LeoCorpLibrary.Core
 		/// </summary>
 		public static string AppDataPath { get => GetAppDataPath(); }
 
-#if NETCOREAPP || NET5_0
+#if !NET45
 		/// <summary>
 		/// Allows you to get the current Operating system.
 		/// </summary>

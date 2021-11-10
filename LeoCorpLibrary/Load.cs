@@ -27,7 +27,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-#if NETCOREAPP3_1 || NET5_0
+#if NETCOREAPP3_1 || NET5_0_OR_GREATER
 using System.Text.Json;
 #endif
 
@@ -263,7 +263,7 @@ namespace LeoCorpLibrary
 			}
 		}
 
-#if NETCOREAPP3_1 || NET5_0
+#if NETCOREAPP3_1 || NET5_0_OR_GREATER
 		/// <summary>
 		/// Allows you to load a saved file in a <see cref="ListView"/>.
 		/// </summary>
