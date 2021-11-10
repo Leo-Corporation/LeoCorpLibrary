@@ -23,20 +23,19 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>4.0.0.2111-rc1</Version>
+    <Version>4.0.0.2111</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 3.11.0.2110
-- Added the possibility to check if a link is valid (#256)
-- Added the possibility to get the protocol of an URL (#257)
-- Added the possibility to check if an URL is using HTTPS (#258)
-- Added the possibility to check if a number is an integer (#259)
-- Refactored the IsEven() method (#260)
-- Updated XML Documentation</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 4.0.0.2111
+- Replaced WebClient with HttpClient if possible (#266)
+- Made GetLastVersion() obsolete (#266)
+- Added support for .NET 6 (#267)
+- Unified supported frameworks between LeoCorpLibrary and LeoCorpLibrary.Core (#268)
+- Fixed compatibility issues</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
