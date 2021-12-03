@@ -138,6 +138,12 @@ namespace LeoCorpLibrary
 			return 400; // An unknown error has occured.
 		}
 
+		/// <summary>
+		/// Gets the status description of a specified website. (ex: <c>"OK"</c>, for status code <c>200</c>)
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>A <see cref="string"/> value.</returns>
+		/// <exception cref="WebException"></exception>
 		public static string GetWebPageStatusDescription(string url)
 		{
 			try

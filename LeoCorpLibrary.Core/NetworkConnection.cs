@@ -137,5 +137,32 @@ namespace LeoCorpLibrary.Core
 			}
 			return 400; // An unknown error has occured.
 		}
+
+		/// <summary>
+		/// Gets the status description of a specified website. (ex: <c>"OK"</c>, for status code <c>200</c>)
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>A <see cref="string"/> value.</returns>
+		/// <exception cref="WebException"></exception>
+		public static string GetWebPageStatusDescription(string url)
+		{
+			try
+			{
+				HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url); // Create a web request
+
+				HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse(); // Get the response of the request
+				myHttpWebResponse.Close(); // Close the request
+
+				return "OK"; // The request was successfull with no warnings nor errors, so return code 200 - OK.
+			}
+			catch (WebException e)
+			{
+				if (e.Status == WebExceptionStatus.ProtocolError)
+				{
+					return ((HttpWebResponse)e.Response).StatusDescription;
+				}
+			}
+			return "Bad Request"; // An unknown error has occured.
+		}
 	}
 }
