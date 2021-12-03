@@ -7,8 +7,8 @@
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
     <Copyright>© 2021</Copyright>
-    <AssemblyVersion>4.0.0.2111</AssemblyVersion>
-    <FileVersion>4.0.0.2111</FileVersion>
+    <AssemblyVersion>4.1.0.2112</AssemblyVersion>
+    <FileVersion>4.1.0.2112</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
@@ -23,19 +23,18 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>4.0.0.2111</Version>
+    <Version>4.1.0.2112-pre1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 4.0.0.2111
-- Replaced WebClient with HttpClient if possible (#266)
-- Made GetLastVersion() obsolete (#266)
-- Added support for .NET 6 (#267)
-- Unified supported frameworks between LeoCorpLibrary and LeoCorpLibrary.Core (#268)
-- Fixed compatibility issues</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 4.1.0.2112-pre1
+- Added support for Windows 11 for GetWindowsVersion() method (#273)
+- Added the possibility to get the status code of web page (#274)
+- Added the possibility to get the status description of web page (#275)
+- Updated XML Documentation (#279)</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
