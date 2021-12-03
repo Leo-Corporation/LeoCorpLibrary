@@ -111,6 +111,31 @@ namespace LeoCorpLibrary.Core
 			return task;
 		}
 
-		
+		/// <summary>
+		/// Gets the status code of a specified website.
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>An <see cref="int"/> value.</returns>
+		/// <exception cref="WebException"></exception>
+		public static int GetWebPageStatusCode(string url)
+		{
+			try
+			{
+				HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url); // Create a web request
+
+				HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse(); // Get the response of the request
+				myHttpWebResponse.Close(); // Close the request
+
+				return 200; // The request was successfull with no warnings nor errors, so return code 200 - OK.
+			}
+			catch (WebException e)
+			{
+				if (e.Status == WebExceptionStatus.ProtocolError)
+				{
+					return (int)((HttpWebResponse)e.Response).StatusCode;
+				}
+			}
+			return 400; // An unknown error has occured.
+		}
 	}
 }
