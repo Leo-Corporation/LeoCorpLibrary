@@ -137,5 +137,26 @@ namespace LeoCorpLibrary
 			}
 			return 400; // An unknown error has occured.
 		}
+
+		public static string GetWebPageStatusDescription(string url)
+		{
+			try
+			{
+				HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url); // Create a web request
+
+				HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse(); // Get the response of the request
+				myHttpWebResponse.Close(); // Close the request
+
+				return "OK"; // The request was successfull with no warnings nor errors, so return code 200 - OK.
+			}
+			catch (WebException e)
+			{
+				if (e.Status == WebExceptionStatus.ProtocolError)
+				{
+					return ((HttpWebResponse)e.Response).StatusDescription;
+				}
+			}
+			return "Bad Request"; // An unknown error has occured.
+		}
 	}
 }
