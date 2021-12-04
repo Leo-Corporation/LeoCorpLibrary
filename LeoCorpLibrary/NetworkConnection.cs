@@ -43,6 +43,23 @@ namespace LeoCorpLibrary
 		}
 
 		/// <summary>
+		/// Allows you to check if the user is connected to Internet.
+		/// </summary>
+		/// <param name="url">The URL of the website where the connection is going to be tested.</param>
+		/// <returns>A <see cref="bool"/> value.</returns>
+		/// <exception cref="ArgumentNullException"></exception>
+		/// <exception cref="WebException"></exception>
+		public static bool IsAvailable(string url)
+		{
+			if (string.IsNullOrEmpty(url))
+			{
+				throw new ArgumentNullException("url", "Please provide a valid URL such as http://example.com.");
+			}
+
+			return GetWebPageStatusCode(url) != 400;
+		}
+
+		/// <summary>
 		/// <para>Allows you to know if the user is connected to Internet asynchronously.</para>
 		/// <para>The connection is tested by default on https://bing.com.</para>
 		/// </summary>
@@ -50,6 +67,20 @@ namespace LeoCorpLibrary
 		public static Task<bool> IsAvailableAsync()
 		{
 			Task<bool> task = new Task<bool>(IsAvailable);
+			task.Start();
+			return task;
+		}
+
+		/// <summary>
+		/// Allows you to check if the user is connected to Internet asynchronously.
+		/// </summary>
+		/// <param name="url">The URL of the website where the connection is going to be tested.</param>
+		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
+		/// <exception cref="ArgumentNullException"></exception>
+		/// <exception cref="WebException"></exception>
+		public static Task<bool> IsAvailableAsync(string url)
+		{
+			Task<bool> task = new Task<bool>(() => IsAvailableTestSite(url));
 			task.Start();
 			return task;
 		}
