@@ -37,20 +37,26 @@ namespace LeoCorpLibrary.Core
 		/// <para>The connection is tested by default on https://bing.com.</para>
 		/// </summary>
 		/// <returns>A <see cref="bool"/> value.</returns>
-		public static bool IsAvailable() // Fonction pour tester la connexion Internet
+		public static bool IsAvailable()
 		{
-			try
+			return GetWebPageStatusCode("https://www.bing.com") != 400;
+		}
+
+		/// <summary>
+		/// Allows you to check if the user is connected to Internet.
+		/// </summary>
+		/// <param name="url">The URL of the website where the connection is going to be tested.</param>
+		/// <returns>A <see cref="bool"/> value.</returns>
+		/// <exception cref="ArgumentNullException"></exception>
+		/// <exception cref="WebException"></exception>
+		public static bool IsAvailable(string url)
+		{
+			if (string.IsNullOrEmpty(url))
 			{
-				using (var client = new WebClient()) // Navigateur Internet
-				using (var stream = client.OpenRead("https://www.bing.com")) // Ouvrir bing.com
-				{
-					return true; // Si la page s'ouvre = connexion OK
-				}
+				throw new ArgumentNullException("url", "Please provide a valid URL such as http://example.com.");
 			}
-			catch
-			{
-				return false; // Si la page ne s'ouvre pas = connexion down
-			}
+
+			return GetWebPageStatusCode(url) != 400;
 		}
 
 		/// <summary>
@@ -66,12 +72,28 @@ namespace LeoCorpLibrary.Core
 		}
 
 		/// <summary>
-		/// <para>Allows you to know if the user is connected to Internet.</para>
-		/// <para>The connection is tested on the specified website.</para>
+		/// Allows you to check if the user is connected to Internet asynchronously.
+		/// </summary>
+		/// <param name="url">The URL of the website where the connection is going to be tested.</param>
+		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
+		/// <exception cref="ArgumentNullException"></exception>
+		/// <exception cref="WebException"></exception>
+		public static Task<bool> IsAvailableAsync(string url)
+		{
+			Task<bool> task = new Task<bool>(() => IsAvailable(url));
+			task.Start();
+			return task;
+		}
+
+		/// <summary>
+		/// <para>Allows you to know if the user is connected to Internet.
+		/// The connection is tested on the specified website.</para>
+		/// This method is obsolete, please use IsAvailable(url) instead.
 		/// </summary>
 		/// <param name="site">Website where the connection is tested.</param>
 		/// <exception cref="System.ArgumentNullException"></exception>
 		/// <returns>A <see cref="bool"/> value.</returns>
+		[Obsolete("This method is obsolete, please use IsAvailable(url) instead.")]
 		public static bool IsAvailableTestSite(string site)
 		{
 			bool result = true;
@@ -98,17 +120,140 @@ namespace LeoCorpLibrary.Core
 		}
 
 		/// <summary>
-		/// <para>Allows you to know if the user is connected to Internet asynchronously.</para>
-		/// <para>The connection is tested on the specified website.</para>
+		/// <para>Allows you to know if the user is connected to Internet asynchronously.
+		/// The connection is tested on the specified website.</para>
+		/// This method is obsolete, please use IsAvailableAsync(url) instead.
 		/// </summary>
 		/// <param name="site">Website where the connection is tested.</param>
 		/// <exception cref="ArgumentNullException"></exception>
 		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
+		[Obsolete("This method is obsolete, please use IsAvailableAsync(url) instead.")]
 		public static Task<bool> IsAvailableTestSiteAsync(string site)
 		{
 			Task<bool> task = new Task<bool>(() => IsAvailableTestSite(site));
 			task.Start();
 			return task;
+		}
+
+		/// <summary>
+		/// Gets the status code of a specified website.
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>An <see cref="int"/> value.</returns>
+		/// <exception cref="WebException"></exception>
+		public static int GetWebPageStatusCode(string url)
+		{
+			try
+			{
+				HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url); // Create a web request
+
+				HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse(); // Get the response of the request
+				myHttpWebResponse.Close(); // Close the request
+
+				return 200; // The request was successfull with no warnings nor errors, so return code 200 - OK.
+			}
+			catch (WebException e)
+			{
+				if (e.Status == WebExceptionStatus.ProtocolError)
+				{
+					return (int)((HttpWebResponse)e.Response).StatusCode;
+				}
+			}
+			return 400; // An unknown error has occured.
+		}
+
+		/// <summary>
+		/// Gets the status description of a specified website. (ex: <c>"OK"</c>, for status code <c>200</c>)
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>A <see cref="string"/> value.</returns>
+		/// <exception cref="WebException"></exception>
+		public static string GetWebPageStatusDescription(string url)
+		{
+			try
+			{
+				HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url); // Create a web request
+
+				HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse(); // Get the response of the request
+				myHttpWebResponse.Close(); // Close the request
+
+				return "OK"; // The request was successfull with no warnings nor errors, so return code 200 - OK.
+			}
+			catch (WebException e)
+			{
+				if (e.Status == WebExceptionStatus.ProtocolError)
+				{
+					return ((HttpWebResponse)e.Response).StatusDescription;
+				}
+			}
+			return "Bad Request"; // An unknown error has occured.
+		}
+
+		/// <summary>
+		/// Gets the <see cref="StatusCodeType"/> of a specified website.
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>A <see cref="StatusCodeType"/> value.</returns>
+		/// <exception cref="WebException"></exception>
+		public static StatusCodeType GetStatusCodeType(string url)
+		{
+			int statusCode = GetWebPageStatusCode(url); // Get the status code
+
+			if (statusCode >= 100 && statusCode <= 199)
+			{
+				return StatusCodeType.Informational; // Return Informational
+			}
+			else if (statusCode >= 200 && statusCode <= 299)
+			{
+				return StatusCodeType.Success; // Return Success
+			}
+			else if (statusCode >= 300 && statusCode <= 399)
+			{
+				return StatusCodeType.Redirection; // Return Redirection
+			}
+			else if (statusCode >= 400 && statusCode <= 499)
+			{
+				return StatusCodeType.ClientError; // Return ClientError
+			}
+			else if (statusCode >= 500 && statusCode <= 599)
+			{
+				return StatusCodeType.ServerError; // Return ServerError
+			}
+			else
+			{
+				return StatusCodeType.ClientError; // Return ClientError
+			}
+		}
+
+		/// <summary>
+		/// Status Code type of a request to a website.
+		/// </summary>
+		public enum StatusCodeType
+		{
+			/// <summary>
+			/// Informational (1xx).
+			/// </summary>
+			Informational,
+
+			/// <summary>
+			/// Success (2xx).
+			/// </summary>
+			Success,
+
+			/// <summary>
+			/// Redirection (3xx).
+			/// </summary>
+			Redirection,
+
+			/// <summary>
+			/// Client error (4xx).
+			/// </summary>
+			ClientError,
+
+			/// <summary>
+			/// Server error (5xx).
+			/// </summary>
+			ServerError
 		}
 	}
 }

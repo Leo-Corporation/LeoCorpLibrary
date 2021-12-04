@@ -262,22 +262,26 @@ namespace LeoCorpLibrary
 			WindowsVersion res = WindowsVersion.Unknown; // Résultat
 			switch (Environment.OSVersion.Version.Major)
 			{
-				case 6: // Si la version majeure est 6
+				case 6: // If major version is 6
 					switch (Environment.OSVersion.Version.Minor)
 					{
-						case 1: // Si Windows 7 (6.1)
+						case 1: // If Windows 7 (6.1)
 							res = WindowsVersion.Windows7; // Windows 7
 							break;
-						case 2: // Si Windows 8 (6.2)
+						case 2: // If Windows 8 (6.2)
 							res = WindowsVersion.Windows8; // Windows 8
 							break;
-						case 3: // Si Windows 8.1 (6.3)
+						case 3: // If Windows 8.1 (6.3)
 							res = WindowsVersion.Windows81; // Windows 8.1
 							break;
 					}
 					break;
-				case 10: // Si Windows 10
+				case 10: // If Windows 10/11 (NT 10.0)
 					res = WindowsVersion.Windows10; // Windows 10
+					if (Environment.OSVersion.Version.Build >= 22000)
+					{
+						res = WindowsVersion.Windows11; // Windows 11
+					}
 					break;
 			}
 			return res;
@@ -601,18 +605,27 @@ namespace LeoCorpLibrary
 		/// Windows 7 (Version 6.1).
 		/// </summary>
 		Windows7,
+		
 		/// <summary>
 		/// Windows 8 (Version 6.2).
 		/// </summary>
 		Windows8,
+		
 		/// <summary>
 		/// Windows 8.1 (Version 6.3).
 		/// </summary>
 		Windows81,
+		
 		/// <summary>
-		/// Windows 10 (Version 10.0)
+		/// Windows 10 (Version 10.0).
 		/// </summary>
 		Windows10,
+
+		/// <summary>
+		/// Windows 11 (Version 10.0.22XXX+).
+		/// </summary>
+		Windows11,
+		
 		/// <summary>
 		/// Unknown operating system.
 		/// </summary>
