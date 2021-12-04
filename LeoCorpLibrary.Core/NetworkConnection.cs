@@ -164,5 +164,72 @@ namespace LeoCorpLibrary.Core
 			}
 			return "Bad Request"; // An unknown error has occured.
 		}
+
+		/// <summary>
+		/// Gets the <see cref="StatusCodeType"/> of a specified website.
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>A <see cref="StatusCodeType"/> value.</returns>
+		/// <exception cref="WebException"></exception>
+		public static StatusCodeType GetStatusCodeType(string url)
+		{
+			int statusCode = GetWebPageStatusCode(url); // Get the status code
+
+			if (statusCode >= 100 && statusCode <= 199)
+			{
+				return StatusCodeType.Informational; // Return Informational
+			}
+			else if (statusCode >= 200 && statusCode <= 299)
+			{
+				return StatusCodeType.Success; // Return Success
+			}
+			else if (statusCode >= 300 && statusCode <= 399)
+			{
+				return StatusCodeType.Redirection; // Return Redirection
+			}
+			else if (statusCode >= 400 && statusCode <= 499)
+			{
+				return StatusCodeType.ClientError; // Return ClientError
+			}
+			else if (statusCode >= 500 && statusCode <= 599)
+			{
+				return StatusCodeType.ServerError; // Return ServerError
+			}
+			else
+			{
+				return StatusCodeType.ClientError; // Return ClientError
+			}
+		}
+
+		/// <summary>
+		/// Status Code type of a request to a website.
+		/// </summary>
+		public enum StatusCodeType
+		{
+			/// <summary>
+			/// Informational (1xx).
+			/// </summary>
+			Informational,
+
+			/// <summary>
+			/// Success (2xx).
+			/// </summary>
+			Success,
+
+			/// <summary>
+			/// Redirection (3xx).
+			/// </summary>
+			Redirection,
+
+			/// <summary>
+			/// Client error (4xx).
+			/// </summary>
+			ClientError,
+
+			/// <summary>
+			/// Server error (5xx).
+			/// </summary>
+			ServerError
+		}
 	}
 }
