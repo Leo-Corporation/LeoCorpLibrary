@@ -37,20 +37,9 @@ namespace LeoCorpLibrary.Core
 		/// <para>The connection is tested by default on https://bing.com.</para>
 		/// </summary>
 		/// <returns>A <see cref="bool"/> value.</returns>
-		public static bool IsAvailable() // Fonction pour tester la connexion Internet
+		public static bool IsAvailable()
 		{
-			try
-			{
-				using (var client = new WebClient()) // Navigateur Internet
-				using (var stream = client.OpenRead("https://www.bing.com")) // Ouvrir bing.com
-				{
-					return true; // Si la page s'ouvre = connexion OK
-				}
-			}
-			catch
-			{
-				return false; // Si la page ne s'ouvre pas = connexion down
-			}
+			return GetWebPageStatusCode("https://www.bing.com") != 400;
 		}
 
 		/// <summary>
