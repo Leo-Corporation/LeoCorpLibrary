@@ -23,18 +23,20 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>4.1.0.2112-pre1</Version>
+    <Version>4.1.0.2112-rc1</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 4.1.0.2112-pre1
-- Added support for Windows 11 for GetWindowsVersion() method (#273)
-- Added the possibility to get the status code of web page (#274)
-- Added the possibility to get the status description of web page (#275)
-- Updated XML Documentation (#279)</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 4.1.0.2112-rc1
+- Added StatusCodeType enum (#276)
+- Added the possibility to get the status code "type" (#276)
+- Updated IsAvailable() method in NetworkConnection (#277)
+- Merged IsAvailableTestSite() and IsAvailable() into one method (#278)
+- Made IsAvailableTestSite() method obsolete (#278)
+- Updated XML Documentation (#279)	</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
