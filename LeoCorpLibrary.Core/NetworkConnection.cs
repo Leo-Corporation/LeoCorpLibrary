@@ -80,18 +80,20 @@ namespace LeoCorpLibrary.Core
 		/// <exception cref="WebException"></exception>
 		public static Task<bool> IsAvailableAsync(string url)
 		{
-			Task<bool> task = new Task<bool>(() => IsAvailableTestSite(url));
+			Task<bool> task = new Task<bool>(() => IsAvailable(url));
 			task.Start();
 			return task;
 		}
 
 		/// <summary>
-		/// <para>Allows you to know if the user is connected to Internet.</para>
-		/// <para>The connection is tested on the specified website.</para>
+		/// <para>Allows you to know if the user is connected to Internet.
+		/// The connection is tested on the specified website.</para>
+		/// This method is obsolete, please use IsAvailable(url) instead.
 		/// </summary>
 		/// <param name="site">Website where the connection is tested.</param>
 		/// <exception cref="System.ArgumentNullException"></exception>
 		/// <returns>A <see cref="bool"/> value.</returns>
+		[Obsolete("This method is obsolete, please use IsAvailable(url) instead.")]
 		public static bool IsAvailableTestSite(string site)
 		{
 			bool result = true;
@@ -118,12 +120,14 @@ namespace LeoCorpLibrary.Core
 		}
 
 		/// <summary>
-		/// <para>Allows you to know if the user is connected to Internet asynchronously.</para>
-		/// <para>The connection is tested on the specified website.</para>
+		/// <para>Allows you to know if the user is connected to Internet asynchronously.
+		/// The connection is tested on the specified website.</para>
+		/// This method is obsolete, please use IsAvailableAsync(url) instead.
 		/// </summary>
 		/// <param name="site">Website where the connection is tested.</param>
 		/// <exception cref="ArgumentNullException"></exception>
 		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
+		[Obsolete("This method is obsolete, please use IsAvailableAsync(url) instead.")]
 		public static Task<bool> IsAvailableTestSiteAsync(string site)
 		{
 			Task<bool> task = new Task<bool>(() => IsAvailableTestSite(site));
