@@ -5,27 +5,10 @@
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LeoCorpLibrary/.NET%20Framework)
 ![Nuget](https://img.shields.io/nuget/dt/LeoCorpLibrary)
 
-<br />
-<p align="center">
-  <a href="https://github.com/Leo-Corporation/LeoCorpLibrary">
-    <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+# LeoCorpLibrary
+A C# library with useful features for .NET Applications.
 
-  <h1 align="center">LeoCorpLibrary</h1>
-
-  <p align="center">
-    A C# library with useful features for .NET Applications.
-    <br />
-    <a href="https://leocorplibrary.leocorporation.dev/"><strong>View documentation »</strong></a>
-    <br />
-    <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBug%5D+">Report Bug</a>
-    ·
-    <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=enhancement&template=feature-request.yml&title=%5BEnhancement%5D+">Request Feature</a>
-    ·
-    <a href="https://www.nuget.org/packages/LeoCorpLibrary/">NuGet</a>
-
-  </p>
-</p>
+[Report Bug](https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBug%5D+) · [**Documentation**](https://leocorplibrary.leocorporation.dev) · [Request Feature](https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=enhancement&template=feature-request.yml&title=%5BEnhancement%5D+)
 
 ## What is it?
 "LeoCorpLibrary" is library writen in C# that contains useful methods for software developpers, such as password generation, update system, maths and geometry methods and more.
