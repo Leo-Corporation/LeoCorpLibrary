@@ -164,5 +164,14 @@ namespace LeoCorpLibrary
 			}
 			return "Bad Request"; // An unknown error has occured.
 		}
+
+		public enum StatusCodeType
+		{
+			Informational,
+			Sucess,
+			Redirection,
+			ClientError,
+			ServerError
+		}
 	}
 }
