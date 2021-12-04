@@ -165,10 +165,40 @@ namespace LeoCorpLibrary
 			return "Bad Request"; // An unknown error has occured.
 		}
 
+		public static StatusCodeType GetStatusCodeType(string url)
+		{
+			int statusCode = GetWebPageStatusCode(url); // Get the status code
+
+			if (statusCode >= 100 && statusCode <= 199)
+			{
+				return StatusCodeType.Informational; // Return Informational
+			}
+			else if (statusCode >= 200 && statusCode <= 299)
+			{
+				return StatusCodeType.Success; // Return Success
+			}
+			else if (statusCode >= 300 && statusCode <= 399)
+			{
+				return StatusCodeType.Redirection; // Return Redirection
+			}
+			else if (statusCode >= 400 && statusCode <= 499)
+			{
+				return StatusCodeType.ClientError; // Return ClientError
+			}
+			else if (statusCode >= 500 && statusCode <= 599)
+			{
+				return StatusCodeType.ServerError; // Return ServerError
+			}
+			else
+			{
+				return StatusCodeType.ClientError; // Return ClientError
+			}
+		}
+
 		public enum StatusCodeType
 		{
 			Informational,
-			Sucess,
+			Success,
 			Redirection,
 			ClientError,
 			ServerError
