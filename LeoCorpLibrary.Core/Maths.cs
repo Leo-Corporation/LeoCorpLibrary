@@ -117,6 +117,25 @@ namespace LeoCorpLibrary.Core
 		public static double GetOpposite(double n) => 0 - n;
 
 		/// <summary>
+		/// Returns the factorial of a specified number.
+		/// </summary>
+		/// <param name="n">The number to get the factorial.</param>
+		/// <returns>A <see cref="int"/> value.</returns>
+		/// <remarks>If you provide a number which the factorial will exeed <see cref="int.MaxValue"/>, the method will return <c>0</c>, or a wrong result.</remarks>
+		public static int Factorial(int n)
+		{
+			if (n == 1 || n == 0) return 1;
+			int r = 1;
+
+			for (int i = 1; i <= (n < 0 ? 0 - n : n); i++)
+			{
+				r *= i;
+			}
+
+			return n < 0 ? 0 - r : r;
+		}
+
+		/// <summary>
 		/// Class that coontains methods for circles.
 		/// </summary>
 		public static class Circle
