@@ -109,6 +109,8 @@ namespace LeoCorpLibrary
 		/// <returns>A <see cref="bool"/> value.</returns>
 		public static bool IsInteger(double number) => (double)(int)number == number;
 
+		public static double GetOpposite(double n) => 0 - n;
+
 		/// <summary>
 		/// Class that coontains methods for circles.
 		/// </summary>
