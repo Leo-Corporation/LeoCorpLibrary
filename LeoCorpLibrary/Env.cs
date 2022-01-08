@@ -558,6 +558,24 @@ namespace LeoCorpLibrary
 				}
 			}
 		}
+
+#if NET5_0_OR_GREATER
+		[System.Runtime.Versioning.SupportedOSPlatform("windows")] 
+#endif
+		public static bool IsDarkThemeAvailable
+		{
+			get
+			{
+				if (WindowsVersion == WindowsVersion.Windows10 || WindowsVersion == WindowsVersion.Windows11)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
 	}
 
 	/// <summary>
