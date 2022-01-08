@@ -559,8 +559,16 @@ namespace LeoCorpLibrary
 			}
 		}
 
+
+
+		/// <summary>
+		/// Returns <see langword="true"/> if the operating system support dark theme.
+		/// </summary>
+		/// <remarks>
+		/// Only works on Windows.
+		/// </remarks>
 #if NET5_0_OR_GREATER
-		[System.Runtime.Versioning.SupportedOSPlatform("windows")] 
+		[System.Runtime.Versioning.SupportedOSPlatform("windows")]
 #endif
 		public static bool IsDarkThemeAvailable
 		{
