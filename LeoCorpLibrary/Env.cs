@@ -539,6 +539,12 @@ namespace LeoCorpLibrary
 			Process.Start("explorer.exe", $@"shell:appsFolder\{packageFamilyName}!{applicationID}"); // Synthax to launch UWP apps
 		}
 
+		/// <summary>
+		/// Gets the current <see cref="SystemThemes"/> of the operating system (Windows only).
+		/// </summary>
+		/// <remarks>
+		/// Returns <see cref="SystemThemes.Light"/> by default.
+		/// </remarks>
 		public static SystemThemes SystemTheme
 		{
 			get
@@ -554,10 +560,24 @@ namespace LeoCorpLibrary
 		}
 	}
 
+	/// <summary>
+	/// Available themes on Windows.
+	/// </summary>
 	public enum SystemThemes
 	{
+		/// <summary>
+		/// Dark theme.
+		/// </summary>
 		Dark,
+
+		/// <summary>
+		/// Light theme.
+		/// </summary>
 		Light,
+
+		/// <summary>
+		/// Unknown theme/OS not supported.
+		/// </summary>
 		Unknown
 	}
 
