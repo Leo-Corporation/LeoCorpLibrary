@@ -109,6 +109,14 @@ namespace LeoCorpLibrary.Core
 		public static bool IsInteger(double number) => (double)(int)number == number;
 
 		/// <summary>
+		/// Gets the opposite of a specified number.
+		/// </summary>
+		/// <param name="n">The number to get the opposite.</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		/// <example>If 10 is specified, the method will return -10.</example>
+		public static double GetOpposite(double n) => 0 - n;
+
+		/// <summary>
 		/// Class that coontains methods for circles.
 		/// </summary>
 		public static class Circle
