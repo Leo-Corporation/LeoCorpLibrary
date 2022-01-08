@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using Microsoft.Win32;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -537,6 +538,27 @@ namespace LeoCorpLibrary
 		{
 			Process.Start("explorer.exe", $@"shell:appsFolder\{packageFamilyName}!{applicationID}"); // Synthax to launch UWP apps
 		}
+
+		public static SystemThemes SystemTheme
+		{
+			get
+			{
+				var t = Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "SystemUsesLightTheme", "1");
+				switch (t)
+				{
+					case 0: return SystemThemes.Dark;
+					case 1: return SystemThemes.Light;
+					default: return SystemThemes.Light; // Assuming running on older version of Windows.
+				}
+			}
+		}
+	}
+
+	public enum SystemThemes
+	{
+		Dark,
+		Light,
+		Unknown
 	}
 
 	/// <summary>
