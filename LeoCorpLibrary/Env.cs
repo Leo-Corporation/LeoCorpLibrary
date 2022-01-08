@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using Microsoft.Win32;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -537,6 +538,73 @@ namespace LeoCorpLibrary
 		{
 			Process.Start("explorer.exe", $@"shell:appsFolder\{packageFamilyName}!{applicationID}"); // Synthax to launch UWP apps
 		}
+
+		/// <summary>
+		/// Gets the current <see cref="SystemThemes"/> of the operating system (Windows only).
+		/// </summary>
+		/// <remarks>
+		/// Returns <see cref="SystemThemes.Light"/> by default.
+		/// </remarks>
+		public static SystemThemes SystemTheme
+		{
+			get
+			{
+				var t = Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "SystemUsesLightTheme", "1");
+				switch (t)
+				{
+					case 0: return SystemThemes.Dark;
+					case 1: return SystemThemes.Light;
+					default: return SystemThemes.Light; // Assuming running on older version of Windows.
+				}
+			}
+		}
+
+
+
+		/// <summary>
+		/// Returns <see langword="true"/> if the operating system support dark theme.
+		/// </summary>
+		/// <remarks>
+		/// Only works on Windows.
+		/// </remarks>
+#if NET5_0_OR_GREATER
+		[System.Runtime.Versioning.SupportedOSPlatform("windows")]
+#endif
+		public static bool IsDarkThemeAvailable
+		{
+			get
+			{
+				if (WindowsVersion == WindowsVersion.Windows10 || WindowsVersion == WindowsVersion.Windows11)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+	}
+
+	/// <summary>
+	/// Available themes on Windows.
+	/// </summary>
+	public enum SystemThemes
+	{
+		/// <summary>
+		/// Dark theme.
+		/// </summary>
+		Dark,
+
+		/// <summary>
+		/// Light theme.
+		/// </summary>
+		Light,
+
+		/// <summary>
+		/// Unknown theme/OS not supported.
+		/// </summary>
+		Unknown
 	}
 
 	/// <summary>
