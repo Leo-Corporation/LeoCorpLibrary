@@ -117,6 +117,19 @@ namespace LeoCorpLibrary
 		/// <example>If 10 is specified, the method will return -10.</example>
 		public static double GetOpposite(double n) => 0 - n;
 
+		public static int Factorial(int n)
+		{
+			if (n == 1 || n == 0) return 1;
+			int r = 1;
+
+			for (int i = 1; i <= (n < 0 ? 0 - n : n); i++)
+			{
+				r *= i;
+			}
+
+			return n < 0 ? 0 - r : r;
+		}
+
 		/// <summary>
 		/// Class that coontains methods for circles.
 		/// </summary>
