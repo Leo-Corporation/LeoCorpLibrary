@@ -29,8 +29,17 @@ using System.Threading.Tasks;
 
 namespace LeoCorpLibrary.Extensions
 {
+	/// <summary>
+	/// Methods that extends the <see cref="double"/> type.
+	/// </summary>
 	public static class DoubleExtensions
 	{
+		/// <summary>
+		/// Converts to second a <see cref="TimeUnits"/>.
+		/// </summary>
+		/// <param name="d">The time unit to convert.</param>
+		/// <param name="timeUnits">The unit of the time. (ex: minutes, hours...)</param>
+		/// <returns>A <see cref="double"/> value.</returns>
 		public static double ToSeconds(this double d, TimeUnits timeUnits)
 		{
 			switch (timeUnits)
@@ -49,12 +58,34 @@ namespace LeoCorpLibrary.Extensions
 		}
 	}
 
+	/// <summary>
+	/// Time units such as milliseconds, seconds, minutes, etc...
+	/// </summary>
 	public enum TimeUnits
 	{
+		/// <summary>
+		/// Milliseconds.
+		/// </summary>
 		Milliseconds,
+
+		/// <summary>
+		/// Seconds.
+		/// </summary>
 		Seconds,
+
+		/// <summary>
+		/// Minutes.
+		/// </summary>
 		Minutes,
+
+		/// <summary>
+		/// Hours.
+		/// </summary>
 		Hours,
+		
+		/// <summary>
+		/// Days.
+		/// </summary>
 		Days
 	}
 }
