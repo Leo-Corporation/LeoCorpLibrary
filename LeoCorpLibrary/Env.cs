@@ -470,7 +470,7 @@ namespace LeoCorpLibrary
 		public static DriveInfo SystemDrive { get => (CurrentOperatingSystem == OperatingSystems.Windows) ? new DriveInfo(Environment.SystemDirectory) : DriveInfo.GetDrives()[0]; } 
 #endif
 #if NET45
-		public static DriveInfo SystemDrive { get => new DriveInfo(Environment.SystemDirectory); } 
+		public static DriveInfo SystemDrive { get => new DriveInfo(Environment.SystemDirectory); }
 #endif
 
 		/// <summary>
@@ -673,17 +673,17 @@ namespace LeoCorpLibrary
 		/// Windows 7 (Version 6.1).
 		/// </summary>
 		Windows7,
-		
+
 		/// <summary>
 		/// Windows 8 (Version 6.2).
 		/// </summary>
 		Windows8,
-		
+
 		/// <summary>
 		/// Windows 8.1 (Version 6.3).
 		/// </summary>
 		Windows81,
-		
+
 		/// <summary>
 		/// Windows 10 (Version 10.0).
 		/// </summary>
@@ -693,7 +693,7 @@ namespace LeoCorpLibrary
 		/// Windows 11 (Version 10.0.22XXX+).
 		/// </summary>
 		Windows11,
-		
+
 		/// <summary>
 		/// Unknown operating system.
 		/// </summary>
