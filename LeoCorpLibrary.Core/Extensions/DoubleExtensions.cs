@@ -35,7 +35,7 @@ namespace LeoCorpLibrary.Core.Extensions
 	public static class DoubleExtensions
 	{
 		/// <summary>
-		/// Converts to second a <see cref="TimeUnits"/>.
+		/// Converts to seconds a <see cref="TimeUnits"/>.
 		/// </summary>
 		/// <param name="d">The time unit to convert.</param>
 		/// <param name="timeUnits">The unit of the time. (ex: minutes, hours...)</param>
@@ -52,6 +52,29 @@ namespace LeoCorpLibrary.Core.Extensions
 					return TimeSpan.FromHours(d).TotalSeconds; // Convert and Return the expected value
 				case TimeUnits.Days:
 					return TimeSpan.FromDays(d).TotalSeconds; // Convert and Return the expected value
+				default:
+					return d;
+			}
+		}
+
+		/// <summary>
+		/// Converts to minutes a <see cref="TimeUnits"/>.
+		/// </summary>
+		/// <param name="d">The time unit to convert.</param>
+		/// <param name="timeUnits">The unit of the time. (ex: minutes, hours...)</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double ToMinutes(this double d, TimeUnits timeUnits)
+		{
+			switch (timeUnits)
+			{
+				case TimeUnits.Milliseconds:
+					return TimeSpan.FromMilliseconds(d).TotalMinutes; // Convert and Return the expected value
+				case TimeUnits.Seconds:
+					return TimeSpan.FromMinutes(d).TotalMinutes; // Convert and Return the expected value
+				case TimeUnits.Hours:
+					return TimeSpan.FromHours(d).TotalMinutes; // Convert and Return the expected value
+				case TimeUnits.Days:
+					return TimeSpan.FromDays(d).TotalMinutes; // Convert and Return the expected value
 				default:
 					return d;
 			}
