@@ -70,11 +70,34 @@ namespace LeoCorpLibrary.Extensions
 				case TimeUnits.Milliseconds:
 					return TimeSpan.FromMilliseconds(d).TotalMinutes; // Convert and Return the expected value
 				case TimeUnits.Seconds:
-					return TimeSpan.FromMinutes(d).TotalMinutes; // Convert and Return the expected value
+					return TimeSpan.FromSeconds(d).TotalMinutes; // Convert and Return the expected value
 				case TimeUnits.Hours:
 					return TimeSpan.FromHours(d).TotalMinutes; // Convert and Return the expected value
 				case TimeUnits.Days:
 					return TimeSpan.FromDays(d).TotalMinutes; // Convert and Return the expected value
+				default:
+					return d;
+			}
+		}
+
+		/// <summary>
+		/// Converts to hours a <see cref="TimeUnits"/>.
+		/// </summary>
+		/// <param name="d">The time unit to convert.</param>
+		/// <param name="timeUnits">The unit of the time. (ex: minutes, hours...)</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double ToHours(this double d, TimeUnits timeUnits)
+		{
+			switch (timeUnits)
+			{
+				case TimeUnits.Milliseconds:
+					return TimeSpan.FromMilliseconds(d).TotalHours; // Convert and Return the expected value
+				case TimeUnits.Seconds:
+					return TimeSpan.FromSeconds(d).TotalHours; // Convert and Return the expected value
+				case TimeUnits.Minutes:
+					return TimeSpan.FromMinutes(d).TotalHours; // Convert and Return the expected value
+				case TimeUnits.Days:
+					return TimeSpan.FromDays(d).TotalHours; // Convert and Return the expected value
 				default:
 					return d;
 			}
