@@ -98,6 +98,29 @@ namespace LeoCorpLibrary.Extensions
 					return d;
 			}
 		}
+
+		/// <summary>
+		/// Converts to days a <see cref="TimeUnits"/>.
+		/// </summary>
+		/// <param name="d">The time unit to convert.</param>
+		/// <param name="timeUnits">The unit of the time. (ex: minutes, hours...)</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double ToDays(this double d, TimeUnits timeUnits)
+		{
+			switch (timeUnits)
+			{
+				case TimeUnits.Milliseconds:
+					return TimeSpan.FromMilliseconds(d).TotalDays; // Convert and Return the expected value
+				case TimeUnits.Seconds:
+					return TimeSpan.FromSeconds(d).TotalDays; // Convert and Return the expected value
+				case TimeUnits.Minutes:
+					return TimeSpan.FromMinutes(d).TotalDays; // Convert and Return the expected value
+				case TimeUnits.Hours:
+					return TimeSpan.FromHours(d).TotalDays; // Convert and Return the expected value
+				default:
+					return d;
+			}
+		}
 	}
 
 	/// <summary>
