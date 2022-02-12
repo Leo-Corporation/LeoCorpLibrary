@@ -60,7 +60,7 @@ There is two branches:
 | Name | Release | Description |
 | :--: | :-----: | :---------: |
 | `main` | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary) | Stable versions |
-| `vNext` | ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary?include_prereleases) | Next version of InternetTest (unstable) |
+| `vNext` | ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Leo-Corporation/LeoCorpLibrary?include_prereleases) | Next version of LeoCorpLibrary (unstable) |
 
 > Note: Other branches can also - of course - exists.
 
@@ -88,10 +88,8 @@ There is two branches:
 ## How to add LeoCorpLibrary to a project?
 [Click here](https://leocorplibrary.leocorporation.dev/install-LeoCorpLibrary#1-add-the-library-to-a-project) to go to the documentation about this topic.
 
-## Roadmap 2021
-Here's LeoCorpLibrary's roadmap:
-
-![Roadmap](https://raw.githubusercontent.com/Leo-Corporation/LeoCorp-Docs/master/Roadmaps/LeoCorpLibrary/LeoCorpLibrary%20Roadmap%202020.png)
+## Roadmap 2022
+There isn't a roadmap yet for this year.
 
 
 **Warning: Some new features can be added without being in the roadmap. Release dates are suggestions.**
