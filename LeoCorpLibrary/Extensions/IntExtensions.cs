@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
 using System;
+using System.Collections.Generic;
 
 namespace LeoCorpLibrary.Extensions
 {
@@ -165,6 +166,21 @@ namespace LeoCorpLibrary.Extensions
 				case UnitType.Petabyte: return i; // Convert and return value
 				default: return i; // Convert and return value
 			}
+		}
+
+		public static int[] GetDivisors(this int number)
+		{
+			List<int> ds = new List<int>(); // Create a list
+
+			for (int i = 1; i <= number; i++)
+			{
+				if (number % i == 0) // Check if the number is a divisor
+				{
+					ds.Add(i); // Add divisor
+				}
+			}
+
+			return ds.ToArray();
 		}
 	}
 }
