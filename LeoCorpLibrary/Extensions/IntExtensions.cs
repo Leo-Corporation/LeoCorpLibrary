@@ -168,6 +168,11 @@ namespace LeoCorpLibrary.Extensions
 			}
 		}
 
+		/// <summary>
+		/// Gets all divisors of a specific number.
+		/// </summary>
+		/// <param name="number">The number.</param>
+		/// <returns>Returns an <see cref="int"/>[] array.</returns>
 		public static int[] GetDivisors(this int number)
 		{
 			List<int> ds = new List<int>(); // Create a list
