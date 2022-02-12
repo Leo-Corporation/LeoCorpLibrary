@@ -23,14 +23,17 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>4.3.0.2202-rc1</Version>
+    <Version>4.3.0.2202</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 4.3.0.2202-rc1
+    <PackageReleaseNotes>Version 4.3.0.2202
+- Added the possibility to convert a time unit to seconds (#293)
+- Added the possibility to convert a time unit to minutes (#294)
+- Added the possibility to convert a time unit to hours (#295)
 - Added the possibility to convert a time unit to days (#296)
 - Added the possibility to get the divisors of a specific number (#297)
 - Updated XML Documentation</PackageReleaseNotes>
