@@ -108,7 +108,7 @@ namespace LeoCorpLibrary
 		/// <param name="d">The time unit to convert.</param>
 		/// <param name="timeUnits">The unit of the time. (ex: minutes, hours...)</param>
 		/// <returns>A <see cref="double"/> value.</returns>
-		public static double TimeUnitToSeconds(this double d, TimeUnits timeUnits)
+		public static double TimeUnitToSeconds(double d, TimeUnits timeUnits)
 		{
 			switch (timeUnits)
 			{
@@ -131,7 +131,7 @@ namespace LeoCorpLibrary
 		/// <param name="d">The time unit to convert.</param>
 		/// <param name="timeUnits">The unit of the time. (ex: minutes, hours...)</param>
 		/// <returns>A <see cref="double"/> value.</returns>
-		public static double TimeUnitToMinutes(this double d, TimeUnits timeUnits)
+		public static double TimeUnitToMinutes(double d, TimeUnits timeUnits)
 		{
 			switch (timeUnits)
 			{
@@ -154,7 +154,7 @@ namespace LeoCorpLibrary
 		/// <param name="d">The time unit to convert.</param>
 		/// <param name="timeUnits">The unit of the time. (ex: minutes, hours...)</param>
 		/// <returns>A <see cref="double"/> value.</returns>
-		public static double TimeUnitToHours(this double d, TimeUnits timeUnits)
+		public static double TimeUnitToHours(double d, TimeUnits timeUnits)
 		{
 			switch (timeUnits)
 			{
@@ -177,7 +177,7 @@ namespace LeoCorpLibrary
 		/// <param name="d">The time unit to convert.</param>
 		/// <param name="timeUnits">The unit of the time. (ex: minutes, hours...)</param>
 		/// <returns>A <see cref="double"/> value.</returns>
-		public static double TimeUnitToDays(this double d, TimeUnits timeUnits)
+		public static double TimeUnitToDays(double d, TimeUnits timeUnits)
 		{
 			switch (timeUnits)
 			{
@@ -191,6 +191,126 @@ namespace LeoCorpLibrary
 					return TimeSpan.FromHours(d).TotalDays; // Convert and Return the expected value
 				default:
 					return d;
+			}
+		}
+
+		/// <summary>
+		/// Converts a size (kb, mb, ...) to byte.
+		/// </summary>
+		/// <param name="i">The size.</param>
+		/// <param name="unitType">The source <see cref="UnitType"/> (kb, mb...).</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double SizeUnitToByte(int i, UnitType unitType)
+		{
+			switch (unitType)
+			{
+				case UnitType.Byte: return i; // Convert and return value
+				case UnitType.Kilobyte: return i * 1000; // Convert and return value
+				case UnitType.Megabyte: return i * 1000000; // Convert and return value
+				case UnitType.Gigabyte: return i * 1000000000; // Convert and return value
+				case UnitType.Terabyte: return i * 1000000000000; // Convert and return value
+				case UnitType.Petabyte: return i * 1000000000000000; // Convert and return value
+				default: return i; // Convert and return value
+			}
+		}
+
+		/// <summary>
+		/// Converts a size (kb, mb, ...) to Kilobyte.
+		/// </summary>
+		/// <param name="i">The size.</param>
+		/// <param name="unitType">The source <see cref="UnitType"/> (kb, mb...).</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double SizeUnitToKilobyte(int i, UnitType unitType)
+		{
+			switch (unitType)
+			{
+				case UnitType.Byte: return i / 1000; // Convert and return value
+				case UnitType.Kilobyte: return i; // Convert and return value
+				case UnitType.Megabyte: return i * 1000; // Convert and return value
+				case UnitType.Gigabyte: return i * 1000000; // Convert and return value
+				case UnitType.Terabyte: return i * 1000000000; // Convert and return value
+				case UnitType.Petabyte: return i * 1000000000000; // Convert and return value
+				default: return i; // Convert and return value
+			}
+		}
+
+		/// <summary>
+		/// Converts a size (kb, mb, ...) to Megabyte.
+		/// </summary>
+		/// <param name="i">The size.</param>
+		/// <param name="unitType">The source <see cref="UnitType"/> (kb, mb...).</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double SizeUnitToMegabyte(int i, UnitType unitType)
+		{
+			switch (unitType)
+			{
+				case UnitType.Byte: return i / 1000000; // Convert and return value
+				case UnitType.Kilobyte: return i / 1000; // Convert and return value
+				case UnitType.Megabyte: return i; // Convert and return value
+				case UnitType.Gigabyte: return i * 1000; // Convert and return value
+				case UnitType.Terabyte: return i * 1000000; // Convert and return value
+				case UnitType.Petabyte: return i * 1000000000; // Convert and return value
+				default: return i; // Convert and return value
+			}
+		}
+
+		/// <summary>
+		/// Converts a size (kb, mb, ...) to Gigabyte.
+		/// </summary>
+		/// <param name="i">The size.</param>
+		/// <param name="unitType">The source <see cref="UnitType"/> (kb, mb...).</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double SizeUnitToGigabyte(int i, UnitType unitType)
+		{
+			switch (unitType)
+			{
+				case UnitType.Byte: return i / 1000000000; // Convert and return value
+				case UnitType.Kilobyte: return i / 1000000; // Convert and return value
+				case UnitType.Megabyte: return i / 1000; // Convert and return value
+				case UnitType.Gigabyte: return i; // Convert and return value
+				case UnitType.Terabyte: return i * 1000; // Convert and return value
+				case UnitType.Petabyte: return i * 1000000; // Convert and return value
+				default: return i; // Convert and return value
+			}
+		}
+
+		/// <summary>
+		/// Converts a size (kb, mb, ...) to Terabyte.
+		/// </summary>
+		/// <param name="i">The size.</param>
+		/// <param name="unitType">The source <see cref="UnitType"/> (kb, mb...).</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double SizeUnitToTerabyte(int i, UnitType unitType)
+		{
+			switch (unitType)
+			{
+				case UnitType.Byte: return i / 1000000000000; // Convert and return value
+				case UnitType.Kilobyte: return i / 1000000000; // Convert and return value
+				case UnitType.Megabyte: return i / 1000000; // Convert and return value
+				case UnitType.Gigabyte: return i / 1000; // Convert and return value
+				case UnitType.Terabyte: return i; // Convert and return value
+				case UnitType.Petabyte: return i * 1000; // Convert and return value
+				default: return i; // Convert and return value
+			}
+		}
+
+		/// <summary>
+		/// Converts a size (kb, mb, ...) to Petabyte.
+		/// </summary>
+		/// <param name="i">The size.</param>
+		/// <param name="unitType">The source <see cref="UnitType"/> (kb, mb...).</param>
+		/// <returns>A <see cref="double"/> value.</returns>
+		public static double SizeUnitToPetabyte(int i, UnitType unitType)
+		{
+			switch (unitType)
+			{
+				case UnitType.Byte: return i / 1000000000000000; // Convert and return value
+				case UnitType.Kilobyte: return i / 1000000000000; // Convert and return value
+				case UnitType.Megabyte: return i / 1000000000; // Convert and return value
+				case UnitType.Gigabyte: return i / 1000000; // Convert and return value
+				case UnitType.Terabyte: return i / 1000; // Convert and return value
+				case UnitType.Petabyte: return i; // Convert and return value
+				default: return i; // Convert and return value
 			}
 		}
 	}
