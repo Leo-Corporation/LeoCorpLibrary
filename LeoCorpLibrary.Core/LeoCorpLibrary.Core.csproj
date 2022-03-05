@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
-    <Version>4.3.0.2202</Version>
+    <Version>4.4.0.2203-pre1</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,16 +14,14 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 4.3.0.2202
-- Added the possibility to convert a time unit to seconds (#293)
-- Added the possibility to convert a time unit to minutes (#294)
-- Added the possibility to convert a time unit to hours (#295)
-- Added the possibility to convert a time unit to days (#296)
-- Added the possibility to get the divisors of a specific number (#297)
+    <PackageReleaseNotes>Version 4.4.0.2203-pre1
+- Added time conversions methods to `UnitsConversions` class (#302)
+- Added storage units conversion methods to `UnitsConversions` class (#303)
+- Moved all enumerations to a dedicated namespace (#304)
 - Updated XML Documentation
 	</PackageReleaseNotes>
-    <AssemblyVersion>4.3.0.2202</AssemblyVersion>
-    <Copyright>© 2021</Copyright>
+    <AssemblyVersion>4.4.0.2203</AssemblyVersion>
+    <Copyright>© 2022</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
