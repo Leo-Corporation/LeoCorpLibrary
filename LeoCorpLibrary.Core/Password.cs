@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
 using LeoCorpLibrary.Core.Extensions;
+using LeoCorpLibrary.Core.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -344,52 +345,5 @@ namespace LeoCorpLibrary.Core
 				return PasswordStrength.Good; // Return
 			}
 		}
-	}
-
-	/// <summary>
-	/// Presets that can be used for password generation.
-	/// </summary>
-	public enum PasswordPresets
-	{
-		/// <summary>
-		/// The "Simple" preset generates a password with simple characters.
-		/// </summary>
-		Simple,
-
-		/// <summary>
-		/// The "Complex" preset generates a password with unusual, hard and complex characters.
-		/// </summary>
-		Complex
-	}
-
-	/// <summary>
-	/// The password strenght enum.
-	/// </summary>
-	public enum PasswordStrength
-	{
-		/// <summary>
-		/// Very good password strenght.
-		/// </summary>
-		VeryGood,
-
-		/// <summary>
-		/// Good password strenght.
-		/// </summary>
-		Good,
-
-		/// <summary>
-		/// Medium password strenght.
-		/// </summary>
-		Medium,
-
-		/// <summary>
-		/// Low password strenght.
-		/// </summary>
-		Low,
-
-		/// <summary>
-		/// Unknown password strenght.
-		/// </summary>
-		Unknown
 	}
 }

@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using LeoCorpLibrary.Enums;
 using System.Windows.Forms;
 
 namespace LeoCorpLibrary.UI
@@ -73,26 +74,5 @@ namespace LeoCorpLibrary.UI
 			form.Left = (Screen.PrimaryScreen.WorkingArea.Width - form.Width) / 2; // Center horizontally
 			form.Top = (Screen.PrimaryScreen.WorkingArea.Height - form.Height) / 2; // Center vertically
 		}
-	}
-
-	/// <summary>
-	/// The alignement of a <see cref="Control"/>.
-	/// </summary>
-	public enum ControlAlignement
-	{
-		/// <summary>
-		/// The alignement of the <see cref="Control"/> will be horizontal.
-		/// </summary>
-		Horizontal,
-
-		/// <summary>
-		/// The alignement of the <see cref="Control"/> will be vertical.
-		/// </summary>
-		Vertical,
-
-		/// <summary>
-		/// The alignement of the <see cref="Control"/> will be horizontal and vertical.
-		/// </summary>
-		Both
 	}
 }

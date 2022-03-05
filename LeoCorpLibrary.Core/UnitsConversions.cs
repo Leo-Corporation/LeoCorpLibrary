@@ -23,6 +23,7 @@ SOFTWARE.
 */
 
 using LeoCorpLibrary.Core.Extensions;
+using LeoCorpLibrary.Core.Enums;
 using System;
 
 namespace LeoCorpLibrary.Core

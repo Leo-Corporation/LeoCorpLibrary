@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using LeoCorpLibrary.Enums;
 using System;
 using System.Net;
 using System.Threading.Tasks;
@@ -223,37 +224,6 @@ namespace LeoCorpLibrary
 			{
 				return StatusCodeType.ClientError; // Return ClientError
 			}
-		}
-
-		/// <summary>
-		/// Status Code type of a request to a website.
-		/// </summary>
-		public enum StatusCodeType
-		{
-			/// <summary>
-			/// Informational (1xx).
-			/// </summary>
-			Informational,
-
-			/// <summary>
-			/// Success (2xx).
-			/// </summary>
-			Success,
-
-			/// <summary>
-			/// Redirection (3xx).
-			/// </summary>
-			Redirection,
-
-			/// <summary>
-			/// Client error (4xx).
-			/// </summary>
-			ClientError,
-
-			/// <summary>
-			/// Server error (5xx).
-			/// </summary>
-			ServerError
 		}
 	}
 }

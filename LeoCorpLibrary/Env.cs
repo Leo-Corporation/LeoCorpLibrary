@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using LeoCorpLibrary.Enums;
 using Microsoft.Win32;
 using System;
 using System.Diagnostics;
@@ -584,119 +585,5 @@ namespace LeoCorpLibrary
 				}
 			}
 		}
-	}
-
-	/// <summary>
-	/// Available themes on Windows.
-	/// </summary>
-	public enum SystemThemes
-	{
-		/// <summary>
-		/// Dark theme.
-		/// </summary>
-		Dark,
-
-		/// <summary>
-		/// Light theme.
-		/// </summary>
-		Light,
-
-		/// <summary>
-		/// Unknown theme/OS not supported.
-		/// </summary>
-		Unknown
-	}
-
-	/// <summary>
-	/// Operating systems.
-	/// </summary>
-	public enum OperatingSystems
-	{
-		/// <summary>
-		/// The Windows Operating system.
-		/// </summary>
-		Windows,
-
-		/// <summary>
-		/// The macOS Operating system.
-		/// </summary>
-		macOS,
-
-		/// <summary>
-		/// The Linux Operating system.
-		/// </summary>
-		Linux,
-
-		/// <summary>
-		/// An unknown Operating system.
-		/// </summary>
-		Unknown
-	}
-
-	/// <summary>
-	/// Size of files/directories.
-	/// </summary>
-	public enum UnitType
-	{
-		/// <summary>
-		/// Byte Unit.
-		/// </summary>
-		Byte,
-		/// <summary>
-		/// Kilobyte Unit.
-		/// </summary>
-		Kilobyte,
-		/// <summary>
-		/// Megabyte Unit.
-		/// </summary>
-		Megabyte,
-		/// <summary>
-		/// Gigabyte Unit.
-		/// </summary>
-		Gigabyte,
-		/// <summary>
-		/// Terabyte Unit.
-		/// </summary>
-		Terabyte,
-		/// <summary>
-		/// Petabyte Unit.
-		/// </summary>
-		Petabyte
-	}
-
-	/// <summary>
-	/// Windows Operating Systems.
-	/// </summary>
-	public enum WindowsVersion
-	{
-		/// <summary>
-		/// Windows 7 (Version 6.1).
-		/// </summary>
-		Windows7,
-
-		/// <summary>
-		/// Windows 8 (Version 6.2).
-		/// </summary>
-		Windows8,
-
-		/// <summary>
-		/// Windows 8.1 (Version 6.3).
-		/// </summary>
-		Windows81,
-
-		/// <summary>
-		/// Windows 10 (Version 10.0).
-		/// </summary>
-		Windows10,
-
-		/// <summary>
-		/// Windows 11 (Version 10.0.22XXX+).
-		/// </summary>
-		Windows11,
-
-		/// <summary>
-		/// Unknown operating system.
-		/// </summary>
-		Unknown
 	}
 }
