@@ -23,6 +23,7 @@ SOFTWARE.
 */
 using LeoCorpLibrary.Core.Enums;
 using System;
+using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -223,6 +224,23 @@ namespace LeoCorpLibrary.Core
 			else
 			{
 				return StatusCodeType.ClientError; // Return ClientError
+			}
+		}
+
+		/// <summary>
+		/// Downloads a file asynchronously using the <see cref="System.Net.Http.HttpClient"/> class.
+		/// </summary>
+		/// <param name="uri">The URI of the file to download.</param>
+		/// <param name="filePath">The path where to store the file once downloaded.</param>
+		/// <returns>A <see cref="Task"/> value (<see cref="void"/>).</returns>
+		public static async Task DownloadFileAsync(Uri uri, string filePath)
+		{
+			using (var s = await new System.Net.Http.HttpClient().GetStreamAsync(uri))
+			{
+				using (var fs = new FileStream(filePath, FileMode.CreateNew))
+				{
+					await s.CopyToAsync(fs);
+				}
 			}
 		}
 	}
