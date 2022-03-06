@@ -6,9 +6,9 @@
     <Company>Léo Corporation</Company>
     <Product>LeoCorpLibrary</Product>
     <Description>A C# library with useful features for .NET Desktop Applications.</Description>
-    <Copyright>© 2021</Copyright>
-    <AssemblyVersion>4.3.0.2202</AssemblyVersion>
-    <FileVersion>4.3.0.2202</FileVersion>
+    <Copyright>© 2022</Copyright>
+    <AssemblyVersion>4.4.0.2203</AssemblyVersion>
+    <FileVersion>4.4.0.2203</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWPF>true</UseWPF>
@@ -23,19 +23,18 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>4.3.0.2202</Version>
+    <Version>4.4.0.2203</Version>
     <Authors>Léo Corporation</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageReleaseNotes>Version 4.3.0.2202
-- Added the possibility to convert a time unit to seconds (#293)
-- Added the possibility to convert a time unit to minutes (#294)
-- Added the possibility to convert a time unit to hours (#295)
-- Added the possibility to convert a time unit to days (#296)
-- Added the possibility to get the divisors of a specific number (#297)
+    <PackageReleaseNotes>Version 4.4.0.2203
+- Added time conversions methods to `UnitsConversions` class (#302)
+- Added storage units conversion methods to `UnitsConversions` class (#303)
+- Moved all enumerations to a dedicated namespace (#304)
+- Added the possibility to download a file using an `HttpClient` (#305)
 - Updated XML Documentation</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>

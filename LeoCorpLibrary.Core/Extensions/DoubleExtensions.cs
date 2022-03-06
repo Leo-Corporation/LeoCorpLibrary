@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using LeoCorpLibrary.Core.Enums;
 using System;
 
 namespace LeoCorpLibrary.Core.Extensions
@@ -121,36 +122,5 @@ namespace LeoCorpLibrary.Core.Extensions
 					return d;
 			}
 		}
-	}
-
-	/// <summary>
-	/// Time units such as milliseconds, seconds, minutes, etc...
-	/// </summary>
-	public enum TimeUnits
-	{
-		/// <summary>
-		/// Milliseconds.
-		/// </summary>
-		Milliseconds,
-
-		/// <summary>
-		/// Seconds.
-		/// </summary>
-		Seconds,
-
-		/// <summary>
-		/// Minutes.
-		/// </summary>
-		Minutes,
-
-		/// <summary>
-		/// Hours.
-		/// </summary>
-		Hours,
-
-		/// <summary>
-		/// Days.
-		/// </summary>
-		Days
 	}
 }

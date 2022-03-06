@@ -21,7 +21,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using LeoCorpLibrary.Core.Enums;
 using System;
+using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -226,34 +228,20 @@ namespace LeoCorpLibrary.Core
 		}
 
 		/// <summary>
-		/// Status Code type of a request to a website.
+		/// Downloads a file asynchronously using the <see cref="System.Net.Http.HttpClient"/> class.
 		/// </summary>
-		public enum StatusCodeType
+		/// <param name="uri">The URI of the file to download.</param>
+		/// <param name="filePath">The path where to store the file once downloaded.</param>
+		/// <returns>A <see cref="Task"/> value (<see cref="void"/>).</returns>
+		public static async Task DownloadFileAsync(Uri uri, string filePath)
 		{
-			/// <summary>
-			/// Informational (1xx).
-			/// </summary>
-			Informational,
-
-			/// <summary>
-			/// Success (2xx).
-			/// </summary>
-			Success,
-
-			/// <summary>
-			/// Redirection (3xx).
-			/// </summary>
-			Redirection,
-
-			/// <summary>
-			/// Client error (4xx).
-			/// </summary>
-			ClientError,
-
-			/// <summary>
-			/// Server error (5xx).
-			/// </summary>
-			ServerError
+			using (var s = await new System.Net.Http.HttpClient().GetStreamAsync(uri))
+			{
+				using (var fs = new FileStream(filePath, FileMode.CreateNew))
+				{
+					await s.CopyToAsync(fs);
+				}
+			}
 		}
 	}
 }
