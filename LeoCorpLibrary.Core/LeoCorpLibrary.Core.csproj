@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
-    <Version>4.4.0.2203-pre1</Version>
+    <Version>4.4.0.2203-rc1</Version>
     <Description>A C# library with useful features for .NET Applications.</Description>
     <Authors>Léo Corporation</Authors>
     <Company>Léo Corporation</Company>
@@ -14,10 +14,11 @@
     <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 4.4.0.2203-pre1
+    <PackageReleaseNotes>Version 4.4.0.2203-rc1
 - Added time conversions methods to `UnitsConversions` class (#302)
 - Added storage units conversion methods to `UnitsConversions` class (#303)
 - Moved all enumerations to a dedicated namespace (#304)
+- Added the possibility to download a file using an `HttpClient` (#305)
 - Updated XML Documentation
 	</PackageReleaseNotes>
     <AssemblyVersion>4.4.0.2203</AssemblyVersion>
