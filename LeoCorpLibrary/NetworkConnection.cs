@@ -25,6 +25,7 @@ using LeoCorpLibrary.Enums;
 using System;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace LeoCorpLibrary
@@ -162,6 +163,12 @@ namespace LeoCorpLibrary
 				}
 			}
 			return 400; // An unknown error has occured.
+		}
+
+		public static async Task<int> GetWebPageStatusCodeAsync(string url)
+		{
+			var httpMessage = await new HttpClient().GetAsync(url); // Send a request to the specified website
+			return (int)httpMessage.StatusCode; // Return the status code returned by the website
 		}
 
 		/// <summary>
