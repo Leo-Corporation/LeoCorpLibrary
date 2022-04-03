@@ -1,45 +1,47 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
-    <Version>4.4.0.2203</Version>
-    <Description>A C# library with useful features for .NET Applications.</Description>
-    <Authors>Léo Corporation</Authors>
-    <Company>Léo Corporation</Company>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-    <PackageIcon>icon.png</PackageIcon>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Version 4.4.0.2203
-- Added time conversions methods to `UnitsConversions` class (#302)
-- Added storage units conversion methods to `UnitsConversions` class (#303)
-- Moved all enumerations to a dedicated namespace (#304)
-- Added the possibility to download a file using an `HttpClient` (#305)
-- Updated XML Documentation
-	</PackageReleaseNotes>
-    <AssemblyVersion>4.4.0.2203</AssemblyVersion>
-    <Copyright>© 2022</Copyright>
+	<TargetFrameworks>net45;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+	<Version>4.5.0.2204-pre1</Version>
+	<Description>A C# library with useful features for .NET Applications.</Description>
+	<Authors>Léo Corporation</Authors>
+	<Company>Léo Corporation</Company>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
+	<PackageIcon>icon.png</PackageIcon>
+	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	  <PackageReleaseNotes>Version 4.5.0.2204-pre1
+- Updated Encrypt() method (#310)
+- Updated Decrypt() method (#310)
+- Updated `Crypt` methods (#310)
+- Added `GetWebPageStatusCode()` method (#311)
+- Updated `GetWebPageStatusCode()` method (#311)
+- Made `GetWebPageStatusCode()` method obsolete (#311)
+- Added XML Documentation
+- Fixed XML comment issue</PackageReleaseNotes>
+	<AssemblyVersion>4.4.0.2203</AssemblyVersion>
+	<Copyright>© 2022</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary.Core\LeoCorpLibrary.Core.xml</DocumentationFile>
+	<DocumentationFile>C:\Users\Léo Peyronnet\source\repos\LeoCorpLibrary\LeoCorpLibrary.Core\LeoCorpLibrary.Core.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\LeoCorpLibrary\images\icon.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
+	<None Include="..\LeoCorpLibrary\images\icon.png">
+	  <Pack>True</Pack>
+	  <PackagePath></PackagePath>
+	</None>
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="System.Net.Http">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll</HintPath>
-    </Reference>
+	<Reference Include="System.Net.Http">
+	  <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll</HintPath>
+	</Reference>
   </ItemGroup>
 
 </Project>
