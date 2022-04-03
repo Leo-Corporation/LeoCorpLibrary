@@ -423,10 +423,10 @@ namespace LeoCorpLibrary
 		/// </summary>
 		public static string AppDataPath { get => GetAppDataPath(); }
 
+#if !NET45
 		/// <summary>
 		/// Allows you to get the current Operating system.
 		/// </summary>
-#if !NET45
 		public static OperatingSystems CurrentOperatingSystem
 		{
 			get
