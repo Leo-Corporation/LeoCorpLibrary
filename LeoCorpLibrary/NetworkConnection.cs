@@ -144,6 +144,7 @@ namespace LeoCorpLibrary
 		/// <param name="url">The URL of the website.</param>
 		/// <returns>An <see cref="int"/> value.</returns>
 		/// <exception cref="WebException"></exception>
+		[Obsolete("This method is obsolete and will be removed in a future version of LeoCorpLibrary. Please use the GetWebPageStatusCode() method instead.")]
 		public static int GetWebPageStatusCode(string url)
 		{
 			try
