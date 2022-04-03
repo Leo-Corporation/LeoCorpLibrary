@@ -25,6 +25,7 @@ using LeoCorpLibrary.Core.Enums;
 using System;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace LeoCorpLibrary.Core
@@ -143,6 +144,7 @@ namespace LeoCorpLibrary.Core
 		/// <param name="url">The URL of the website.</param>
 		/// <returns>An <see cref="int"/> value.</returns>
 		/// <exception cref="WebException"></exception>
+		[Obsolete("This method is obsolete and will be removed in a future version of LeoCorpLibrary. Please use the GetWebPageStatusCode() method instead.")]
 		public static int GetWebPageStatusCode(string url)
 		{
 			try
@@ -162,6 +164,17 @@ namespace LeoCorpLibrary.Core
 				}
 			}
 			return 400; // An unknown error has occured.
+		}
+
+		/// <summary>
+		/// Gets the status code of a specified website asynchronously.
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>An <see cref="int"/> value, the status code of the URL.</returns>
+		public static async Task<int> GetWebPageStatusCodeAsync(string url)
+		{
+			var httpMessage = await new HttpClient().GetAsync(url); // Send a request to the specified website
+			return (int)httpMessage.StatusCode; // Return the status code returned by the website
 		}
 
 		/// <summary>
