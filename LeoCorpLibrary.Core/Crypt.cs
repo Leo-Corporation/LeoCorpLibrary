@@ -47,9 +47,9 @@ namespace LeoCorpLibrary.Core
 				throw new ArgumentNullException(nameof(source), "The string cannot be null.");
 			}
 
-			using (TripleDESCryptoServiceProvider tripleDESCryptoService = new TripleDESCryptoServiceProvider())
+			using (var tripleDESCryptoService = TripleDES.Create())
 			{
-				using (MD5CryptoServiceProvider hashMD5Provider = new MD5CryptoServiceProvider()) // Create MD5CryptoServiceProvider
+				using (var hashMD5Provider = MD5.Create()) // Create MD5CryptoServiceProvider
 				{
 					byte[] byteHash = hashMD5Provider.ComputeHash(Encoding.UTF8.GetBytes(key));
 					tripleDESCryptoService.Key = byteHash;
@@ -74,9 +74,9 @@ namespace LeoCorpLibrary.Core
 				throw new ArgumentNullException(nameof(encrypt), "The string cannot be null.");
 			}
 
-			using (TripleDESCryptoServiceProvider tripleDESCryptoService = new TripleDESCryptoServiceProvider())
+			using (var tripleDESCryptoService = TripleDES.Create())
 			{
-				using (MD5CryptoServiceProvider hashMD5Provider = new MD5CryptoServiceProvider()) // Create MD5CryptoServiceProvider
+				using (var hashMD5Provider = MD5.Create()) // Create MD5CryptoServiceProvider
 				{
 					byte[] byteHash = hashMD5Provider.ComputeHash(Encoding.UTF8.GetBytes(key));
 					tripleDESCryptoService.Key = byteHash;
