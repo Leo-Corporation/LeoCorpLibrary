@@ -23,14 +23,14 @@
   <PropertyGroup>
 	<ApplicationManifest>app.manifest</ApplicationManifest>
 	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	<Version>4.5.0.2204-pre1</Version>
+	<Version>4.5.0.2204-rc1</Version>
 	<Authors>Léo Corporation</Authors>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageIcon>icon.png</PackageIcon>
 	<RepositoryType>git</RepositoryType>
 	<RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
 	<PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-	<PackageReleaseNotes>Version 4.5.0.2204-pre1
+	<PackageReleaseNotes>Version 4.5.0.2204-rc1
 - Updated Encrypt() method (#310)
 - Updated Decrypt() method (#310)
 - Updated `Crypt` methods (#310)
@@ -38,7 +38,12 @@
 - Updated `GetWebPageStatusCode()` method (#311)
 - Made `GetWebPageStatusCode()` method obsolete (#311)
 - Added XML Documentation
-- Fixed XML comment issue</PackageReleaseNotes>
+- Fixed XML comment issue
+- Added `GetWebPageStatusDescriptionAsync()` method (#312)
+- Made `GetWebPageStatusDescription()` method obsolete (#312)
+- Updated `GetWebPageStatusDescription()` method (#312)
+- Removed obsolete methods (#312)
+- Removed null argument check in `GetUnixTime()` method (#313)</PackageReleaseNotes>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
   </PropertyGroup>
