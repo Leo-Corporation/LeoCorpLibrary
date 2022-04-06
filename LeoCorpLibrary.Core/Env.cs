@@ -397,10 +397,6 @@ namespace LeoCorpLibrary.Core
 		/// <returns>A <see cref="int"/> value.</returns>
 		public static int GetUnixTime(DateTime date)
 		{
-			if (date == null) // Si l'argument est null
-			{
-				throw new ArgumentNullException(""); // Erreur
-			}
 			return (int)date.Subtract(new DateTime(1970, 1, 1)).TotalSeconds; // Calculer Unix Time
 		}
 
