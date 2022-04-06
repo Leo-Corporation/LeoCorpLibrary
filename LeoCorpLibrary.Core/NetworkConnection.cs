@@ -183,6 +183,7 @@ namespace LeoCorpLibrary.Core
 		/// <param name="url">The URL of the website.</param>
 		/// <returns>A <see cref="string"/> value.</returns>
 		/// <exception cref="WebException"></exception>
+		[Obsolete("This method is obsolete and will be removed in a future version of LeoCorpLibrary. Please use the GetWebPageStatusDescriptionAsync() method instead.")]
 		public static string GetWebPageStatusDescription(string url)
 		{
 			try
@@ -202,6 +203,17 @@ namespace LeoCorpLibrary.Core
 				}
 			}
 			return "Bad Request"; // An unknown error has occured.
+		}
+
+		/// <summary>
+		/// Get the status description of a specified website asynchronously. (ex: <c>"OK"</c>, for status code <c>200</c>)
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>A <see cref="string"/> value, the status description of the URL.</returns>
+		public static async Task<string> GetWebPageStatusDescriptionAsync(string url)
+		{
+			var httpMessage = await new HttpClient().GetAsync(url); // Send a request to the specified website
+			return httpMessage.ReasonPhrase; // Return the status description returned by the website
 		}
 
 		/// <summary>
