@@ -204,6 +204,12 @@ namespace LeoCorpLibrary
 			return "Bad Request"; // An unknown error has occured.
 		}
 
+		public static async Task<string> GetWebPageStatusDescriptionAsync(string url)
+		{
+			var httpMessage = await new HttpClient().GetAsync(url); // Send a request to the specified website
+			return httpMessage.ReasonPhrase; // Return the status description returned by the website
+		}
+
 		/// <summary>
 		/// Gets the <see cref="StatusCodeType"/> of a specified website.
 		/// </summary>
