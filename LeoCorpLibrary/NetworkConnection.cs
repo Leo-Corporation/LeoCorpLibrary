@@ -183,6 +183,7 @@ namespace LeoCorpLibrary
 		/// <param name="url">The URL of the website.</param>
 		/// <returns>A <see cref="string"/> value.</returns>
 		/// <exception cref="WebException"></exception>
+		[Obsolete("This method is obsolete and will be removed in a future version of LeoCorpLibrary. Please use the GetWebPageStatusDescriptionAsync() method instead.")]
 		public static string GetWebPageStatusDescription(string url)
 		{
 			try
