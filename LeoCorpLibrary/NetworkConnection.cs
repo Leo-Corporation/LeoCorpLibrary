@@ -67,11 +67,9 @@ namespace LeoCorpLibrary
 		/// <para>The connection is tested by default on https://bing.com.</para>
 		/// </summary>
 		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
-		public static Task<bool> IsAvailableAsync()
+		public static async Task<bool> IsAvailableAsync()
 		{
-			Task<bool> task = new Task<bool>(IsAvailable);
-			task.Start();
-			return task;
+			return await GetWebPageStatusCodeAsync("https://www.bing.com") != 400;
 		}
 
 		/// <summary>
@@ -81,11 +79,9 @@ namespace LeoCorpLibrary
 		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
 		/// <exception cref="ArgumentNullException"></exception>
 		/// <exception cref="WebException"></exception>
-		public static Task<bool> IsAvailableAsync(string url)
+		public static async Task<bool> IsAvailableAsync(string url)
 		{
-			Task<bool> task = new Task<bool>(() => IsAvailable(url));
-			task.Start();
-			return task;
+			return await GetWebPageStatusCodeAsync(url) != 400;
 		}
 
 		/// <summary>

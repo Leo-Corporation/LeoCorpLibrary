@@ -67,11 +67,9 @@ namespace LeoCorpLibrary.Core
 		/// <para>The connection is tested by default on https://bing.com.</para>
 		/// </summary>
 		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
-		public static Task<bool> IsAvailableAsync()
+		public static async Task<bool> IsAvailableAsync()
 		{
-			Task<bool> task = new Task<bool>(IsAvailable);
-			task.Start();
-			return task;
+			return await GetWebPageStatusCodeAsync("https://www.bing.com") != 400;
 		}
 
 		/// <summary>
@@ -81,11 +79,9 @@ namespace LeoCorpLibrary.Core
 		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
 		/// <exception cref="ArgumentNullException"></exception>
 		/// <exception cref="WebException"></exception>
-		public static Task<bool> IsAvailableAsync(string url)
+		public static async Task<bool> IsAvailableAsync(string url)
 		{
-			Task<bool> task = new Task<bool>(() => IsAvailable(url));
-			task.Start();
-			return task;
+			return await GetWebPageStatusCodeAsync(url) != 400;
 		}
 
 		/// <summary>
@@ -251,16 +247,16 @@ namespace LeoCorpLibrary.Core
 				return StatusCodeType.ClientError; // Return ClientError
 			}
 		}
-
+		
 		/// <summary>
-		/// Downloads a file asynchronously using the <see cref="System.Net.Http.HttpClient"/> class.
+		/// Downloads a file asynchronously using the <see cref="HttpClient"/> class.
 		/// </summary>
 		/// <param name="uri">The URI of the file to download.</param>
 		/// <param name="filePath">The path where to store the file once downloaded.</param>
 		/// <returns>A <see cref="Task"/> value (<see cref="void"/>).</returns>
 		public static async Task DownloadFileAsync(Uri uri, string filePath)
 		{
-			using (var s = await new System.Net.Http.HttpClient().GetStreamAsync(uri))
+			using (var s = await new HttpClient().GetStreamAsync(uri))
 			{
 				using (var fs = new FileStream(filePath, FileMode.CreateNew))
 				{
