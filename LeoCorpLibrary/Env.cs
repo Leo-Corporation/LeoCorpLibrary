@@ -396,10 +396,6 @@ namespace LeoCorpLibrary
 		/// <returns>A <see cref="int"/> value.</returns>
 		public static int GetUnixTime(DateTime date)
 		{
-			if (date == null) // Si l'argument est null
-			{
-				throw new ArgumentNullException(""); // Erreur
-			}
 			return (int)date.Subtract(new DateTime(1970, 1, 1)).TotalSeconds; // Calculer Unix Time
 		}
 
@@ -423,10 +419,10 @@ namespace LeoCorpLibrary
 		/// </summary>
 		public static string AppDataPath { get => GetAppDataPath(); }
 
+#if !NET45
 		/// <summary>
 		/// Allows you to get the current Operating system.
 		/// </summary>
-#if !NET45
 		public static OperatingSystems CurrentOperatingSystem
 		{
 			get

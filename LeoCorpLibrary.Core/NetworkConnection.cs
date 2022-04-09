@@ -25,6 +25,7 @@ using LeoCorpLibrary.Core.Enums;
 using System;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace LeoCorpLibrary.Core
@@ -66,11 +67,9 @@ namespace LeoCorpLibrary.Core
 		/// <para>The connection is tested by default on https://bing.com.</para>
 		/// </summary>
 		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
-		public static Task<bool> IsAvailableAsync()
+		public static async Task<bool> IsAvailableAsync()
 		{
-			Task<bool> task = new Task<bool>(IsAvailable);
-			task.Start();
-			return task;
+			return await GetWebPageStatusCodeAsync("https://www.bing.com") != 400;
 		}
 
 		/// <summary>
@@ -80,11 +79,9 @@ namespace LeoCorpLibrary.Core
 		/// <returns>A <see cref="Task{TResult}"/> value.</returns>
 		/// <exception cref="ArgumentNullException"></exception>
 		/// <exception cref="WebException"></exception>
-		public static Task<bool> IsAvailableAsync(string url)
+		public static async Task<bool> IsAvailableAsync(string url)
 		{
-			Task<bool> task = new Task<bool>(() => IsAvailable(url));
-			task.Start();
-			return task;
+			return await GetWebPageStatusCodeAsync(url) != 400;
 		}
 
 		/// <summary>
@@ -143,6 +140,7 @@ namespace LeoCorpLibrary.Core
 		/// <param name="url">The URL of the website.</param>
 		/// <returns>An <see cref="int"/> value.</returns>
 		/// <exception cref="WebException"></exception>
+		[Obsolete("This method is obsolete and will be removed in a future version of LeoCorpLibrary. Please use the GetWebPageStatusCode() method instead.")]
 		public static int GetWebPageStatusCode(string url)
 		{
 			try
@@ -165,11 +163,23 @@ namespace LeoCorpLibrary.Core
 		}
 
 		/// <summary>
+		/// Gets the status code of a specified website asynchronously.
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>An <see cref="int"/> value, the status code of the URL.</returns>
+		public static async Task<int> GetWebPageStatusCodeAsync(string url)
+		{
+			var httpMessage = await new HttpClient().GetAsync(url); // Send a request to the specified website
+			return (int)httpMessage.StatusCode; // Return the status code returned by the website
+		}
+
+		/// <summary>
 		/// Gets the status description of a specified website. (ex: <c>"OK"</c>, for status code <c>200</c>)
 		/// </summary>
 		/// <param name="url">The URL of the website.</param>
 		/// <returns>A <see cref="string"/> value.</returns>
 		/// <exception cref="WebException"></exception>
+		[Obsolete("This method is obsolete and will be removed in a future version of LeoCorpLibrary. Please use the GetWebPageStatusDescriptionAsync() method instead.")]
 		public static string GetWebPageStatusDescription(string url)
 		{
 			try
@@ -189,6 +199,17 @@ namespace LeoCorpLibrary.Core
 				}
 			}
 			return "Bad Request"; // An unknown error has occured.
+		}
+
+		/// <summary>
+		/// Get the status description of a specified website asynchronously. (ex: <c>"OK"</c>, for status code <c>200</c>)
+		/// </summary>
+		/// <param name="url">The URL of the website.</param>
+		/// <returns>A <see cref="string"/> value, the status description of the URL.</returns>
+		public static async Task<string> GetWebPageStatusDescriptionAsync(string url)
+		{
+			var httpMessage = await new HttpClient().GetAsync(url); // Send a request to the specified website
+			return httpMessage.ReasonPhrase; // Return the status description returned by the website
 		}
 
 		/// <summary>
@@ -226,16 +247,16 @@ namespace LeoCorpLibrary.Core
 				return StatusCodeType.ClientError; // Return ClientError
 			}
 		}
-
+		
 		/// <summary>
-		/// Downloads a file asynchronously using the <see cref="System.Net.Http.HttpClient"/> class.
+		/// Downloads a file asynchronously using the <see cref="HttpClient"/> class.
 		/// </summary>
 		/// <param name="uri">The URI of the file to download.</param>
 		/// <param name="filePath">The path where to store the file once downloaded.</param>
 		/// <returns>A <see cref="Task"/> value (<see cref="void"/>).</returns>
 		public static async Task DownloadFileAsync(Uri uri, string filePath)
 		{
-			using (var s = await new System.Net.Http.HttpClient().GetStreamAsync(uri))
+			using (var s = await new HttpClient().GetStreamAsync(uri))
 			{
 				using (var fs = new FileStream(filePath, FileMode.CreateNew))
 				{
