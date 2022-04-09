@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 	<TargetFrameworks>net45;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
-	<Version>4.5.0.2204-rc1</Version>
+	<Version>4.5.0.2204</Version>
 	<Description>A C# library with useful features for .NET Applications.</Description>
 	<Authors>Léo Corporation</Authors>
 	<Company>Léo Corporation</Company>
@@ -14,7 +14,7 @@
 	<PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
 	<PackageIcon>icon.png</PackageIcon>
 	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	  <PackageReleaseNotes>Version 4.5.0.2204-rc1
+	  <PackageReleaseNotes>Version 4.5.0.2204
 - Updated Encrypt() method (#310)
 - Updated Decrypt() method (#310)
 - Updated `Crypt` methods (#310)
