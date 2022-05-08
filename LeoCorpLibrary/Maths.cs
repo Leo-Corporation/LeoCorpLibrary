@@ -118,12 +118,17 @@ namespace LeoCorpLibrary
 		public static double GetOpposite(double n) => 0 - n;
 
 		/// <summary>
-		/// Gets the postivie of any number.
+		/// Gets the positive of any number.
 		/// </summary>
 		/// <param name="n">The number you want to get the positive of.</param>
 		/// <returns>A <see cref="double"/> value, the positive of the number.</returns>
 		public static double GetPositive(double n) => n >= 0 ? n : -n;
 
+		/// <summary>
+		/// Gets the negative of any number.
+		/// </summary>
+		/// <param name="n">The number you want to get the negative of.</param>
+		/// <returns>A <see cref="double"/> value, the ngeative of the number.</returns>
 		public static double GetNegative(double n) => n <= 0 ? n : -n;
 
 
