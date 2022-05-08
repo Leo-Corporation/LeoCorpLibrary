@@ -117,6 +117,13 @@ namespace LeoCorpLibrary.Core
 		public static double GetOpposite(double n) => 0 - n;
 
 		/// <summary>
+		/// Gets the postivie of any number.
+		/// </summary>
+		/// <param name="n">The number you want to get the positive of.</param>
+		/// <returns>A <see cref="double"/> value, the positive of the number.</returns>
+		public static double GetPositive(double n) => n >= 0 ? n : -n;
+
+		/// <summary>
 		/// Returns the factorial of a specified number.
 		/// </summary>
 		/// <param name="n">The number to get the factorial.</param>

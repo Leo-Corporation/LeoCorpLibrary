@@ -117,6 +117,11 @@ namespace LeoCorpLibrary
 		/// <example>If 10 is specified, the method will return -10.</example>
 		public static double GetOpposite(double n) => 0 - n;
 
+		/// <summary>
+		/// Gets the postivie of any number.
+		/// </summary>
+		/// <param name="n">The number you want to get the positive of.</param>
+		/// <returns>A <see cref="double"/> value, the positive of the number.</returns>
 		public static double GetPositive(double n) => n >= 0 ? n : -n;
 
 
