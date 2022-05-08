@@ -131,6 +131,21 @@ namespace LeoCorpLibrary
 		/// <returns>A <see cref="double"/> value, the ngeative of the number.</returns>
 		public static double GetNegative(double n) => n <= 0 ? n : -n;
 
+		/// <summary>
+		/// Gets the results/images of specified numbers after applying to them a function. (<c>f(x) = x</c>)
+		/// </summary>
+		/// <param name="function">The function to apply.</param>
+		/// <param name="numbers">The numbers you want to get the results after applying specific function.</param>
+		/// <returns>An array of <see cref="double"/>.</returns>
+		public static double[] GetResultsOf(Func<double, double> function, params double[] numbers)
+		{
+			double[] results = new double[numbers.Length]; // Create a new array that will contain the results once the other method is applied to each number
+			for (int i = 0; i < numbers.Length; i++) // For each number
+			{
+				results[i] = function(numbers[i]); // Apply the method to the number
+			}
+			return results; // Return the results
+		}
 
 		/// <summary>
 		/// Returns the factorial of a specified number.
