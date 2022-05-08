@@ -130,6 +130,16 @@ namespace LeoCorpLibrary.Core
 		/// <returns>A <see cref="double"/> value, the ngeative of the number.</returns>
 		public static double GetNegative(double n) => n <= 0 ? n : -n;
 
+		public static double[] GetResultsOf(Func<double, double> function, params double[] numbers) 
+		{
+			double[] results = new double[numbers.Length]; // Create a new array that will contain the results once the other method is applied to each number
+			for (int i = 0; i < numbers.Length; i++) // For each number
+			{
+				results[i] = function(numbers[i]); // Apply the method to the number
+			}
+			return results; // Return the results
+		}
+
 		/// <summary>
 		/// Returns the factorial of a specified number.
 		/// </summary>
