@@ -124,6 +124,8 @@ namespace LeoCorpLibrary
 		/// <returns>A <see cref="double"/> value, the positive of the number.</returns>
 		public static double GetPositive(double n) => n >= 0 ? n : -n;
 
+		public static double GetNegative(double n) => n <= 0 ? n : -n;
+
 
 		/// <summary>
 		/// Returns the factorial of a specified number.
