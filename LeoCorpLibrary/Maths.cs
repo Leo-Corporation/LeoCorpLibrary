@@ -640,6 +640,14 @@ namespace LeoCorpLibrary
 			/// <param name="increaseRate">The evolution rate.</param>
 			/// <returns>A <see cref="double"/> value.</returns>
 			public static double GetResultPercentageIncrease(double value, double increaseRate) => (1 + increaseRate) * value;
+
+			/// <summary>
+			/// Gets the result after an decrease of x% of a specified value.
+			/// </summary>
+			/// <param name="value">The base value.</param>
+			/// <param name="decreaseRate">The evolution rate, must be positive.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetResultPercentageDecrease(double value, double decreaseRate) => (decreaseRate >= 0) ? (1 - decreaseRate) * value : GetResultPercentageIncrease(value, decreaseRate);
 		}
 	}
 }
