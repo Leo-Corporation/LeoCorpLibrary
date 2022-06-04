@@ -656,6 +656,8 @@ namespace LeoCorpLibrary
 			/// <param name="evolutionRate">The evolution rate to get the inverse of.</param>
 			/// <returns>A <see cref="double"/> value.</returns>
 			public static double GetInvertedEvolutionRate(double evolutionRate) => 1 / (1 + evolutionRate) - 1;
+
+			public static string ProportionToPercentageString(double proportion) => $"{proportion * 100}%";
 		}
 	}
 }
