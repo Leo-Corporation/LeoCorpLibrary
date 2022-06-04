@@ -625,5 +625,19 @@ namespace LeoCorpLibrary.Core
 				return Math.PI * (radius * radius) * height / 3;
 			}
 		}
+
+		/// <summary>
+		/// Class that contains percentage-related methods.
+		/// </summary>
+		public static class Percentage
+		{
+			/// <summary>
+			/// Gets the result after an increase of x% of a specified value.
+			/// </summary>
+			/// <param name="value">The base value.</param>
+			/// <param name="increaseRate">The evolution rate.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetResultPercentageIncrease(double value, double increaseRate) => (1 + increaseRate) * value;
+		}
 	}
 }
