@@ -648,6 +648,8 @@ namespace LeoCorpLibrary
 			/// <param name="decreaseRate">The evolution rate, must be positive.</param>
 			/// <returns>A <see cref="double"/> value.</returns>
 			public static double GetResultPercentageDecrease(double value, double decreaseRate) => (decreaseRate >= 0) ? (1 - decreaseRate) * value : GetResultPercentageIncrease(value, decreaseRate);
+
+			public static double GetInvertedEvolutionRate(double evolutionRate) => 1 / (1 + evolutionRate) - 1;
 		}
 	}
 }
