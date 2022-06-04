@@ -646,6 +646,14 @@ namespace LeoCorpLibrary.Core
 			/// <param name="decreaseRate">The evolution rate, must be positive.</param>
 			/// <returns>A <see cref="double"/> value.</returns>
 			public static double GetResultPercentageDecrease(double value, double decreaseRate) => (decreaseRate >= 0) ? (1 - decreaseRate) * value : GetResultPercentageIncrease(value, decreaseRate);
+
+			/// <summary>
+			/// Gets the inverse of a specified evolution rate. For instance, if we have a decrease of 50%, <c>t = -0.5</c>, to get back to the orginal value, <c>t' = 1/(1+t)-1 = 1</c>.
+			/// </summary>
+			/// <remarks>To get the multiplier, add 1 to the returned value.</remarks>
+			/// <param name="evolutionRate">The evolution rate to get the inverse of.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetInvertedEvolutionRate(double evolutionRate) => 1 / (1 + evolutionRate) - 1;
 		}
 	}
 }
