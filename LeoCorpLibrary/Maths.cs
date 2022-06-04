@@ -627,5 +627,10 @@ namespace LeoCorpLibrary
 				return Math.PI * (radius * radius) * height / 3;
 			}
 		}
+
+		public static class Percentage
+		{
+			public static double GetResultPercentageIncrease(double value, double increaseRate) => (1 + increaseRate) * value;
+		}
 	}
 }
