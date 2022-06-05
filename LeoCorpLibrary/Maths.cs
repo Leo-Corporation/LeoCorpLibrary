@@ -166,6 +166,8 @@ namespace LeoCorpLibrary
 			return n < 0 ? 0 - r : r;
 		}
 
+		public static bool IsPositive(double n) => n > 0;
+
 		/// <summary>
 		/// Class that coontains methods for circles.
 		/// </summary>
