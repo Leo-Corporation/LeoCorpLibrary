@@ -166,6 +166,20 @@ namespace LeoCorpLibrary.Core
 		}
 
 		/// <summary>
+		/// Gets if the number is positive or not.
+		/// </summary>
+		/// <param name="n">The number to check.</param>
+		/// <returns>Returns <see langword="true"/> if the number is positive, a <see cref="bool"/> value.</returns>
+		public static bool IsPositive(double n) => n > 0;
+
+		/// <summary>
+		/// Gets if the number is negative or not.
+		/// </summary>
+		/// <param name="n">The number to check.</param>
+		/// <returns>Returns <see langword="true"/> if the number is negative, a <see cref="bool"/> value.</returns>
+		public static bool IsNegative(double n) => n < 0;
+
+		/// <summary>
 		/// Class that coontains methods for circles.
 		/// </summary>
 		public static class Circle
@@ -624,6 +638,44 @@ namespace LeoCorpLibrary.Core
 			{
 				return Math.PI * (radius * radius) * height / 3;
 			}
+		}
+
+		/// <summary>
+		/// Class that contains percentage-related methods.
+		/// </summary>
+		public static class Percentage
+		{
+			/// <summary>
+			/// Gets the result after an increase of x% of a specified value.
+			/// </summary>
+			/// <param name="value">The base value.</param>
+			/// <param name="increaseRate">The evolution rate, in the following format: <c>x/100d</c>.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetResultPercentageIncrease(double value, double increaseRate) => (1 + increaseRate) * value;
+
+			/// <summary>
+			/// Gets the result after an decrease of x% of a specified value.
+			/// </summary>
+			/// <param name="value">The base value.</param>
+			/// <param name="decreaseRate">The evolution rate, must be positive, in the following format: <c>x/100d</c>.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetResultPercentageDecrease(double value, double decreaseRate) => (decreaseRate >= 0) ? (1 - decreaseRate) * value : GetResultPercentageIncrease(value, decreaseRate);
+
+			/// <summary>
+			/// Gets the inverse of a specified evolution rate. For instance, if we have a decrease of 50%, <c>t = -0.5</c>, to get back to the orginal value, <c>t' = 1/(1+t)-1 = 1</c>.
+			/// </summary>
+			/// <remarks>To get the multiplier, add 1 to the returned value.</remarks>
+			/// <param name="evolutionRate">The evolution rate to get the inverse of, in the following format: <c>x/100d</c>.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static double GetInvertedEvolutionRate(double evolutionRate) => 1 / (1 + evolutionRate) - 1;
+
+			/// <summary>
+			/// Gets the formatted string of a proportion.
+			/// </summary>
+			/// <example>For instance, 150/200 will return 75%.</example>
+			/// <param name="proportion">The proportion to get the percentage of.</param>
+			/// <returns>A <see cref="double"/> value.</returns>
+			public static string ProportionToPercentageString(double proportion) => $"{proportion * 100}%";
 		}
 	}
 }

@@ -1,67 +1,71 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-  <PropertyGroup>
-	<ProjectGuid>{42249739-9D60-4048-8691-B6536BCF49CE}</ProjectGuid>
-	<TargetFrameworks>net45;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
-	<AssemblyTitle>LeoCorpLibrary</AssemblyTitle>
-	<Company>Léo Corporation</Company>
-	<Product>LeoCorpLibrary</Product>
-	<Description>A C# library with useful features for .NET Desktop Applications.</Description>
-	<Copyright>© 2022</Copyright>
-	<AssemblyVersion>4.6.0.2205</AssemblyVersion>
-	<FileVersion>4.6.0.2205</FileVersion>
-	<OutputPath>bin\$(Configuration)\</OutputPath>
-	<UseWindowsForms>true</UseWindowsForms>
-	<UseWPF>true</UseWPF>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-	<DebugType>full</DebugType>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-	<DebugType>pdbonly</DebugType>
-	<DocumentationFile>bin\$(Configuration)\LeoCorpLibrary.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup>
-	<ApplicationManifest>app.manifest</ApplicationManifest>
-	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	<Version>4.6.0.2205</Version>
-	<Authors>Léo Corporation</Authors>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<PackageIcon>icon.png</PackageIcon>
-	<RepositoryType>git</RepositoryType>
-	<RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
-	<PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-	<PackageReleaseNotes>Version 4.6.0.2205
-- Added the possibility to get the positive of a number (#318)
-- Added the possibility to get the negative of a number (#319)
-- Added `GetResultsOf()` method (#320)
+	<PropertyGroup>
+		<ProjectGuid>{42249739-9D60-4048-8691-B6536BCF49CE}</ProjectGuid>
+		<TargetFrameworks>net45;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
+		<AssemblyTitle>LeoCorpLibrary</AssemblyTitle>
+		<Company>Léo Corporation</Company>
+		<Product>LeoCorpLibrary</Product>
+		<Description>A C# library with useful features for .NET Desktop Applications.</Description>
+		<Copyright>© 2022</Copyright>
+		<AssemblyVersion>4.7.0.2206</AssemblyVersion>
+		<FileVersion>4.7.0.2206</FileVersion>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<UseWindowsForms>true</UseWindowsForms>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>pdbonly</DebugType>
+		<DocumentationFile>bin\$(Configuration)\LeoCorpLibrary.xml</DocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Version>4.7.0.2206</Version>
+		<Authors>Léo Corporation</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageIcon>icon.png</PackageIcon>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
+		<PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
+		<PackageReleaseNotes>Version 4.7.0.2206
+- Added the possibility to get the result of a percentage increase (#324)
+- Added the possibility to get the result of a percentage decrease (#325)
+- Added the possibility to get the evolution rate that cancel itself (#326)
+- Added the possibility to convert a proportion to a percentage string (#327)
+- Add the possibility to check if a number is positive or negative (#328)
+- Added IsPositive() method (#329)
+- Added IsNegative() method (#330)
 - Added XML Documentation</PackageReleaseNotes>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
-  </PropertyGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">
-	<Reference Include="System.Windows.Forms" />
-	<Reference Include="System.Data.DataSetExtensions" />
-	<Reference Include="Microsoft.CSharp" />
-	<Reference Include="System.Net.Http" />
-  </ItemGroup>
-  <ItemGroup>
-	<Compile Remove="images\**" />
-	<Compile Remove="Packages\**" />
-	<EmbeddedResource Remove="images\**" />
-	<EmbeddedResource Remove="Packages\**" />
-	<None Remove="images\**" />
-	<None Remove="Packages\**" />
-	<None Include="images\icon.png">
-	  <Pack>True</Pack>
-	  <PackagePath></PackagePath>
-	</None>
-  </ItemGroup>
-  <ItemGroup>
-	<None Include="app.manifest" />
-  </ItemGroup>
-  <ItemGroup>
-	<Reference Include="System.Net.Http">
-	  <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll</HintPath>
-	</Reference>
-  </ItemGroup>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
+	</PropertyGroup>
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">
+		<Reference Include="System.Windows.Forms" />
+		<Reference Include="System.Data.DataSetExtensions" />
+		<Reference Include="Microsoft.CSharp" />
+		<Reference Include="System.Net.Http" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="images\**" />
+		<Compile Remove="Packages\**" />
+		<EmbeddedResource Remove="images\**" />
+		<EmbeddedResource Remove="Packages\**" />
+		<None Remove="images\**" />
+		<None Remove="Packages\**" />
+		<None Include="images\icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="app.manifest" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="System.Net.Http">
+			<HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Net.Http.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>
