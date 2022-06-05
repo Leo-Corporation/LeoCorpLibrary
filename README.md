@@ -97,7 +97,7 @@ There isn't a roadmap yet for this year.
 ## Contribute
 Here's what you'll need to contribute to this project:
 - Visual Studio 2019/2022 with:
-   - .NET Desktop Developpement
+   - .NET Desktop Development
    - Git
 - .NET
    - .NET Framework 4.5
@@ -111,7 +111,6 @@ Here's what you'll need to contribute to this project:
 - [Leo-Corporation / ColorPicker](https://github.com/Leo-Corporation/ColorPicker)
 - [Leo-Corporation / Datalya](https://github.com/Leo-Corporation/Datalya)
 - [Leo-Corporation / Gavilya](https://github.com/Leo-Corporation/Gavilya)
-- [Leo-Corporation / Générateur de mots de passe](https://github.com/Leo-Corporation/Generateur-de-mots-de-passe)
 - [Leo-Corporation / Gerayis](https://github.com/Leo-Corporation/Gerayis)
 - [Leo-Corporation / InternetTest](https://github.com/Leo-Corporation/InternetTest)
 - [Leo-Corporation / LABS-Experiences](https://github.com/Leo-Corporation/LABS-Experiences)
