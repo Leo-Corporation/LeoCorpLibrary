@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 	<TargetFrameworks>net45;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
-	<Version>4.7.0.2206-pre1</Version>
+	<Version>4.7.0.2206-rc1</Version>
 	<Description>A C# library with useful features for .NET Applications.</Description>
 	<Authors>Léo Corporation</Authors>
 	<Company>Léo Corporation</Company>
@@ -14,11 +14,14 @@
 	<PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
 	<PackageIcon>icon.png</PackageIcon>
 	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	  <PackageReleaseNotes>Version 4.7.0.2206-pre1
+	  <PackageReleaseNotes>Version 4.7.0.2206-rc1
 - Added the possibility to get the result of a percentage increase (#324)
 - Added the possibility to get the result of a percentage decrease (#325)
 - Added the possibility to get the evolution rate that cancel itself (#326)
 - Added the possibility to convert a proportion to a percentage string (#327)
+- Add the possibility to check if a number is positive or negative (#328)
+- Added IsPositive() method (#329)
+- Added IsNegative() method (#330)
 - Added XML Documentation</PackageReleaseNotes>
 	<AssemblyVersion>4.7.0.2206</AssemblyVersion>
 	<Copyright>© 2022</Copyright>
