@@ -166,6 +166,11 @@ namespace LeoCorpLibrary
 			return n < 0 ? 0 - r : r;
 		}
 
+		/// <summary>
+		/// Gets if the number is positive or not.
+		/// </summary>
+		/// <param name="n">The number to check.</param>
+		/// <returns>Returns <see langword="true"/> if the number is positive, a <see cref="bool"/> value.</returns>
 		public static bool IsPositive(double n) => n > 0;
 
 		/// <summary>

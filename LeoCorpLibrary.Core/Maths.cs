@@ -166,6 +166,13 @@ namespace LeoCorpLibrary.Core
 		}
 
 		/// <summary>
+		/// Gets if the number is positive or not.
+		/// </summary>
+		/// <param name="n">The number to check.</param>
+		/// <returns>Returns <see langword="true"/> if the number is positive, a <see cref="bool"/> value.</returns>
+		public static bool IsPositive(double n) => n > 0;
+
+		/// <summary>
 		/// Class that coontains methods for circles.
 		/// </summary>
 		public static class Circle
