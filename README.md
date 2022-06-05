@@ -28,7 +28,7 @@
 </p>
 
 ## What is it?
-"LeoCorpLibrary" is library writen in C# that contains useful methods for software developpers, such as password generation, update system, maths and geometry methods and more.
+"LeoCorpLibrary" is library written in C# that contains useful methods for software developers, such as password generation, update system, maths and geometry methods and more.
 
 There is two variations of LeoCorpLibrary that are available in different platforms:
 
