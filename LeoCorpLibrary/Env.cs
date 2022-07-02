@@ -482,6 +482,12 @@ namespace LeoCorpLibrary
 			return dtDateTime; // Return the result
 		}
 
+		public static int DateTimeToUnixTime(DateTime dateTime)
+		{
+			DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc); // Create a date
+			return (int)dateTime.Subtract(dtDateTime).TotalSeconds; // Return the result
+		}
+
 		/// <summary>
 		/// Gets if a specified process name is currently running.
 		/// </summary>
