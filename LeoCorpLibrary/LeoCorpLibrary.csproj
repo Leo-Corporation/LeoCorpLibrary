@@ -7,8 +7,8 @@
 		<Product>LeoCorpLibrary</Product>
 		<Description>A C# library with useful features for .NET Desktop Applications.</Description>
 		<Copyright>© 2022</Copyright>
-		<AssemblyVersion>4.7.0.2206</AssemblyVersion>
-		<FileVersion>4.7.0.2206</FileVersion>
+		<AssemblyVersion>4.8.0.2207</AssemblyVersion>
+		<FileVersion>4.8.0.2207</FileVersion>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
 		<UseWindowsForms>true</UseWindowsForms>
 		<UseWPF>true</UseWPF>
@@ -23,21 +23,16 @@
 	<PropertyGroup>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<Version>4.7.0.2206</Version>
+		<Version>4.8.0.2207-pre1</Version>
 		<Authors>Léo Corporation</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
 		<PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-		<PackageReleaseNotes>Version 4.7.0.2206
-- Added the possibility to get the result of a percentage increase (#324)
-- Added the possibility to get the result of a percentage decrease (#325)
-- Added the possibility to get the evolution rate that cancel itself (#326)
-- Added the possibility to convert a proportion to a percentage string (#327)
-- Add the possibility to check if a number is positive or negative (#328)
-- Added IsPositive() method (#329)
-- Added IsNegative() method (#330)
+		<PackageReleaseNotes>Version 4.8.0.2207-pre1
+- Added the possibility to convert a DateTime to UnixTime (#336)
+- Added the possibility to convert Double to Int (#337)
 - Added XML Documentation</PackageReleaseNotes>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageProjectUrl>https://github.com/Leo-Corporation/LeoCorpLibrary/</PackageProjectUrl>
