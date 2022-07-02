@@ -122,5 +122,8 @@ namespace LeoCorpLibrary.Extensions
 					return d;
 			}
 		}
+
+		
+		public static int ToInt(this double d) => (int)Math.Round(d);
 	}
 }
