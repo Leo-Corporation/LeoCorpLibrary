@@ -593,6 +593,9 @@ namespace LeoCorpLibrary
 			}
 		}
 
+		/// <summary>
+		/// Returns the directory where the app is executed.
+		/// </summary>
 		public static string CurrentAppDirectory => Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 	}
 }
