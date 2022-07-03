@@ -592,5 +592,7 @@ namespace LeoCorpLibrary
 				}
 			}
 		}
+
+		public static string CurrentAppDirectory => Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 	}
 }
