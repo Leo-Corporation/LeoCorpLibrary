@@ -483,6 +483,17 @@ namespace LeoCorpLibrary
 		}
 
 		/// <summary>
+		/// Converts a <see cref="DateTime"/> to Unix Time.
+		/// </summary>
+		/// <param name="dateTime">The <see cref="DateTime"/> to convert.</param>
+		/// <returns>An <see cref="int"/> value, the converted unix time.</returns>
+		public static int DateTimeToUnixTime(DateTime dateTime)
+		{
+			DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc); // Create a date
+			return (int)dateTime.Subtract(dtDateTime).TotalSeconds; // Return the result
+		}
+
+		/// <summary>
 		/// Gets if a specified process name is currently running.
 		/// </summary>
 		/// <param name="processName">The process name to find.</param>
@@ -537,6 +548,14 @@ namespace LeoCorpLibrary
 		}
 
 		/// <summary>
+		/// Gets the occupied space on a specified <see cref="DriveInfo"/>, and converts it to a percentage.
+		/// </summary>
+		/// <remarks>This method can return <see cref="double.NaN"/>.</remarks>
+		/// <param name="driveInfo">The drive to get the occupied space percentage of.</param>
+		/// <returns>A <see cref="double"/> value, between 0 and 1.</returns>
+		public static double GetOccupiedSpacePercentage(DriveInfo driveInfo) => (driveInfo.TotalSize - driveInfo.TotalFreeSpace) / (double)driveInfo.TotalSize;
+
+		/// <summary>
 		/// Gets the current <see cref="SystemThemes"/> of the operating system (Windows only).
 		/// </summary>
 		/// <remarks>
@@ -581,5 +600,10 @@ namespace LeoCorpLibrary
 				}
 			}
 		}
+
+		/// <summary>
+		/// Returns the directory where the app is executed.
+		/// </summary>
+		public static string CurrentAppDirectory => Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 	}
 }

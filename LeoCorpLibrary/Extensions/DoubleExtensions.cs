@@ -122,5 +122,12 @@ namespace LeoCorpLibrary.Extensions
 					return d;
 			}
 		}
+
+		/// <summary>
+		/// Converts a <see cref="double"/> value to an <see cref="int"/> value.
+		/// </summary>
+		/// <param name="d">The <see cref="double"/> to convert.</param>
+		/// <returns>An <see cref="int"/> value.</returns>
+		public static int ToInt(this double d) => (int)Math.Round(d);
 	}
 }
