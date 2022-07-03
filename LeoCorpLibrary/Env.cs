@@ -547,6 +547,8 @@ namespace LeoCorpLibrary
 			Process.Start("explorer.exe", $@"shell:appsFolder\{packageFamilyName}!{applicationID}"); // Synthax to launch UWP apps
 		}
 
+		public static double GetOccupiedSpacePercentage(DriveInfo driveInfo) => (driveInfo.TotalSize - driveInfo.TotalFreeSpace) / (double)driveInfo.TotalSize;
+
 		/// <summary>
 		/// Gets the current <see cref="SystemThemes"/> of the operating system (Windows only).
 		/// </summary>
