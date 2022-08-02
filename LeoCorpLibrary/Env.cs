@@ -556,6 +556,10 @@ namespace LeoCorpLibrary
 		/// <returns>A <see cref="double"/> value, between 0 and 1.</returns>
 		public static double GetOccupiedSpacePercentage(DriveInfo driveInfo) => (driveInfo.TotalSize - driveInfo.TotalFreeSpace) / (double)driveInfo.TotalSize;
 
+		/// <summary>
+		/// Gets the drive with the higest free space available.
+		/// </summary>
+		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
 		public static DriveInfo GetDriveWithHighestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
 
 		/// <summary>

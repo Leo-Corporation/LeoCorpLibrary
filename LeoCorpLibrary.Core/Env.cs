@@ -25,6 +25,7 @@ using LeoCorpLibrary.Core.Enums;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 #if !NET45
 using System.Runtime.InteropServices;
@@ -538,6 +539,12 @@ namespace LeoCorpLibrary.Core
 		/// <param name="driveInfo">The drive to get the occupied space percentage of.</param>
 		/// <returns>A <see cref="double"/> value, between 0 and 1.</returns>
 		public static double GetOccupiedSpacePercentage(DriveInfo driveInfo) => (driveInfo.TotalSize - driveInfo.TotalFreeSpace) / (double)driveInfo.TotalSize;
+
+		/// <summary>
+		/// Gets the drive with the higest free space available.
+		/// </summary>
+		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
+		public static DriveInfo GetDriveWithHighestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
 
 		/// <summary>
 		/// Returns <see langword="true"/> if the operating system support dark theme.
