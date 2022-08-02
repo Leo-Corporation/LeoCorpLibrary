@@ -26,6 +26,7 @@ using Microsoft.Win32;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
@@ -554,6 +555,8 @@ namespace LeoCorpLibrary
 		/// <param name="driveInfo">The drive to get the occupied space percentage of.</param>
 		/// <returns>A <see cref="double"/> value, between 0 and 1.</returns>
 		public static double GetOccupiedSpacePercentage(DriveInfo driveInfo) => (driveInfo.TotalSize - driveInfo.TotalFreeSpace) / (double)driveInfo.TotalSize;
+
+		public static DriveInfo GetDriveWithHighestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
 
 		/// <summary>
 		/// Gets the current <see cref="SystemThemes"/> of the operating system (Windows only).
