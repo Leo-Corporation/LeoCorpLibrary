@@ -562,6 +562,8 @@ namespace LeoCorpLibrary
 		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
 		public static DriveInfo GetDriveWithHighestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
 
+		public static DriveInfo GetDriveWithLowestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).Last();
+
 		/// <summary>
 		/// Gets the current <see cref="SystemThemes"/> of the operating system (Windows only).
 		/// </summary>
