@@ -560,9 +560,13 @@ namespace LeoCorpLibrary
 		/// Gets the drive with the higest free space available.
 		/// </summary>
 		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
-		public static DriveInfo GetDriveWithHighestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
+		public static DriveInfo GetDriveWithHighestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).Last();
 
-		public static DriveInfo GetDriveWithLowestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).Last();
+		/// <summary>
+		/// Gets the drive with the lowest free space available.
+		/// </summary>
+		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
+		public static DriveInfo GetDriveWithLowestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
 
 		/// <summary>
 		/// Gets the current <see cref="SystemThemes"/> of the operating system (Windows only).
