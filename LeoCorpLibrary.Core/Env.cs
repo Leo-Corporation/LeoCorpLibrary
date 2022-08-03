@@ -25,6 +25,7 @@ using LeoCorpLibrary.Core.Enums;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 #if !NET45
 using System.Runtime.InteropServices;
@@ -538,6 +539,68 @@ namespace LeoCorpLibrary.Core
 		/// <param name="driveInfo">The drive to get the occupied space percentage of.</param>
 		/// <returns>A <see cref="double"/> value, between 0 and 1.</returns>
 		public static double GetOccupiedSpacePercentage(DriveInfo driveInfo) => (driveInfo.TotalSize - driveInfo.TotalFreeSpace) / (double)driveInfo.TotalSize;
+
+		/// <summary>
+		/// Gets the drive with the higest free space available.
+		/// </summary>
+		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
+		public static DriveInfo GetDriveWithHighestFreeSpace()
+		{
+			var drives = DriveInfo.GetDrives(); // Get all drives
+			drives = drives.Where(x => x.DriveType != DriveType.CDRom).ToArray(); // Remove CD-ROM
+			return drives.OrderByDescending(x => x.TotalFreeSpace).First(); // Return the drive with the highest free space
+		}
+
+		/// <summary>
+		/// Gets the drive with the lowest free space available.
+		/// </summary>
+		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
+		public static DriveInfo GetDriveWithLowestFreeSpace()
+		{
+			var drives = DriveInfo.GetDrives(); // Get all drives
+			drives = drives.Where(x => x.DriveType != DriveType.CDRom).ToArray(); // Remove CD-ROM
+			return drives.OrderBy(x => x.TotalFreeSpace).First(); // Return the drive with the lowest free space
+		}
+
+		/// <summary>
+		/// Gets the appropriate <see cref="UnitType"/> to use depending of the total size of the drive.
+		/// </summary>
+		/// <param name="driveInfo">The drive to get the unit of.</param>
+		/// <returns>A <see cref="UnitType"/> value, the appropriate unit.</returns>
+		public static UnitType GetDriveUnitType(DriveInfo driveInfo)
+		{
+			if (driveInfo.TotalSize >= Math.Pow(1024, 5))
+			{
+				return UnitType.Petabyte;
+			}
+			if (driveInfo.TotalSize >= Math.Pow(1024, 4))
+			{
+				return UnitType.Terabyte;
+			}
+			if (driveInfo.TotalSize >= 1073741824)
+			{
+				return UnitType.Gigabyte;
+			}
+			else if (driveInfo.TotalSize >= 1048576)
+			{
+				return UnitType.Megabyte;
+			}
+			else if (driveInfo.TotalSize >= 1024)
+			{
+				return UnitType.Kilobyte;
+			}
+			else
+			{
+				return UnitType.Byte;
+			}
+		}
+
+		/// <summary>
+		/// Gets if a specified drive is a CD/DVD-ROM.
+		/// </summary>
+		/// <param name="driveInfo"></param>
+		/// <returns>A <see cref="bool"/> value. <see langword="true"/> if the drive is an optical drive; <see langword="false"/> if it isn't.</returns>
+		public static bool IsDriveOpticalDrive(DriveInfo driveInfo) => driveInfo.DriveType == DriveType.CDRom;
 
 		/// <summary>
 		/// Returns <see langword="true"/> if the operating system support dark theme.
