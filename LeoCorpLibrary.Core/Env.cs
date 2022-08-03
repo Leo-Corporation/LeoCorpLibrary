@@ -544,13 +544,23 @@ namespace LeoCorpLibrary.Core
 		/// Gets the drive with the higest free space available.
 		/// </summary>
 		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
-		public static DriveInfo GetDriveWithHighestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).Last();
+		public static DriveInfo GetDriveWithHighestFreeSpace()
+		{
+			var drives = DriveInfo.GetDrives(); // Get all drives
+			drives = drives.Where(x => x.DriveType != DriveType.CDRom).ToArray(); // Remove CD-ROM
+			return drives.OrderByDescending(x => x.TotalFreeSpace).First(); // Return the drive with the highest free space
+		}
 
 		/// <summary>
 		/// Gets the drive with the lowest free space available.
 		/// </summary>
 		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
-		public static DriveInfo GetDriveWithLowestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
+		public static DriveInfo GetDriveWithLowestFreeSpace()
+		{
+			var drives = DriveInfo.GetDrives(); // Get all drives
+			drives = drives.Where(x => x.DriveType != DriveType.CDRom).ToArray(); // Remove CD-ROM
+			return drives.OrderBy(x => x.TotalFreeSpace).First(); // Return the drive with the lowest free space
+		}
 
 		/// <summary>
 		/// Gets the appropriate <see cref="UnitType"/> to use depending of the total size of the drive.
