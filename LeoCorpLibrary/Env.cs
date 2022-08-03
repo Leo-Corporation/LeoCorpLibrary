@@ -601,6 +601,8 @@ namespace LeoCorpLibrary
 			}
 		}
 
+		public static bool IsDriveOpticalDrive(DriveInfo driveInfo) => driveInfo.DriveType == DriveType.CDRom;
+
 		/// <summary>
 		/// Gets the current <see cref="SystemThemes"/> of the operating system (Windows only).
 		/// </summary>
