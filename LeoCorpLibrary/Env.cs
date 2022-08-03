@@ -568,6 +568,34 @@ namespace LeoCorpLibrary
 		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
 		public static DriveInfo GetDriveWithLowestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
 
+		public static UnitType GetDriveUnitType(DriveInfo driveInfo)
+		{
+			if (driveInfo.TotalSize >= Math.Pow(1024, 5))
+			{
+				return UnitType.Petabyte;
+			}
+			if (driveInfo.TotalSize >= Math.Pow(1024, 4))
+			{
+				return UnitType.Terabyte;
+			}
+			if (driveInfo.TotalSize >= 1073741824)
+			{
+				return UnitType.Gigabyte;
+			}
+			else if (driveInfo.TotalSize >= 1048576)
+			{
+				return UnitType.Megabyte;
+			}
+			else if (driveInfo.TotalSize >= 1024)
+			{
+				return UnitType.Kilobyte;
+			}
+			else
+			{
+				return UnitType.Byte;
+			}
+		}
+
 		/// <summary>
 		/// Gets the current <see cref="SystemThemes"/> of the operating system (Windows only).
 		/// </summary>
