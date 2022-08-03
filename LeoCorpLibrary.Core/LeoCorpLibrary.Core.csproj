@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 	<TargetFrameworks>net45;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
-	<Version>4.9.0.2208-rc1</Version>
+	<Version>4.9.0.2208</Version>
 	<Description>A C# library with useful features for .NET Applications.</Description>
 	<Authors>Léo Corporation</Authors>
 	<Company>Léo Corporation</Company>
@@ -14,7 +14,7 @@
 	<PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
 	<PackageIcon>icon.png</PackageIcon>
 	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	  <PackageReleaseNotes>Version 4.9.0.2208-rc1
+	  <PackageReleaseNotes>Version 4.9.0.2208
 - Added the possibility to get the drive with the highest free space (#345)
 - Added the possibility to get the drive with the lowest free space (#346)
 - Added the possibility to get the UnitType of a drive (#347)

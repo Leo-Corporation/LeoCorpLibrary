@@ -23,14 +23,14 @@
 	<PropertyGroup>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<Version>4.9.0.2208-rc1</Version>
+		<Version>4.9.0.2208</Version>
 		<Authors>Léo Corporation</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/Leo-Corporation/LeoCorpLibrary</RepositoryUrl>
 		<PackageTags>Lib Library LeoCorporation C# CSharp dotnet winforms maths wpf ui leo leocorp crypt guid password generator</PackageTags>
-		<PackageReleaseNotes>Version 4.9.0.2208-rc1
+		<PackageReleaseNotes>Version 4.9.0.2208
 - Added the possibility to get the drive with the highest free space (#345)
 - Added the possibility to get the drive with the lowest free space (#346)
 - Added the possibility to get the UnitType of a drive (#347)
