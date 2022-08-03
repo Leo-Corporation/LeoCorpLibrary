@@ -553,7 +553,7 @@ namespace LeoCorpLibrary.Core
 		public static DriveInfo GetDriveWithLowestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
 
 		/// <summary>
-		/// Gets the appropriate <see cref="UnitType"/> to use depending of the total sizer of the drive.
+		/// Gets the appropriate <see cref="UnitType"/> to use depending of the total size of the drive.
 		/// </summary>
 		/// <param name="driveInfo">The drive to get the unit of.</param>
 		/// <returns>A <see cref="UnitType"/> value, the appropriate unit.</returns>
@@ -584,6 +584,13 @@ namespace LeoCorpLibrary.Core
 				return UnitType.Byte;
 			}
 		}
+
+		/// <summary>
+		/// Gets if a specified drive is a CD/DVD-ROM.
+		/// </summary>
+		/// <param name="driveInfo"></param>
+		/// <returns>A <see cref="bool"/> value. <see langword="true"/> if the drive is an optical drive; <see langword="false"/> if it isn't.</returns>
+		public static bool IsDriveOpticalDrive(DriveInfo driveInfo) => driveInfo.DriveType == DriveType.CDRom;
 
 		/// <summary>
 		/// Returns <see langword="true"/> if the operating system support dark theme.
