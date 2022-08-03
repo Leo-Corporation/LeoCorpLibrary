@@ -553,6 +553,39 @@ namespace LeoCorpLibrary.Core
 		public static DriveInfo GetDriveWithLowestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
 
 		/// <summary>
+		/// Gets the appropriate <see cref="UnitType"/> to use depending of the total sizer of the drive.
+		/// </summary>
+		/// <param name="driveInfo">The drive to get the unit of.</param>
+		/// <returns>A <see cref="UnitType"/> value, the appropriate unit.</returns>
+		public static UnitType GetDriveUnitType(DriveInfo driveInfo)
+		{
+			if (driveInfo.TotalSize >= Math.Pow(1024, 5))
+			{
+				return UnitType.Petabyte;
+			}
+			if (driveInfo.TotalSize >= Math.Pow(1024, 4))
+			{
+				return UnitType.Terabyte;
+			}
+			if (driveInfo.TotalSize >= 1073741824)
+			{
+				return UnitType.Gigabyte;
+			}
+			else if (driveInfo.TotalSize >= 1048576)
+			{
+				return UnitType.Megabyte;
+			}
+			else if (driveInfo.TotalSize >= 1024)
+			{
+				return UnitType.Kilobyte;
+			}
+			else
+			{
+				return UnitType.Byte;
+			}
+		}
+
+		/// <summary>
 		/// Returns <see langword="true"/> if the operating system support dark theme.
 		/// </summary>
 		/// <remarks>

@@ -568,6 +568,11 @@ namespace LeoCorpLibrary
 		/// <returns>A <see cref="DriveInfo"/> value, which contains the information of the drive.</returns>
 		public static DriveInfo GetDriveWithLowestFreeSpace() => DriveInfo.GetDrives().OrderBy(d => d.TotalFreeSpace).First();
 
+		/// <summary>
+		/// Gets the appropriate <see cref="UnitType"/> to use depending of the total sizer of the drive.
+		/// </summary>
+		/// <param name="driveInfo">The drive to get the unit of.</param>
+		/// <returns>A <see cref="UnitType"/> value, the appropriate unit.</returns>
 		public static UnitType GetDriveUnitType(DriveInfo driveInfo)
 		{
 			if (driveInfo.TotalSize >= Math.Pow(1024, 5))
