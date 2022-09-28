@@ -55,7 +55,7 @@ There is two variations of LeoCorpLibrary that are available in different platfo
 
 ## Documentation
 ### Branches
-There is two branches:
+There are two branches:
 
 | Name | Release | Description |
 | :--: | :-----: | :---------: |
