@@ -11,12 +11,12 @@
     <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h1 align="center">LeoCorpLibrary</h1>
+  <h1 align="center">LeoCorpLibrary (discontinued)</h1>
 
   <p align="center">
     A C# library with useful features for .NET Applications.
     <br />
-    <a href="https://leocorplibrary.leocorporation.dev/"><strong>View documentation »</strong></a>
+    <a href="https://peyrsharp.leocorporation.dev/"><strong>View the documentation of PeyrSharp »</strong></a>
     <br />
     <a href="https://github.com/Leo-Corporation/LeoCorpLibrary/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBug%5D+">Report Bug</a>
     ·
@@ -26,6 +26,10 @@
 
   </p>
 </p>
+
+## Introducing PeyrSharp
+LeoCorpLibrary is evolving; it is now called PeyrSharp, and has been rebuilt from the ground up!
+[Learn more](https://peyrsharp.leocorporation.dev/)
 
 ## What is it?
 "LeoCorpLibrary" is library written in C# that contains useful methods for software developers, such as password generation, update system, maths and geometry methods and more.
